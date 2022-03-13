@@ -1,0 +1,17 @@
+name: Prettier
+
+on: push
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.3
+        with:
+          prettier_plugins: "prettier-plugin-svelte"
+          prettier_options: --config .prettierrc --check .
+          dry: true

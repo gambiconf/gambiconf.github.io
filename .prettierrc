@@ -1,0 +1,11 @@
+{
+  "printWidth": 98,
+  "overrides": [
+    {
+      "files": "*.svelte",
+      "options": {
+        "semi": false
+      }
+    }
+  ]
+}

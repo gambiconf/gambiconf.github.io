@@ -39,3 +39,13 @@ h5 {
 h6 {
   font-size: var(--h6-size);
 }
+
+a {
+  color: rgb(84, 89, 95);
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+a:hover {
+  color: #FF8915;
+}

@@ -16,7 +16,7 @@
     width: 100%;
     height: 100%;
 
-    background-image: var(--background-image);
+    background-image: url("../../static/hero-background.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -98,7 +98,7 @@
 </style>
 
 <section>
-  <div style="--background-image: url({`${assets}/hero-background.png`})" class="background-overlay" />
+  <div class="background-overlay" />
 
   <div class="message">
     <div class="mascot">

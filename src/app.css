@@ -12,10 +12,6 @@
   --h6-size: calc(var(--h1-size) * 0.5);
 }
 
-body {
-  margin: 0;
-}
-
 h1 {
   font-size: var(--h1-size);
 }
@@ -48,4 +44,16 @@ a {
 
 a:hover {
   color: #FF8915;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.2rem;
+  }
 }

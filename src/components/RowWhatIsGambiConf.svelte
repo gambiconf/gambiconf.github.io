@@ -40,7 +40,7 @@
   }
 </style>
 
-<article>
+<article id="about">
   <div class="column">
     <h4>What is GambiConf?</h4>
   </div>

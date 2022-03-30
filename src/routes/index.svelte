@@ -15,6 +15,7 @@
     background-size: 100px;
 
     padding-top: 400px;
+    padding-bottom: 100px;
   }
 
   @media screen and (min-width: 768px) {

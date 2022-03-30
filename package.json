@@ -14,7 +14,10 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "dependencies": {
-    "@fontsource/ibm-plex-sans": "^4.5.5"
+    "@fontsource/ibm-plex-sans": "^4.5.5",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "svelte-fa": "^2.4.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.19.1",

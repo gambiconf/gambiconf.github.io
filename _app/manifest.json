@@ -1,0 +1,106 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-16ebb3ac.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor-591dda9d.js",
+      "_paths-c0fc83a9.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/index.svelte",
+      "src/routes/code-of-conduct.svelte",
+      "src/routes/cfp.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-ef414097.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-591dda9d.js",
+      "_paths-c0fc83a9.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-16f2767c.css"
+    ],
+    "assets": [
+      "assets/ibm-plex-sans-cyrillic-ext-400-normal-5cc4dcc1.woff2",
+      "assets/ibm-plex-sans-all-400-normal-d3d9f55b.woff",
+      "assets/ibm-plex-sans-cyrillic-400-normal-6a0b950c.woff2",
+      "assets/ibm-plex-sans-greek-400-normal-575e5b3b.woff2",
+      "assets/ibm-plex-sans-vietnamese-400-normal-09a4c493.woff2",
+      "assets/ibm-plex-sans-latin-ext-400-normal-3f23485d.woff2",
+      "assets/ibm-plex-sans-latin-400-normal-fcecb97c.woff2"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-9cafe3bc.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-591dda9d.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-1a0b619f.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-591dda9d.js",
+      "_paths-c0fc83a9.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-5604495e.css"
+    ],
+    "assets": [
+      "assets/hero-background-80197874.png",
+      "assets/mambi-icon-oulined-adc99a3e.png"
+    ]
+  },
+  "src/routes/code-of-conduct.svelte": {
+    "file": "pages/code-of-conduct.svelte-f2822802.js",
+    "src": "src/routes/code-of-conduct.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-591dda9d.js"
+    ],
+    "css": [
+      "assets/pages/code-of-conduct.svelte-a06e38ff.css"
+    ],
+    "assets": [
+      "assets/mambi-icon-oulined-adc99a3e.png"
+    ]
+  },
+  "src/routes/cfp.svelte": {
+    "file": "pages/cfp.svelte-bd9c01d7.js",
+    "src": "src/routes/cfp.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-591dda9d.js",
+      "_paths-c0fc83a9.js"
+    ],
+    "css": [
+      "assets/pages/cfp.svelte-a414c6a3.css"
+    ],
+    "assets": [
+      "assets/mambi-icon-oulined-adc99a3e.png"
+    ]
+  },
+  "_vendor-591dda9d.js": {
+    "file": "chunks/vendor-591dda9d.js",
+    "css": [
+      "assets/vendor-26e0b922.css"
+    ]
+  },
+  "_paths-c0fc83a9.js": {
+    "file": "chunks/paths-c0fc83a9.js"
+  }
+}

@@ -90,6 +90,7 @@
         <a href="/">Home</a>
         <a href="/#about">About</a>
         <a href="/cfp">Call for Proposal</a>
+        <a href="/code-of-conduct">Code of Conduct</a>
       </div>
     </div>
 

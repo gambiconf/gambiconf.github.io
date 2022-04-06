@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-5e769751.js",
+    "file": "start-238f701f.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -16,7 +16,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-f1080dce.js",
+    "file": "pages/__layout.svelte-c5b6b480.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -25,7 +25,7 @@
       "_paths-c0fc83a9.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-5e853010.css"
+      "assets/pages/__layout.svelte-72a3419b.css"
     ],
     "assets": [
       "assets/ibm-plex-sans-cyrillic-ext-400-normal-5cc4dcc1.woff2",
@@ -47,7 +47,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-68910c56.js",
+    "file": "pages/index.svelte-f21a19b6.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -56,7 +56,7 @@
       "_paths-c0fc83a9.js"
     ],
     "css": [
-      "assets/pages/index.svelte-8b703736.css"
+      "assets/pages/index.svelte-d2e1bf41.css"
     ],
     "assets": [
       "assets/hero-background-80197874.png",

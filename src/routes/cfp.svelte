@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { Circle } from 'svelte-loading-spinners'
+  import { postCfp } from '../network/cfp';
+  import Alert from '../components/Alert.svelte'
   import Tweet from '../components/Tweet.svelte'
   import type { TweetStatus } from '../components/Tweet.svelte'
 
@@ -16,6 +19,29 @@
 
   $: tweetTalkCountCharacters = 13 + name.length + title.length + description.length
   $: tweetBioCountCharacters = 19 + bio.length
+
+  let submitState: { status: 'submitting' | 'success' | 'error', message?: string } | null = null
+
+  const handleSubmit = async () => {
+    if (tweetTalkCountCharacters > 270) {
+      submitState = { status: 'error', message: 'Tweet talk exceeds 270 characters' }
+      return
+    }
+
+    if (tweetBioCountCharacters > 270) {
+      submitState = { status: 'error', message: 'Tweet bio exceeds 270 characters' }
+      return
+    }
+
+    submitState = { status: 'submitting' }
+
+    const result = await postCfp({ name, title, description, duration: Number(duration), format, bio, social, email })
+    if (result) {
+      submitState = { status: 'success', message: 'Successfully submitted' }
+    } else {
+      submitState = { status: 'error', message: 'Failed to submit' }
+    }
+  }
 </script>
 
 <style>
@@ -28,6 +54,10 @@
     min-width: 100vw;
   }
 
+  h1 {
+    margin-top: 60px;
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -35,6 +65,7 @@
     max-width: 1140px;
 
     margin: auto;
+    margin-bottom: 60px;
   }
 
   label {
@@ -59,9 +90,43 @@
     color: red;
     font-weight: bold;
   }
+
+  .alert-wrapper {
+    margin-bottom: 5px;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+
+    cursor: pointer;
+
+    background-color: #f34b21;
+    padding: 10px;
+    border: unset;
+    border-radius: 4px;
+    width: 50%;
+
+    margin-top: 20px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.4s;
+  }
+  button:hover {
+    transform: scale(0.99);
+    filter: brightness(0.9);
+  }
+
+  @media screen and (min-width: 768px) {
+    button {
+      width: 25%;
+    }
+  }
 </style>
 
-<form>
+<form on:submit|preventDefault={handleSubmit}>
   <h1>CFP</h1>
 
   <h4>Talk infos</h4>
@@ -167,4 +232,21 @@
 
   <label for="email">E-Mail for the feedback (we won't share it)</label>
   <input name="email" type="email" required bind:value={email} />
+
+  {#if submitState && submitState.status !== 'submitting'}
+    <div class="alert-wrapper">
+      <Alert status={submitState.status} message={submitState.message} />
+    </div>
+  {/if}
+
+  <button
+    type="submit"
+    disabled={submitState?.status === 'submitting'}
+  >
+    {#if submitState?.status === 'submitting'}
+      <Circle color="white" size={16} />
+    {:else}
+      Submit
+    {/if}
+  </button>
 </form>

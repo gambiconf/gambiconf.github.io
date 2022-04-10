@@ -1,40 +1,37 @@
-# create-svelte
+# <img src="/static/favicon.png" align="right" height="75px" />  GambiConf
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+> 🐒 The Blow Your Mind Conference
 
-## Creating a project
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/9501115/162629911-d01fcf9d-61be-4d3b-9503-8ab04d496554.png">
+</p>
 
-If you're seeing this, you've probably already done this step. Congrats!
+# How to run
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+1 - Clone this repo
 
-# create a new project in my-app
-npm init svelte@next my-app
+```
+git@github.com:gambiconf/gambiconf.github.io.git
 ```
 
-> Note: the `@next` is temporary
+2 - Install the dependencies
 
-## Developing
+```
+cd gambiconf.github.io.git && npm i
+```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+3 - Start the SvelteKit's development mode
 
-```bash
+```
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+4 - Then the website will be available at [`http://localhost:3000/`](http://localhost:3000/)
 
-To create a production version of your app:
+## How to deploy
 
-```bash
-npm run build
+Deploying to GitHub Pages is an easy task. Just run it:
+
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+npm run build && npm run deploy
+```

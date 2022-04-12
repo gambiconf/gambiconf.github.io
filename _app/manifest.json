@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-423049c4.js",
+    "file": "start-868b4826.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -16,7 +16,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-7c3fbb03.js",
+    "file": "pages/__layout.svelte-f8fe01f7.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -25,7 +25,7 @@
       "_paths-c0fc83a9.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-72a3419b.css"
+      "assets/pages/__layout.svelte-a6e9d4fd.css"
     ],
     "assets": [
       "assets/ibm-plex-sans-cyrillic-ext-400-normal-5cc4dcc1.woff2",

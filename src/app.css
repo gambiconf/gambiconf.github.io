@@ -10,6 +10,12 @@
   --h4-size: calc(var(--h1-size) * 0.7);
   --h5-size: calc(var(--h1-size) * 0.6);
   --h6-size: calc(var(--h1-size) * 0.5);
+
+  --header-height: 40px;
+}
+
+html {
+  scroll-padding-top: calc(var(--header-height) + 2rem);
 }
 
 h1 {
@@ -55,5 +61,11 @@ a:hover {
 @media screen and (min-width: 768px) {
   body {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }

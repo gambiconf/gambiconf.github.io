@@ -9,6 +9,7 @@
     width: 100vw;
     z-index: 1;
     height: var(--header-height);
+
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0px 2px 15px 2px rgb(0 0 0 / 5%);
   }

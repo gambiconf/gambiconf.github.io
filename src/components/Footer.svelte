@@ -91,6 +91,13 @@
         <a href="/#about">About</a>
         <a href="/cfp">Call for Proposal</a>
         <a href="/code-of-conduct">Code of Conduct</a>
+        <a
+          href="https://docs.google.com/presentation/d/1u-VWUl92qNr1i_zEcqSdXwLXpwsT6pTl6CIVoA-WrMg/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Media Kit
+        </a>
       </div>
     </div>
 

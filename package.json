@@ -2,7 +2,7 @@
   "name": "gambiconf",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev --port 80",
+    "dev": "svelte-kit dev",
     "build": "svelte-kit build && touch ./build/.nojekyll && echo \"gambiconf.dev\" > ./build/CNAME",
     "deploy": "gh-pages -d build -t true",
     "package": "svelte-kit package",

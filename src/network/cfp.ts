@@ -10,7 +10,7 @@ type PostCfpParams = {
 }
 
 const postCfp = async (params: PostCfpParams) => {
-  const response = await fetch('test', {
+  const response = await fetch('https://ziqr6rpq3j.execute-api.us-east-1.amazonaws.com/production/cfp', {
     method: 'POST',
     body: JSON.stringify(params),
   })

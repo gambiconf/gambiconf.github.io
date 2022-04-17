@@ -37,8 +37,14 @@
       <p>
         It features projects and ideas that are definitely outside the box. Let's expand the boundaries of
         what's possible, unlocking unknown knowledge—just like we did in the 2021 edition when we learned
-        <a href="https://www.youtube.com/watch?v=UWiXNTdmL2Q">how to build computers using only water</a>
-        and <a href="https://www.youtube.com/watch?v=_-o3ToBC0AI">how to run DOOM on an oscilloscope</a>!
+        <a href="https://www.youtube.com/watch?v=UWiXNTdmL2Q" target="_blank" rel="noopener">
+          how to build computers using only water
+        </a>
+        and
+        <a href="https://www.youtube.com/watch?v=_-o3ToBC0AI" target="_blank" rel="noopener">
+          how to run DOOM on an oscilloscope
+        </a>
+        !
       </p>
 
       <p>
@@ -49,9 +55,9 @@
       </p>
 
       <p>
-        Based on conferences like <a href="https://bangbangcon.com/">!!Con</a> and <a href="http://sigbovik.org/">SIGBOVIK</a>,
-        we organized the first edition of GambiConf last year in Brazil in Portuguese. Now, we want to bring
-        the event to Portugal in English!
+        Based on conferences like <a href="https://bangbangcon.com/" target="_blank" rel="noopener">!!Con</a> and
+        <a href="http://sigbovik.org/" target="_blank" rel="noopener">SIGBOVIK</a>, we organized the first edition
+        of GambiConf last year in Brazil in Portuguese. Now, we want to bring the event to Portugal in English!
       </p>
 
       <p>

@@ -9,6 +9,11 @@ const config = {
 
 	kit: {
 		adapter: staticAdapter(),
+    vite: {
+      optimizeDeps: {
+        include: "debug"
+      },
+    },
 		prerender: {
 			default: true,
 		},

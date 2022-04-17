@@ -1,10 +1,14 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import { Circle } from 'svelte-loading-spinners'
   import { postCfp } from '../network/cfp';
   import Alert from '../components/Alert.svelte'
   import Tweet from '../components/Tweet.svelte'
   import type { TweetStatus } from '../components/Tweet.svelte'
+  import { Recaptcha, recaptcha, observer } from "svelte-recaptcha-v2"
 
+  const googleRecaptchaSiteKey = "6LeXSH8fAAAAADiCGSRY378WssqrM25p5nNFAu2w"
+  
   let name = ''
   let title = ''
   let description = ''
@@ -23,6 +27,7 @@
   let submitState: { status: 'submitting' | 'success' | 'error', message?: string } | null = null
 
   const handleSubmit = async () => {
+    recaptcha.execute()
     if (tweetTalkCountCharacters > 270) {
       submitState = { status: 'error', message: 'Tweet talk exceeds 270 characters' }
       return
@@ -33,15 +38,20 @@
       return
     }
 
+    const event = await Promise.resolve(observer);
+
+    const recaptchaToken = event.detail?.token ? event.detail.token : false;
+
     submitState = { status: 'submitting' }
 
     const result = await postCfp({ name, title, description, duration: Number(duration), format, bio, social, email })
-    if (result) {
+    if (result && recaptchaToken) {
       submitState = { status: 'success', message: 'Successfully submitted' }
     } else {
       submitState = { status: 'error', message: 'Failed to submit' }
     }
   }
+
 </script>
 
 <style>
@@ -238,6 +248,12 @@
       <Alert status={submitState.status} message={submitState.message} />
     </div>
   {/if}
+
+  <Recaptcha
+    sitekey={googleRecaptchaSiteKey}
+    badge={"buttomright"}
+    size={"invisible"}
+  />
 
   <button
     type="submit"

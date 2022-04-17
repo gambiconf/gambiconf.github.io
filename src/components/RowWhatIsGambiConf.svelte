@@ -53,6 +53,18 @@
         we organized the first edition of GambiConf last year in Brazil in Portuguese. Now, we want to bring
         the event to Portugal in English!
       </p>
+
+      <p>
+        You can check
+        <a
+          href="https://macabeus.medium.com/gambiconf-why-do-we-need-a-new-tech-event-4ff3302cf3d"
+          target="_blank"
+          rel="noopener"
+        >
+          our presentation post
+        </a>
+        to find out more about our purpose.
+      </p>
     </div>
   </Window>
 </div>

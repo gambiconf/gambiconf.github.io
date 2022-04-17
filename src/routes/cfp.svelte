@@ -7,7 +7,7 @@
   import type { TweetStatus } from '../components/Tweet.svelte'
   import { Recaptcha, recaptcha, observer } from "svelte-recaptcha-v2"
 
-  const googleRecaptchaSiteKey = "6LeXSH8fAAAAADiCGSRY378WssqrM25p5nNFAu2w"
+  const googleRecaptchaSiteKey = "6LfUgH8fAAAAAPbpxPErEvt5F9_P-Y4ySvrZmFgx"
   
   let name = ''
   let title = ''
@@ -253,6 +253,7 @@
     sitekey={googleRecaptchaSiteKey}
     badge={"buttomright"}
     size={"invisible"}
+    on:success
   />
 
   <button

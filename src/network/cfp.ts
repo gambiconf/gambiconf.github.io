@@ -6,7 +6,8 @@ type PostCfpParams = {
   format: string
   bio: string
   social: string
-  email: string
+  email: string,
+  token: string
 }
 
 const postCfp = async (params: PostCfpParams) => {

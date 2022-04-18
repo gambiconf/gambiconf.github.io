@@ -1,3 +1,7 @@
+<svelte:head>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</svelte:head>
+
 <script lang="ts">
   import { onMount } from 'svelte'
   import { Circle } from 'svelte-loading-spinners'
@@ -5,9 +9,8 @@
   import Alert from '../components/Alert.svelte'
   import Tweet from '../components/Tweet.svelte'
   import type { TweetStatus } from '../components/Tweet.svelte'
-  import { Recaptcha, recaptcha, observer } from "svelte-recaptcha-v2"
 
-  const googleRecaptchaSiteKey = "6LfUgH8fAAAAAPbpxPErEvt5F9_P-Y4ySvrZmFgx"
+  const googleRecaptchaSiteKey = ""
   
   let name = ''
   let title = ''
@@ -27,7 +30,6 @@
   let submitState: { status: 'submitting' | 'success' | 'error', message?: string } | null = null
 
   const handleSubmit = async () => {
-    recaptcha.execute()
     if (tweetTalkCountCharacters > 270) {
       submitState = { status: 'error', message: 'Tweet talk exceeds 270 characters' }
       return
@@ -37,20 +39,29 @@
       submitState = { status: 'error', message: 'Tweet bio exceeds 270 characters' }
       return
     }
-
-    const event = await Promise.resolve(observer);
-
-    const recaptchaToken = event.detail?.token ? event.detail.token : false;
-
+        
     submitState = { status: 'submitting' }
 
-    const result = await postCfp({ name, title, description, duration: Number(duration), format, bio, social, email })
-    if (result && recaptchaToken) {
+    const token = grecaptcha.getResponse()
+
+    if (!token) {
+      submitState = { status: 'error', message: 'reCaptcha failed' }
+      return false;
+    }
+
+    const result = await postCfp({ name, title, description, duration: Number(duration), format, bio, social, email, token })
+    if (result && token) {
       submitState = { status: 'success', message: 'Successfully submitted' }
     } else {
       submitState = { status: 'error', message: 'Failed to submit' }
     }
   }
+
+  onMount(async () => {
+    window.grecaptcha.ready(() => {
+      grecaptcha.render('g-recaptcha', { sitekey: googleRecaptchaSiteKey })
+    })
+  })
 
 </script>
 
@@ -249,12 +260,7 @@
     </div>
   {/if}
 
-  <Recaptcha
-    sitekey={googleRecaptchaSiteKey}
-    badge={"buttomright"}
-    size={"invisible"}
-    on:success
-  />
+  <div id="g-recaptcha" required></div>
 
   <button
     type="submit"

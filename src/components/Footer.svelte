@@ -7,6 +7,7 @@
   import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
   import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
   import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+  import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube'
 </script>
 
 <style>
@@ -70,6 +71,12 @@
     .logo-image {
       height: 150px;
     }
+
+    .social-links-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 5px;
+    }
   }
 </style>
 
@@ -107,7 +114,7 @@
       <div>
         <a href="mailto:mambi@gambiconf.dev" class="email">mambi@gambiconf.dev</a>
 
-        <div>
+        <div class="social-links-container">
           <a
             href="https://twitter.com/gambiconf"
             target="_blank"
@@ -180,6 +187,25 @@
                 color="white"
                 scale={0.6}
                 icon={faLinkedin}
+              />
+            </FaLayers>
+          </a>
+
+          <a
+            href="https://www.youtube.com/channel/UCnTbfjNNWxFMyqW-d2QgHYw/featured"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube"
+            class="social-media-icon"
+          >
+            <FaLayers size="2x">
+              <Fa
+                icon={faCircle}
+              />
+              <Fa
+                color="white"
+                scale={0.6}
+                icon={faYoutube}
               />
             </FaLayers>
           </a>

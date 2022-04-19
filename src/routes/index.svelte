@@ -3,6 +3,7 @@
   import Hero from '../components/Hero.svelte'
   import RowCFP from '../components/RowCfp.svelte'
   import RowWhereAndWhen from '../components/RowWhereAndWhen.svelte'
+  import RowPartners from '../components/RowPartners.svelte'
   import RowWhatIsGambiConf from '../components/RowWhatIsGambiConf.svelte'
 </script>
 
@@ -50,4 +51,10 @@
   </div>
 
   <RowCFP />
+
+  <div class="bullters-gutter-wrapper">
+    <BulletsGutter />
+  </div>
+
+  <RowPartners />
 </div>

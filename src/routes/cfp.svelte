@@ -10,7 +10,7 @@
   import Tweet from '../components/Tweet.svelte'
   import type { TweetStatus } from '../components/Tweet.svelte'
 
-  const googleRecaptchaSiteKey = ""
+  const googleRecaptchaSiteKey = process.env.googleRecaptcha
   
   let name = ''
   let title = ''

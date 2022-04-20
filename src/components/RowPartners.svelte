@@ -7,6 +7,7 @@
   .content {
     display: grid;
     justify-items: center;
+    gap: 25px;
 
     padding: 25px;
   }
@@ -23,7 +24,7 @@
 
   @media screen and (min-width: 768px) {
     .content {
-      justify-items: start;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 </style>
@@ -39,6 +40,18 @@
         class="ellipsis"
         src={`${assets}/podcast-fronteiras.svg`}
         alt="Logo of the podcast 'Fronteiras da Engenharia de Software'"
+      />
+    </a>
+
+    <a
+      href="https://www.reaktor.com"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        class="ellipsis"
+        src={`${assets}/reaktor.svg`}
+        alt="Reaktor logo"
       />
     </a>
   </div>

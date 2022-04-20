@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-81da70d7.js",
+    "file": "start-2d20dca0.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -47,7 +47,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-0bf6d20b.js",
+    "file": "pages/index.svelte-e36048da.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -56,7 +56,7 @@
       "_paths-c0fc83a9.js"
     ],
     "css": [
-      "assets/pages/index.svelte-567bd6ea.css"
+      "assets/pages/index.svelte-6467a0b2.css"
     ],
     "assets": [
       "assets/hero-background-80197874.png",

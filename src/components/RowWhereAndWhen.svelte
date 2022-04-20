@@ -43,7 +43,7 @@
     </div>
 
     <div>
-      <p>On the 3rd of September, the event is in person in Reaktor:</p>
+      <p>On the 3rd of September, the event is in person in <a href="https://www.reaktor.com/lisbon/">Reaktor</a>:</p>
 
       <address>
         Largo do Duque de Cadaval 17<br />

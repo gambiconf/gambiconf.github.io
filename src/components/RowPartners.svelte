@@ -24,7 +24,7 @@
 
   @media screen and (min-width: 768px) {
     .content {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 </style>
@@ -52,6 +52,18 @@
         class="ellipsis"
         src={`${assets}/reaktor.svg`}
         alt="Reaktor logo"
+      />
+    </a>
+
+    <a
+      href="https://docs.google.com/presentation/d/1u-VWUl92qNr1i_zEcqSdXwLXpwsT6pTl6CIVoA-WrMg/edit?usp=sharing"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        class="ellipsis"
+        src={`${assets}/become-a-partner.png`}
+        alt="The GambiConf mascot holding a lifting a board written 'Become a partner'"
       />
     </a>
   </div>

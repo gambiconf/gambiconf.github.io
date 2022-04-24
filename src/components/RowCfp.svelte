@@ -24,7 +24,7 @@
     justify-content: center;
   }
 
-  a {
+  .button-cfp {
     background-color: #f34b21;
     padding: 10px;
     border-radius: 4px;
@@ -36,10 +36,10 @@
 
     transition: 0.4s;
   }
-  a:visited {
+  .button-cfp:visited {
     color: white;
   }
-  a:hover {
+  .button-cfp:hover {
     transform: scale(0.99);
     filter: brightness(0.9);
   }
@@ -74,13 +74,24 @@
         </p>
 
         <p>
+          Are you willing to speak at GambiConf, but don't know what to talk about?
+          <a
+            href="https://threadreaderapp.com/thread/1518259526243393536.html"
+            target="_blank"
+            rel="noopener"
+          >
+            Click here.
+          </a>
+        </p>
+
+        <p>
           The deadline is May 22.
         </p>
       </div>
     </div>
 
     <div class="button">
-      <a href="/cfp">Apply to the CFP</a>
+      <a class="button-cfp" href="/cfp">Apply to the CFP</a>
     </div>
   </div>
 </Window>

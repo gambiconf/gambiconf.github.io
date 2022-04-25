@@ -97,6 +97,13 @@
         <a href="/">Home</a>
         <a href="/#about">About</a>
         <a href="/cfp">Call for Proposal</a>
+        <a
+          href="https://gambiconf.dev/2021"
+          target="_blank"
+          rel="noopener"
+        >
+          2021 Edition
+        </a>
         <a href="/code-of-conduct">Code of Conduct</a>
         <a
           href="https://docs.google.com/presentation/d/1u-VWUl92qNr1i_zEcqSdXwLXpwsT6pTl6CIVoA-WrMg/edit?usp=sharing"

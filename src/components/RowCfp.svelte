@@ -85,7 +85,7 @@
         </p>
 
         <p>
-          The deadline is May 22.
+          The deadline is May 29.
         </p>
       </div>
     </div>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import Calendar from './Calendar.svelte'
   import Window from './Window.svelte'
+  import Button from './Button.svelte'
 </script>
 
 <style>
@@ -20,8 +21,13 @@
     margin-top: 0;
   }
 
-  .content p:last-of-type {
-    margin-bottom: 0;
+  .actions {
+    display: flex;
+    gap: 25px
+  }
+
+  .avoid-wrap {
+    display:inline-block;
   }
 
   @media screen and (min-width: 768px) {
@@ -56,6 +62,20 @@
       <p>
         Free streaming for both days on <a href="https://www.youtube.com/channel/UCnTbfjNNWxFMyqW-d2QgHYw">YouTube</a>
       </p>
+
+      <div class="actions">
+        <Button
+          url="https://www.eventbrite.com/e/gambiconf-eu-in-person-day-3-september-tickets-358129012517"
+        >
+          Register for the <span class="avoid-wrap">in-person day</span>
+        </Button>
+
+        <Button
+          url="https://www.eventbrite.com/e/gambiconf-eu-online-day-10-september-tickets-358997881327"
+        >
+          Register for the <span class="avoid-wrap">online day</span>
+        </Button>
+      </div>
     </div>
   </div>
 </Window>

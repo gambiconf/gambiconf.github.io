@@ -1,5 +1,6 @@
 <script lang="ts">
   import { assets } from '$app/paths'
+  import Button from './Button.svelte'
 </script>
 
 <style>
@@ -77,6 +78,10 @@
     opacity: 60%;
   }
 
+  .action {
+    margin-top: 25px;
+  }
+
   @media screen and (min-width: 768px) {
     .mascot {
       width: auto;
@@ -135,5 +140,13 @@
     <p class="hours">
       14:00 - 19:00
     </p>
+
+    <div class="action">
+      <Button
+        url="https://www.eventbrite.com/cc/gambiconf-eu-464079"
+      >
+        Register now for free!
+      </Button>
+    </div>
   </div>
 </section>

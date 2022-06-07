@@ -57,11 +57,5 @@
     <BulletsGutter />
   </div>
 
-  <RowCFP />
-
-  <div class="bullters-gutter-wrapper">
-    <BulletsGutter />
-  </div>
-
   <RowPartners />
 </div>

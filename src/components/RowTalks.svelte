@@ -150,6 +150,33 @@
         <div class="division" />
       </div>
 
+      <Talk
+        talkTitle="Network Technocracy: A Tale of Monitoring, Spoofing, Intercepting and Social Engineering"
+        speakerName="@rlaneth"
+        speakerImage={`${assets}/speakers/rlaneth.jpg`}
+        socialLinks={[
+          { type: 'twitter', url: 'https://twitter.com/rlaneth' },
+          { type: 'github', url: 'https://github.com/rlaneth' },
+          { type: 'linkedin', url: 'https://www.linkedin.com/in/rlaneth' },
+          { type: 'website', url: 'https://rlaneth.com' },
+        ]}
+      >
+          <p slot="talkDescription">
+            Forced to use a SOHO router he was given no permission to manage, Rodrigo Laneth embarks on a journey
+            to regain control over his personal network segment.
+          </p>
+
+          <p slot="speakerBio">
+            Laneth dedicates most of his time to the projects of Miralium, his own micro-sized cybersecurity company.
+            Likes anime, network protocols and typography. Likes flight simulators too, but is wary of actual flight.
+            Dislikes developing web apps with React
+          </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <p class="more-talks">
         More talks will be revealed weekly! Be the first to know by following us on <a href="https://twitter.com/gambiconf">Twitter</a>!
       </p>

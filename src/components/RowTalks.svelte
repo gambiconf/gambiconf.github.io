@@ -92,6 +92,28 @@
         <div class="division" />
       </div>
 
+      <Talk
+        talkTitle="Why are you making your own programming language?"
+        speakerName="@TheEduardoRFS"
+        speakerImage={`${assets}/speakers/theeduardorfs.jpeg`}
+        socialLinks={[
+          { type: 'github', url: 'https://github.com/EduardoRFS' },
+          { type: 'twitch', url: 'https://twitch.tv/eduardorfs' },
+        ]}
+      >
+        <p slot="talkDescription">
+          I will be trying to convince you, that making a programming language is not a complete stupid idea and how to do that without hurting everyone.
+        </p>
+
+        <p slot="speakerBio">
+          I like to describe myself as anti floating point, also I'm currently on the team Taylor Swift + programming languages.
+        </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <p class="more-talks">
         More talks will be revealed weekly! Be the first to know by following us on <a href="https://twitter.com/gambiconf">Twitter</a>!
       </p>

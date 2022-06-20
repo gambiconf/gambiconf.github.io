@@ -199,6 +199,31 @@
         <div class="division" />
       </div>
 
+      <Talk
+        talkTitle="Finding and creating gambiarras with python ASTs"
+        speakerName="@devmessias"
+        speakerImage={`${assets}/speakers/brunomessias.png`}
+        socialLinks={[
+          { type: 'github', url: 'https://github.com/devmessias' },
+          { type: 'website', url: 'https://devmessias.github.io' },
+        ]}
+      >
+          <p slot="talkDescription">
+            Let's talk about how PyASTrX can find messy stuff in your codebase, then discuss a chaotic approach using
+            metaprogramming with ASTs to create new behaviors in the sklearn pipelines
+          </p>
+
+          <p slot="speakerBio">
+            I'm passionate about how we can use computers and math to solve real and abstract problems.
+            I've experience developing open-software projects and community management.
+            Today I work at <a href="https://twitter.com/idwall_co">@idwall_co</a> and pursuing my Ph.D. in graphs(ML) and survey analysis.
+          </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <p class="more-talks">
         More talks will be revealed weekly! Be the first to know by following us on <a href="https://twitter.com/gambiconf">Twitter</a>!
       </p>

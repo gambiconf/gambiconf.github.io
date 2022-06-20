@@ -74,7 +74,12 @@
     <slot name="talkDescription" />
 
     <h6 class="talk-speaker">
-      By {speakerName}:
+      By
+      {#if speakerName[0] === '@'}
+        <a href={`https://twitter.com/${speakerName}`}>{speakerName}</a>:
+      {:else}
+        {speakerName}:
+      {/if}
     </h6>
 
     <slot name="speakerBio" />

@@ -83,7 +83,7 @@
           </p>
 
           <p slot="speakerBio">
-            <a href="https://twitter.com/tijnosaurus">@tijnosaurus</a> is a software engineer at Reaktor.
+            Tijn is a software engineer at Reaktor.
             He mainly writes TypeScript during the day, and likes to tinker around with esoteric compilers after office hours.
           </p>
       </Talk>

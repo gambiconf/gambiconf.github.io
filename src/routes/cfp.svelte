@@ -1,10 +1,17 @@
+<svelte:head>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</svelte:head>
+
 <script lang="ts">
+  import { onMount } from 'svelte'
   import { Circle } from 'svelte-loading-spinners'
   import { postCfp } from '../network/cfp';
   import Alert from '../components/Alert.svelte'
   import Tweet from '../components/Tweet.svelte'
   import type { TweetStatus } from '../components/Tweet.svelte'
 
+  const googleRecaptchaSiteKey = process.env.googleRecaptcha
+  
   let name = ''
   let title = ''
   let description = ''
@@ -32,16 +39,30 @@
       submitState = { status: 'error', message: 'Tweet bio exceeds 270 characters' }
       return
     }
-
+        
     submitState = { status: 'submitting' }
 
-    const result = await postCfp({ name, title, description, duration: Number(duration), format, bio, social, email })
-    if (result) {
+    const token = grecaptcha.getResponse()
+
+    if (!token) {
+      submitState = { status: 'error', message: 'reCaptcha failed' }
+      return false;
+    }
+
+    const result = await postCfp({ name, title, description, duration: Number(duration), format, bio, social, email, token })
+    if (result && token) {
       submitState = { status: 'success', message: 'Successfully submitted' }
     } else {
       submitState = { status: 'error', message: 'Failed to submit' }
     }
   }
+
+  onMount(async () => {
+    window.grecaptcha.ready(() => {
+      grecaptcha.render('g-recaptcha', { sitekey: googleRecaptchaSiteKey })
+    })
+  })
+
 </script>
 
 <style>
@@ -238,6 +259,8 @@
       <Alert status={submitState.status} message={submitState.message} />
     </div>
   {/if}
+
+  <div id="g-recaptcha" required></div>
 
   <button
     type="submit"

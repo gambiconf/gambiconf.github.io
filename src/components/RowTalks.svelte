@@ -224,6 +224,31 @@
         <div class="division" />
       </div>
 
+      <Talk
+        talkTitle="Building a serverless PHP Laravel application using Laravel Vapor"
+        speakerName="Bruno Francisco"
+        speakerImage={`${assets}/speakers/bruno-francisco.jpeg`}
+        socialLinks={[
+          { type: 'github', url: 'https://github.com/CharlieBrownCharacter' },
+          { type: 'linkedin', url: 'https://www.linkedin.com/in/bfrancisco11/' },
+          { type: 'website', url: 'https://codotto.com/users/fb2ca7cc-0f94-4d6a-a470-0ba4466f6ba7/brunofrancisco' },
+        ]}
+      >
+        <p slot="talkDescription">
+          <a href="https://codotto.com/">Codotto</a> aims to be a platform for IT communities where they organize meetups.
+          We'll cover how we built a serverless application that can handle millions of requests per minute
+        </p>
+
+        <p slot="speakerBio">
+          My name is Bruno. I have worked 6 years as a Software Engineer in multiple companies and now I'm focusing on building solutions that are scalable and secure.
+          Currently I'm interested in PHP (Laravel) and JS/TS (Vue)
+        </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <p class="more-talks">
         More talks will be revealed weekly! Be the first to know by following us on <a href="https://twitter.com/gambiconf">Twitter</a>!
       </p>

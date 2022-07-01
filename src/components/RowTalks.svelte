@@ -114,6 +114,30 @@
         <div class="division" />
       </div>
 
+      <Talk
+        talkTitle="The Genesis of a Universal Video Transcoder"
+        speakerName="Blagoj Jovanov"
+        speakerImage={`${assets}/speakers/blagoj-jovanov.jpeg`}
+        socialLinks={[
+          { type: 'linkedin', url: 'https://www.linkedin.com/in/blagoj-jovanov-2a79b239/' },
+        ]}
+      >
+        <p slot="talkDescription">
+          This is a story which starts with screen capturing, continues with automation of UI processes and
+          finally evolves in the art of extreme reverse engineering by the means of deep dive into hex code.
+        </p>
+
+        <p slot="speakerBio">
+          Blagoj is working as a Senior Software Engineer at Swiss software company Netcetera.
+          He started as a fullstack developer (Spring Boot + Angular).
+          Currently he is Lead Dev of a SAFe team consisting of 10+ people working in challenging environment.
+        </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <p class="more-talks">
         More talks will be revealed weekly! Be the first to know by following us on <a href="https://twitter.com/gambiconf">Twitter</a>!
       </p>

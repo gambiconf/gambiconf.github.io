@@ -6,6 +6,7 @@
 <style>
   .content {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     gap: 25px;
 
@@ -13,7 +14,7 @@
   }
 
   .content img {
-    max-height: 175px;
+    max-height: 100px;
     transition: filter 0.75s;
     filter: grayscale(1);
   }
@@ -23,8 +24,8 @@
   }
 
   @media screen and (min-width: 768px) {
-    .content {
-      grid-template-columns: repeat(3, 1fr);
+    .content img {
+      max-height: 175px;
     }
   }
 </style>
@@ -50,6 +51,17 @@
       <img
         src={`${assets}/reaktor.svg`}
         alt="Reaktor logo"
+      />
+    </a>
+
+    <a
+      href="https://www.cumbuca.com/"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src={`${assets}/cumbuca.png`}
+        alt="Cumbuca logo"
       />
     </a>
 

@@ -31,7 +31,7 @@
     height: 50vh;
     width: 100%;
 
-    top: 350px;
+    top: 85%;
   }
   .mascot img {
     max-height: 100%;
@@ -90,7 +90,7 @@
       top: auto;
       right: 230px;
 
-      margin-top: 15vh;
+      margin-top: 20vh;
     }
 
     .message {

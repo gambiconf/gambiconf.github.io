@@ -102,7 +102,6 @@
       <div>
         <a href="/">Home</a>
         <a href="/#about">About</a>
-        <a href="/cfp">Call for Proposal</a>
         <a
           href="https://gambiconf.dev/2021"
           target="_blank"

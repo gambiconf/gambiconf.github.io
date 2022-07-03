@@ -37,7 +37,6 @@
       rel="noopener"
     >
       <img
-        class="ellipsis"
         src={`${assets}/podcast-fronteiras.svg`}
         alt="Logo of the podcast 'Fronteiras da Engenharia de Software'"
       />
@@ -49,7 +48,6 @@
       rel="noopener"
     >
       <img
-        class="ellipsis"
         src={`${assets}/reaktor.svg`}
         alt="Reaktor logo"
       />
@@ -61,7 +59,6 @@
       rel="noopener"
     >
       <img
-        class="ellipsis"
         src={`${assets}/become-a-partner.png`}
         alt="The GambiConf mascot holding a lifting a board written 'Become a partner'"
       />

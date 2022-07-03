@@ -15,13 +15,15 @@
     background-color: white;
     border-top: 1px solid #ddd;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    text-align: center;
   }
 
   .content-wrapper {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    gap: 10px;
 
     max-width: 1140px;
 
@@ -61,6 +63,10 @@
   }
 
   @media screen and (min-width: 768px) {
+    footer {
+      text-align: left;
+    }
+
     .content-wrapper {
       flex-direction: row;
 

@@ -273,6 +273,28 @@
         <div class="division" />
       </div>
 
+      <Talk
+        talkTitle="Klonoa in Sonic 1"
+        speakerName="Barak Shahino"
+        speakerImage={`${assets}/speakers/barak-shahino.png`}
+        socialLinks={[
+          { type: 'twitter', url: 'https://twitter.com/barakshahino' },
+        ]}
+      >
+        <p slot="talkDescription">
+          I am working on a Sonic 1 ROM hack where I attempt to replicate Klonoa's gameplay mechanics in place of Sonic's
+        </p>
+
+        <p slot="speakerBio">
+          I'm a big fan of different Medias and a big Sonic The Hedgehog fan.
+          I have interest in drawing and programming and just recently finished a course in Software QA.
+        </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <p class="more-talks">
         More talks will be revealed weekly! Be the first to know by following us on <a href="https://twitter.com/gambiconf">Twitter</a>!
       </p>

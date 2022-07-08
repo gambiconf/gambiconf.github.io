@@ -138,6 +138,32 @@
         <div class="division" />
       </div>
 
+      <Talk
+        talkTitle="Weird Machines: Exploiting Turing-Completeness"
+        speakerName="Pedro Castilho"
+        speakerImage={`${assets}/speakers/pedro-castilho.jpeg`}
+        socialLinks={[
+          { type: 'github', url: 'https://www.github.com/coproduto' },
+          { type: 'twitter', url: 'https://twitter.com/coproduto' },
+          { type: 'linkedin', url: 'https://www.linkedin.com/in/pcstl' },
+        ]}
+      >
+        <p slot="talkDescription">
+          There are tiny machines everywhere in your computer, in your motherboard, your network stack, even your fonts.
+          We'll be learning how to make them do our bidding - for fun, of course!
+        </p>
+
+        <p slot="speakerBio">
+          Pedro Castilho (<a href="https://twitter.com/coproduto">@coproduto</a>) is a Brazilian software developer.
+          He spends most of his time either working at <a href="https://twitter.com/appcumbuca">@appcumbuca</a>, writing Elixir code
+          or thinking about little computers running quietly inside your fonts.
+        </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <p class="more-talks">
         More talks will be revealed weekly! Be the first to know by following us on <a href="https://twitter.com/gambiconf">Twitter</a>!
       </p>

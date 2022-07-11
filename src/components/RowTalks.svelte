@@ -321,6 +321,30 @@
         <div class="division" />
       </div>
 
+      <Talk
+        talkTitle="My Blog is Hilariously Overengineered to the Point People Think it's a Static Site"
+        speakerName="@theprincessxena"
+        speakerImage={`${assets}/speakers/theprincessxena.png`}
+        socialLinks={[
+          { type: 'github', url: 'https://github.com/Xe' },
+          { type: 'website', url: 'https://christine.website' },
+        ]}
+      >
+        <p slot="talkDescription">
+          Dynamic webapps don't have to be slow. In this talk I will break out how I overengineered my blog with Rust
+          to the point that people think it's a static site.
+        </p>
+
+        <p slot="speakerBio">
+          Xe Iaso is the archmage of infrastructure at Tailscale. Xe writes a lot about tech, philosophy and original short stories.
+          Xe likes chaotic good computing and can usually be seen to be up to no good on Twitch.
+        </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <p class="more-talks">
         More talks will be revealed weekly! Be the first to know by following us on <a href="https://twitter.com/gambiconf">Twitter</a>!
       </p>

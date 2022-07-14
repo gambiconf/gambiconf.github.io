@@ -164,9 +164,26 @@
         <div class="division" />
       </div>
 
-      <p class="more-talks">
-        More talks will be revealed weekly! Be the first to know by following us on <a href="https://twitter.com/gambiconf">Twitter</a>!
-      </p>
+      <Talk
+        talkTitle="styled-ppx: How to mimic a JavaScript feature and over-engineering CSS"
+        speakerName="@davesnx"
+        speakerImage={`${assets}/speakers/davesnx.jpg`}
+        socialLinks={[
+          { type: 'github', url: 'https://www.github.com/davesnx' },
+          { type: 'website', url: 'https://www.sancho.dev' },
+          { type: 'twitter', url: 'https://twitter.com/davesnx' },
+        ]}
+      >
+        <p slot="talkDescription">
+          I will meticulously explain the problem, a few possible solutions and the over-engineered approach that I endup with.
+          Frontend, ReScript FFI bindings to JavaScript, and ppxes.
+        </p>
+
+        <p slot="speakerBio">
+          I'm a Barcelona based software engineer. Trying to make cute software with Reason and OCaml.
+          I co-host EmelleTV a streaming show talking about these languages. I currently work at Ahrefs, building styled-ppx.
+        </p>
+      </Talk>
 
       <div class="division-wrapper">
         <div class="division" />

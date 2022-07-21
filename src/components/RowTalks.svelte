@@ -362,6 +362,30 @@
         <div class="division" />
       </div>
 
+      <Talk
+        talkTitle="A One Woman Show of Migrating an Entire R&D SCM From Bitbucket Cloud to a Self-Hosted GitLab"
+        speakerName="@Hilafish1"
+        speakerImage={`${assets}/speakers/hilafish1.jpeg`}
+        socialLinks={[
+          { type: 'linkedin', url: 'https://www.linkedin.com/in/hila-fish' },
+          { type: 'twitter', url: 'https://twitter.com/Hilafish1' },
+        ]}
+      >
+        <p slot="talkDescription">
+          I'll share my journey of migrating an entire R&D's codebase from BitBucket to GitLab on my own.
+          you'll gain takeaways you could adopt for your projects!
+        </p>
+
+        <p slot="speakerBio">
+          Hila Fish is a Senior DevOps Engineer at Wix. She believes the DevOps culture is what drives a company to perform in its best,
+          and carries the vision to enhance and stabilize the business by taking care of its infrastructure.
+        </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <p class="more-talks">
         More talks will be revealed weekly! Be the first to know by following us on <a href="https://twitter.com/gambiconf">Twitter</a>!
       </p>

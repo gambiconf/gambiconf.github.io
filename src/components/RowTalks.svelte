@@ -31,11 +31,6 @@
     width: 70%;
     background-color: #f34b2133;
   }
-
-  .more-talks {
-    font-weight: bolder;
-    text-align: center;
-  }
 </style>
 
 <div id="talks">
@@ -386,9 +381,26 @@
         <div class="division" />
       </div>
 
-      <p class="more-talks">
-        More talks will be revealed weekly! Be the first to know by following us on <a href="https://twitter.com/gambiconf">Twitter</a>!
-      </p>
+      <Talk
+        talkTitle="Resurrecting ancient routers for fun and necessity"
+        speakerName="Fernão Vellozo"
+        speakerImage={`${assets}/speakers/fernao-vellozo.jpeg`}
+        socialLinks={[
+          { type: 'github', url: 'https://www.github.com/fvellozo' },
+          { type: 'linkedin', url: 'https://www.linkedin.com/in/fernaovellozo' },
+          { type: 'facebook', url: 'https://www.facebook.com/fernao.vellozo' },
+        ]}
+      >
+        <p slot="talkDescription">
+          In this talk, we will discuss some tricks and "gambiarras" that are still viable in order to extend the
+          lifecycle of firmwares for routers with 4 to 8 MB of flash space and 32 to 64 MB of RAM.
+        </p>
+
+        <p slot="speakerBio">
+          History teacher who became a sysadmin. GNU/Linux user since 1999, specialist in all sorts of gambiarras and
+          an enthusiast of free software and other non-liberticide technologies.
+        </p>
+      </Talk>
     </article>
   </Window>
 </div>

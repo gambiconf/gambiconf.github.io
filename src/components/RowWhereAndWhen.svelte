@@ -49,12 +49,12 @@
     </div>
 
     <div>
-      <p>On the 3rd of September, the event is in person in <a href="https://www.reaktor.com/lisbon/">Reaktor</a>:</p>
+      <p>On the 3rd of September, the event is in person in <a href="https://www.42lisboa.com/en/">42 Lisboa</a>:</p>
 
       <address>
-        Largo do Duque de Cadaval 17<br />
+        Penha de França, at Rua Neves Ferreira nº13, 1170-273<br />
         Lisbon, Portugal<br />
-        <a href="https://goo.gl/maps/eMAancyj5pRT7E2cA">See on Google Maps</a>
+        <a href="https://goo.gl/maps/dFLBWL328PrB8SQk9">See on Google Maps</a>
       </address>
 
       <p>On the 10th of September, the event is only online.</p>

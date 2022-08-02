@@ -33,6 +33,17 @@
 <Window title="Partners">
   <div class="content">
     <a
+      href="https://www.42lisboa.com/en/"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src={`${assets}/42-lisboa.png`}
+        alt="42 Lisboa logo"
+      />
+    </a>
+
+    <a
       href="https://anchor.fm/fronteirases"
       target="_blank"
       rel="noopener"

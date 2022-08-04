@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-bd940c5f.js",
+    "file": "start-d232a135.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-2f14ed6e.js",
+      "_vendor-135f0ed2.js",
       "_paths-c0fc83a9.js"
     ],
     "dynamicImports": [
@@ -16,12 +16,12 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-31dcd7ce.js",
+    "file": "pages/__layout.svelte-32cc0054.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-2f14ed6e.js",
+      "_vendor-135f0ed2.js",
       "_paths-c0fc83a9.js"
     ],
     "css": [
@@ -38,25 +38,25 @@
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-8a4ffd0e.js",
+    "file": "error.svelte-35ba6ed5.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-2f14ed6e.js"
+      "_vendor-135f0ed2.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-b6b3644a.js",
+    "file": "pages/index.svelte-432d6200.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-2f14ed6e.js",
+      "_vendor-135f0ed2.js",
       "_paths-c0fc83a9.js"
     ],
     "css": [
-      "assets/pages/index.svelte-c6177e1d.css"
+      "assets/pages/index.svelte-88746a2d.css"
     ],
     "assets": [
       "assets/hero-background-80197874.png",
@@ -64,12 +64,12 @@
     ]
   },
   "src/routes/code-of-conduct.svelte": {
-    "file": "pages/code-of-conduct.svelte-241acf1e.js",
+    "file": "pages/code-of-conduct.svelte-f774afe8.js",
     "src": "src/routes/code-of-conduct.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-2f14ed6e.js"
+      "_vendor-135f0ed2.js"
     ],
     "css": [
       "assets/pages/code-of-conduct.svelte-a06e38ff.css"
@@ -79,12 +79,12 @@
     ]
   },
   "src/routes/cfp.svelte": {
-    "file": "pages/cfp.svelte-9fcc7967.js",
+    "file": "pages/cfp.svelte-a3b03167.js",
     "src": "src/routes/cfp.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-2f14ed6e.js",
+      "_vendor-135f0ed2.js",
       "_paths-c0fc83a9.js"
     ],
     "css": [
@@ -94,8 +94,8 @@
       "assets/mambi-icon-oulined-adc99a3e.png"
     ]
   },
-  "_vendor-2f14ed6e.js": {
-    "file": "chunks/vendor-2f14ed6e.js",
+  "_vendor-135f0ed2.js": {
+    "file": "chunks/vendor-135f0ed2.js",
     "css": [
       "assets/vendor-bda6b974.css"
     ]

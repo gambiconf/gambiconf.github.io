@@ -77,6 +77,17 @@
     </a>
 
     <a
+      href="https://ahrefs.com/"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src={`${assets}/ahrefs.svg`}
+        alt="Ahrefs logo"
+      />
+    </a>
+
+    <a
       href="https://docs.google.com/presentation/d/1u-VWUl92qNr1i_zEcqSdXwLXpwsT6pTl6CIVoA-WrMg/edit?usp=sharing"
       target="_blank"
       rel="noopener"

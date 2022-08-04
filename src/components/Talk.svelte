@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { assets } from '$app/paths'
+  import { google as getGoogleCalendarLink } from "calendar-link";
   import SocialLinks from './SocialLinks.svelte'
   import type { SocialLink } from './SocialLinks.svelte'
 
@@ -7,12 +7,26 @@
   export let speakerName: string
   export let speakerImage: string
   export let socialLinks: SocialLink[]
+  export let date: string
+  export let hours: string
+  export let duration: number
+
+  const googleCalendarLink = getGoogleCalendarLink({
+    title: `[GambiConf Talk] ${talkTitle}`,
+    start: `${date} ${hours}:00 +0100`,
+    duration: [duration, 'minutes'],
+  })
 </script>
 
 <style>
   h6 {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  .time {
+    margin: 0;
+    font-weight: bold;
   }
 
   .speaker-image-column {
@@ -70,6 +84,10 @@
     <h6>
       {talkTitle}
     </h6>
+
+    <p class="time">
+      At <a href={googleCalendarLink} target="_blank" rel="noopener">{hours}</a>
+    </p>
 
     <slot name="talkDescription" />
 

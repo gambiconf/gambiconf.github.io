@@ -31,16 +31,23 @@
     width: 70%;
     background-color: #f34b2133;
   }
+
+  .break {
+    text-align: center;
+  }
 </style>
 
-<div id="talks">
-  <Window title="Talks">
+<div id="schedule">
+  <Window title="Schedule">
     <article class="content">
       <h3>September 3 / In-person day</h3>
 
       <Talk
         talkTitle="Kill All Mutants! (Intro to Mutation Testing)"
-        speakerName="Dave Aronson"
+        date="2022-09-03"
+        hours="14:20"
+        duration={30}
+        speakerName="@DaveAronson"
         speakerImage={`${assets}/speakers/dave-aronson.jpeg`}
         socialLinks={[
           { type: 'twitter', url: 'https://twitter.com/DaveAronson' },
@@ -54,7 +61,7 @@
           </p>
 
           <p slot="speakerBio">
-            <a href="https://twitter.com/DaveAronson">@DaveAronson</a> is a software development consultant with 37 years of experience.
+            Dave Aronson is a software development consultant with 37 years of experience.
             He is the T. Rex of Codosaurus, LLC (his one-person company, which explains how he can get such a cool title) near Washington, DC, USA.
             In his spare time, he brews mead.
           </p>
@@ -65,52 +72,10 @@
       </div>
 
       <Talk
-        talkTitle="Writing a Game Boy compiler in Forth"
-        speakerName="@tijnosaurus"
-        speakerImage={`${assets}/speakers/tijnosaurus.jpeg`}
-        socialLinks={[
-          { type: 'github', url: 'https://github.com/ams-hackers/gbforth' },
-        ]}
-      >
-          <p slot="talkDescription">
-            Why read the manual if you can reverse-engineer a ROM instead?
-            This talk shows how you can use Forth to learn about retro hardware with an incremental approach.
-          </p>
-
-          <p slot="speakerBio">
-            Tijn is a software engineer at Reaktor.
-            He mainly writes TypeScript during the day, and likes to tinker around with esoteric compilers after office hours.
-          </p>
-      </Talk>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <Talk
-        talkTitle="Why are you making your own programming language?"
-        speakerName="@TheEduardoRFS"
-        speakerImage={`${assets}/speakers/theeduardorfs.jpeg`}
-        socialLinks={[
-          { type: 'github', url: 'https://github.com/EduardoRFS' },
-          { type: 'twitch', url: 'https://twitch.tv/eduardorfs' },
-        ]}
-      >
-        <p slot="talkDescription">
-          I will be trying to convince you, that making a programming language is not a complete stupid idea and how to do that without hurting everyone.
-        </p>
-
-        <p slot="speakerBio">
-          I like to describe myself as anti floating point, also I'm currently on the team Taylor Swift + programming languages.
-        </p>
-      </Talk>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <Talk
         talkTitle="The Genesis of a Universal Video Transcoder"
+        date="2022-09-03"
+        hours="14:55"
+        duration={45}
         speakerName="Blagoj Jovanov"
         speakerImage={`${assets}/speakers/blagoj-jovanov.jpeg`}
         socialLinks={[
@@ -134,7 +99,97 @@
       </div>
 
       <Talk
+        talkTitle="Why are you making your own programming language?"
+        date="2022-09-03"
+        hours="15:45"
+        duration={45}
+        speakerName="@TheEduardoRFS"
+        speakerImage={`${assets}/speakers/theeduardorfs.jpeg`}
+        socialLinks={[
+          { type: 'github', url: 'https://github.com/EduardoRFS' },
+          { type: 'twitch', url: 'https://twitch.tv/eduardorfs' },
+        ]}
+      >
+        <p slot="talkDescription">
+          I will be trying to convince you, that making a programming language is not a complete stupid idea and how to do that without hurting everyone.
+        </p>
+
+        <p slot="speakerBio">
+          I like to describe myself as anti floating point, also I'm currently on the team Taylor Swift + programming languages.
+        </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <p class="break">
+        30-minutes break
+      </p>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <Talk
+        talkTitle="Writing a Game Boy compiler in Forth"
+        date="2022-09-03"
+        hours="17:00"
+        duration={20}
+        speakerName="@tijnosaurus"
+        speakerImage={`${assets}/speakers/tijnosaurus.jpeg`}
+        socialLinks={[
+          { type: 'github', url: 'https://github.com/ams-hackers/gbforth' },
+        ]}
+      >
+        <p slot="talkDescription">
+          Why read the manual if you can reverse-engineer a ROM instead?
+          This talk shows how you can use Forth to learn about retro hardware with an incremental approach.
+        </p>
+
+        <p slot="speakerBio">
+          Tijn is a software engineer at Reaktor.
+          He mainly writes TypeScript during the day, and likes to tinker around with esoteric compilers after office hours.
+        </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <Talk
+        talkTitle="styled-ppx: How to mimic a JavaScript feature and over-engineering CSS"
+        date="2022-09-03"
+        hours="17:25"
+        duration={30}
+        speakerName="@davesnx"
+        speakerImage={`${assets}/speakers/davesnx.jpg`}
+        socialLinks={[
+          { type: 'github', url: 'https://www.github.com/davesnx' },
+          { type: 'website', url: 'https://www.sancho.dev' },
+          { type: 'twitter', url: 'https://twitter.com/davesnx' },
+        ]}
+      >
+        <p slot="talkDescription">
+          I will meticulously explain the problem, a few possible solutions and the over-engineered approach that I endup with.
+          Frontend, ReScript FFI bindings to JavaScript, and ppxes.
+        </p>
+
+        <p slot="speakerBio">
+          I'm a Barcelona based software engineer. Trying to make cute software with Reason and OCaml.
+          I co-host EmelleTV a streaming show talking about these languages. I currently work at Ahrefs, building styled-ppx.
+        </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <Talk
         talkTitle="Weird Machines: Exploiting Turing-Completeness"
+        date="2022-09-03"
+        hours="18:00"
+        duration={45}
         speakerName="Pedro Castilho"
         speakerImage={`${assets}/speakers/pedro-castilho.jpeg`}
         socialLinks={[
@@ -159,60 +214,38 @@
         <div class="division" />
       </div>
 
-      <Talk
-        talkTitle="styled-ppx: How to mimic a JavaScript feature and over-engineering CSS"
-        speakerName="@davesnx"
-        speakerImage={`${assets}/speakers/davesnx.jpg`}
-        socialLinks={[
-          { type: 'github', url: 'https://www.github.com/davesnx' },
-          { type: 'website', url: 'https://www.sancho.dev' },
-          { type: 'twitter', url: 'https://twitter.com/davesnx' },
-        ]}
-      >
-        <p slot="talkDescription">
-          I will meticulously explain the problem, a few possible solutions and the over-engineered approach that I endup with.
-          Frontend, ReScript FFI bindings to JavaScript, and ppxes.
-        </p>
-
-        <p slot="speakerBio">
-          I'm a Barcelona based software engineer. Trying to make cute software with Reason and OCaml.
-          I co-host EmelleTV a streaming show talking about these languages. I currently work at Ahrefs, building styled-ppx.
-        </p>
-      </Talk>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
       <h3>September 10 / Online day</h3>
 
       <Talk
-        talkTitle="Reverse Engineering Satellite Communication"
-        speakerName="Lucas Teske"
-        speakerImage={`${assets}/speakers/lucas-teske.jpg`}
+        talkTitle="Klonoa in Sonic 1"
+        date="2022-09-10"
+        hours="14:15"
+        duration={20}
+        speakerName="Barak Shahino"
+        speakerImage={`${assets}/speakers/barak-shahino.png`}
         socialLinks={[
-          { type: 'twitter', url: 'https://twitter.com/lucasteske' },
-          { type: 'github', url: 'https://github.com/racerxdl' },
-          { type: 'twitch', url: 'https://www.twitch.tv/racerxdl' },
-          { type: 'website', url: 'https://lucasteske.dev/' },
+          { type: 'twitter', url: 'https://twitter.com/barakshahino' },
         ]}
       >
-          <p slot="talkDescription">
-            How I reverse engineered the GOES Satellite Protocol to receive a few images.
-          </p>
+        <p slot="talkDescription">
+          I am working on a Sonic 1 ROM hack where I attempt to replicate Klonoa's gameplay mechanics in place of Sonic's
+        </p>
 
-          <p slot="speakerBio">
-            “I play, hack stuff, create and destroy stuff. Check it out to see live hacks! Or destroying my computer (it happens).
-            I'm also the creator of OpenSatelliteProject and SegDSP!〞
-          </p>
+        <p slot="speakerBio">
+          I'm a big fan of different Medias and a big Sonic The Hedgehog fan.
+          I have interest in drawing and programming and just recently finished a course in Software QA.
+        </p>
       </Talk>
-
+      
       <div class="division-wrapper">
         <div class="division" />
       </div>
 
       <Talk
         talkTitle="Nyxt: The Internet on your terms"
+        date="2022-09-10"
+        hours="14:40"
+        duration={20}
         speakerName="Pierre Neidhardt"
         speakerImage={`${assets}/speakers/pierre-neidhardt.png`}
         socialLinks={[
@@ -235,7 +268,65 @@
       </div>
 
       <Talk
+        talkTitle="My Blog is Hilariously Overengineered to the Point People Think it's a Static Site"
+        date="2022-09-10"
+        hours="15:05"
+        duration={20}
+        speakerName="@theprincessxena"
+        speakerImage={`${assets}/speakers/theprincessxena.png`}
+        socialLinks={[
+          { type: 'github', url: 'https://github.com/Xe' },
+          { type: 'website', url: 'https://christine.website' },
+        ]}
+      >
+        <p slot="talkDescription">
+          Dynamic webapps don't have to be slow. In this talk I will break out how I overengineered my blog with Rust
+          to the point that people think it's a static site.
+        </p>
+
+        <p slot="speakerBio">
+          Xe Iaso is the archmage of infrastructure at Tailscale. Xe writes a lot about tech, philosophy and original short stories.
+          Xe likes chaotic good computing and can usually be seen to be up to no good on Twitch.
+        </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <Talk
+        talkTitle="Finding and creating gambiarras with python ASTs"
+        date="2022-09-10"
+        hours="15:30"
+        duration={30}
+        speakerName="@devmessias"
+        speakerImage={`${assets}/speakers/brunomessias.png`}
+        socialLinks={[
+          { type: 'github', url: 'https://github.com/devmessias' },
+          { type: 'website', url: 'https://devmessias.github.io' },
+        ]}
+      >
+          <p slot="talkDescription">
+            Let's talk about how PyASTrX can find messy stuff in your codebase, then discuss a chaotic approach using
+            metaprogramming with ASTs to create new behaviors in the sklearn pipelines
+          </p>
+
+          <p slot="speakerBio">
+            I'm passionate about how we can use computers and math to solve real and abstract problems.
+            I've experience developing open-software projects and community management.
+            Today I work at <a href="https://twitter.com/idwall_co">@idwall_co</a> and pursuing my Ph.D. in graphs(ML) and survey analysis.
+          </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <Talk
         talkTitle="Network Technocracy: A Tale of Monitoring, Spoofing, Intercepting and Social Engineering"
+        date="2022-09-10"
+        hours="16:05"
+        duration={30}
         speakerName="@rlaneth"
         speakerImage={`${assets}/speakers/rlaneth.jpg`}
         socialLinks={[
@@ -262,103 +353,10 @@
       </div>
 
       <Talk
-        talkTitle="Finding and creating gambiarras with python ASTs"
-        speakerName="@devmessias"
-        speakerImage={`${assets}/speakers/brunomessias.png`}
-        socialLinks={[
-          { type: 'github', url: 'https://github.com/devmessias' },
-          { type: 'website', url: 'https://devmessias.github.io' },
-        ]}
-      >
-          <p slot="talkDescription">
-            Let's talk about how PyASTrX can find messy stuff in your codebase, then discuss a chaotic approach using
-            metaprogramming with ASTs to create new behaviors in the sklearn pipelines
-          </p>
-
-          <p slot="speakerBio">
-            I'm passionate about how we can use computers and math to solve real and abstract problems.
-            I've experience developing open-software projects and community management.
-            Today I work at <a href="https://twitter.com/idwall_co">@idwall_co</a> and pursuing my Ph.D. in graphs(ML) and survey analysis.
-          </p>
-      </Talk>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <Talk
-        talkTitle="Building a serverless PHP Laravel application using Laravel Vapor"
-        speakerName="Bruno Francisco"
-        speakerImage={`${assets}/speakers/bruno-francisco.jpeg`}
-        socialLinks={[
-          { type: 'github', url: 'https://github.com/CharlieBrownCharacter' },
-          { type: 'linkedin', url: 'https://www.linkedin.com/in/bfrancisco11/' },
-          { type: 'website', url: 'https://codotto.com/users/fb2ca7cc-0f94-4d6a-a470-0ba4466f6ba7/brunofrancisco' },
-        ]}
-      >
-        <p slot="talkDescription">
-          <a href="https://codotto.com/">Codotto</a> aims to be a platform for IT communities where they organize meetups.
-          We'll cover how we built a serverless application that can handle millions of requests per minute
-        </p>
-
-        <p slot="speakerBio">
-          My name is Bruno. I have worked 6 years as a Software Engineer in multiple companies and now I'm focusing on building solutions that are scalable and secure.
-          Currently I'm interested in PHP (Laravel) and JS/TS (Vue)
-        </p>
-      </Talk>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <Talk
-        talkTitle="Klonoa in Sonic 1"
-        speakerName="Barak Shahino"
-        speakerImage={`${assets}/speakers/barak-shahino.png`}
-        socialLinks={[
-          { type: 'twitter', url: 'https://twitter.com/barakshahino' },
-        ]}
-      >
-        <p slot="talkDescription">
-          I am working on a Sonic 1 ROM hack where I attempt to replicate Klonoa's gameplay mechanics in place of Sonic's
-        </p>
-
-        <p slot="speakerBio">
-          I'm a big fan of different Medias and a big Sonic The Hedgehog fan.
-          I have interest in drawing and programming and just recently finished a course in Software QA.
-        </p>
-      </Talk>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <Talk
-        talkTitle="My Blog is Hilariously Overengineered to the Point People Think it's a Static Site"
-        speakerName="@theprincessxena"
-        speakerImage={`${assets}/speakers/theprincessxena.png`}
-        socialLinks={[
-          { type: 'github', url: 'https://github.com/Xe' },
-          { type: 'website', url: 'https://christine.website' },
-        ]}
-      >
-        <p slot="talkDescription">
-          Dynamic webapps don't have to be slow. In this talk I will break out how I overengineered my blog with Rust
-          to the point that people think it's a static site.
-        </p>
-
-        <p slot="speakerBio">
-          Xe Iaso is the archmage of infrastructure at Tailscale. Xe writes a lot about tech, philosophy and original short stories.
-          Xe likes chaotic good computing and can usually be seen to be up to no good on Twitch.
-        </p>
-      </Talk>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <Talk
         talkTitle="A One Woman Show of Migrating an Entire R&D SCM From Bitbucket Cloud to a Self-Hosted GitLab"
+        date="2022-09-10"
+        hours="16:40"
+        duration={20}
         speakerName="@Hilafish1"
         speakerImage={`${assets}/speakers/hilafish1.jpeg`}
         socialLinks={[
@@ -383,6 +381,9 @@
 
       <Talk
         talkTitle="Resurrecting ancient routers for fun and necessity"
+        date="2022-09-10"
+        hours="17:05"
+        duration={45}
         speakerName="Fernão Vellozo"
         speakerImage={`${assets}/speakers/fernao-vellozo.jpeg`}
         socialLinks={[
@@ -400,6 +401,62 @@
           History teacher who became a sysadmin. GNU/Linux user since 1999, specialist in all sorts of gambiarras and
           an enthusiast of free software and other non-liberticide technologies.
         </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <Talk
+        talkTitle="Building a serverless PHP Laravel application using Laravel Vapor"
+        date="2022-09-10"
+        hours="17:55"
+        duration={20}
+        speakerName="Bruno Francisco"
+        speakerImage={`${assets}/speakers/bruno-francisco.jpeg`}
+        socialLinks={[
+          { type: 'github', url: 'https://github.com/CharlieBrownCharacter' },
+          { type: 'linkedin', url: 'https://www.linkedin.com/in/bfrancisco11/' },
+          { type: 'website', url: 'https://codotto.com/users/fb2ca7cc-0f94-4d6a-a470-0ba4466f6ba7/brunofrancisco' },
+        ]}
+      >
+        <p slot="talkDescription">
+          <a href="https://codotto.com/">Codotto</a> aims to be a platform for IT communities where they organize meetups.
+          We'll cover how we built a serverless application that can handle millions of requests per minute
+        </p>
+
+        <p slot="speakerBio">
+          My name is Bruno. I have worked 6 years as a Software Engineer in multiple companies and now I'm focusing on building solutions that are scalable and secure.
+          Currently I'm interested in PHP (Laravel) and JS/TS (Vue)
+        </p>
+      </Talk>
+      
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <Talk
+        talkTitle="Reverse Engineering Satellite Communication"
+        date="2022-09-10"
+        hours="18:20"
+        duration={30}
+        speakerName="Lucas Teske"
+        speakerImage={`${assets}/speakers/lucas-teske.jpg`}
+        socialLinks={[
+          { type: 'twitter', url: 'https://twitter.com/lucasteske' },
+          { type: 'github', url: 'https://github.com/racerxdl' },
+          { type: 'twitch', url: 'https://www.twitch.tv/racerxdl' },
+          { type: 'website', url: 'https://lucasteske.dev/' },
+        ]}
+      >
+          <p slot="talkDescription">
+            How I reverse engineered the GOES Satellite Protocol to receive a few images.
+          </p>
+
+          <p slot="speakerBio">
+            “I play, hack stuff, create and destroy stuff. Check it out to see live hacks! Or destroying my computer (it happens).
+            I'm also the creator of OpenSatelliteProject and SegDSP!〞
+          </p>
       </Talk>
     </article>
   </Window>

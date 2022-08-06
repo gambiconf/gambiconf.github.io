@@ -94,9 +94,9 @@
     <h6 class="talk-speaker">
       By
       {#if speakerName[0] === '@'}
-        <a href={`https://twitter.com/${speakerName}`}>{speakerName}</a>:
+        <a href={`https://twitter.com/${speakerName}`}>{speakerName}</a>{#if $$slots.speakerBio}:{/if}
       {:else}
-        {speakerName}:
+        {speakerName}{#if $$slots.speakerBio}:{/if}
       {/if}
     </h6>
 

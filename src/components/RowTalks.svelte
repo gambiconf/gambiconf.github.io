@@ -43,6 +43,32 @@
       <h3>September 3 / In-person day</h3>
 
       <Talk
+        talkTitle="Opening Ceremony"
+        date="2022-09-03"
+        hours="14:00"
+        duration={15}
+        speakerName="@bmacabeus"
+        speakerImage={`${assets}/speakers/macabeus.jpeg`}
+        socialLinks={[
+          { type: 'twitter', url: 'https://twitter.com/bmacabeus' },
+          { type: 'github', url: 'https://github.com/macabeus' },
+          { type: 'website', url: 'http://macabeus.github.io/' },
+        ]}
+      >
+          <p slot="talkDescription">
+            Welcome to the event!
+          </p>
+
+          <p slot="speakerBio">
+            I love to engage people to do playful personal projects and share unusual ideas - and organizing GambiConf is part of that!
+          </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <Talk
         talkTitle="Kill All Mutants! (Intro to Mutation Testing)"
         date="2022-09-03"
         hours="14:20"
@@ -214,7 +240,51 @@
         <div class="division" />
       </div>
 
+      <Talk
+        talkTitle="Ending Ceremony"
+        date="2022-09-03"
+        hours="18:45"
+        duration={10}
+        speakerName="@bmacabeus"
+        speakerImage={`${assets}/speakers/macabeus.jpeg`}
+        socialLinks={[
+          { type: 'twitter', url: 'https://twitter.com/bmacabeus' },
+          { type: 'github', url: 'https://github.com/macabeus' },
+          { type: 'website', url: 'http://macabeus.github.io/' },
+        ]}
+      >
+          <p slot="talkDescription">
+            End of the in-person day!
+          </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <h3>September 10 / Online day</h3>
+
+      <Talk
+        talkTitle="Opening Ceremony"
+        date="2022-09-10"
+        hours="14:00"
+        duration={10}
+        speakerName="@bmacabeus"
+        speakerImage={`${assets}/speakers/macabeus.jpeg`}
+        socialLinks={[
+          { type: 'twitter', url: 'https://twitter.com/bmacabeus' },
+          { type: 'github', url: 'https://github.com/macabeus' },
+          { type: 'website', url: 'http://macabeus.github.io/' },
+        ]}
+      >
+          <p slot="talkDescription">
+            Welcome to the event!
+          </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
 
       <Talk
         talkTitle="Klonoa in Sonic 1"
@@ -236,7 +306,7 @@
           I have interest in drawing and programming and just recently finished a course in Software QA.
         </p>
       </Talk>
-      
+
       <div class="division-wrapper">
         <div class="division" />
       </div>
@@ -430,7 +500,7 @@
           Currently I'm interested in PHP (Laravel) and JS/TS (Vue)
         </p>
       </Talk>
-      
+
       <div class="division-wrapper">
         <div class="division" />
       </div>
@@ -456,6 +526,28 @@
           <p slot="speakerBio">
             “I play, hack stuff, create and destroy stuff. Check it out to see live hacks! Or destroying my computer (it happens).
             I'm also the creator of OpenSatelliteProject and SegDSP!〞
+          </p>
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <Talk
+        talkTitle="Ending Ceremony"
+        date="2022-09-10"
+        hours="18:50"
+        duration={10}
+        speakerName="@bmacabeus"
+        speakerImage={`${assets}/speakers/macabeus.jpeg`}
+        socialLinks={[
+          { type: 'twitter', url: 'https://twitter.com/bmacabeus' },
+          { type: 'github', url: 'https://github.com/macabeus' },
+          { type: 'website', url: 'http://macabeus.github.io/' },
+        ]}
+      >
+          <p slot="talkDescription">
+            And the closing of the event. So Long, and Thanks for All the Fish!
           </p>
       </Talk>
     </article>

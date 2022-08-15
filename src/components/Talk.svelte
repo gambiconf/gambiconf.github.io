@@ -1,8 +1,7 @@
 <script lang="ts">
-  import dayjs from "dayjs";
-  import { stringify } from "query-string";
   import SocialLinks from './SocialLinks.svelte'
   import type { SocialLink } from './SocialLinks.svelte'
+  import { getGoogleCalendarLink } from "../utils/calendar";
 
   export let talkTitle: string
   export let speakerName: string
@@ -12,18 +11,11 @@
   export let hours: string
   export let duration: number
 
-  let startUtc = dayjs(`${date}T${hours}:00+01:00`)
-
-  let startDate: string = startUtc.format("YYYYMMDDTHHmmssZ")
-  let endDate: string = startUtc.add(duration, "minutes").format("YYYYMMDDTHHmmssZ")
- 
-  const details = {
-    action: "TEMPLATE",
-    text: `[GambiConf Talk] ${talkTitle}`,
-    dates: startDate + "/" + endDate,
-  };
-
-  const googleCalendarLink = `https://calendar.google.com/calendar/render?${stringify(details)}`
+  const googleCalendarLink = getGoogleCalendarLink({
+    title: talkTitle,
+    start: `${date} ${hours}:00 +01:00`,
+    duration: duration,
+  })
 </script>
 
 <style>

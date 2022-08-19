@@ -4,7 +4,7 @@
   import type { SocialLink } from './SocialLinks.svelte'
 
   export let talkTitle: string
-  export let speakerName: string
+  export let speakers: Array<{ name: string, bio?: string }>
   export let speakerImage: string
   export let socialLinks: SocialLink[]
   export let date: string
@@ -72,7 +72,7 @@
     <img
       class="speaker-image"
       src={speakerImage}
-      alt={speakerName}
+      alt="Speaker"
     />
 
     <SocialLinks
@@ -89,17 +89,23 @@
       At <a href={googleCalendarLink} target="_blank" rel="noopener">{hours}</a>
     </p>
 
-    <slot name="talkDescription" />
+    <p>
+      <slot />
+    </p>
 
-    <h6 class="talk-speaker">
-      By
-      {#if speakerName[0] === '@'}
-        <a href={`https://twitter.com/${speakerName}`}>{speakerName}</a>{#if $$slots.speakerBio}:{/if}
-      {:else}
-        {speakerName}{#if $$slots.speakerBio}:{/if}
-      {/if}
-    </h6>
+    {#each speakers as { name, bio }}
+      <h6 class="talk-speaker">
+        By
+        {#if name[0] === '@'}
+          <a href={`https://twitter.com/${name}`}>{name}</a>{#if bio}:{/if}
+        {:else}
+          {name}{#if bio}:{/if}
+        {/if}
+      </h6>
 
-    <slot name="speakerBio" />
+      <p>
+        {@html bio ?? ''}
+      </p>
+    {/each}
   </div>
 </article>

@@ -268,8 +268,12 @@
           {
             name: '@bmacabeus',
           },
+          {
+            name: '@MarcoWorms',
+            bio: 'Contributor at <a href="https://yearn.finance">yearn.finance</a>'
+          }
         ]}
-        speakerImage={`${assets}/speakers/macabeus.jpeg`}
+        speakerImage={`${assets}/speakers/macabeus-and-worms.png`}
         socialLinks={[
           { type: 'twitter', url: 'https://twitter.com/bmacabeus' },
           { type: 'github', url: 'https://github.com/macabeus' },
@@ -530,8 +534,11 @@
           {
             name: '@bmacabeus',
           },
+          {
+            name: '@MarcoWorms',
+          }
         ]}
-        speakerImage={`${assets}/speakers/macabeus.jpeg`}
+        speakerImage={`${assets}/speakers/macabeus-and-worms.png`}
         socialLinks={[
           { type: 'twitter', url: 'https://twitter.com/bmacabeus' },
           { type: 'github', url: 'https://github.com/macabeus' },

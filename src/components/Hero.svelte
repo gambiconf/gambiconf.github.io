@@ -138,7 +138,8 @@
     </p>
 
     <p class="hours">
-      14:00 - 19:00
+      14:00 - 19:00 (Sept 3rd)<br />
+      14:00 - 19:50 (Sept 10th)
     </p>
 
     <div class="action">

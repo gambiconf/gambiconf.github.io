@@ -46,7 +46,7 @@
         talkTitle="Opening Ceremony"
         date="2022-09-03"
         hours="14:00"
-        duration={15}
+        duration={20}
         speakers={[
           {
             name: '@bmacabeus',
@@ -70,7 +70,7 @@
       <Talk
         talkTitle="Kill All Mutants! (Intro to Mutation Testing)"
         date="2022-09-03"
-        hours="14:20"
+        hours="14:25"
         duration={30}
         speakers={[
           {
@@ -98,7 +98,7 @@
       <Talk
         talkTitle="The Genesis of a Universal Video Transcoder"
         date="2022-09-03"
-        hours="14:55"
+        hours="15:00"
         duration={45}
         speakers={[
           {
@@ -124,7 +124,7 @@
       <Talk
         talkTitle="Why are you making your own programming language?"
         date="2022-09-03"
-        hours="15:45"
+        hours="15:50"
         duration={45}
         speakers={[
           {
@@ -156,7 +156,7 @@
       <Talk
         talkTitle="Writing a Game Boy compiler in Forth"
         date="2022-09-03"
-        hours="17:00"
+        hours="17:05"
         duration={20}
         speakers={[
           {
@@ -181,7 +181,7 @@
       <Talk
         talkTitle="styled-ppx: How to mimic a JavaScript feature and over-engineering CSS"
         date="2022-09-03"
-        hours="17:25"
+        hours="17:30"
         duration={30}
         speakers={[
           {
@@ -206,27 +206,16 @@
       </div>
 
       <Talk
-        talkTitle="Weird Machines: Exploiting Turing-Completeness"
+        talkTitle="Lightning Talk"
         date="2022-09-03"
-        hours="18:00"
-        duration={45}
-        speakers={[
-          {
-            name: 'Pedro Castilho',
-            bio: `Pedro Castilho (<a href="https://twitter.com/coproduto">@coproduto</a>) is a Brazilian software developer.
-              He spends most of his time either working at <a href="https://twitter.com/appcumbuca">@appcumbuca</a>, writing Elixir code
-              or thinking about little computers running quietly inside your fonts.`,
-          },
-        ]}
-        speakerImage={`${assets}/speakers/pedro-castilho.jpeg`}
-        socialLinks={[
-          { type: 'github', url: 'https://www.github.com/coproduto' },
-          { type: 'twitter', url: 'https://twitter.com/coproduto' },
-          { type: 'linkedin', url: 'https://www.linkedin.com/in/pcstl' },
-        ]}
+        hours="18:05"
+        duration={40}
+        speakers={[]}
+        speakerImage={`${assets}/speakers/lightning-talk.png`}
+        socialLinks={[]}
       >
-        There are tiny machines everywhere in your computer, in your motherboard, your network stack, even your fonts.
-        We'll be learning how to make them do our bidding - for fun, of course!
+        Do you want to quickly share a personal project, a crazy idea, or tell a computer joke? Then give a lightning talk at GambiConf!
+        Let us know by sending a <a href="https://twitter.com/gambiconf">DM on Twitter</a> or telling us during the event.
       </Talk>
 
       <div class="division-wrapper">
@@ -526,9 +515,37 @@
       </div>
 
       <Talk
+        talkTitle="Weird Machines: Exploiting Turing-Completeness"
+        date="2022-09-10"
+        hours="18:55"
+        duration={45}
+        speakers={[
+          {
+            name: 'Pedro Castilho',
+            bio: `Pedro Castilho (<a href="https://twitter.com/coproduto">@coproduto</a>) is a Brazilian software developer.
+              He spends most of his time either working at <a href="https://twitter.com/appcumbuca">@appcumbuca</a>, writing Elixir code
+              or thinking about little computers running quietly inside your fonts.`,
+          },
+        ]}
+        speakerImage={`${assets}/speakers/pedro-castilho.jpeg`}
+        socialLinks={[
+          { type: 'github', url: 'https://www.github.com/coproduto' },
+          { type: 'twitter', url: 'https://twitter.com/coproduto' },
+          { type: 'linkedin', url: 'https://www.linkedin.com/in/pcstl' },
+        ]}
+      >
+        There are tiny machines everywhere in your computer, in your motherboard, your network stack, even your fonts.
+        We'll be learning how to make them do our bidding - for fun, of course!
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <Talk
         talkTitle="Ending Ceremony"
         date="2022-09-10"
-        hours="18:50"
+        hours="19:40"
         duration={10}
         speakers={[
           {

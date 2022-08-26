@@ -49,11 +49,15 @@
         duration={20}
         speakers={[
           {
+            name: '@caiocodes',
+            bio: 'Junior Software Engineer <a href="https://twitter.com/Dashlane">@Dashlane</a>, ex-Qonto, JavaScript lover and machine learning engineer-to-be. Soon blogging and producing content in YouTube about software engineering. Gambiarras will take over the world',
+          },
+          {
             name: '@bmacabeus',
-            bio: 'I love to engage people to do playful personal projects and share unusual ideas - and organizing GambiConf is part of that!',
+            bio: "Hey, I'm Bruno Macabeus. I love to engage people to do playful personal projects and share unusual ideas - and organizing GambiConf is part of that!",
           },
         ]}
-        speakerImage={`${assets}/speakers/macabeus.jpeg`}
+        speakerImage={`${assets}/speakers/macabeus-and-caio.png`}
         socialLinks={[
           { type: 'twitter', url: 'https://twitter.com/bmacabeus' },
           { type: 'github', url: 'https://github.com/macabeus' },
@@ -229,10 +233,13 @@
         duration={15}
         speakers={[
           {
+            name: '@caiocodes',
+          },
+          {
             name: '@bmacabeus',
           },
         ]}
-        speakerImage={`${assets}/speakers/macabeus.jpeg`}
+        speakerImage={`${assets}/speakers/macabeus-and-caio.png`}
         socialLinks={[
           { type: 'twitter', url: 'https://twitter.com/bmacabeus' },
           { type: 'github', url: 'https://github.com/macabeus' },
@@ -255,12 +262,12 @@
         duration={10}
         speakers={[
           {
-            name: '@bmacabeus',
-          },
-          {
             name: '@MarcoWorms',
             bio: 'Contributor at <a href="https://yearn.finance">yearn.finance</a>'
-          }
+          },
+          {
+            name: '@bmacabeus',
+          },
         ]}
         speakerImage={`${assets}/speakers/macabeus-and-worms.png`}
         socialLinks={[
@@ -549,11 +556,11 @@
         duration={10}
         speakers={[
           {
-            name: '@bmacabeus',
+            name: '@MarcoWorms',
           },
           {
-            name: '@MarcoWorms',
-          }
+            name: '@bmacabeus',
+          },
         ]}
         speakerImage={`${assets}/speakers/macabeus-and-worms.png`}
         socialLinks={[

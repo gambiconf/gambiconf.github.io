@@ -157,7 +157,7 @@
         talkTitle="Writing a Game Boy compiler in Forth"
         date="2022-09-03"
         hours="17:05"
-        duration={20}
+        duration={30}
         speakers={[
           {
             name: '@tijnosaurus',
@@ -181,7 +181,7 @@
       <Talk
         talkTitle="styled-ppx: How to mimic a JavaScript feature and over-engineering CSS"
         date="2022-09-03"
-        hours="17:30"
+        hours="17:40"
         duration={30}
         speakers={[
           {
@@ -208,8 +208,8 @@
       <Talk
         talkTitle="Lightning Talk"
         date="2022-09-03"
-        hours="18:05"
-        duration={40}
+        hours="18:15"
+        duration={30}
         speakers={[]}
         speakerImage={`${assets}/speakers/lightning-talk.png`}
         socialLinks={[]}
@@ -226,7 +226,7 @@
         talkTitle="Ending Ceremony"
         date="2022-09-03"
         hours="18:45"
-        duration={10}
+        duration={15}
         speakers={[
           {
             name: '@bmacabeus',

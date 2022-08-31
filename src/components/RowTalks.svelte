@@ -103,7 +103,7 @@
         talkTitle="The Genesis of a Universal Video Transcoder"
         date="2022-09-03"
         hours="15:00"
-        duration={45}
+        duration={35}
         speakers={[
           {
             name: 'Blagoj Jovanov',
@@ -128,7 +128,7 @@
       <Talk
         talkTitle="Why are you making your own programming language?"
         date="2022-09-03"
-        hours="15:50"
+        hours="15:40"
         duration={45}
         speakers={[
           {
@@ -160,7 +160,7 @@
       <Talk
         talkTitle="Writing a Game Boy compiler in Forth"
         date="2022-09-03"
-        hours="17:05"
+        hours="16:55"
         duration={30}
         speakers={[
           {
@@ -185,8 +185,8 @@
       <Talk
         talkTitle="styled-ppx: How to mimic a JavaScript feature and over-engineering CSS"
         date="2022-09-03"
-        hours="17:40"
-        duration={30}
+        hours="17:30"
+        duration={40}
         speakers={[
           {
             name: '@davesnx',

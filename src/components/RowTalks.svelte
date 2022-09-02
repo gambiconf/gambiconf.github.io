@@ -125,32 +125,8 @@
         <div class="division" />
       </div>
 
-      <Talk
-        talkTitle="Why are you making your own programming language?"
-        date="2022-09-03"
-        hours="15:40"
-        duration={45}
-        speakers={[
-          {
-            name: '@TheEduardoRFS',
-            bio: "I like to describe myself as anti floating point, also I'm currently on the team Taylor Swift + programming languages.",
-          },
-        ]}
-        speakerImage={`${assets}/speakers/theeduardorfs.jpeg`}
-        socialLinks={[
-          { type: 'github', url: 'https://github.com/EduardoRFS' },
-          { type: 'twitch', url: 'https://twitch.tv/eduardorfs' },
-        ]}
-      >
-        I will be trying to convince you, that making a programming language is not a complete stupid idea and how to do that without hurting everyone.
-      </Talk>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
       <p class="break">
-        30-minutes break
+        45-minutes break
       </p>
 
       <div class="division-wrapper">
@@ -160,7 +136,7 @@
       <Talk
         talkTitle="Writing a Game Boy compiler in Forth"
         date="2022-09-03"
-        hours="16:55"
+        hours="16:25"
         duration={30}
         speakers={[
           {
@@ -185,7 +161,7 @@
       <Talk
         talkTitle="styled-ppx: How to mimic a JavaScript feature and over-engineering CSS"
         date="2022-09-03"
-        hours="17:30"
+        hours="17:00"
         duration={40}
         speakers={[
           {
@@ -212,7 +188,7 @@
       <Talk
         talkTitle="Lightning Talk"
         date="2022-09-03"
-        hours="18:15"
+        hours="17:45"
         duration={30}
         speakers={[]}
         speakerImage={`${assets}/speakers/lightning-talk.png`}
@@ -229,8 +205,8 @@
       <Talk
         talkTitle="Ending Ceremony"
         date="2022-09-03"
-        hours="18:45"
-        duration={15}
+        hours="18:15"
+        duration={30}
         speakers={[
           {
             name: '@caiocodes',
@@ -246,7 +222,7 @@
           { type: 'website', url: 'http://macabeus.github.io/' },
         ]}
       >
-        End of the in-person day!
+        Let's play Kahoot and finish the in-person day!
       </Talk>
 
       <div class="division-wrapper">
@@ -522,9 +498,33 @@
       </div>
 
       <Talk
+        talkTitle="Why are you making your own programming language?"
+        date="2022-09-03"
+        hours="18:55"
+        duration={45}
+        speakers={[
+          {
+            name: '@TheEduardoRFS',
+            bio: "I like to describe myself as anti floating point, also I'm currently on the team Taylor Swift + programming languages.",
+          },
+        ]}
+        speakerImage={`${assets}/speakers/theeduardorfs.jpeg`}
+        socialLinks={[
+          { type: 'github', url: 'https://github.com/EduardoRFS' },
+          { type: 'twitch', url: 'https://twitch.tv/eduardorfs' },
+        ]}
+      >
+        I will be trying to convince you, that making a programming language is not a complete stupid idea and how to do that without hurting everyone.
+      </Talk>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <Talk
         talkTitle="Weird Machines: Exploiting Turing-Completeness"
         date="2022-09-10"
-        hours="18:55"
+        hours="19:45"
         duration={45}
         speakers={[
           {
@@ -552,7 +552,7 @@
       <Talk
         talkTitle="Ending Ceremony"
         date="2022-09-10"
-        hours="19:40"
+        hours="20:30"
         duration={10}
         speakers={[
           {

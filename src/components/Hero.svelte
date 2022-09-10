@@ -144,9 +144,9 @@
 
     <div class="action">
       <Button
-        url="https://www.eventbrite.com/cc/gambiconf-eu-464079"
+        url="https://www.youtube.com/channel/UCnTbfjNNWxFMyqW-d2QgHYw"
       >
-        Register now for free!
+        YouuTube channel
       </Button>
     </div>
   </div>

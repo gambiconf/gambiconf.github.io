@@ -2,6 +2,7 @@
   import BulletsGutter from '../components/BulletsGutter.svelte'
   import Hero from '../components/Hero.svelte'
   import RowCFP from '../components/RowCfp.svelte'
+  import YouTubeRow from '../components/YouTubeRow.svelte';
   import RowTalks from '../components/RowTalks.svelte'
   import RowWhereAndWhen from '../components/RowWhereAndWhen.svelte'
   import RowPartners from '../components/RowPartners.svelte'
@@ -38,6 +39,12 @@
 
 <div class="wrapper-content">
   <div class="hero-margin" />
+
+  <YouTubeRow />
+
+  <div class="bullters-gutter-wrapper">
+    <BulletsGutter />
+  </div>
 
   <RowWhatIsGambiConf />
 

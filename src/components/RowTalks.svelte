@@ -498,33 +498,9 @@
       </div>
 
       <Talk
-        talkTitle="Why are you making your own programming language?"
-        date="2022-09-03"
-        hours="18:55"
-        duration={45}
-        speakers={[
-          {
-            name: '@TheEduardoRFS',
-            bio: "I like to describe myself as anti floating point, also I'm currently on the team Taylor Swift + programming languages.",
-          },
-        ]}
-        speakerImage={`${assets}/speakers/theeduardorfs.jpeg`}
-        socialLinks={[
-          { type: 'github', url: 'https://github.com/EduardoRFS' },
-          { type: 'twitch', url: 'https://twitch.tv/eduardorfs' },
-        ]}
-      >
-        I will be trying to convince you, that making a programming language is not a complete stupid idea and how to do that without hurting everyone.
-      </Talk>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <Talk
         talkTitle="Weird Machines: Exploiting Turing-Completeness"
         date="2022-09-10"
-        hours="19:45"
+        hours="18:55"
         duration={45}
         speakers={[
           {
@@ -552,7 +528,7 @@
       <Talk
         talkTitle="Ending Ceremony"
         date="2022-09-10"
-        hours="20:30"
+        hours="19:40"
         duration={10}
         speakers={[
           {

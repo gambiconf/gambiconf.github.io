@@ -10,10 +10,6 @@
 </script>
 
 <style>
-  :global(body) {
-    margin: 0;
-  }
-
   .bullters-gutter-wrapper {
     margin-top: 30px;
     margin-bottom: 30px;

@@ -18,6 +18,10 @@ html {
   scroll-padding-top: calc(var(--header-height) + 2rem);
 }
 
+body {
+  margin: 0;
+}
+
 h1 {
   font-size: var(--h1-size);
 }

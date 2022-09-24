@@ -60,5 +60,6 @@
     <a href="/">Home</a>
     <a href="/#about">About</a>
     <a href="/#schedule">Schedule</a>
+    <a href="/album">Album</a>
   </nav>
 </header>

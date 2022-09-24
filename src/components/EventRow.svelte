@@ -11,6 +11,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
+
+    margin-bottom: 10px;
   }
 
   .video {
@@ -64,6 +66,8 @@
           ></iframe>
         </div>
       </div>
+
+      <a href="/album">📸 Go to the event album</a>
     </article>
   </Window>
 </div>

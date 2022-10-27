@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { google as getGoogleCalendarLink } from "calendar-link";
+  import { getGoogleCalendarLink } from '../utils/calendar';
   import SocialLinks from './SocialLinks.svelte'
   import type { SocialLink } from './SocialLinks.svelte'
 
@@ -14,7 +14,7 @@
   const googleCalendarLink = getGoogleCalendarLink({
     title: `[GambiConf Talk] ${talkTitle}`,
     start: `${date} ${hours}:00 +0100`,
-    duration: [duration, 'minutes'],
+    duration,
   })
 </script>
 

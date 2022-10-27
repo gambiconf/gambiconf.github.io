@@ -3,7 +3,7 @@
 
 <style>
   :global(body) {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../../static/mambi-icon-oulined.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/mambi-icon-oulined.png");
     background-position: center right;
     background-size: 100px;
 

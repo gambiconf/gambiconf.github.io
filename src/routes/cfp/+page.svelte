@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Circle } from 'svelte-loading-spinners'
-  import { postCfp } from '../network/cfp';
-  import Alert from '../components/Alert.svelte'
-  import Tweet from '../components/Tweet.svelte'
-  import type { TweetStatus } from '../components/Tweet.svelte'
+  import { postCfp } from '../../network/cfp';
+  import Alert from '../../components/Alert.svelte'
+  import Tweet from '../../components/Tweet.svelte'
+  import type { TweetStatus } from '../../components/Tweet.svelte'
 
   let name = ''
   let title = ''
@@ -46,7 +46,7 @@
 
 <style>
   :global(body) {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../../static/mambi-icon-oulined.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/mambi-icon-oulined.png");
     background-position: center right;
     background-size: 100px;
 

@@ -17,7 +17,7 @@
     width: 100%;
     height: 100%;
 
-    background-image: url("../../static/hero-background.png");
+    background-image: url("/hero-background.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

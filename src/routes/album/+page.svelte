@@ -2,7 +2,7 @@
   import Fa from 'svelte-fa/src/fa.svelte'
   import FaLayers from 'svelte-fa/src/fa-layers.svelte'
   import { faX } from '@fortawesome/free-solid-svg-icons/faX'
-  import Gallery from '../components/Gallery.svelte'
+  import Gallery from '../../components/Gallery.svelte'
 
   let selectedPhoto: string = null
 
@@ -14,14 +14,14 @@
     selectedPhoto = null
   }
 
-  const importPhotos = import.meta.glob('../../static/photos/*.jpeg')
+  const importPhotos = import.meta.glob('../../../static/photos/*.jpeg')
   let photos = []
-  
+
   const loadPhotos = async () => {
     const sortedPhotos = Object.keys(importPhotos).sort((a, b) => a.localeCompare(b))
 
     for (const path of sortedPhotos) {
-      const mod = await importPhotos[path]()
+      const mod = await importPhotos[path]() as any
       photos = [...photos, mod.default]
     }
   }
@@ -31,7 +31,7 @@
 
 <style>
   :global(body) {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../../static/mambi-icon-oulined.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/mambi-icon-oulined.png");
     background-position: center right;
     background-size: 100px;
   }

@@ -16,9 +16,10 @@
   },
   "dependencies": {
     "@fontsource/ibm-plex-sans": "^4.5.5",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "calendar-link": "^2.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "dayjs": "1.11.6",
+    "query-string": "7.1.1",
     "svelte-fa": "^2.4.0",
     "svelte-loading-spinners": "0.1.7"
   },

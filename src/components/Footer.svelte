@@ -4,7 +4,6 @@
   import { assets } from '$app/paths'
   import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle'
   import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
-  import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
   import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
   import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
   import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube'
@@ -80,8 +79,9 @@
 
     .social-links-container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-row-gap: 5px;
+      justify-items: center;
     }
   }
 </style>
@@ -142,25 +142,6 @@
                 color="white"
                 scale={0.6}
                 icon={faTwitter}
-              />
-            </FaLayers>
-          </a>
-
-          <a
-            href="https://www.facebook.com/GambiConf-102543485504335"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa
-                icon={faCircle}
-              />
-              <Fa
-                color="white"
-                scale={0.6}
-                icon={faFacebook}
               />
             </FaLayers>
           </a>

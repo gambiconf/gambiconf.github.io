@@ -3,8 +3,6 @@
   import Seo from '../components/Seo.svelte'
   import Header from '../components/Header.svelte'
   import '../app.css'
-
-  export const ssr = false
 </script>
 
 <svelte:head>

@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 2,
+  "vscodeFluent.replacementTemplate": "<Localized id=\"$1\" />",
+  "svelte.plugin.svelte.compilerWarnings": {
+    "security-anchor-rel-noreferrer": "ignore",
+    "a11y-missing-content": "ignore"
+  }
+}

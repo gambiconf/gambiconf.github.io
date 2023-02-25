@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { Localized } from '@nubolab-ffwd/svelte-fluent'
+</script>
+
 <style>
   .root {
     color: white;
@@ -38,22 +42,23 @@
 </style>
 
 <div class="root">
-  <div class="month">September 2022</div>
+  <div class="month"><Localized id="calendar--month" /></div>
 
-  <span>Su</span>
-  <span>Mo</span>
-  <span>Tu</span>
-  <span>We</span>
-  <span>Th</span>
-  <span>Fr</span>
-  <span>Sa</span>
+  <span><Localized id="calendar--sunday" /></span>
+  <span><Localized id="calendar--monday" /></span>
+  <span><Localized id="calendar--tuesday" /></span>
+  <span><Localized id="calendar--wednesday" /></span>
+  <span><Localized id="calendar--thursday" /></span>
+  <span><Localized id="calendar--friday" /></span>
+  <span><Localized id="calendar--saturday" /></span>
 
+  <span />
   <span />
   <span />
   <span />
   <span />
   <span>1</span>
-  <span>2</span>
+  <span class="highlighted-day">2</span>
   <span class="highlighted-day">3</span>
   <span>4</span>
   <span>5</span>
@@ -61,7 +66,7 @@
   <span>7</span>
   <span>8</span>
   <span>9</span>
-  <span class="highlighted-day">10</span>
+  <span>10</span>
   <span>11</span>
   <span>12</span>
   <span>13</span>
@@ -82,4 +87,5 @@
   <span>28</span>
   <span>29</span>
   <span>30</span>
+  <span>31</span>
 </div>

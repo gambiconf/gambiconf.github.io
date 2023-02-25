@@ -1,5 +1,6 @@
 <script lang="ts">
   import { assets } from '$app/paths'
+  import { t } from '../store/locale'
   import Window from './Window.svelte'
 </script>
 
@@ -30,7 +31,7 @@
   }
 </style>
 
-<Window title="Partners">
+<Window title={$t('partners--title')}>
   <div class="content">
     <a
       href="https://www.42lisboa.com/en/"

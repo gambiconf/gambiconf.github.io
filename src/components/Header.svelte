@@ -1,5 +1,7 @@
 <script lang="ts">
-  import { assets } from '$app/paths'
+  import { Localized } from '@nubolab-ffwd/svelte-fluent'
+  import { base, assets } from '$app/paths'
+  import LanguageSwitcher from './LanguageSwitcher.svelte'
 </script>
 
 <style>
@@ -57,9 +59,9 @@
   </a>
 
   <nav>
-    <a href="/">Home</a>
-    <a href="/#about">About</a>
-    <a href="/#schedule">Schedule</a>
-    <a href="/album">Album</a>
+    <a href={base}><Localized id="header--home" /></a>
+    <a href={`${base}/#about`}><Localized id="header--about" /></a>
+    <a href={`${base}/cfp`}><Localized id="header--cfp" /></a>
+    <LanguageSwitcher />
   </nav>
 </header>

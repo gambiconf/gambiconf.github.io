@@ -1,7 +1,10 @@
 <script lang="ts">
+  import { Localized, Overlay } from '@nubolab-ffwd/svelte-fluent'
   import Fa from 'svelte-fa/src/fa.svelte'
   import FaLayers from 'svelte-fa/src/fa-layers.svelte'
   import { faPaperPlane } from '@fortawesome/free-solid-svg-icons/faPaperPlane'
+  import { base } from '$app/paths'
+  import { t } from '../store/locale'
   import Window from './Window.svelte'
 </script>
 
@@ -55,7 +58,7 @@
   }
 </style>
 
-<Window title="Call for Proposal">
+<Window title={$t('call-for-proposal--title')}>
   <div class="content">
     <div class="row">
       <div class="icon">
@@ -69,29 +72,28 @@
 
       <div>
         <p>
-          If you've ever worked on a really hacky personal project or thought of a unique-underground-workaroundish way of doing something in CS,
-          come share your experience with us! We want to hear from you!
+          <Localized id="call-for-proposal--body-paragraph-1" />
         </p>
 
         <p>
-          Are you willing to speak at GambiConf, but don't know what to talk about?
-          <a
-            href="https://threadreaderapp.com/thread/1518259526243393536.html"
-            target="_blank"
-            rel="noopener"
-          >
-            Click here.
-          </a>
+          <Overlay id="call-for-proposal--body-paragraph-2">
+            <a
+              data-l10n-name="link"
+              href="https://threadreaderapp.com/thread/1518259526243393536.html"
+              target="_blank"
+              rel="noopener"
+            />
+          </Overlay>
         </p>
 
         <p>
-          The deadline is May 29.
+          <Localized id="call-for-proposal--body-paragraph-3" />
         </p>
       </div>
     </div>
 
     <div class="button">
-      <a class="button-cfp" href="/cfp">Apply to the CFP</a>
+      <a class="button-cfp" href={`${base}/cfp`}><Localized id="call-for-proposal--cta" /></a>
     </div>
   </div>
 </Window>

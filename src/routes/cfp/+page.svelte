@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Localized, Overlay } from '@nubolab-ffwd/svelte-fluent'
   import { Circle } from 'svelte-loading-spinners'
   import { postCfp } from '../../network/cfp';
   import Alert from '../../components/Alert.svelte'
@@ -127,20 +128,22 @@
 </style>
 
 <form on:submit|preventDefault={handleSubmit}>
-  <h1>CFP</h1>
+  <h1><Localized id="cfp--title" /></h1>
 
-  <h4>Talk infos</h4>
+  <h4><Localized id="cfp--section-talk-info" /></h4>
 
-  <label for="name">Your name or Twitter handler</label>
-  <input
-    name="name"
-    type="text"
-    placeholder='"My name" or "@twitterHandler"'
-    required
-    bind:value={name}
-  >
+  <Localized id="cfp--field-speaker-name-or-twitter-handler" let:attrs>
+    <label for="name">{attrs.label}</label>
+    <input
+      name="name"
+      type="text"
+      placeholder={attrs.placeholder}
+      required
+      bind:value={name}
+    >
+  </Localized>
 
-  <label for="title">Talk title</label>
+  <label for="title"><Localized id="cfp--field-title" /></label>
   <input
     name="title"
     type="text"
@@ -148,7 +151,7 @@
     bind:value={title}
   >
 
-  <label for="description">Description</label>
+  <label for="description"><Localized id="cfp--field-description" /></label>
   <textarea
     name="description"
     rows="4"
@@ -156,14 +159,16 @@
     bind:value={description}
   />
 
-  <label for="duration">Ideal talk duration</label>
-  <select name="duration" required bind:value={duration}>
-    <option value="15">15 minutes</option>
-    <option value="20">20 minutes</option>
-    <option value="30">30 minutes</option>
-    <option value="45">45 minutes</option>
-    <option value="60">60 minutes</option>
-  </select>
+  <Localized id="cfp--field-ideal-duration" let:attrs>
+    <label for="duration">{attrs.label}</label>
+    <select name="duration" required bind:value={duration}>
+      <option value="15">{attrs.option15minutes} </option>
+      <option value="20">{attrs.option20minutes} </option>
+      <option value="30">{attrs.option30minutes} </option>
+      <option value="45">{attrs.option45minutes} </option>
+      <option value="60">{attrs.option60minutes} </option>
+    </select>
+  </Localized>
 
   <label for="format">Format</label>
   <select name="format" required bind:value={format}>
@@ -173,7 +178,7 @@
   </select>
 
   <span>
-    Tweet preview
+    <Localized id="cfp--tweet-preview" />
     <span
       class:warning-limit={tweetTalkOnAlert === 'warning'}
       class:exceeded-limit={tweetTalkOnAlert === 'exceeded'}
@@ -191,9 +196,9 @@
     {description}
   </Tweet>
 
-  <h4>About you</h4>
+  <h4><Localized id="cfp--section-about-you" /></h4>
 
-  <label for="bio">Bio</label>
+  <label for="bio"><Localized id="cfp--field-bio" /></label>
   <textarea
     name="bio"
     rows="4"
@@ -202,7 +207,7 @@
   />
 
   <span>
-    Tweet preview
+    <Localized id="cfp--tweet-preview" />
     <span
       class:warning-limit={tweetBioOnAlert === 'warning'}
       class:exceeded-limit={tweetBioOnAlert === 'exceeded'}
@@ -219,18 +224,18 @@
     {bio}
   </Tweet>
 
-  <h4>Contacts</h4>
+  <h4><Localized id="cfp--section-contacts" /></h4>
 
-  <label for="social">Social Medias (it'll be public)</label>
+  <label for="social"><Localized id="cfp--field-social-medias" /></label>
   <textarea
     name="social"
-    placeholder={"GitHub: macabeus\nStackoverflow: macabeus\n..."}
+    placeholder="GitHub: macabeus\nStack Overflow: macabeus\n..."
     rows="3"
     required
     bind:value={social}
   />
 
-  <label for="email">E-Mail for the feedback (we won't share it)</label>
+  <label for="email"><Localized id="cfp--field-email" /></label>
   <input name="email" type="email" required bind:value={email} />
 
   {#if submitState && submitState.status !== 'submitting'}
@@ -246,7 +251,7 @@
     {#if submitState?.status === 'submitting'}
       <Circle color="white" size={16} />
     {:else}
-      Submit
+      <Localized id="cfp--submit" />
     {/if}
   </button>
 </form>

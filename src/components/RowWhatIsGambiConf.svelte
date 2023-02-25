@@ -1,5 +1,7 @@
 <script lang="ts">
+  import { Localized, Overlay } from '@nubolab-ffwd/svelte-fluent'
   import { assets } from '$app/paths'
+  import { t } from '../store/locale'
   import Window from './Window.svelte'
 </script>
 
@@ -22,7 +24,7 @@
 </style>
 
 <div id="about">
-  <Window title="What is GambiConf?">
+  <Window title={$t('row-what-is-gambiconf--title')}>
     <div class="content">
       <img
         class="icon"
@@ -31,45 +33,72 @@
       />
 
       <p>
-        GambiConf is a unique tech conference that's gonna blow your mind! 🐒
+        <Localized id="row-what-is-gambiconf--body-paragraph-1" />
       </p>
 
       <p>
-        It features projects and ideas that are definitely outside the box. Let's expand the boundaries of
-        what's possible, unlocking unknown knowledge—just like we did in the 2021 edition when we learned
-        <a href="https://www.youtube.com/watch?v=UWiXNTdmL2Q" target="_blank" rel="noopener">
-          how to build computers using only water
-        </a>
-        and
-        <a href="https://www.youtube.com/watch?v=_-o3ToBC0AI" target="_blank" rel="noopener">
-          how to run DOOM on an oscilloscope
-        </a>
-        !
+        <Overlay id="row-what-is-gambiconf--body-paragraph-2">
+          <a
+            data-l10n-name="link-talk-water"
+            href="https://www.youtube.com/watch?v=UWiXNTdmL2Q"
+            target="_blank"
+            rel="noopener"
+          />
+
+          <a
+            data-l10n-name="link-talk-satellite"
+            href="https://www.youtube.com/watch?v=6msRiv4PJVk"
+            target="_blank"
+            rel="noopener"
+          />
+        </Overlay>
       </p>
 
       <p>
-        This is a multilingual, not limited to a specific technology, conference. We try to focus more on the
-        purpose of the presented projects, the unique nature of the sessions, and what one can learn from a random,
-        very unusual, idea. We want to encourage people to try new ideas and discover new things,
-        for the simple sake of curiosity and exploration.
+        <Localized id="row-what-is-gambiconf--body-paragraph-3" />
       </p>
 
       <p>
-        Based on conferences like <a href="https://bangbangcon.com/" target="_blank" rel="noopener">!!Con</a> and
-        <a href="http://sigbovik.org/" target="_blank" rel="noopener">SIGBOVIK</a>, we organized the first edition
-        of GambiConf last year in Brazil in Portuguese. Now, we want to bring the event to Portugal in English!
+        <Overlay id="row-what-is-gambiconf--body-paragraph-4">
+          <a
+            data-l10n-name="link-bangbangcon"
+            href="https://bangbangcon.com/"
+            target="_blank"
+            rel="noopener"
+          />
+
+          <a
+            data-l10n-name="link-sigbovik"
+            href="http://sigbovik.org/"
+            target="_blank"
+            rel="noopener"
+          />
+
+          <a
+            data-l10n-name="link-gambiconf-2021"
+            href="https://gambiconf.dev/2021"
+            target="_blank"
+            rel="noopener"
+          />
+
+          <a
+            data-l10n-name="link-gambiconf-2022"
+            href="https://gambiconf.dev/2022"
+            target="_blank"
+            rel="noopener"
+          />
+        </Overlay>
       </p>
 
       <p>
-        You can check
-        <a
-          href="https://macabeus.medium.com/gambiconf-why-do-we-need-a-new-tech-event-4ff3302cf3d"
-          target="_blank"
-          rel="noopener"
-        >
-          our presentation post
-        </a>
-        to find out more about our purpose.
+        <Overlay id="row-what-is-gambiconf--body-paragraph-5">
+          <a
+            data-l10n-name="link-1"
+            href="https://macabeus.medium.com/gambiconf-why-do-we-need-a-new-tech-event-4ff3302cf3d"
+            target="_blank"
+            rel="noopener"
+          />
+        </Overlay>
       </p>
     </div>
   </Window>

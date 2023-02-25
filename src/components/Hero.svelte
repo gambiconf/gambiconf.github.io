@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Localized } from '@nubolab-ffwd/svelte-fluent'
   import { assets } from '$app/paths'
   import Button from './Button.svelte'
 </script>
@@ -74,10 +75,6 @@
     opacity: 60%;
   }
 
-  .hours {
-    opacity: 60%;
-  }
-
   .action {
     margin-top: 25px;
   }
@@ -119,34 +116,23 @@
       </h1>
 
       <p>
-        The Blow Your Mind Conference
+        <Localized id="hero--subtitle" />
       </p>
     </div>
 
     <h4 class="date">
       <span>
-        September
-      </span>
-
-      <span>
-        3 and 10
+        <Localized id="hero--date" />
       </span>
     </h4>
 
     <p class="location">
-      Lisbon and Online
-    </p>
-
-    <p class="hours">
-      14:00 - 18:45 (Sept 3rd)<br />
-      14:00 - 19:50 (Sept 10th)
+      <Localized id="hero--location" />
     </p>
 
     <div class="action">
-      <Button
-        url="https://www.youtube.com/channel/UCnTbfjNNWxFMyqW-d2QgHYw"
-      >
-        YouuTube channel
+      <Button url="https://twitter.com/gambiconf">
+        <Localized id="hero--twitter-cta" />
       </Button>
     </div>
   </div>

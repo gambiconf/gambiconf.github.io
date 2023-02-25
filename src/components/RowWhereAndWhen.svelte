@@ -1,7 +1,8 @@
 <script lang="ts">
+  import { Localized, Overlay } from '@nubolab-ffwd/svelte-fluent'
+  import { t } from '../store/locale'
   import Calendar from './Calendar.svelte'
   import Window from './Window.svelte'
-  import Button from './Button.svelte'
 </script>
 
 <style>
@@ -21,15 +22,6 @@
     margin-top: 0;
   }
 
-  .actions {
-    display: flex;
-    gap: 25px
-  }
-
-  .avoid-wrap {
-    display:inline-block;
-  }
-
   @media screen and (min-width: 768px) {
     .content {
       flex-direction: row;
@@ -42,40 +34,25 @@
   }
 </style>
 
-<Window title="Where and When">
+<Window title={$t('where-and-when--title')}>
   <div class="content">
     <div class="calendar">
       <Calendar />
     </div>
 
     <div>
-      <p>On the 3rd of September, the event is in person in <a href="https://www.42lisboa.com/en/">42 Lisboa</a>:</p>
-
-      <address>
-        Penha de França, at Rua Neves Ferreira nº13, 1170-273<br />
-        Lisbon, Portugal<br />
-        <a href="https://goo.gl/maps/dFLBWL328PrB8SQk9">See on Google Maps</a>
-      </address>
-
-      <p>On the 10th of September, the event is only online.</p>
-
       <p>
-        Free streaming for both days on <a href="https://www.youtube.com/channel/UCnTbfjNNWxFMyqW-d2QgHYw">YouTube</a>
+        <Localized id="where-and-when--body-paragraph-1" />
       </p>
 
-      <div class="actions">
-        <Button
-          url="https://www.eventbrite.com/e/gambiconf-eu-in-person-day-3-september-tickets-358129012517"
-        >
-          Register for the <span class="avoid-wrap">in-person day</span>
-        </Button>
-
-        <Button
-          url="https://www.eventbrite.com/e/gambiconf-eu-online-day-10-september-tickets-358997881327"
-        >
-          Register for the <span class="avoid-wrap">online day</span>
-        </Button>
-      </div>
+      <p>
+        <Overlay id="where-and-when--body-paragraph-2">
+          <a
+            data-l10n-name="link"
+            href="https://www.youtube.com/@gambiconf"
+          />
+        </Overlay>
+      </p>
     </div>
   </div>
 </Window>

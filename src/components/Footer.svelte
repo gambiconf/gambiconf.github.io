@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Localized } from '@nubolab-ffwd/svelte-fluent'
   import Fa from 'svelte-fa/src/fa.svelte'
   import FaLayers from 'svelte-fa/src/fa-layers.svelte'
   import { assets } from '$app/paths'
@@ -97,31 +98,38 @@
     </div>
 
     <div class="column-content">
-      <h1>Site Map</h1>
+      <h1><Localized id="footer--site-map" /></h1>
 
       <div>
-        <a href="/">Home</a>
-        <a href="/#about">About</a>
+        <a href="/"><Localized id="footer--home" /></a>
+        <a href="/#about"><Localized id="footer--about" /></a>
         <a
           href="https://gambiconf.dev/2021"
           target="_blank"
           rel="noopener"
         >
-          2021 Edition
+          <Localized id="footer--2021-edition" />
         </a>
-        <a href="/code-of-conduct">Code of Conduct</a>
+        <a
+          href="https://gambiconf.dev/2022"
+          target="_blank"
+          rel="noopener"
+        >
+          <Localized id="footer--2022-edition" />
+        </a>
+        <a href="/code-of-conduct"><Localized id="footer--code-of-conduct" /></a>
         <a
           href="https://docs.google.com/presentation/d/1u-VWUl92qNr1i_zEcqSdXwLXpwsT6pTl6CIVoA-WrMg/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Media Kit
+          <Localized id="footer--media-kit" />
         </a>
       </div>
     </div>
 
     <address class="column-content">
-      <h1>Contacts</h1>
+      <h1><Localized id="footer--contacts" /></h1>
 
       <div>
         <a href="mailto:mambi@gambiconf.dev" class="email">mambi@gambiconf.dev</a>

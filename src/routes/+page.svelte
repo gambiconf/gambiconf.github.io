@@ -1,9 +1,7 @@
 <script lang="ts">
   import BulletsGutter from '../components/BulletsGutter.svelte'
   import Hero from '../components/Hero.svelte'
-  import RowCFP from '../components/RowCfp.svelte'
-  import EventRow from '../components/EventRow.svelte';
-  import RowTalks from '../components/RowTalks.svelte'
+  import RowCfp from '../components/RowCfp.svelte'
   import RowWhereAndWhen from '../components/RowWhereAndWhen.svelte'
   import RowPartners from '../components/RowPartners.svelte'
   import RowWhatIsGambiConf from '../components/RowWhatIsGambiConf.svelte'
@@ -36,25 +34,19 @@
 <div class="wrapper-content">
   <div class="hero-margin" />
 
-  <EventRow />
-
-  <div class="bullters-gutter-wrapper">
-    <BulletsGutter />
-  </div>
-
   <RowWhatIsGambiConf />
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />
   </div>
 
-  <RowTalks />
+  <RowWhereAndWhen />
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />
   </div>
 
-  <RowWhereAndWhen />
+  <RowCfp />
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />

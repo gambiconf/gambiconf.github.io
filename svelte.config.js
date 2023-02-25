@@ -7,6 +7,14 @@ const config = {
   // for more information about preprocessors
   preprocess: preprocess(),
 
+  onwarn: (warning, handler) => {
+    if (['a11y-missing-content', 'security-anchor-rel-noreferrer'].find((rule) => warning.code.includes(rule))) {
+      return;
+    }
+
+    handler(warning);
+  },
+
   kit: {
     adapter: staticAdapter({
       fallback: 'index.html'

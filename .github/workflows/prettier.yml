@@ -12,4 +12,4 @@ jobs:
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
         with:
-          prettier_options: --config .prettierrc .
+          prettier_options: --config .prettierrc --check .

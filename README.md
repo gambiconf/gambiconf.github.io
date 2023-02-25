@@ -1,4 +1,4 @@
-# <img src="/static/favicon.png" align="right" height="75px" />  GambiConf
+# <img src="/static/favicon.png" align="right" height="75px" /> GambiConf
 
 > 🐒 The Blow Your Mind Conference
 

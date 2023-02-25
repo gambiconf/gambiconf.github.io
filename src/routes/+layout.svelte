@@ -1,26 +1,26 @@
 <script>
-  import { Localized } from '@nubolab-ffwd/svelte-fluent'
-  import Footer from '../components/Footer.svelte'
-  import Seo from '../components/Seo.svelte'
-  import Header from '../components/Header.svelte'
-  import LocalizationProvider from '../providers/LocalizationProvider.svelte'
-  import '../app.css'
+	import { Localized } from '@nubolab-ffwd/svelte-fluent';
+	import Footer from '../components/Footer.svelte';
+	import Seo from '../components/Seo.svelte';
+	import Header from '../components/Header.svelte';
+	import LocalizationProvider from '../providers/LocalizationProvider.svelte';
+	import '../app.css';
 </script>
 
 <svelte:head>
-  <Seo />
+	<Seo />
 </svelte:head>
 
 <LocalizationProvider>
-  <title><Localized id="title" /></title>
+	<title><Localized id="title" /></title>
 
-  <Header />
+	<Header />
 
-  <body>
-    <main>
-      <slot />
-    </main>
-  </body>
+	<body>
+		<main>
+			<slot />
+		</main>
+	</body>
 
-  <Footer />
+	<Footer />
 </LocalizationProvider>

@@ -11,7 +11,7 @@
   let title = ""
   let description = ""
   let duration = ""
-  let format = ""
+  let language = ""
   let bio = ""
   let social = ""
   let email = ""
@@ -19,8 +19,11 @@
   let tweetTalkOnAlert: TweetStatus = "ok"
   let tweetBioOnAlert: TweetStatus = "ok"
 
-  $: talkTweetPreview = `Talk "${title}" por ${name}\n\n${description}`
-  $: speakerTweetPreview = `About the speaker:\n${bio}`
+  $: talkTweetPreview =
+    language === "only-english"
+      ? `Talk "${title}" by ${name} (in 🇺🇸)\n\n${description}`
+      : `Talk "${title}" por ${name}\n\n${description}`
+  $: speakerTweetPreview = `Sobre o palestrante:\n${bio}`
 
   let submitState: {
     status: "submitting" | "success" | "error"
@@ -45,7 +48,7 @@
       title,
       description,
       duration: Number(duration),
-      format,
+      language,
       bio,
       social,
       email,
@@ -68,6 +71,15 @@
     <input name="name" type="text" placeholder={attrs.placeholder} required bind:value={name} />
   </Localized>
 
+  <Localized id="cfp--field-language" let:attrs>
+    <label for="language">{attrs.label}</label>
+    <select name="language" required bind:value={language}>
+      <option value="only-portuguese">{attrs.optionPortuguese}</option>
+      <option value="only-english">{attrs.optionEnglish}</option>
+      <option value="both-english-and-portuguese">{attrs.optionPortugueseOrEnglish}</option>
+    </select>
+  </Localized>
+
   <label for="title"><Localized id="cfp--field-title" /></label>
   <input name="title" type="text" required bind:value={title} />
 
@@ -84,13 +96,6 @@
       <option value="60">{attrs.option60minutes} </option>
     </select>
   </Localized>
-
-  <label for="format">Format</label>
-  <select name="format" required bind:value={format}>
-    <option value="in-person">I can talk only in-person</option>
-    <option value="online">I can talk only online</option>
-    <option value="both">Both in-person or online works for me</option>
-  </select>
 
   <span>
     <Localized id="cfp--tweet-preview" />

@@ -5,11 +5,12 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte"
   import { assets } from "$app/paths"
+  import { tweetLength } from "../utils/tweet"
   import Donut from "./Donut.svelte"
 
-  export let countCharacters = 0
+  export let body = ""
 
-  $: donutPercent = (countCharacters * 100) / 270
+  $: donutPercent = (tweetLength(body) * 100) / 270
 
   const dispatch = createEventDispatcher()
 
@@ -42,7 +43,16 @@
     </div>
 
     <div class="text">
-      <slot />
+      {#each body.split(/(\s)/) as word}
+        {#if word === "\n"}
+          <br />
+        {:else if word[0] === "@"}
+          <span class="tweet-handler">{word}</span>
+        {:else}
+          {word}
+        {/if}
+        {" "}
+      {/each}
     </div>
 
     <div class="icons">
@@ -139,5 +149,9 @@
   .text {
     line-height: 1.3125;
     white-space: pre-line;
+  }
+
+  .tweet-handler {
+    color: rgb(29, 155, 240);
   }
 </style>

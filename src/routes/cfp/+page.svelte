@@ -5,6 +5,7 @@
   import Alert from "../../components/Alert.svelte"
   import Tweet from "../../components/Tweet.svelte"
   import type { TweetStatus } from "../../components/Tweet.svelte"
+  import { tweetLength } from "../../utils/tweet"
 
   let name = ""
   let title = ""
@@ -18,8 +19,8 @@
   let tweetTalkOnAlert: TweetStatus = "ok"
   let tweetBioOnAlert: TweetStatus = "ok"
 
-  $: tweetTalkCountCharacters = 13 + name.length + title.length + description.length
-  $: tweetBioCountCharacters = 19 + bio.length
+  $: talkTweetPreview = `Talk "${title}" por ${name}\n\n${description}`
+  $: speakerTweetPreview = `About the speaker:\n${bio}`
 
   let submitState: {
     status: "submitting" | "success" | "error"
@@ -27,19 +28,13 @@
   } | null = null
 
   const handleSubmit = async () => {
-    if (tweetTalkCountCharacters > 270) {
-      submitState = {
-        status: "error",
-        message: "Tweet talk exceeds 270 characters",
-      }
+    if (tweetLength(talkTweetPreview) > 270) {
+      submitState = { status: "error", message: "Tweet talk exceeds 270 characters" }
       return
     }
 
-    if (tweetBioCountCharacters > 270) {
-      submitState = {
-        status: "error",
-        message: "Tweet bio exceeds 270 characters",
-      }
+    if (tweetLength(speakerTweetPreview) > 270) {
+      submitState = { status: "error", message: "Tweet bio exceeds 270 characters" }
       return
     }
 
@@ -103,20 +98,16 @@
       class:warning-limit={tweetTalkOnAlert === "warning"}
       class:exceeded-limit={tweetTalkOnAlert === "exceeded"}
     >
-      ({tweetTalkCountCharacters}/270)
+      ({tweetLength(talkTweetPreview)}/270)
     </span>
   </span>
 
   <Tweet
-    countCharacters={tweetTalkCountCharacters}
+    body={talkTweetPreview}
     on:tweetStatusChanged={(event) => {
       tweetTalkOnAlert = event.detail.tweetStatus
     }}
-  >
-    Talk "{title}" by <span class:tweet-handler={name[0] === "@"}>{name}</span>.<br />
-    <br />
-    {description}
-  </Tweet>
+  />
 
   <h4><Localized id="cfp--section-about-you" /></h4>
 
@@ -129,19 +120,16 @@
       class:warning-limit={tweetBioOnAlert === "warning"}
       class:exceeded-limit={tweetBioOnAlert === "exceeded"}
     >
-      ({tweetBioCountCharacters}/270)
+      ({tweetLength(speakerTweetPreview)}/270)
     </span>
   </span>
 
   <Tweet
-    countCharacters={tweetBioCountCharacters}
+    body={speakerTweetPreview}
     on:tweetStatusChanged={(event) => {
       tweetBioOnAlert = event.detail.tweetStatus
     }}
-  >
-    About the speaker:
-    {bio}
-  </Tweet>
+  />
 
   <h4><Localized id="cfp--section-contacts" /></h4>
 
@@ -204,10 +192,6 @@
 
   form label + * {
     margin-bottom: 20px;
-  }
-
-  .tweet-handler {
-    color: rgb(29, 155, 240);
   }
 
   .warning-limit {

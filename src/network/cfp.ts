@@ -3,7 +3,7 @@ type PostCfpParams = {
   title: string;
   description: string;
   duration: number;
-  format: string;
+  language: string;
   bio: string;
   social: string;
   email: string;

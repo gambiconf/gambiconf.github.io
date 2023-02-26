@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
+  import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { Circle } from "svelte-loading-spinners"
   import { postCfp } from "../../network/cfp"
   import Alert from "../../components/Alert.svelte"
@@ -113,8 +113,7 @@
       tweetTalkOnAlert = event.detail.tweetStatus
     }}
   >
-    Talk "{title}" by
-    <span class:tweet-handler={name[0] === "@"}>{name}</span>.<br />
+    Talk "{title}" by <span class:tweet-handler={name[0] === "@"}>{name}</span>.<br />
     <br />
     {description}
   </Tweet>
@@ -149,7 +148,7 @@
   <label for="social"><Localized id="cfp--field-social-medias" /></label>
   <textarea
     name="social"
-    placeholder="GitHub: macabeus\nStack Overflow: macabeus\n..."
+    placeholder={"GitHub: macabeus\nStack Overflow: macabeus\n..."}
     rows="3"
     required
     bind:value={social}

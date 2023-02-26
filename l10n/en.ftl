@@ -81,7 +81,7 @@ footer--contacts = Contacts
 ## CFP
 
 cfp--title = CFP
-cfp--talk-info = Talk
+cfp--section-talk-info = Talk
 cfp--field-speaker-name-or-twitter-handler = _
   .label = Your name or Twitter handler
   .placeholder = "My name" or "@twitterHandler"

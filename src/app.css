@@ -1,75 +1,75 @@
-@import '@fontsource/ibm-plex-sans';
+@import "@fontsource/ibm-plex-sans";
 
 :root {
-	font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-	--h1-size: 3rem;
-	--h2-size: calc(var(--h1-size) * 0.9);
-	--h3-size: calc(var(--h1-size) * 0.8);
-	--h4-size: calc(var(--h1-size) * 0.7);
-	--h5-size: calc(var(--h1-size) * 0.6);
-	--h6-size: calc(var(--h1-size) * 0.5);
+  --h1-size: 3rem;
+  --h2-size: calc(var(--h1-size) * 0.9);
+  --h3-size: calc(var(--h1-size) * 0.8);
+  --h4-size: calc(var(--h1-size) * 0.7);
+  --h5-size: calc(var(--h1-size) * 0.6);
+  --h6-size: calc(var(--h1-size) * 0.5);
 
-	--header-height: 40px;
+  --header-height: 40px;
 }
 
 html {
-	scroll-padding-top: calc(var(--header-height) + 2rem);
+  scroll-padding-top: calc(var(--header-height) + 2rem);
 }
 
 body {
-	margin: 0;
+  margin: 0;
 }
 
 h1 {
-	font-size: var(--h1-size);
+  font-size: var(--h1-size);
 }
 
 h2 {
-	font-size: var(--h2-size);
+  font-size: var(--h2-size);
 }
 
 h3 {
-	font-size: var(--h3-size);
+  font-size: var(--h3-size);
 }
 
 h4 {
-	font-size: var(--h4-size);
+  font-size: var(--h4-size);
 }
 
 h5 {
-	font-size: var(--h5-size);
+  font-size: var(--h5-size);
 }
 
 h6 {
-	font-size: var(--h6-size);
+  font-size: var(--h6-size);
 }
 
 a {
-	color: rgb(84, 89, 95);
-	text-decoration: none;
-	transition: 0.4s;
+  color: rgb(84, 89, 95);
+  text-decoration: none;
+  transition: 0.4s;
 }
 
 a:hover {
-	color: #ff8915;
+  color: #ff8915;
 }
 
 @media screen and (min-width: 640px) {
-	body {
-		font-size: 0.8rem;
-	}
+  body {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
-	body {
-		font-size: 1.2rem;
-	}
+  body {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
-	html {
-		scroll-behavior: smooth;
-	}
+  html {
+    scroll-behavior: smooth;
+  }
 }

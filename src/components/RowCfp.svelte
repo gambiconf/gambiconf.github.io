@@ -1,12 +1,49 @@
 <script lang="ts">
-  import { Localized, Overlay } from '@nubolab-ffwd/svelte-fluent'
-  import Fa from 'svelte-fa/src/fa.svelte'
-  import FaLayers from 'svelte-fa/src/fa-layers.svelte'
-  import { faPaperPlane } from '@fortawesome/free-solid-svg-icons/faPaperPlane'
-  import { base } from '$app/paths'
-  import { t } from '../store/locale'
-  import Window from './Window.svelte'
+  import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
+  import Fa from "svelte-fa/src/fa.svelte"
+  import FaLayers from "svelte-fa/src/fa-layers.svelte"
+  import { faPaperPlane } from "@fortawesome/free-solid-svg-icons/faPaperPlane"
+  import { base } from "$app/paths"
+  import { t } from "../store/locale"
+  import Window from "./Window.svelte"
 </script>
+
+<Window title={$t("call-for-proposal--title")}>
+  <div class="content">
+    <div class="row">
+      <div class="icon">
+        <FaLayers size="4x">
+          <Fa color="#0271b8" icon={faPaperPlane} />
+        </FaLayers>
+      </div>
+
+      <div>
+        <p>
+          <Localized id="call-for-proposal--body-paragraph-1" />
+        </p>
+
+        <p>
+          <Overlay id="call-for-proposal--body-paragraph-2">
+            <a
+              data-l10n-name="link"
+              href="https://threadreaderapp.com/thread/1518259526243393536.html"
+              target="_blank"
+              rel="noopener"
+            />
+          </Overlay>
+        </p>
+
+        <p>
+          <Localized id="call-for-proposal--body-paragraph-3" />
+        </p>
+      </div>
+    </div>
+
+    <div class="button">
+      <a class="button-cfp" href={`${base}/cfp`}><Localized id="call-for-proposal--cta" /></a>
+    </div>
+  </div>
+</Window>
 
 <style>
   .content {
@@ -57,43 +94,3 @@
     }
   }
 </style>
-
-<Window title={$t('call-for-proposal--title')}>
-  <div class="content">
-    <div class="row">
-      <div class="icon">
-        <FaLayers size="4x">
-          <Fa
-            color="#0271b8"
-            icon={faPaperPlane}
-          />
-        </FaLayers>
-      </div>
-
-      <div>
-        <p>
-          <Localized id="call-for-proposal--body-paragraph-1" />
-        </p>
-
-        <p>
-          <Overlay id="call-for-proposal--body-paragraph-2">
-            <a
-              data-l10n-name="link"
-              href="https://threadreaderapp.com/thread/1518259526243393536.html"
-              target="_blank"
-              rel="noopener"
-            />
-          </Overlay>
-        </p>
-
-        <p>
-          <Localized id="call-for-proposal--body-paragraph-3" />
-        </p>
-      </div>
-    </div>
-
-    <div class="button">
-      <a class="button-cfp" href={`${base}/cfp`}><Localized id="call-for-proposal--cta" /></a>
-    </div>
-  </div>
-</Window>

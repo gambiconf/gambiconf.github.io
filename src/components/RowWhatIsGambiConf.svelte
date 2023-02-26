@@ -1,36 +1,14 @@
 <script lang="ts">
-  import { Localized, Overlay } from '@nubolab-ffwd/svelte-fluent'
-  import { assets } from '$app/paths'
-  import { t } from '../store/locale'
-  import Window from './Window.svelte'
+  import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
+  import { assets } from "$app/paths"
+  import { t } from "../store/locale"
+  import Window from "./Window.svelte"
 </script>
 
-<style>
-  .content {
-    padding: 25px;
-  }
-
-  .icon {
-    float: left;
-  }
-
-  .content p:first-of-type {
-    margin-top: 0;
-  }
-
-  .content p:last-of-type {
-    margin-bottom: 0;
-  }
-</style>
-
 <div id="about">
-  <Window title={$t('row-what-is-gambiconf--title')}>
+  <Window title={$t("row-what-is-gambiconf--title")}>
     <div class="content">
-      <img
-        class="icon"
-        src={`${assets}/favicon.png`}
-        alt="GambiConf icon"
-      />
+      <img class="icon" src={`${assets}/favicon.png`} alt="GambiConf icon" />
 
       <p>
         <Localized id="row-what-is-gambiconf--body-paragraph-1" />
@@ -103,3 +81,21 @@
     </div>
   </Window>
 </div>
+
+<style>
+  .content {
+    padding: 25px;
+  }
+
+  .icon {
+    float: left;
+  }
+
+  .content p:first-of-type {
+    margin-top: 0;
+  }
+
+  .content p:last-of-type {
+    margin-bottom: 0;
+  }
+</style>

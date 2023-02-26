@@ -1,35 +1,52 @@
 <script>
-  import { onMount, createEventDispatcher } from "svelte";
+  import { onMount, createEventDispatcher } from "svelte"
 
-  const dispatch = createEventDispatcher();
+  const dispatch = createEventDispatcher()
 
-  let slotHolder = null;
-  let columns = [];
-  const columnCount = 5;
+  let slotHolder = null
+  let columns = []
+  const columnCount = 5
 
   const handleClickPhoto = (e) => {
-    dispatch("photoClick", { src: e.target.src });
+    dispatch("photoClick", { src: e.target.src })
   }
 
   const draw = () => {
-    const photos = Array.from(slotHolder.childNodes).filter(
-      (child) => child.tagName === "IMG"
-    );
+    const photos = Array.from(slotHolder.childNodes).filter((child) => child.tagName === "IMG")
 
-    columns = new Array(columnCount).fill([]);
+    columns = new Array(columnCount).fill([])
 
     for (let i = 0; i < photos.length; i++) {
-      const idx = i % columnCount;
+      const idx = i % columnCount
 
       columns[idx] = [
         ...columns[idx],
         { src: photos[i].src, alt: photos[i].alt, class: photos[i].className },
-      ];
+      ]
     }
   }
 
-  onMount(draw);
+  onMount(draw)
 </script>
+
+<div
+  class="slot-holder"
+  bind:this={slotHolder}
+  on:DOMNodeInserted={draw}
+  on:DOMNodeRemoved={draw}
+>
+  <slot />
+</div>
+
+<div class="root">
+  {#each columns as column}
+    <div class="column">
+      {#each column as img}
+        <img src={img.src} alt={img.alt} on:click={handleClickPhoto} class="img-hover column" />
+      {/each}
+    </div>
+  {/each}
+</div>
 
 <style>
   .slot-holder {
@@ -54,7 +71,6 @@
     border-radius: 5px;
   }
 
-
   .img-hover {
     opacity: 0.9;
     transition: all 0.2s;
@@ -67,27 +83,3 @@
     transform: scale(1.05);
   }
 </style>
-
-<div
-  class="slot-holder"
-  bind:this={slotHolder}
-  on:DOMNodeInserted={draw}
-  on:DOMNodeRemoved={draw}
->
-  <slot />
-</div>
-
-<div class="root">
-  {#each columns as column}
-    <div class="column">
-      {#each column as img}
-        <img
-          src={img.src}
-          alt={img.alt}
-          on:click={handleClickPhoto}
-          class="img-hover column"
-        />
-      {/each}
-    </div>
-  {/each}
-</div>

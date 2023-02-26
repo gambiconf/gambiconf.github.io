@@ -1,6 +1,12 @@
 <script lang="ts">
-  export let url: string;
+  export let url: string
 </script>
+
+<div class="button">
+  <a href={url} target="_blank" rel="noopener noreferrer">
+    <slot />
+  </a>
+</div>
 
 <style>
   .button {
@@ -28,13 +34,3 @@
     filter: brightness(0.9);
   }
 </style>
-
-<div class="button">
-  <a
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <slot />
-  </a>
-</div>

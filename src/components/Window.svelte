@@ -2,6 +2,22 @@
   export let title: string
 </script>
 
+<div class="window">
+  <div class="title-bar">
+    <div class="title-buttons">
+      <div class="button-close" />
+      <div class="button-minimize" />
+      <div class="button-expand" />
+    </div>
+
+    <div>
+      {title}
+    </div>
+  </div>
+
+  <slot />
+</div>
+
 <style>
   .window {
     border: 1px solid #222;
@@ -60,19 +76,3 @@
     }
   }
 </style>
-
-<div class="window">
-  <div class="title-bar">
-    <div class="title-buttons">
-      <div class="button-close" />
-      <div class="button-minimize" />
-      <div class="button-expand" />
-    </div>
-
-    <div>
-      {title}
-    </div>
-  </div>
-
-  <slot />
-</div>

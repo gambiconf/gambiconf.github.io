@@ -1,38 +1,70 @@
 <script context="module" lang="ts">
-  export type TweetStatus =
-    | 'ok'
-    | 'warning'
-    | 'exceeded'
+  export type TweetStatus = "ok" | "warning" | "exceeded"
 </script>
 
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte'
-  import { assets } from '$app/paths'
+  import { createEventDispatcher } from "svelte"
+  import { assets } from "$app/paths"
   import Donut from "./Donut.svelte"
 
   export let countCharacters = 0
 
-  $: donutPercent = countCharacters * 100 / 270
+  $: donutPercent = (countCharacters * 100) / 270
 
   const dispatch = createEventDispatcher()
 
-  let tweetStatus: TweetStatus = 'ok'
+  let tweetStatus: TweetStatus = "ok"
 
-  $: if (donutPercent > 100 && tweetStatus !== 'exceeded') {
-    tweetStatus = 'exceeded'
-    dispatch('tweetStatusChanged', { tweetStatus })
-  } else if (donutPercent > 75 && donutPercent <= 100 && tweetStatus !== 'warning') {
-    tweetStatus = 'warning'
-    dispatch('tweetStatusChanged', { tweetStatus })
-  } else if (donutPercent <= 75 && tweetStatus !== 'ok') {
-    tweetStatus = 'ok'
-    dispatch('tweetStatusChanged', { tweetStatus })
+  $: if (donutPercent > 100 && tweetStatus !== "exceeded") {
+    tweetStatus = "exceeded"
+    dispatch("tweetStatusChanged", { tweetStatus })
+  } else if (donutPercent > 75 && donutPercent <= 100 && tweetStatus !== "warning") {
+    tweetStatus = "warning"
+    dispatch("tweetStatusChanged", { tweetStatus })
+  } else if (donutPercent <= 75 && tweetStatus !== "ok") {
+    tweetStatus = "ok"
+    dispatch("tweetStatusChanged", { tweetStatus })
   }
 </script>
 
+<div class="tweet">
+  <div class="profile-pic" style="background-image: url({`${assets}/tweet/avatar.png`})" />
+
+  <div class="content">
+    <div class="header">
+      <div class="meta">
+        <span class="nickname">GambiConf</span>
+        <span class="handle">@gambiconf ·</span>
+        <span class="date">July 1, 2022</span>
+      </div>
+
+      <img class="ellipsis" src={`${assets}/tweet/ellipsis.svg`} alt="Ellipsis" />
+    </div>
+
+    <div class="text">
+      <slot />
+    </div>
+
+    <div class="icons">
+      <img src={`${assets}/tweet/comment.svg`} alt="Comment" />
+      <img src={`${assets}/tweet/retweet.svg`} alt="Retweet" />
+      <img src={`${assets}/tweet/favorite.svg`} alt="Favorite" />
+      <img src={`${assets}/tweet/info.svg`} alt="Info" />
+      <img src={`${assets}/tweet/stats.svg`} alt="Stats" />
+
+      <Donut
+        size={24}
+        percent={donutPercent}
+        bgColor={{ exceeded: "red", warning: "#ff7720", ok: "#304BA5" }[tweetStatus]}
+      />
+    </div>
+  </div>
+</div>
+
 <style>
   .tweet {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu,
+      "Helvetica Neue", sans-serif;
 
     background-color: white;
     transition: background-color 0.25s;
@@ -73,13 +105,15 @@
     grid-template-columns: 1fr auto;
     grid-gap: 2px;
   }
-  .meta .date, .meta .handle {
+  .meta .date,
+  .meta .handle {
     color: rgb(101, 119, 134);
   }
   .meta .nickname {
     font-weight: bold;
   }
-  .nickname:hover, .date:hover {
+  .nickname:hover,
+  .date:hover {
     text-decoration: underline;
   }
 
@@ -87,7 +121,7 @@
     height: 1em;
   }
 
-  .icons  {
+  .icons {
     max-width: 440px;
 
     margin-top: 5px;
@@ -107,44 +141,3 @@
     white-space: pre-line;
   }
 </style>
-
-<div class="tweet">
-  <div
-    class="profile-pic"
-    style="background-image: url({`${assets}/tweet/avatar.png`})"
-  />
-
-  <div class="content">
-    <div class="header">
-      <div class="meta">
-        <span class="nickname">GambiConf</span>
-        <span class="handle">@gambiconf ·</span>
-        <span class="date">July 1, 2022</span>
-      </div>
-
-      <img
-        class="ellipsis"
-        src={`${assets}/tweet/ellipsis.svg`}
-        alt="Ellipsis"
-      />
-    </div>
-
-    <div class="text">
-      <slot />
-    </div>
-
-    <div class="icons">
-      <img src={`${assets}/tweet/comment.svg`} alt="Comment" />
-      <img src={`${assets}/tweet/retweet.svg`} alt="Retweet" />
-      <img src={`${assets}/tweet/favorite.svg`} alt="Favorite" />
-      <img src={`${assets}/tweet/info.svg`} alt="Info" />
-      <img src={`${assets}/tweet/stats.svg`} alt="Stats" />
-
-      <Donut
-        size={24}
-        percent={donutPercent}
-        bgColor={{ exceeded: 'red', warning: '#ff7720', ok: '#304BA5' }[tweetStatus]}
-      />
-    </div>
-  </div>
-</div>

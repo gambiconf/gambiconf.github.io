@@ -9,14 +9,14 @@ declare namespace App {
   // interface Stuff {}
 }
 
-declare module 'svelte-fa/src/fa.svelte' {
-  import Fa from 'svelte-fa/src/index.js';
+declare module "svelte-fa/src/fa.svelte" {
+  import Fa from "svelte-fa/src/index.js";
   export default Fa;
 }
 
-declare module 'svelte-fa/src/fa-layers.svelte' {
-  import FaLayers from 'svelte-fa/src/index.js';
+declare module "svelte-fa/src/fa-layers.svelte" {
+  import FaLayers from "svelte-fa/src/index.js";
   export default FaLayers;
 }
 
-declare module '@nubolab-ffwd/svelte-fluent';
+declare module "@nubolab-ffwd/svelte-fluent";

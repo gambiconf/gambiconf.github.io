@@ -1,8 +1,21 @@
 <script lang="ts">
-  import { Localized } from '@nubolab-ffwd/svelte-fluent'
-  import { base, assets } from '$app/paths'
-  import LanguageSwitcher from './LanguageSwitcher.svelte'
+  import { Localized } from "@nubolab-ffwd/svelte-fluent"
+  import { base, assets } from "$app/paths"
+  import LanguageSwitcher from "./LanguageSwitcher.svelte"
 </script>
+
+<header>
+  <a href="/">
+    <img src={`${assets}/logo.png`} alt="logo" />
+  </a>
+
+  <nav>
+    <a href={base}><Localized id="header--home" /></a>
+    <a href={`${base}/#about`}><Localized id="header--about" /></a>
+    <a href={`${base}/cfp`}><Localized id="header--cfp" /></a>
+    <LanguageSwitcher />
+  </nav>
+</header>
 
 <style>
   header {
@@ -32,7 +45,7 @@
     align-items: center;
     height: 100%;
     margin-right: 5vw;
-    gap: 20px
+    gap: 20px;
   }
 
   @media screen and (min-width: 768px) {
@@ -45,23 +58,7 @@
 
     nav {
       margin-right: 10vw;
-      gap: 25px
+      gap: 25px;
     }
   }
 </style>
-
-<header>
-  <a href="/">
-    <img
-      src={`${assets}/logo.png`}
-      alt="logo"
-    />
-  </a>
-
-  <nav>
-    <a href={base}><Localized id="header--home" /></a>
-    <a href={`${base}/#about`}><Localized id="header--about" /></a>
-    <a href={`${base}/cfp`}><Localized id="header--cfp" /></a>
-    <LanguageSwitcher />
-  </nav>
-</header>

@@ -1,3 +1,9 @@
+<div>
+  <span />
+  <span />
+  <span />
+</div>
+
 <style>
   div {
     display: flex;
@@ -16,9 +22,3 @@
     border-radius: 50%;
   }
 </style>
-
-<div>
-  <span />
-  <span />
-  <span />
-</div>

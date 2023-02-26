@@ -1,45 +1,6 @@
 <script lang="ts">
-  import { Localized } from '@nubolab-ffwd/svelte-fluent'
+  import { Localized } from "@nubolab-ffwd/svelte-fluent"
 </script>
-
-<style>
-  .root {
-    color: white;
-    font-size: 1rem;
-
-    width: 315px;
-    background: #332f2e;
-    border-radius: 5px;
-    overflow: hidden;
-
-    padding: 0 10px 10px 10px;
-    box-sizing: border-box;
-    background-color: #0271b8;
-  }
-
-  .month {
-    margin-top: 18px;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  .root span {
-    float: left;
-    width: 42px;
-    height: 42px;
-    text-align: center;
-    line-height: 40px;
-  }
-
-  .highlighted-day {
-    color: #FF8915;
-    font-weight: bold;
-
-    border: 1px solid #FF8915;
-    border-radius: 50%;
-    box-sizing: border-box;
-  }
-</style>
 
 <div class="root">
   <div class="month"><Localized id="calendar--month" /></div>
@@ -89,3 +50,42 @@
   <span>30</span>
   <span>31</span>
 </div>
+
+<style>
+  .root {
+    color: white;
+    font-size: 1rem;
+
+    width: 315px;
+    background: #332f2e;
+    border-radius: 5px;
+    overflow: hidden;
+
+    padding: 0 10px 10px 10px;
+    box-sizing: border-box;
+    background-color: #0271b8;
+  }
+
+  .month {
+    margin-top: 18px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .root span {
+    float: left;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  .highlighted-day {
+    color: #ff8915;
+    font-weight: bold;
+
+    border: 1px solid #ff8915;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+</style>

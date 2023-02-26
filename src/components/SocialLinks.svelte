@@ -1,24 +1,24 @@
 <script context="module" lang="ts">
   export type SocialLink = {
-    type: 'github' | 'linkedin' | 'twitch' | 'twitter' | 'facebook' | 'website',
-    url: string,
+    type: "github" | "linkedin" | "twitch" | "twitter" | "facebook" | "website"
+    url: string
   }
 </script>
 
 <script lang="ts">
-  import Fa from 'svelte-fa/src/fa.svelte'
-  import FaLayers from 'svelte-fa/src/fa-layers.svelte'
-  import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
-  import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
-  import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
-  import { faTwitch } from '@fortawesome/free-brands-svg-icons/faTwitch'
-  import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
-  import { faEarth } from '@fortawesome/free-solid-svg-icons/faEarth'
-  import type { IconDefinition } from '@fortawesome/fontawesome-common-types'
+  import Fa from "svelte-fa/src/fa.svelte"
+  import FaLayers from "svelte-fa/src/fa-layers.svelte"
+  import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
+  import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
+  import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin"
+  import { faTwitch } from "@fortawesome/free-brands-svg-icons/faTwitch"
+  import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook"
+  import { faEarth } from "@fortawesome/free-solid-svg-icons/faEarth"
+  import type { IconDefinition } from "@fortawesome/fontawesome-common-types"
 
   export let links: SocialLink[]
 
-  const mapLinkTypeToIcon: { [link in SocialLink['type']]: IconDefinition } = {
+  const mapLinkTypeToIcon: { [link in SocialLink["type"]]: IconDefinition } = {
     github: faGithub,
     linkedin: faLinkedin,
     twitch: faTwitch,
@@ -28,6 +28,22 @@
   }
 </script>
 
+<div class="social-links">
+  {#each links as link}
+    <a
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={link.type}
+      class="social-media-icon"
+    >
+      <FaLayers size="2x">
+        <Fa scale={0.6} icon={mapLinkTypeToIcon[link.type]} />
+      </FaLayers>
+    </a>
+  {/each}
+</div>
+
 <style>
   .social-links {
     display: flex;
@@ -35,7 +51,7 @@
   }
 
   .social-media-icon {
-    color: #0271b8
+    color: #0271b8;
   }
   .social-media-icon:hover {
     filter: brightness(0.8);
@@ -49,22 +65,3 @@
     }
   }
 </style>
-
-<div class="social-links">
-  {#each links as link}
-    <a
-      href={link.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={link.type}
-      class="social-media-icon"
-    >
-      <FaLayers size="2x">
-        <Fa
-          scale={0.6}
-          icon={mapLinkTypeToIcon[link.type]}
-        />
-      </FaLayers>
-    </a>
-  {/each}
-</div>

@@ -1,7 +1,11 @@
 <script lang="ts">
-  export let status: 'success' | 'error'
+  export let status: "success" | "error"
   export let message: string
 </script>
+
+<div class={status}>
+  {message}
+</div>
 
 <style>
   div {
@@ -18,7 +22,3 @@
     background-color: #ffa1a1;
   }
 </style>
-
-<div class={status}>
-  {message}
-</div>

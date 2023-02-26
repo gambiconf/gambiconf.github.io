@@ -1,5 +1,5 @@
-import preprocess from 'svelte-preprocess';
-import staticAdapter from '@sveltejs/adapter-static';
+import preprocess from "svelte-preprocess";
+import staticAdapter from "@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,7 +8,11 @@ const config = {
   preprocess: preprocess(),
 
   onwarn: (warning, handler) => {
-    if (['a11y-missing-content', 'security-anchor-rel-noreferrer'].find((rule) => warning.code.includes(rule))) {
+    if (
+      ["a11y-missing-content", "security-anchor-rel-noreferrer"].find((rule) =>
+        warning.code.includes(rule)
+      )
+    ) {
       return;
     }
 
@@ -17,9 +21,9 @@ const config = {
 
   kit: {
     adapter: staticAdapter({
-      fallback: 'index.html'
+      fallback: "index.html",
     }),
-    prerender: { entries: [] }
+    prerender: { entries: [] },
   },
 };
 

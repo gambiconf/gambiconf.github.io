@@ -1,5 +1,6 @@
 type PostCfpParams = {
   name: string;
+  twitterHandler: string;
   title: string;
   description: string;
   duration: number;

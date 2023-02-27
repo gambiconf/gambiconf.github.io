@@ -8,6 +8,7 @@
   import { tweetLength } from "../../utils/tweet"
 
   let name = ""
+  let twitterHandler = ""
   let title = ""
   let description = ""
   let duration = ""
@@ -21,8 +22,8 @@
 
   $: talkTweetPreview =
     language === "only-english"
-      ? `Talk "${title}" by ${name} (in 🇺🇸)\n\n${description}`
-      : `Talk "${title}" por ${name}\n\n${description}`
+      ? `Talk "${title}" by ${twitterHandler || name} (in 🇺🇸)\n\n${description}`
+      : `Talk "${title}" por ${twitterHandler || name}\n\n${description}`
   $: speakerTweetPreview = `Sobre o palestrante:\n${bio}`
 
   let submitState: {
@@ -45,6 +46,7 @@
 
     const result = await postCfp({
       name,
+      twitterHandler,
       title,
       description,
       duration: Number(duration),
@@ -66,9 +68,12 @@
 
   <h4><Localized id="cfp--section-talk-info" /></h4>
 
-  <Localized id="cfp--field-speaker-name-or-twitter-handler" let:attrs>
+  <label for="name"><Localized id="cfp--field-name" /></label>
+  <input name="name" type="text" required bind:value={name} />
+
+  <Localized id="cfp--field-twitter-handler" let:attrs>
     <label for="name">{attrs.label}</label>
-    <input name="name" type="text" placeholder={attrs.placeholder} required bind:value={name} />
+    <input name="name" type="text" placeholder={attrs.placeholder} bind:value={twitterHandler} />
   </Localized>
 
   <Localized id="cfp--field-language" let:attrs>

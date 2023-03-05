@@ -1,6 +1,14 @@
 import preprocess from "svelte-preprocess";
 import staticAdapter from "@sveltejs/adapter-static";
 
+const environment = process.env.ENV;
+const mapEnvironmentToBasePath = {
+  production: "",
+  staging: "/website-staging",
+};
+const basePath = mapEnvironmentToBasePath[environment];
+console.warn(`Unknown environment: "${environment}"`);
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   // Consult https://github.com/sveltejs/svelte-preprocess
@@ -20,6 +28,9 @@ const config = {
   },
 
   kit: {
+    paths: {
+      base: basePath,
+    },
     adapter: staticAdapter({
       fallback: "index.html",
     }),

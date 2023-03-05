@@ -30,8 +30,18 @@ npm run dev
 
 ## How to deploy
 
+### Prod
+
 Deploying to GitHub Pages is an easy task. Just run it:
 
 ```
-npm run build && npm run deploy
+npm run build:prod && npm run deploy:prod
+```
+
+### Staging
+
+We have a [staging repository/environmnet](https://github.com/gambiconf/website-staging).
+
+```
+npm run build:staging && npm run deploy:staging
 ```

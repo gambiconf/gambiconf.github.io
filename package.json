@@ -4,7 +4,10 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && touch ./build/.nojekyll && echo \"gambiconf.dev\" > ./build/CNAME",
-    "deploy": "gh-pages -d build -t true",
+    "build:prod": "export ENV=production && npm run build && cp build/index.html build/404.html",
+    "build:staging": "export ENV=staging && npm run build && cp build/index.html build/404.html",
+    "deploy:prod": "gh-pages --repo git@github.com:gambiconf/gambiconf.github.io.git -d build -t true",
+    "deploy:staging": "gh-pages --repo git@github.com:gambiconf/website-staging.git -d build -t true",
     "preview": "vite preview",
     "test": "playwright test",
     "check": "svelte-check --tsconfig ./tsconfig.json",

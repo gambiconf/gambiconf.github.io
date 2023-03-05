@@ -4,7 +4,7 @@
   import { faX } from "@fortawesome/free-solid-svg-icons/faX"
   import Gallery from "../../components/Gallery.svelte"
 
-  let selectedPhoto: string = null
+  let selectedPhoto: string | null = null
 
   const handlePhotoClick = (e) => {
     selectedPhoto = e.detail.src
@@ -18,7 +18,7 @@
   }
 
   const importPhotos = import.meta.glob("../../../static/photos/*.jpeg")
-  let photos = []
+  let photos: string[] = []
 
   const loadPhotos = async () => {
     const sortedPhotos = Object.keys(importPhotos).sort((a, b) => a.localeCompare(b))

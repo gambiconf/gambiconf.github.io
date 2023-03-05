@@ -29,10 +29,13 @@
   $: speakerTweetPreview =
     language === "only-english" ? `About the speaker:\n${bio}` : `Sobre o palestrante:\n${bio}`
 
-  let submitState: {
-    status: "submitting" | "success" | "error"
-    message?: string
-  } | null = null
+  let submitState:
+    | { status: "submitting" }
+    | {
+        status: "success" | "error"
+        message: string
+      }
+    | null = null
 
   const handleSubmit = async () => {
     if (tweetLength(talkTweetPreview) > 270) {

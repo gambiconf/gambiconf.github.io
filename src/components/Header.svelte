@@ -5,12 +5,12 @@
 </script>
 
 <header>
-  <a href="/">
+  <a href={`${base}/`}>
     <img src={`${assets}/logo.png`} alt="logo" />
   </a>
 
   <nav>
-    <a href={base}><Localized id="header--home" /></a>
+    <a href={`${base}/`}><Localized id="header--home" /></a>
     <a href={`${base}/#about`}><Localized id="header--about" /></a>
     <a href={`${base}/cfp`}><Localized id="header--cfp" /></a>
     <LanguageSwitcher />

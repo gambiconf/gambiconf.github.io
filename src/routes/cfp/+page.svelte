@@ -26,7 +26,8 @@
     language === "only-english"
       ? `Talk "${title}" by ${twitterHandler || name} (in 🇺🇸)\n\n${description}`
       : `Talk "${title}" por ${twitterHandler || name}\n\n${description}`
-  $: speakerTweetPreview = `Sobre o palestrante:\n${bio}`
+  $: speakerTweetPreview =
+    language === "only-english" ? `About the speaker:\n${bio}` : `Sobre o palestrante:\n${bio}`
 
   let submitState: {
     status: "submitting" | "success" | "error"

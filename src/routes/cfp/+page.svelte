@@ -5,7 +5,9 @@
   import Alert from "../../components/Alert.svelte"
   import Tweet from "../../components/Tweet.svelte"
   import type { TweetStatus } from "../../components/Tweet.svelte"
+  import Window from "../../components/Window.svelte"
   import { tweetLength } from "../../utils/tweet"
+  import { t } from "../../store/locale"
 
   let name = ""
   let twitterHandler = ""
@@ -63,112 +65,119 @@
   }
 </script>
 
-<form on:submit|preventDefault={handleSubmit}>
-  <h1><Localized id="cfp--title" /></h1>
+<div class="page">
+  <Window title={$t("cfp--title")}>
+    <form on:submit|preventDefault={handleSubmit}>
+      <h4><Localized id="cfp--section-talk-info" /></h4>
 
-  <h4><Localized id="cfp--section-talk-info" /></h4>
+      <label for="name"><Localized id="cfp--field-name" /></label>
+      <input name="name" type="text" required bind:value={name} />
 
-  <label for="name"><Localized id="cfp--field-name" /></label>
-  <input name="name" type="text" required bind:value={name} />
+      <Localized id="cfp--field-twitter-handler" let:attrs>
+        <label for="name">{attrs.label}</label>
+        <input
+          name="name"
+          type="text"
+          placeholder={attrs.placeholder}
+          bind:value={twitterHandler}
+        />
+      </Localized>
 
-  <Localized id="cfp--field-twitter-handler" let:attrs>
-    <label for="name">{attrs.label}</label>
-    <input name="name" type="text" placeholder={attrs.placeholder} bind:value={twitterHandler} />
-  </Localized>
+      <Localized id="cfp--field-language" let:attrs>
+        <label for="language">{attrs.label}</label>
+        <select name="language" required bind:value={language}>
+          <option value="only-portuguese">{attrs.optionPortuguese}</option>
+          <option value="only-english">{attrs.optionEnglish}</option>
+          <option value="both-english-and-portuguese">{attrs.optionPortugueseOrEnglish}</option>
+        </select>
+      </Localized>
 
-  <Localized id="cfp--field-language" let:attrs>
-    <label for="language">{attrs.label}</label>
-    <select name="language" required bind:value={language}>
-      <option value="only-portuguese">{attrs.optionPortuguese}</option>
-      <option value="only-english">{attrs.optionEnglish}</option>
-      <option value="both-english-and-portuguese">{attrs.optionPortugueseOrEnglish}</option>
-    </select>
-  </Localized>
+      <label for="title"><Localized id="cfp--field-title" /></label>
+      <input name="title" type="text" required bind:value={title} />
 
-  <label for="title"><Localized id="cfp--field-title" /></label>
-  <input name="title" type="text" required bind:value={title} />
+      <label for="description"><Localized id="cfp--field-description" /></label>
+      <textarea name="description" rows="4" required bind:value={description} />
 
-  <label for="description"><Localized id="cfp--field-description" /></label>
-  <textarea name="description" rows="4" required bind:value={description} />
+      <Localized id="cfp--field-ideal-duration" let:attrs>
+        <label for="duration">{attrs.label}</label>
+        <select name="duration" required bind:value={duration}>
+          <option value="15">{attrs.option15minutes} </option>
+          <option value="20">{attrs.option20minutes} </option>
+          <option value="30">{attrs.option30minutes} </option>
+          <option value="45">{attrs.option45minutes} </option>
+          <option value="60">{attrs.option60minutes} </option>
+        </select>
+      </Localized>
 
-  <Localized id="cfp--field-ideal-duration" let:attrs>
-    <label for="duration">{attrs.label}</label>
-    <select name="duration" required bind:value={duration}>
-      <option value="15">{attrs.option15minutes} </option>
-      <option value="20">{attrs.option20minutes} </option>
-      <option value="30">{attrs.option30minutes} </option>
-      <option value="45">{attrs.option45minutes} </option>
-      <option value="60">{attrs.option60minutes} </option>
-    </select>
-  </Localized>
+      <span>
+        <Localized id="cfp--tweet-preview" />
+        <span
+          class:warning-limit={tweetTalkOnAlert === "warning"}
+          class:exceeded-limit={tweetTalkOnAlert === "exceeded"}
+        >
+          ({tweetLength(talkTweetPreview)}/270)
+        </span>
+      </span>
 
-  <span>
-    <Localized id="cfp--tweet-preview" />
-    <span
-      class:warning-limit={tweetTalkOnAlert === "warning"}
-      class:exceeded-limit={tweetTalkOnAlert === "exceeded"}
-    >
-      ({tweetLength(talkTweetPreview)}/270)
-    </span>
-  </span>
+      <Tweet
+        body={talkTweetPreview}
+        on:tweetStatusChanged={(event) => {
+          tweetTalkOnAlert = event.detail.tweetStatus
+        }}
+      />
 
-  <Tweet
-    body={talkTweetPreview}
-    on:tweetStatusChanged={(event) => {
-      tweetTalkOnAlert = event.detail.tweetStatus
-    }}
-  />
+      <h4><Localized id="cfp--section-about-you" /></h4>
 
-  <h4><Localized id="cfp--section-about-you" /></h4>
+      <label for="bio"><Localized id="cfp--field-bio" /></label>
+      <textarea name="bio" rows="4" required bind:value={bio} />
 
-  <label for="bio"><Localized id="cfp--field-bio" /></label>
-  <textarea name="bio" rows="4" required bind:value={bio} />
+      <span>
+        <Localized id="cfp--tweet-preview" />
+        <span
+          class:warning-limit={tweetBioOnAlert === "warning"}
+          class:exceeded-limit={tweetBioOnAlert === "exceeded"}
+        >
+          ({tweetLength(speakerTweetPreview)}/270)
+        </span>
+      </span>
 
-  <span>
-    <Localized id="cfp--tweet-preview" />
-    <span
-      class:warning-limit={tweetBioOnAlert === "warning"}
-      class:exceeded-limit={tweetBioOnAlert === "exceeded"}
-    >
-      ({tweetLength(speakerTweetPreview)}/270)
-    </span>
-  </span>
+      <Tweet
+        body={speakerTweetPreview}
+        on:tweetStatusChanged={(event) => {
+          tweetBioOnAlert = event.detail.tweetStatus
+        }}
+      />
 
-  <Tweet
-    body={speakerTweetPreview}
-    on:tweetStatusChanged={(event) => {
-      tweetBioOnAlert = event.detail.tweetStatus
-    }}
-  />
+      <h4><Localized id="cfp--section-contacts" /></h4>
 
-  <h4><Localized id="cfp--section-contacts" /></h4>
+      <label for="social"><Localized id="cfp--field-social-medias" /></label>
+      <textarea
+        name="social"
+        placeholder={"GitHub: macabeus\nStack Overflow: macabeus\n..."}
+        rows="3"
+        required
+        bind:value={social}
+      />
 
-  <label for="social"><Localized id="cfp--field-social-medias" /></label>
-  <textarea
-    name="social"
-    placeholder={"GitHub: macabeus\nStack Overflow: macabeus\n..."}
-    rows="3"
-    required
-    bind:value={social}
-  />
+      <label for="email"><Localized id="cfp--field-email" /></label>
+      <input name="email" type="email" required bind:value={email} />
 
-  <label for="email"><Localized id="cfp--field-email" /></label>
-  <input name="email" type="email" required bind:value={email} />
+      {#if submitState && submitState.status !== "submitting"}
+        <div class="alert-wrapper">
+          <Alert status={submitState.status} message={submitState.message} />
+        </div>
+      {/if}
 
-  {#if submitState && submitState.status !== "submitting"}
-    <div class="alert-wrapper">
-      <Alert status={submitState.status} message={submitState.message} />
-    </div>
-  {/if}
-
-  <button type="submit" disabled={submitState?.status === "submitting"}>
-    {#if submitState?.status === "submitting"}
-      <Circle color="white" size={16} />
-    {:else}
-      <Localized id="cfp--submit" />
-    {/if}
-  </button>
-</form>
+      <button type="submit" disabled={submitState?.status === "submitting"}>
+        {#if submitState?.status === "submitting"}
+          <Circle color="white" size={16} />
+        {:else}
+          <Localized id="cfp--submit" />
+        {/if}
+      </button>
+    </form>
+  </Window>
+</div>
 
 <style>
   :global(body) {
@@ -181,8 +190,13 @@
     min-width: 100vw;
   }
 
-  h1 {
+  .page {
     margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  h4:first-child {
+    margin-top: 0;
   }
 
   form {
@@ -191,8 +205,7 @@
 
     max-width: 1140px;
 
-    margin: auto;
-    margin-bottom: 60px;
+    padding: 25px;
   }
 
   label {

@@ -105,8 +105,6 @@
 
 <style>
   footer {
-    background-color: white;
-    border-top: 1px solid #ddd;
     padding-top: 10px;
     padding-bottom: 20px;
     text-align: center;

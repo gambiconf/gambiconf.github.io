@@ -76,9 +76,6 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu,
       "Helvetica Neue", sans-serif;
 
-    background-color: white;
-    transition: background-color 0.25s;
-
     display: grid;
     grid-template-columns: auto 1fr;
     grid-gap: 10px;
@@ -86,9 +83,6 @@
     max-width: 600px;
     min-width: 400px;
     padding: 15px;
-  }
-  .tweet:hover {
-    background-color: rgb(245, 248, 250);
   }
 
   .profile-pic {

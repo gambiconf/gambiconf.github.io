@@ -4,10 +4,14 @@
   import Seo from "../components/Seo.svelte"
   import Header from "../components/Header.svelte"
   import LocalizationProvider from "../providers/LocalizationProvider.svelte"
+  import { theme } from '../store/theme'
   import "../app.css"
 </script>
 
 <svelte:head>
+  <meta name="color-scheme" content={$theme} />
+  <link rel="stylesheet" href={`/themes/${$theme}.css`} />
+
   <Seo />
 </svelte:head>
 

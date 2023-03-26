@@ -66,6 +66,10 @@ call-for-proposal--cta = Submeter no CFP
 ## Partners
 
 partners--title = Parceiros
+partners--become-a-partner = _
+  .href = https://docs.google.com/presentation/d/1u-VWUl92qNr1i_zEcqSdXwLXpwsT6pTl6CIVoA-WrMg/edit?usp=sharing
+  .src = { $assets }/seja-parceiro.png
+  .alt = The GambiConf mascot holding a lifting a board written 'Become a partner'
 
 ## Footer
 
@@ -82,7 +86,7 @@ footer--contacts = Contatos
 
 cfp--title = CFP
 cfp--section-talk-info = Talk
-cfp--field-name = Name
+cfp--field-name = Nome
 cfp--field-twitter-handler = _
   .label = Twitter handler (opcional)
   .placeholder = @twitterHandler

@@ -66,6 +66,10 @@ call-for-proposal--cta = Apply to the CFP
 ## Partners
 
 partners--title = Partners
+partners--become-a-partner = _
+  .href = https://docs.google.com/presentation/d/1u-VWUl92qNr1i_zEcqSdXwLXpwsT6pTl6CIVoA-WrMg/edit?usp=sharing
+  .src = { $assets }/become-a-partner.png
+  .alt = The GambiConf mascot holding a lifting a board written 'Become a partner'
 
 ## Footer
 

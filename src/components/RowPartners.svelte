@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
   import { t } from "../store/locale"
   import Window from "./Window.svelte"
@@ -6,46 +7,22 @@
 
 <Window title={$t("partners--title")}>
   <div class="content">
-    <a href="https://www.42lisboa.com/en/" target="_blank" rel="noopener">
-      <img src={`${assets}/42-lisboa.png`} alt="42 Lisboa logo" />
-    </a>
-
-    <a href="https://anchor.fm/fronteirases" target="_blank" rel="noopener">
-      <img
-        src={`${assets}/podcast-fronteiras.svg`}
-        alt="Logo of the podcast 'Fronteiras da Engenharia de Software'"
-      />
-    </a>
-
-    <a href="https://www.reaktor.com" target="_blank" rel="noopener">
-      <img src={`${assets}/reaktor.svg`} alt="Reaktor logo" />
-    </a>
-
-    <a href="https://www.cumbuca.com/" target="_blank" rel="noopener">
-      <img src={`${assets}/cumbuca.png`} alt="Cumbuca logo" />
-    </a>
-
-    <a href="https://ahrefs.com/" target="_blank" rel="noopener">
-      <img src={`${assets}/ahrefs.svg`} alt="Ahrefs logo" />
-    </a>
-
-    <a
-      href="https://docs.google.com/presentation/d/1u-VWUl92qNr1i_zEcqSdXwLXpwsT6pTl6CIVoA-WrMg/edit?usp=sharing"
-      target="_blank"
-      rel="noopener"
-    >
-      <img
-        src={`${assets}/become-a-partner.png`}
-        alt="The GambiConf mascot holding a lifting a board written 'Become a partner'"
-      />
-    </a>
+    <Localized id="partners--become-a-partner" args={{ assets }} let:attrs>
+      <a
+        href="https://docs.google.com/presentation/d/1beZavMrKfFFwblVRevZbxyq9UH4rS717q9oJrTVOCxI/edit?usp=sharing"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src={attrs.src.replace(/\p{C}/gu, "")} alt={attrs.alt} />
+      </a>
+    </Localized>
   </div>
 </Window>
 
 <style>
   .content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     justify-items: center;
     gap: 25px;
 

@@ -111,3 +111,7 @@ cfp--section-contacts = Contatos
 cfp--field-social-medias = Medias sociais (isso será público)
 cfp--field-email = E-Mail para o feedback (não será publicado)
 cfp--submit = Submeter
+
+# ThemeSwitch
+theme--light = Trocar para tema escuro
+theme--dark = Trocar para tema claro

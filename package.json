@@ -19,6 +19,7 @@
     "@fluent/langneg": "^0.6.2",
     "@fontsource/ibm-plex-sans": "^4.5.13",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "dayjs": "1.11.6",
     "flag-icons": "^6.6.6",

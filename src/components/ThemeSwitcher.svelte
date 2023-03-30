@@ -3,9 +3,8 @@
   import FaLayers from 'svelte-fa/src/fa-layers.svelte'
   import { onMount } from 'svelte'
   import { theme } from '../store/theme'
-  import { faMoon } from '@fortawesome/free-solid-svg-icons/faMoon'
-  import { faSun } from '@fortawesome/free-solid-svg-icons/faSun'
-
+  import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons'
+  import { t } from "../store/locale"
 
   function toggleTheme() {
     theme.update((current) => {
@@ -38,15 +37,15 @@
   }
 </style>
 
-<div class="theme-switch-wrapper" on:click={toggleTheme}>
+<div class="theme-switch-wrapper" on:click={toggleTheme} title="{$t("theme--" + $theme)}">
   <div class="icons">
   {#if $theme === 'light'}
     <FaLayers>
-      <Fa icon={faMoon} color="#5B6877" />
+      <Fa icon={faMoon} color="#54595f" />
     </FaLayers>
   {:else}
     <FaLayers>
-      <Fa icon={faSun} color="#f2d44f" />
+      <Fa icon={faSun} color="#afa99e" />
     </FaLayers>
   {/if}
   </div>

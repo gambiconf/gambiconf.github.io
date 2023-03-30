@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import Footer from "../components/Footer.svelte"
   import Seo from "../components/Seo.svelte"
@@ -6,6 +7,11 @@
   import LocalizationProvider from "../providers/LocalizationProvider.svelte"
   import { theme } from '../store/theme'
   import "../app.css"
+
+  onMount(() => {
+    let currentTheme = localStorage.getItem("theme") ?? "light"
+    theme.set(currentTheme)
+  })
 </script>
 
 <svelte:head>

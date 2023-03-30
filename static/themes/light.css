@@ -58,3 +58,8 @@ footer {
 .tweet:hover {
   background-color: rgb(245, 248, 250);
 }
+
+/* LanguageSwitcher */
+.svelte-select .item {
+  color: #54595f;
+}

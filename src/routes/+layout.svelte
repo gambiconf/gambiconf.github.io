@@ -25,12 +25,8 @@
   <title><Localized id="title" /></title>
 
   <Header />
-
-  <body>
     <main>
       <slot />
     </main>
-  </body>
-
   <Footer />
 </LocalizationProvider>

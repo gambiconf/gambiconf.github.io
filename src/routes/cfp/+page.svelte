@@ -8,6 +8,7 @@
   import Window from "../../components/Window.svelte"
   import { tweetLength } from "../../utils/tweet"
   import { t } from "../../store/locale"
+  import { theme } from "../../store/theme"
 
   let name = ""
   let twitterHandler = ""
@@ -68,6 +69,10 @@
     }
   }
 </script>
+
+<svelte:head>
+  <link rel="stylesheet" href={`/themes/cfp.${$theme}.css`} />
+</svelte:head>
 
 <div class="page">
   <Window title={$t("cfp--title")}>
@@ -185,6 +190,7 @@
 
 <style>
   :global(body) {
+
     background-position: center right;
     background-size: 100px;
 
@@ -192,7 +198,7 @@
     min-width: 100vw;
   }
 
-  .page {
+ .page {
     margin-top: 60px;
     margin-bottom: 30px;
   }

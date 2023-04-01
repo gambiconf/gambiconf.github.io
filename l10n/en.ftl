@@ -113,5 +113,5 @@ cfp--field-email = E-Mail for the feedback (we won't share it)
 cfp--submit = Submit
 
 # ThemeSwitch
-theme--light = Switch to dark theme
-theme--dark = Switch to light theme
+theme--light = Switch to dark mode
+theme--dark = Switch to light mode

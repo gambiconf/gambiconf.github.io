@@ -95,7 +95,7 @@
 
   .title p {
     margin-top: 0;
-    opacity: 60%;
+    opacity: 70%;
   }
 
   h4,
@@ -108,7 +108,7 @@
   }
 
   .location {
-    opacity: 60%;
+    opacity: 70%;
   }
 
   .action {

@@ -29,6 +29,7 @@ footer a {
 }
 
 /* Background cover Home */
+
 main > section {
   background-color: rgb(53, 57, 59);
 }
@@ -59,12 +60,8 @@ footer {
 .tweet .content img {
   filter: invert(100%) sepia(17%) saturate(274%) hue-rotate(95deg) brightness(101%) contrast(99%);
 }
-/* #1d9bf0 */
-/* Start Tweet word counter circle */
 
-/* .tweet > .content > .icons > svg > circle:nth-child(2) { */
-/*   fill: #2f3336; */
-/* } */
+/* Start Tweet word counter circle */
 
 .tweet .content .icons svg > circle {
   fill: #2f3336;
@@ -81,9 +78,9 @@ footer {
 .tweet:hover .icons svg > svg > circle {
   fill: rgb(42, 45, 47);
 }
-/* End Tweet word counter circle */
 
 /* Start LanguageSwitcher */
+
 .svelte-select .item {
   color: #afa99e;
 }
@@ -99,4 +96,3 @@ footer {
   transform: scale(0.99);
   filter: brightness(0.9);
 }
-/* End LanguageSwitcher */

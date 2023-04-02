@@ -27,6 +27,7 @@ header {
 }
 
 /* Background cover Home */
+
 main > section {
   background-color: #a8b8f1;
 }
@@ -55,6 +56,7 @@ footer {
 }
 
 /* LanguageSwitcher */
+
 .svelte-select .item {
   color: #54595f;
 }

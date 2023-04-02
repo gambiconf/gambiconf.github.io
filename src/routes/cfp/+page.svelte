@@ -190,7 +190,6 @@
 
 <style>
   :global(body) {
-
     background-position: center right;
     background-size: 100px;
 
@@ -198,7 +197,7 @@
     min-width: 100vw;
   }
 
- .page {
+  .page {
     margin-top: 60px;
     margin-bottom: 30px;
   }

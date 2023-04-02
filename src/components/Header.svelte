@@ -2,7 +2,7 @@
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { base, assets } from "$app/paths"
   import LanguageSwitcher from "./LanguageSwitcher.svelte"
-  import ThemeSwitcher from './ThemeSwitcher.svelte'
+  import ThemeSwitcher from "./ThemeSwitcher.svelte"
 </script>
 
 <header>

@@ -5,7 +5,7 @@
   import Seo from "../components/Seo.svelte"
   import Header from "../components/Header.svelte"
   import LocalizationProvider from "../providers/LocalizationProvider.svelte"
-  import { theme } from '../store/theme'
+  import { theme } from "../store/theme"
   import "../app.css"
 
   onMount(() => {
@@ -25,8 +25,8 @@
   <title><Localized id="title" /></title>
 
   <Header />
-    <main>
-      <slot />
-    </main>
+  <main>
+    <slot />
+  </main>
   <Footer />
 </LocalizationProvider>

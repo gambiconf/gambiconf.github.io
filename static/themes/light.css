@@ -1,0 +1,62 @@
+:root {
+  --lightest: 100%;
+  --lighter: 80%;
+  --light: 60%;
+  --strong: 40%;
+  --stronger: 20%;
+  --strongest: 0%;
+}
+
+.wrapper-content {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    url("/mambi-icon-oulined.png");
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 2px 15px 2px rgb(0 0 0 / 5%);
+}
+
+.button a {
+  background-color: #f34b21;
+  color: white;
+}
+
+.button a:visited {
+  color: white;
+}
+
+/* Background cover Home */
+
+main > section {
+  background-color: #a8b8f1;
+}
+
+.window {
+  border: 1px solid #222;
+  background-color: white;
+}
+
+.window .title-bar {
+  border-bottom: 1px solid #222;
+}
+
+footer {
+  background-color: white;
+  border-top: 1px solid #ddd;
+}
+
+.tweet {
+  background-color: white;
+  transition: background-color 0.25s;
+}
+
+.tweet:hover {
+  background-color: rgb(245, 248, 250);
+}
+
+/* LanguageSwitcher */
+
+.svelte-select .item {
+  color: #54595f;
+}

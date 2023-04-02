@@ -15,12 +15,10 @@
   }
 
   a {
-    background-color: #f34b21;
     padding: 10px;
     border-radius: 4px;
     min-width: 25%;
 
-    color: white;
     text-decoration: none;
     text-align: center;
 

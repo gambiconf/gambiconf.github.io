@@ -43,8 +43,6 @@
 
 <style>
   section {
-    background-color: #a8b8f1;
-
     position: relative;
     height: 55vh;
   }
@@ -97,7 +95,7 @@
 
   .title p {
     margin-top: 0;
-    opacity: 60%;
+    opacity: 70%;
   }
 
   h4,
@@ -110,7 +108,7 @@
   }
 
   .location {
-    opacity: 60%;
+    opacity: 70%;
   }
 
   .action {

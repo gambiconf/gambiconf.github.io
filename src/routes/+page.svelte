@@ -40,8 +40,6 @@
   }
 
   .wrapper-content {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
-      url("/mambi-icon-oulined.png");
     background-position: center right;
     background-size: 100px;
 

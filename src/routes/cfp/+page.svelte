@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { Circle } from "svelte-loading-spinners"
   import { postCfp } from "../../network/cfp"
@@ -71,7 +72,7 @@
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" href={`/themes/cfp.${$theme}.css`} />
+  <link rel="stylesheet" href={`${base}/themes/cfp.${$theme}.css`} />
 </svelte:head>
 
 <div class="page">

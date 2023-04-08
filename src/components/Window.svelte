@@ -20,9 +20,7 @@
 
 <style>
   .window {
-    border: 1px solid #222;
     border-radius: 10px;
-    background-color: white;
 
     max-width: 1140px;
 
@@ -31,8 +29,6 @@
   }
 
   .title-bar {
-    border-bottom: 1px solid #222;
-
     text-align: center;
     font-weight: bold;
   }

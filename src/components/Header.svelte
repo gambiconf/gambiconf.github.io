@@ -2,6 +2,7 @@
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { base, assets } from "$app/paths"
   import LanguageSwitcher from "./LanguageSwitcher.svelte"
+  import ThemeSwitcher from "./ThemeSwitcher.svelte"
 </script>
 
 <header>
@@ -14,6 +15,7 @@
     <a href={`${base}/#about`}><Localized id="header--about" /></a>
     <a href={`${base}/cfp`}><Localized id="header--cfp" /></a>
     <LanguageSwitcher />
+    <ThemeSwitcher />
   </nav>
 </header>
 
@@ -24,9 +26,6 @@
     width: 100vw;
     z-index: 1;
     height: var(--header-height);
-
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0px 2px 15px 2px rgb(0 0 0 / 5%);
   }
 
   img {

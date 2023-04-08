@@ -1,13 +1,25 @@
 <script>
+  import { base } from '$app/paths';
+  import { onMount } from "svelte"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import Footer from "../components/Footer.svelte"
   import Seo from "../components/Seo.svelte"
   import Header from "../components/Header.svelte"
   import LocalizationProvider from "../providers/LocalizationProvider.svelte"
+  import { theme } from "../store/theme"
+
   import "../app.css"
+
+  onMount(() => {
+    let currentTheme = localStorage.getItem("theme") ?? "light"
+    theme.set(currentTheme)
+  })
 </script>
 
 <svelte:head>
+  <meta name="color-scheme" content={$theme} />
+  <link rel="stylesheet" href={`${base}/themes/${$theme}.css`} />
+
   <Seo />
 </svelte:head>
 
@@ -15,12 +27,8 @@
   <title><Localized id="title" /></title>
 
   <Header />
-
-  <body>
-    <main>
-      <slot />
-    </main>
-  </body>
-
+  <main>
+    <slot />
+  </main>
   <Footer />
 </LocalizationProvider>

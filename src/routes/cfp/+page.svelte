@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { Circle } from "svelte-loading-spinners"
   import { postCfp } from "../../network/cfp"
@@ -8,6 +9,7 @@
   import Window from "../../components/Window.svelte"
   import { tweetLength } from "../../utils/tweet"
   import { t } from "../../store/locale"
+  import { theme } from "../../store/theme"
 
   let name = ""
   let twitterHandler = ""
@@ -68,6 +70,10 @@
     }
   }
 </script>
+
+<svelte:head>
+  <link rel="stylesheet" href={`${base}/themes/cfp.${$theme}.css`} />
+</svelte:head>
 
 <div class="page">
   <Window title={$t("cfp--title")}>
@@ -185,8 +191,6 @@
 
 <style>
   :global(body) {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
-      url("/mambi-icon-oulined.png");
     background-position: center right;
     background-size: 100px;
 

@@ -17,7 +17,12 @@ const config = {
 
   onwarn: (warning, handler) => {
     if (
-      ["a11y-missing-content", "security-anchor-rel-noreferrer"].find((rule) =>
+      [
+        "a11y-missing-content",
+        "a11y-missing-attribute",
+        "a11y-click-events-have-key-events",
+        "security-anchor-rel-noreferrer",
+      ].find((rule) =>
         warning.code.includes(rule)
       )
     ) {

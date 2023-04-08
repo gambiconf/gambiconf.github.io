@@ -22,9 +22,7 @@ const config = {
         "a11y-missing-attribute",
         "a11y-click-events-have-key-events",
         "security-anchor-rel-noreferrer",
-      ].find((rule) =>
-        warning.code.includes(rule)
-      )
+      ].find((rule) => warning.code.includes(rule))
     ) {
       return;
     }

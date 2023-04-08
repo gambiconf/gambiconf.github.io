@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { base } from '$app/paths';
+  import { base } from "$app/paths"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { Circle } from "svelte-loading-spinners"
   import { postCfp } from "../../network/cfp"

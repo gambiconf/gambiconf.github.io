@@ -1,3 +1,10 @@
+:root {
+  --calendar-weekday: #ebddd2;
+  --calendar-month: #ebddd2;
+  --calendar-border-color: #ebddd2;
+  --calendar-highlighted-day-color: #ffaa67;
+}
+
 .wrapper-content {
   background-image: linear-gradient(rgba(24, 26, 27, 0.7), rgba(24, 26, 27, 0.7)),
     url("/mambi-icon-oulined.png");
@@ -16,7 +23,7 @@ footer a {
 
 /* All buttons */
 .button a {
-  background-color: rgb(182, 44, 10);
+  background-color: #f34b21;
   color: rgb(232, 230, 227);
 }
 
@@ -31,7 +38,7 @@ footer a {
 /* Background cover Home */
 
 main > section {
-  background-color: rgb(53, 57, 59);
+  background-color: #013826;
 }
 
 .window {
@@ -95,4 +102,13 @@ footer {
   background-color: rgb(42, 45, 47) !important;
   transform: scale(0.99);
   filter: brightness(0.9);
+}
+
+/* Link */
+.link {
+  color: rgb(199 162 127);
+}
+
+.link:hover {
+  color: #ff8915;
 }

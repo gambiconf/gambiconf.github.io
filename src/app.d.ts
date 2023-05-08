@@ -20,3 +20,4 @@ declare module "svelte-fa/src/fa-layers.svelte" {
 }
 
 declare module "@nubolab-ffwd/svelte-fluent";
+declare module "svelte-rough-notation";

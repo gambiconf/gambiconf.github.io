@@ -15,7 +15,7 @@
   span {
     align-self: center;
 
-    background-color: #899fee;
+    background-color: #f27215;
 
     width: 5px;
     height: 5px;

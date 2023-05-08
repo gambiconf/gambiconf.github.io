@@ -1,10 +1,9 @@
 <script lang="ts">
   import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
-  import Fa from "svelte-fa/src/fa.svelte"
-  import FaLayers from "svelte-fa/src/fa-layers.svelte"
-  import { faPaperPlane } from "@fortawesome/free-solid-svg-icons/faPaperPlane"
+  import { assets } from "$app/paths"
   import { base } from "$app/paths"
   import { t } from "../store/locale"
+  import Link from "./Link.svelte"
   import Window from "./Window.svelte"
 </script>
 
@@ -12,9 +11,7 @@
   <div class="content">
     <div class="row">
       <div class="icon">
-        <FaLayers size="4x">
-          <Fa color="#0271b8" icon={faPaperPlane} />
-        </FaLayers>
+        <img height="128px" src={`${assets}/writing-on-paper.png`} />
       </div>
 
       <div>
@@ -24,11 +21,9 @@
 
         <p>
           <Overlay id="call-for-proposal--body-paragraph-2">
-            <a
-              data-l10n-name="link"
+            <Link
+              l10n="link"
               href="https://threadreaderapp.com/thread/1518259526243393536.html"
-              target="_blank"
-              rel="noopener"
             />
           </Overlay>
         </p>
@@ -65,7 +60,6 @@
   }
 
   .button-cfp {
-    background-color: #f34b21;
     padding: 10px;
     border-radius: 4px;
     min-width: 25%;

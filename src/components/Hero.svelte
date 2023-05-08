@@ -57,7 +57,6 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.3;
     mix-blend-mode: overlay;
   }
 

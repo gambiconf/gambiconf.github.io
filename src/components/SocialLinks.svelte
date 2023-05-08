@@ -51,7 +51,7 @@
   }
 
   .social-media-icon {
-    color: #0271b8;
+    color: #f34b21;
   }
   .social-media-icon:hover {
     filter: brightness(0.8);

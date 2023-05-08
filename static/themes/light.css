@@ -5,6 +5,11 @@
   --strong: 40%;
   --stronger: 20%;
   --strongest: 0%;
+
+  --calendar-weekday: #101a01;
+  --calendar-month: #101a01;
+  --calendar-border-color: #101a01;
+  --calendar-highlighted-day-color: rgb(159, 91, 1);
 }
 
 .wrapper-content {
@@ -29,7 +34,7 @@ header {
 /* Background cover Home */
 
 main > section {
-  background-color: #a8b8f1;
+  background-color: #08bf1b;
 }
 
 .window {
@@ -59,4 +64,13 @@ footer {
 
 .svelte-select .item {
   color: #54595f;
+}
+
+/* Link */
+.link {
+  color: rgb(159, 91, 1);
+}
+
+.link:hover {
+  color: #ff8915;
 }

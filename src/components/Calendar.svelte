@@ -1,91 +1,119 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
+  import { annotate } from "svelte-rough-notation"
 </script>
 
 <div class="root">
   <div class="month"><Localized id="calendar--month" /></div>
 
-  <span><Localized id="calendar--sunday" /></span>
-  <span><Localized id="calendar--monday" /></span>
-  <span><Localized id="calendar--tuesday" /></span>
-  <span><Localized id="calendar--wednesday" /></span>
-  <span><Localized id="calendar--thursday" /></span>
-  <span><Localized id="calendar--friday" /></span>
-  <span><Localized id="calendar--saturday" /></span>
+  <span class="weekday"><Localized id="calendar--sunday" /></span>
+  <span class="weekday"><Localized id="calendar--monday" /></span>
+  <span class="weekday"><Localized id="calendar--tuesday" /></span>
+  <span class="weekday"><Localized id="calendar--wednesday" /></span>
+  <span class="weekday"><Localized id="calendar--thursday" /></span>
+  <span class="weekday"><Localized id="calendar--friday" /></span>
+  <span class="weekday"><Localized id="calendar--saturday" /></span>
 
   <span />
   <span />
   <span />
   <span />
   <span />
-  <span>1</span>
-  <span class="highlighted-day">2</span>
-  <span class="highlighted-day">3</span>
-  <span>4</span>
-  <span>5</span>
-  <span>6</span>
-  <span>7</span>
-  <span>8</span>
-  <span>9</span>
-  <span>10</span>
-  <span>11</span>
-  <span>12</span>
-  <span>13</span>
-  <span>14</span>
-  <span>15</span>
-  <span>16</span>
-  <span>17</span>
-  <span>18</span>
-  <span>19</span>
-  <span>20</span>
-  <span>21</span>
-  <span>22</span>
-  <span>23</span>
-  <span>24</span>
-  <span>25</span>
-  <span>26</span>
-  <span>27</span>
-  <span>28</span>
-  <span>29</span>
-  <span>30</span>
-  <span>31</span>
+  <span class="regular-day">1</span>
+  <span
+    class="highlighted-day"
+    use:annotate={{
+      type: "circle",
+      iterations: 2,
+      visible: true,
+      padding: -5,
+      color: "var(--calendar-highlighted-day-color)",
+    }}
+  >
+    2
+  </span>
+  <span
+    class="highlighted-day"
+    use:annotate={{
+      type: "circle",
+      iterations: 2,
+      visible: true,
+      padding: -5,
+      color: "var(--calendar-highlighted-day-color)",
+    }}
+  >
+    3
+  </span>
+  <span class="regular-day">4</span>
+  <span class="regular-day">5</span>
+  <span class="regular-day">6</span>
+  <span class="regular-day">7</span>
+  <span class="regular-day">8</span>
+  <span class="regular-day">9</span>
+  <span class="regular-day">10</span>
+  <span class="regular-day">11</span>
+  <span class="regular-day">12</span>
+  <span class="regular-day">13</span>
+  <span class="regular-day">14</span>
+  <span class="regular-day">15</span>
+  <span class="regular-day">16</span>
+  <span class="regular-day">17</span>
+  <span class="regular-day">18</span>
+  <span class="regular-day">19</span>
+  <span class="regular-day">20</span>
+  <span class="regular-day">21</span>
+  <span class="regular-day">22</span>
+  <span class="regular-day">23</span>
+  <span class="regular-day">24</span>
+  <span class="regular-day">25</span>
+  <span class="regular-day">26</span>
+  <span class="regular-day">27</span>
+  <span class="regular-day">28</span>
+  <span class="regular-day">29</span>
+  <span class="regular-day">30</span>
+  <span class="regular-day">31</span>
 </div>
 
 <style>
   .root {
-    color: white;
     font-size: 1rem;
 
     width: 315px;
-    background: #332f2e;
+    border: 1px solid var(--calendar-border-color);
     border-radius: 5px;
     overflow: hidden;
 
     padding: 0 10px 10px 10px;
     box-sizing: border-box;
-    background-color: #0271b8;
   }
 
   .month {
+    color: var(--calendar-weekday);
+
     margin-top: 18px;
     text-transform: uppercase;
     text-align: center;
   }
 
+  .weekday {
+    color: var(--calendar-weekday);
+  }
+
   .root span {
     float: left;
-    width: 42px;
-    height: 42px;
+    width: 41px;
+    height: 41px;
     text-align: center;
     line-height: 40px;
   }
 
-  .highlighted-day {
-    color: #ff8915;
-    font-weight: bold;
+  .regular-day {
+    color: #dac5b6;
+    opacity: 0.7;
+  }
 
-    border: 1px solid #ff8915;
-    border-radius: 50%;
-    box-sizing: border-box;
+  .highlighted-day {
+    color: var(--calendar-highlighted-day-color);
+    font-weight: bold;
   }
 </style>

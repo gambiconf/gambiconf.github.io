@@ -2,6 +2,7 @@
   import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
   import { t } from "../store/locale"
   import Calendar from "./Calendar.svelte"
+  import Link from "./Link.svelte"
   import Window from "./Window.svelte"
 </script>
 
@@ -18,7 +19,7 @@
 
       <p>
         <Overlay id="where-and-when--body-paragraph-2">
-          <a data-l10n-name="link" href="https://www.youtube.com/@gambiconf" />
+          <Link l10n="link" href="https://www.youtube.com/@gambiconf" />
         </Overlay>
       </p>
     </div>

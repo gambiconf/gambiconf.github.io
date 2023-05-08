@@ -2,6 +2,7 @@
   import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
   import { t } from "../store/locale"
+  import Link from "./Link.svelte"
   import Window from "./Window.svelte"
 </script>
 
@@ -16,19 +17,8 @@
 
       <p>
         <Overlay id="row-what-is-gambiconf--body-paragraph-2">
-          <a
-            data-l10n-name="link-talk-water"
-            href="https://www.youtube.com/watch?v=UWiXNTdmL2Q"
-            target="_blank"
-            rel="noopener"
-          />
-
-          <a
-            data-l10n-name="link-talk-satellite"
-            href="https://www.youtube.com/watch?v=6msRiv4PJVk"
-            target="_blank"
-            rel="noopener"
-          />
+          <Link l10n="link-talk-water" href="https://www.youtube.com/watch?v=UWiXNTdmL2Q" />
+          <Link l10n="link-talk-satellite" href="https://www.youtube.com/watch?v=UWiXNTdmL2Q" />
         </Overlay>
       </p>
 
@@ -38,43 +28,18 @@
 
       <p>
         <Overlay id="row-what-is-gambiconf--body-paragraph-4">
-          <a
-            data-l10n-name="link-bangbangcon"
-            href="https://bangbangcon.com/"
-            target="_blank"
-            rel="noopener"
-          />
-
-          <a
-            data-l10n-name="link-sigbovik"
-            href="http://sigbovik.org/"
-            target="_blank"
-            rel="noopener"
-          />
-
-          <a
-            data-l10n-name="link-gambiconf-2021"
-            href="https://gambiconf.dev/2021"
-            target="_blank"
-            rel="noopener"
-          />
-
-          <a
-            data-l10n-name="link-gambiconf-2022"
-            href="https://gambiconf.dev/2022"
-            target="_blank"
-            rel="noopener"
-          />
+          <Link l10n="link-bangbangcon" href="https://bangbangcon.com/" />
+          <Link l10n="link-sigbovik" href="http://sigbovik.org/" />
+          <Link l10n="link-gambiconf-2021" href="https://gambiconf.dev/2021" />
+          <Link l10n="link-gambiconf-2022" href="https://gambiconf.dev/2022" />
         </Overlay>
       </p>
 
       <p>
         <Overlay id="row-what-is-gambiconf--body-paragraph-5">
-          <a
-            data-l10n-name="link-1"
+          <Link
+            l10n="link-1"
             href="https://macabeus.medium.com/gambiconf-why-do-we-need-a-new-tech-event-4ff3302cf3d"
-            target="_blank"
-            rel="noopener"
           />
         </Overlay>
       </p>

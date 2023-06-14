@@ -25,12 +25,22 @@
 
     <h4 class="date">
       <span>
-        <Localized id="hero--date" />
+        <Localized id="hero--date-first-line" />
+      </span>
+
+      <span>
+        <Localized id="hero--date-second-line" />
       </span>
     </h4>
 
     <p class="location">
-      <Localized id="hero--location" />
+      <span>
+        <Localized id="hero--location-first-line" />
+      </span>
+
+      <span>
+        <Localized id="hero--location-second-line" />
+      </span>
     </p>
 
     <div class="action">
@@ -102,11 +112,17 @@
     margin: 0;
   }
 
-  .date > span {
-    display: inline-block;
+  .date {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
   }
 
   .location {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
     opacity: 70%;
   }
 

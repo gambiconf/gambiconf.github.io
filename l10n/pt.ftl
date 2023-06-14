@@ -9,8 +9,10 @@ header--cfp = CFP
 ## Hero
 
 hero--subtitle = The Blow Your Mind Conference
-hero--date = 2 e 3 de Dezembro
-hero--location = São Paulo, Brasil
+hero--date-first-line = 25 e 26 de
+hero--date-second-line = Novembro
+hero--location-first-line = USP - Campus Butantã
+hero--location-second-line = São Paulo, Brasil
 hero--twitter-cta = Acompanhe no Twitter
 
 ## Row What Is GambiConf
@@ -38,12 +40,12 @@ row-what-is-gambiconf--body-paragraph-5 =
 ## Where and When
 
 where-and-when--title = Onde e quando
-where-and-when--body-paragraph-1 = 2 e 3 de Dezembro, em endereço a ser definido.
+where-and-when--body-paragraph-1 = 25 e 26 de Novembro, na <a data-l10n-name='link'>USP - Campus Butantã</a>.
 where-and-when--body-paragraph-2 = Streaming gratuito no <a data-l10n-name='link'>YouTube</a>
 
 ## Calendar
 
-calendar--month = Dezembro 2023
+calendar--month = Novembro 2023
 calendar--sunday = Do
 calendar--monday = 2ª
 calendar--tuesday = 3ª

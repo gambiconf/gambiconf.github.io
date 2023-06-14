@@ -17,33 +17,9 @@
   <span />
   <span />
   <span />
-  <span />
-  <span />
   <span class="regular-day">1</span>
-  <span
-    class="highlighted-day"
-    use:annotate={{
-      type: "circle",
-      iterations: 2,
-      visible: true,
-      padding: -5,
-      color: "var(--calendar-highlighted-day-color)",
-    }}
-  >
-    2
-  </span>
-  <span
-    class="highlighted-day"
-    use:annotate={{
-      type: "circle",
-      iterations: 2,
-      visible: true,
-      padding: -5,
-      color: "var(--calendar-highlighted-day-color)",
-    }}
-  >
-    3
-  </span>
+  <span class="regular-day">2</span>
+  <span class="regular-day">3</span>
   <span class="regular-day">4</span>
   <span class="regular-day">5</span>
   <span class="regular-day">6</span>
@@ -65,13 +41,30 @@
   <span class="regular-day">22</span>
   <span class="regular-day">23</span>
   <span class="regular-day">24</span>
-  <span class="regular-day">25</span>
-  <span class="regular-day">26</span>
+  <span
+    class="highlighted-day"
+    use:annotate={{
+      type: "circle",
+      iterations: 2,
+      visible: true,
+      padding: -5,
+      color: "var(--calendar-highlighted-day-color)",
+    }}>25</span
+  >
+  <span
+    class="highlighted-day"
+    use:annotate={{
+      type: "circle",
+      iterations: 2,
+      visible: true,
+      padding: -5,
+      color: "var(--calendar-highlighted-day-color)",
+    }}>26</span
+  >
   <span class="regular-day">27</span>
   <span class="regular-day">28</span>
   <span class="regular-day">29</span>
   <span class="regular-day">30</span>
-  <span class="regular-day">31</span>
 </div>
 
 <style>

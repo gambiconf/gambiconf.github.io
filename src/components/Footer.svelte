@@ -29,11 +29,7 @@
           <Localized id="footer--2022-edition" />
         </a>
         <a href="/code-of-conduct"><Localized id="footer--code-of-conduct" /></a>
-        <a
-          href="https://docs.google.com/presentation/d/1u-VWUl92qNr1i_zEcqSdXwLXpwsT6pTl6CIVoA-WrMg/edit?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={`${assets}/mediakit.pdf`} target="_blank" rel="noopener noreferrer">
           <Localized id="footer--media-kit" />
         </a>
       </div>

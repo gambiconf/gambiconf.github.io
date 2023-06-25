@@ -8,20 +8,12 @@
 
 <Window title={$t("partners--title")}>
   <div class="content">
-    <a
-      href="https://codelab.ime.usp.br/"
-      target="_blank"
-      rel="noopener"
-    >
+    <a href="https://codelab.ime.usp.br/" target="_blank" rel="noopener">
       <img src={`${assets}/codelab-${$theme}.svg`} alt="Codelab" />
     </a>
 
     <Localized id="partners--become-a-partner" args={{ assets }} let:attrs>
-      <a
-        href="https://docs.google.com/presentation/d/1beZavMrKfFFwblVRevZbxyq9UH4rS717q9oJrTVOCxI/edit?usp=sharing"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href={attrs.href.replace(/\p{C}/gu, "")} target="_blank" rel="noopener">
         <img src={attrs.src.replace(/\p{C}/gu, "")} alt={attrs.alt} />
       </a>
     </Localized>

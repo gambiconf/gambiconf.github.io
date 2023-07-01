@@ -57,12 +57,14 @@ calendar--saturday = Sa
 
 call-for-proposal--title = Call for Proposal
 call-for-proposal--body-paragraph-1 =
-  If you've ever worked on a really hacky personal project or thought of a unique-underground-workaroundish
-  way of doing something in CS, come share your experience with us! We want to hear from you!
+  If you want to share a hacky personal project or thought of a unique-underground-workaroundish way
+  of doing something in CS, come and present your <strong data-l10n-name='talk'>talk</strong>!
 call-for-proposal--body-paragraph-2 =
-  Are you willing to speak at GambiConf, but don't know what to talk about?
-  <a data-l10n-name='link'>Click here.</a>
-call-for-proposal--body-paragraph-3 = The deadline is Jul 31.
+  If you prefer to focus on a hands-on experience with the community, you can choose to lead a <strong data-l10n-name='sprint'>sprint</strong>.
+  This is a moment where you can guide people to collaborate on an open-source project or to provide a practical workshop.
+call-for-proposal--body-paragraph-3 =
+  In case you're lacking ideas, get inspired by checking out how was the first GambiConf edition: <a data-l10n-name='link'>read this thread</a>.
+call-for-proposal--body-paragraph-4 = The deadline is Aug 27.
 call-for-proposal--cta = Apply to the CFP
 
 ## Partners
@@ -87,11 +89,16 @@ footer--contacts = Contacts
 ## CFP
 
 cfp--title = CFP
-cfp--section-talk-info = Talk
+cfp--section-main = Submission
 cfp--field-name = Name
 cfp--field-twitter-handler = _
   .label = Twitter handler (optional)
   .placeholder = @twitterHandler
+cfp--field-type = _
+  .label = What are you going to lead?
+  .optionTalk = A talk
+  .optionSprint = A sprint
+  .sublabel = Talks are presentations lasting 15 to 45 minutes. On the flip side, sprints are focused on hands-on with a duration longer than 1 hour.
 cfp--field-title = Title
 cfp--field-description = Description
 cfp--field-ideal-duration = _
@@ -100,7 +107,6 @@ cfp--field-ideal-duration = _
   .option20minutes = 20 minutes
   .option30minutes = 30 minutes
   .option45minutes = 45 minutes
-  .option60minutes = 60 minutes
 cfp--field-language = _
   .label = Language
   .optionPortuguese = I can talk only in Portuguese
@@ -113,6 +119,8 @@ cfp--section-contacts = Contacts
 cfp--field-social-medias = Social Medias (it'll be public)
 cfp--field-email = E-Mail for the feedback (we won't share it)
 cfp--submit = Submit
+cfp--submit-success = Successfully submitted
+cfp--submit-error = Failed to submit
 
 # ThemeSwitch
 theme--light = Switch to dark mode

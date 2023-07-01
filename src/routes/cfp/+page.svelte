@@ -9,27 +9,34 @@
   import Window from "../../components/Window.svelte"
   import { tweetLength } from "../../utils/tweet"
   import { t } from "../../store/locale"
+  import { capitalize } from "../../utils/capitalize"
   import { theme } from "../../store/theme"
 
-  let name = ""
+  let speakerName = ""
   let twitterHandler = ""
+  let type = ""
   let title = ""
   let description = ""
   let duration = ""
   let language = ""
-  let bio = ""
-  let social = ""
-  let email = ""
+  let speakerBio = ""
+  let speakerSocialMedias = ""
+  let speakerEmail = ""
 
   let tweetTalkOnAlert: TweetStatus = "ok"
   let tweetBioOnAlert: TweetStatus = "ok"
 
   $: talkTweetPreview =
-    language === "only-english"
-      ? `Talk "${title}" by ${twitterHandler || name} (in 🇺🇸)\n\n${description}`
-      : `Talk "${title}" por ${twitterHandler || name}\n\n${description}`
+    language === "only_english"
+      ? `${capitalize(type)} "${title}" by ${
+          twitterHandler || speakerName
+        } (in 🇺🇸)\n\n${description}`
+      : `${capitalize(type)} "${title}" por ${twitterHandler || speakerName}\n\n${description}`
+
   $: speakerTweetPreview =
-    language === "only-english" ? `About the speaker:\n${bio}` : `Sobre o palestrante:\n${bio}`
+    language === "only_english"
+      ? `About the speaker:\n${speakerBio}`
+      : `Sobre o palestrante:\n${speakerBio}`
 
   let submitState:
     | { status: "submitting" }
@@ -53,20 +60,21 @@
     submitState = { status: "submitting" }
 
     const result = await postCfp({
-      name,
+      speakerName,
       twitterHandler,
+      type,
       title,
       description,
       duration: Number(duration),
       language,
-      bio,
-      social,
-      email,
+      speakerBio,
+      speakerSocialMedias,
+      speakerEmail,
     })
     if (result) {
-      submitState = { status: "success", message: "Successfully submitted" }
+      submitState = { status: "success", message: $t("cfp--submit-success") }
     } else {
-      submitState = { status: "error", message: "Failed to submit" }
+      submitState = { status: "error", message: $t("cfp--submit-error") }
     }
   }
 </script>
@@ -78,46 +86,70 @@
 <div class="page">
   <Window title={$t("cfp--title")}>
     <form on:submit|preventDefault={handleSubmit}>
-      <h4><Localized id="cfp--section-talk-info" /></h4>
+      <h4><Localized id="cfp--section-main" /></h4>
 
-      <label for="name"><Localized id="cfp--field-name" /></label>
-      <input name="name" type="text" required bind:value={name} />
+      <div class="field">
+        <label for="name"><Localized id="cfp--field-name" /></label>
+        <input name="name" type="text" required bind:value={speakerName} />
+      </div>
 
-      <Localized id="cfp--field-twitter-handler" let:attrs>
-        <label for="name">{attrs.label}</label>
-        <input
-          name="name"
-          type="text"
-          placeholder={attrs.placeholder}
-          bind:value={twitterHandler}
-        />
-      </Localized>
+      <div class="field">
+        <Localized id="cfp--field-twitter-handler" let:attrs>
+          <label for="name">{attrs.label}</label>
+          <input
+            name="name"
+            type="text"
+            placeholder={attrs.placeholder}
+            bind:value={twitterHandler}
+          />
+        </Localized>
+      </div>
 
-      <Localized id="cfp--field-language" let:attrs>
-        <label for="language">{attrs.label}</label>
-        <select name="language" required bind:value={language}>
-          <option value="only-portuguese">{attrs.optionPortuguese}</option>
-          <option value="only-english">{attrs.optionEnglish}</option>
-          <option value="both-english-and-portuguese">{attrs.optionPortugueseOrEnglish}</option>
-        </select>
-      </Localized>
+      <div class="field">
+        <Localized id="cfp--field-language" let:attrs>
+          <label for="language">{attrs.label}</label>
+          <select name="language" required bind:value={language}>
+            <option value="only_portuguese">{attrs.optionPortuguese}</option>
+            <option value="only_english">{attrs.optionEnglish}</option>
+            <option value="portuguese_or_english">{attrs.optionPortugueseOrEnglish}</option>
+          </select>
+        </Localized>
+      </div>
 
-      <label for="title"><Localized id="cfp--field-title" /></label>
-      <input name="title" type="text" required bind:value={title} />
+      <div class="field">
+        <Localized id="cfp--field-type" let:attrs>
+          <label for="type">{attrs.label}</label>
+          <select name="type" required bind:value={type}>
+            <option value="talk">{attrs.optionTalk} </option>
+            <option value="sprint">{attrs.optionSprint} </option>
+          </select>
+          <label for="type" class="sublabel">{attrs.sublabel}</label>
+        </Localized>
+      </div>
 
-      <label for="description"><Localized id="cfp--field-description" /></label>
-      <textarea name="description" rows="4" required bind:value={description} />
+      <div class="field">
+        <label for="title"><Localized id="cfp--field-title" /></label>
+        <input name="title" type="text" required bind:value={title} />
+      </div>
 
-      <Localized id="cfp--field-ideal-duration" let:attrs>
-        <label for="duration">{attrs.label}</label>
-        <select name="duration" required bind:value={duration}>
-          <option value="15">{attrs.option15minutes} </option>
-          <option value="20">{attrs.option20minutes} </option>
-          <option value="30">{attrs.option30minutes} </option>
-          <option value="45">{attrs.option45minutes} </option>
-          <option value="60">{attrs.option60minutes} </option>
-        </select>
-      </Localized>
+      <div class="field">
+        <label for="description"><Localized id="cfp--field-description" /></label>
+        <textarea name="description" rows="4" required bind:value={description} />
+      </div>
+
+      {#if type === "talk"}
+        <div class="field">
+          <Localized id="cfp--field-ideal-duration" let:attrs>
+            <label for="duration">{attrs.label}</label>
+            <select name="duration" required bind:value={duration}>
+              <option value="15">{attrs.option15minutes} </option>
+              <option value="20">{attrs.option20minutes} </option>
+              <option value="30">{attrs.option30minutes} </option>
+              <option value="45">{attrs.option45minutes} </option>
+            </select>
+          </Localized>
+        </div>
+      {/if}
 
       <span>
         <Localized id="cfp--tweet-preview" />
@@ -138,8 +170,10 @@
 
       <h4><Localized id="cfp--section-about-you" /></h4>
 
-      <label for="bio"><Localized id="cfp--field-bio" /></label>
-      <textarea name="bio" rows="4" required bind:value={bio} />
+      <div class="field">
+        <label for="bio"><Localized id="cfp--field-bio" /></label>
+        <textarea name="bio" rows="4" required bind:value={speakerBio} />
+      </div>
 
       <span>
         <Localized id="cfp--tweet-preview" />
@@ -160,17 +194,21 @@
 
       <h4><Localized id="cfp--section-contacts" /></h4>
 
-      <label for="social"><Localized id="cfp--field-social-medias" /></label>
-      <textarea
-        name="social"
-        placeholder={"GitHub: macabeus\nStack Overflow: macabeus\n..."}
-        rows="3"
-        required
-        bind:value={social}
-      />
+      <div class="field">
+        <label for="social"><Localized id="cfp--field-social-medias" /></label>
+        <textarea
+          name="social"
+          placeholder={"GitHub: macabeus\nStack Overflow: macabeus\n..."}
+          rows="3"
+          required
+          bind:value={speakerSocialMedias}
+        />
+      </div>
 
-      <label for="email"><Localized id="cfp--field-email" /></label>
-      <input name="email" type="email" required bind:value={email} />
+      <div class="field">
+        <label for="email"><Localized id="cfp--field-email" /></label>
+        <input name="email" type="email" required bind:value={speakerEmail} />
+      </div>
 
       {#if submitState && submitState.status !== "submitting"}
         <div class="alert-wrapper">
@@ -221,8 +259,15 @@
     margin-bottom: 4px;
   }
 
-  form label + * {
+  .field {
+    display: flex;
+    flex-direction: column;
+
     margin-bottom: 20px;
+  }
+
+  .sublabel {
+    font-size: 12px;
   }
 
   .warning-limit {

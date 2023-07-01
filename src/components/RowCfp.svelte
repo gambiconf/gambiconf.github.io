@@ -16,11 +16,19 @@
 
       <div>
         <p>
-          <Localized id="call-for-proposal--body-paragraph-1" />
+          <Overlay id="call-for-proposal--body-paragraph-1">
+            <strong data-l10n-name="talk" />
+          </Overlay>
         </p>
 
         <p>
           <Overlay id="call-for-proposal--body-paragraph-2">
+            <strong data-l10n-name="sprint" />
+          </Overlay>
+        </p>
+
+        <p>
+          <Overlay id="call-for-proposal--body-paragraph-3">
             <Link
               l10n="link"
               href="https://threadreaderapp.com/thread/1518259526243393536.html"
@@ -29,7 +37,7 @@
         </p>
 
         <p>
-          <Localized id="call-for-proposal--body-paragraph-3" />
+          <Localized id="call-for-proposal--body-paragraph-4" />
         </p>
       </div>
     </div>

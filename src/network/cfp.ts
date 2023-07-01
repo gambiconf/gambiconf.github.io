@@ -1,18 +1,19 @@
 type PostCfpParams = {
-  name: string;
+  speakerName: string;
   twitterHandler: string;
+  type: string;
+  language: string;
   title: string;
   description: string;
   duration: number;
-  language: string;
-  bio: string;
-  social: string;
-  email: string;
+  speakerBio: string;
+  speakerSocialMedias: string;
+  speakerEmail: string;
 };
 
 const postCfp = async (params: PostCfpParams) => {
   const response = await fetch(
-    "https://ziqr6rpq3j.execute-api.us-east-1.amazonaws.com/production/cfp",
+    "https://n48djewxre.execute-api.us-east-1.amazonaws.com/cfp",
     {
       method: "POST",
       body: JSON.stringify(params),

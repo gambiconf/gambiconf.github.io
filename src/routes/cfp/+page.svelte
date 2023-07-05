@@ -1,8 +1,9 @@
 <script lang="ts">
+  import { onMount } from "svelte"
   import { base } from "$app/paths"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { Circle } from "svelte-loading-spinners"
-  import { postCfp } from "../../network/cfp"
+  import { getSubmissions, postSubmissions, putSubmissions } from "../../network/submissions"
   import Alert from "../../components/Alert.svelte"
   import Tweet from "../../components/Tweet.svelte"
   import type { TweetStatus } from "../../components/Tweet.svelte"
@@ -11,6 +12,9 @@
   import { t } from "../../store/locale"
   import { capitalize } from "../../utils/capitalize"
   import { theme } from "../../store/theme"
+
+  let currentSubmissionId = ""
+  let showSubmitNewEntryButton = false
 
   let speakerName = ""
   let twitterHandler = ""
@@ -40,11 +44,11 @@
 
   let submitState:
     | { status: "submitting" }
+    | { status: "idle" }
     | {
         status: "success" | "error"
         message: string
-      }
-    | null = null
+      } = { status: "idle" }
 
   const handleSubmit = async () => {
     if (tweetLength(talkTweetPreview) > 270) {
@@ -59,24 +63,109 @@
 
     submitState = { status: "submitting" }
 
-    const result = await postCfp({
-      speakerName,
-      twitterHandler,
-      type,
-      title,
-      description,
-      duration: Number(duration),
-      language,
-      speakerBio,
-      speakerSocialMedias,
-      speakerEmail,
-    })
-    if (result) {
-      submitState = { status: "success", message: $t("cfp--submit-success") }
+    if (currentSubmissionId) {
+      const result = await putSubmissions({
+        id: currentSubmissionId,
+        speakerName,
+        twitterHandler,
+        type,
+        title,
+        description,
+        duration: Number(duration),
+        language,
+        speakerBio,
+        speakerSocialMedias,
+        speakerEmail,
+      })
+
+      if (result) {
+        submitState = { status: "success", message: $t("cfp--submit-success") }
+      } else {
+        submitState = { status: "error", message: $t("cfp--submit-error") }
+      }
     } else {
-      submitState = { status: "error", message: $t("cfp--submit-error") }
+      const result = await postSubmissions({
+        speakerName,
+        twitterHandler,
+        type,
+        title,
+        description,
+        duration: Number(duration),
+        language,
+        speakerBio,
+        speakerSocialMedias,
+        speakerEmail,
+      })
+
+      if (result) {
+        showSubmitNewEntryButton = true
+
+        currentSubmissionId = result.id
+        const url = new URL(window.location.toString())
+        url.searchParams.set("id", result.id)
+        window.history.pushState(null, "", url.toString())
+
+        submitState = { status: "success", message: $t("cfp--submit-success") }
+      } else {
+        submitState = { status: "error", message: $t("cfp--submit-error") }
+      }
     }
   }
+
+  const clearForm = () => {
+    currentSubmissionId = ""
+
+    showSubmitNewEntryButton = false
+
+    speakerName = ""
+    twitterHandler = ""
+    type = ""
+    title = ""
+    description = ""
+    duration = ""
+    language = ""
+    speakerBio = ""
+    speakerSocialMedias = ""
+    speakerEmail = ""
+
+    submitState = { status: "idle" }
+
+    const url = new URL(window.location.toString())
+    url.searchParams.delete("id")
+    window.history.pushState(null, "", url.toString())
+  }
+
+  const loadGivenSubmission = async () => {
+    const urlParams = new URLSearchParams(window.location.search)
+    const givenSubmissionId = urlParams.get("id")
+    if (givenSubmissionId) {
+      currentSubmissionId = givenSubmissionId
+
+      const givenSubmission = await getSubmissions(givenSubmissionId)
+
+      if (!givenSubmission) {
+        window.alert(
+          "We could not load a submission with the given id. Please, report the issue by sending us an email (mambi@gambiconf.dev) or opening an issue on https://github.com/gambiconf/gambiconf.github.io"
+        )
+        return
+      }
+
+      speakerName = givenSubmission.speakerName
+      twitterHandler = givenSubmission.twitterHandler
+      type = givenSubmission.type
+      title = givenSubmission.title
+      description = givenSubmission.description
+      duration = `${givenSubmission.duration}`
+      language = givenSubmission.language
+      speakerBio = givenSubmission.speakerBio
+      speakerSocialMedias = givenSubmission.speakerSocialMedias
+      speakerEmail = givenSubmission.speakerEmail
+    }
+  }
+
+  onMount(() => {
+    loadGivenSubmission()
+  })
 </script>
 
 <svelte:head>
@@ -210,7 +299,7 @@
         <input name="email" type="email" required bind:value={speakerEmail} />
       </div>
 
-      {#if submitState && submitState.status !== "submitting"}
+      {#if submitState.status === "success" || submitState.status === "error"}
         <div class="alert-wrapper">
           <Alert status={submitState.status} message={submitState.message} />
         </div>
@@ -219,10 +308,18 @@
       <button type="submit" disabled={submitState?.status === "submitting"}>
         {#if submitState?.status === "submitting"}
           <Circle color="white" size={16} />
+        {:else if currentSubmissionId}
+          <Localized id="cfp--update" />
         {:else}
           <Localized id="cfp--submit" />
         {/if}
       </button>
+
+      {#if showSubmitNewEntryButton}
+        <button type="submit" class="outline" on:click={clearForm}>
+          <Localized id="cfp--clear-form" />
+        </button>
+      {/if}
     </form>
   </Window>
 </div>
@@ -306,6 +403,11 @@
   button:hover {
     transform: scale(0.99);
     filter: brightness(0.9);
+  }
+  .outline {
+    border: 1px solid #f34b21;
+    background-color: transparent;
+    color: #f34b21;
   }
 
   @media screen and (min-width: 768px) {

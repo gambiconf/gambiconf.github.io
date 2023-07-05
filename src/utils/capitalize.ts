@@ -1,9 +1,9 @@
 const capitalize = (word: string) => {
   if (!word) {
-    return ''
+    return "";
   }
 
-  return word[0].toUpperCase() + word.slice(1)
-}
+  return word[0].toUpperCase() + word.slice(1);
+};
 
-export { capitalize }
+export { capitalize };

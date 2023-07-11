@@ -86,7 +86,7 @@
             href="https://www.instagram.com/gambiconf"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Twitter"
+            aria-label="Instagram"
             class="social-media-icon"
           >
             <FaLayers size="2x">

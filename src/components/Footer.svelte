@@ -5,6 +5,7 @@
   import { assets } from "$app/paths"
   import { faCircle } from "@fortawesome/free-solid-svg-icons/faCircle"
   import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
+  import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram"
   import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin"
   import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
@@ -78,6 +79,19 @@
             <FaLayers size="2x">
               <Fa icon={faCircle} />
               <Fa color="white" scale={0.6} icon={faLinkedin} />
+            </FaLayers>
+          </a>
+
+          <a
+            href="https://www.instagram.com/gambiconf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            class="social-media-icon"
+          >
+            <FaLayers size="2x">
+              <Fa icon={faCircle} />
+              <Fa color="white" scale={0.6} icon={faInstagram} />
             </FaLayers>
           </a>
 

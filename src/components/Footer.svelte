@@ -23,10 +23,10 @@
       <div>
         <a href="/"><Localized id="footer--home" /></a>
         <a href="/#about"><Localized id="footer--about" /></a>
-        <a href="https://gambiconf.dev/2021" target="_blank" rel="noopener">
+        <a href="https://gambiconf.dev/2021" target="_blank" rel="noopener noreferrer">
           <Localized id="footer--2021-edition" />
         </a>
-        <a href="https://gambiconf.dev/2022" target="_blank" rel="noopener">
+        <a href="https://gambiconf.dev/2022" target="_blank" rel="noopener noreferrer">
           <Localized id="footer--2022-edition" />
         </a>
         <a href="/code-of-conduct"><Localized id="footer--code-of-conduct" /></a>
@@ -98,7 +98,7 @@
           <a
             href="https://www.youtube.com/channel/UCnTbfjNNWxFMyqW-d2QgHYw/featured"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             aria-label="YouTube"
             class="social-media-icon"
           >

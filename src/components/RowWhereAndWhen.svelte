@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
+  import { Overlay } from "@nubolab-ffwd/svelte-fluent"
   import { t } from "../store/locale"
   import Calendar from "./Calendar.svelte"
   import Link from "./Link.svelte"

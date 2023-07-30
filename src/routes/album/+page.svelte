@@ -24,6 +24,7 @@
     const sortedPhotos = Object.keys(importPhotos).sort((a, b) => a.localeCompare(b))
 
     for (const path of sortedPhotos) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const mod = (await importPhotos[path]()) as any
       photos = [...photos, mod.default]
     }

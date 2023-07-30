@@ -19,7 +19,7 @@ type GetSubmissionResponse = PostSubmissionsParams & { id: string };
 
 const getSubmissions = async (id: string) => {
   const response = await fetch(
-    `https://n48djewxre.execute-api.us-east-1.amazonaws.com/submissions/${id}`
+    `https://n48djewxre.execute-api.us-east-1.amazonaws.com/submissions/${id}`,
   );
 
   if (response.status !== 200) {
@@ -36,7 +36,7 @@ const postSubmissions = async (params: PostSubmissionsParams) => {
     {
       method: "POST",
       body: JSON.stringify(params),
-    }
+    },
   );
 
   if (response.status !== 200) {
@@ -53,7 +53,7 @@ const putSubmissions = async (params: PutSubmissionResponse) => {
     {
       method: "PUT",
       body: JSON.stringify(params),
-    }
+    },
   );
 
   if (response.status !== 200) {

@@ -5,6 +5,7 @@
   --calendar-highlighted-day-color: #ffaa67;
 }
 
+body,
 .wrapper-content {
   background-image: linear-gradient(rgba(24, 26, 27, 0.7), rgba(24, 26, 27, 0.7)),
     url("/mambi-icon-oulined.png");
@@ -37,7 +38,7 @@ footer a {
 
 /* Background cover Home */
 
-main > section {
+main > section:not(.code-of-conduct) {
   background-color: #012a1c;
 }
 

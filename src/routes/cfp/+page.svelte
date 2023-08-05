@@ -168,10 +168,6 @@
   })
 </script>
 
-<svelte:head>
-  <link rel="stylesheet" href={`${base}/themes/cfp.${$theme}.css`} />
-</svelte:head>
-
 <div class="page">
   <Window title={$t("cfp--title")}>
     <form on:submit|preventDefault={handleSubmit}>

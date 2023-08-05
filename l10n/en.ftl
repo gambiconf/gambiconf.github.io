@@ -127,3 +127,6 @@ cfp--clear-form = Clear form to submit a new entry
 # ThemeSwitch
 theme--light = Switch to dark mode
 theme--dark = Switch to light mode
+
+# Code of Conduct
+code-of-conduct--title = Code of Conduct

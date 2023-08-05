@@ -96,7 +96,7 @@
           </a>
 
           <a
-            href="https://www.youtube.com/channel/UCnTbfjNNWxFMyqW-d2QgHYw/featured"
+            href="https://www.youtube.com/@gambiconf/videos"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"

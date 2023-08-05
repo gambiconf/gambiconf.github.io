@@ -9,6 +9,7 @@ type PostSubmissionsParams = {
   speakerBio: string;
   speakerSocialMedias: string;
   speakerEmail: string;
+  notes: string;
 };
 
 type PostSubmissionResponse = { id: string };

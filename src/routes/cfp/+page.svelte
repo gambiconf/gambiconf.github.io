@@ -26,6 +26,7 @@
   let speakerBio = ""
   let speakerSocialMedias = ""
   let speakerEmail = ""
+  let notes = ""
 
   let tweetTalkOnAlert: TweetStatus = "ok"
   let tweetBioOnAlert: TweetStatus = "ok"
@@ -76,6 +77,7 @@
         speakerBio,
         speakerSocialMedias,
         speakerEmail,
+        notes,
       })
 
       if (result) {
@@ -95,6 +97,7 @@
         speakerBio,
         speakerSocialMedias,
         speakerEmail,
+        notes,
       })
 
       if (result) {
@@ -127,6 +130,7 @@
     speakerBio = ""
     speakerSocialMedias = ""
     speakerEmail = ""
+    notes = ""
 
     submitState = { status: "idle" }
 
@@ -160,6 +164,7 @@
       speakerBio = givenSubmission.speakerBio
       speakerSocialMedias = givenSubmission.speakerSocialMedias
       speakerEmail = givenSubmission.speakerEmail
+      notes = givenSubmission.notes
     }
   }
 
@@ -293,6 +298,11 @@
       <div class="field">
         <label for="email"><Localized id="cfp--field-email" /></label>
         <input name="email" type="email" required bind:value={speakerEmail} />
+      </div>
+
+      <div class="field">
+        <label for="email"><Localized id="cfp--field-notes" /></label>
+        <textarea name="notes" rows="3" bind:value={notes} />
       </div>
 
       {#if submitState.status === "success" || submitState.status === "error"}

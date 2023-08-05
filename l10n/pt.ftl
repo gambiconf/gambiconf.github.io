@@ -120,6 +120,7 @@ cfp--field-bio = Bio
 cfp--section-contacts = Contatos
 cfp--field-social-medias = Medias sociais (isso será público)
 cfp--field-email = E-Mail para o feedback (não será publicado)
+cfp--field-notes = Qualquer observação adicional?
 cfp--submit = Submeter
 cfp--update = Atualizar submissão
 cfp--submit-success = Submetido com sucesso

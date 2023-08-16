@@ -19,7 +19,10 @@
 <svelte:head>
   <meta name="color-scheme" content={$theme} />
   <link rel="stylesheet" href={`${base}/themes/${$theme}.css`} />
-
+  <meta og:title="GambiConf 2023" />
+  <meta og:type="website" />
+  <meta og:url="https://gambiconf.dev/" />
+  <meta og:image="./static/logo.png" />
   <Seo />
 </svelte:head>
 

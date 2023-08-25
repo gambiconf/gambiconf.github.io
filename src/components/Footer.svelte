@@ -9,6 +9,7 @@
   import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin"
   import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
+  import { t } from "../store/locale"
 </script>
 
 <footer>
@@ -30,7 +31,7 @@
           <Localized id="footer--2022-edition" />
         </a>
         <a href="/code-of-conduct"><Localized id="footer--code-of-conduct" /></a>
-        <a href={`${assets}/mediakit.pdf`} target="_blank" rel="noopener noreferrer">
+        <a href={$t('footer--media-kit-href', { assets }).replace(/\p{C}/gu, "")} target="_blank" rel="noopener noreferrer">
           <Localized id="footer--media-kit" />
         </a>
       </div>

@@ -71,7 +71,7 @@ call-for-proposal--cta = Apply to the CFP
 
 partners--title = Partners
 partners--become-a-partner = _
-  .href = { $assets }/mediakit.pdf
+  .href = { $assets }/mediakit-en.pdf
   .src = { $assets }/become-a-partner.png
   .alt = The GambiConf mascot holding a lifting a board written 'Become a partner'
 
@@ -84,6 +84,7 @@ footer--2021-edition = 2021 Edition
 footer--2022-edition = 2022 Edition
 footer--code-of-conduct = Code of Conduct
 footer--media-kit = Media Kit
+footer--media-kit-href = { $assets }/mediakit-en.pdf
 footer--contacts = Contacts
 
 ## CFP

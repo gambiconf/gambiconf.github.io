@@ -66,7 +66,7 @@ call-for-proposal--body-paragraph-2 =
   ou ministrar um minicurso prático.
 call-for-proposal--body-paragraph-3 =
   Caso esteja sem muitas ideias, se inspire vendo como foi a primeira edição da GambiConf: <a data-l10n-name='link'>leia essa thread</a>.
-call-for-proposal--body-paragraph-4 = O deadline é 27 de Agosto.
+call-for-proposal--body-paragraph-4 = O deadline é 10 de Setembro.
 call-for-proposal--cta = Submeter no CFP
 
 ## Partners

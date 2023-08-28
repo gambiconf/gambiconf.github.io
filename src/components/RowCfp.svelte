@@ -2,7 +2,7 @@
   import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
   import { base } from "$app/paths"
-  import { t } from "../store/locale"
+  import { locale, t } from "../store/locale"
   import Link from "./Link.svelte"
   import Window from "./Window.svelte"
 </script>
@@ -31,7 +31,9 @@
           <Overlay id="call-for-proposal--body-paragraph-3">
             <Link
               l10n="link"
-              href="https://threadreaderapp.com/thread/1518259526243393536.html"
+              href={$locale === "pt"
+                ? "https://threadreaderapp.com/thread/1688524161340076034.html"
+                : "https://threadreaderapp.com/thread/1518259526243393536.html"}
             />
           </Overlay>
         </p>

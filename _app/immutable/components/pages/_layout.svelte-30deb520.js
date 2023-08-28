@@ -70,7 +70,7 @@ call-for-proposal--body-paragraph-2 =
   This is a moment where you can guide people to collaborate on an open-source project or to provide a practical workshop.
 call-for-proposal--body-paragraph-3 =
   In case you're lacking ideas, get inspired by checking out how was the first GambiConf edition: <a data-l10n-name='link'>read this thread</a>.
-call-for-proposal--body-paragraph-4 = The deadline is Aug 27.
+call-for-proposal--body-paragraph-4 = The deadline is Sep 10.
 call-for-proposal--cta = Apply to the CFP
 
 ## Partners
@@ -205,7 +205,7 @@ call-for-proposal--body-paragraph-2 =
   ou ministrar um minicurso prático.
 call-for-proposal--body-paragraph-3 =
   Caso esteja sem muitas ideias, se inspire vendo como foi a primeira edição da GambiConf: <a data-l10n-name='link'>leia essa thread</a>.
-call-for-proposal--body-paragraph-4 = O deadline é 27 de Agosto.
+call-for-proposal--body-paragraph-4 = O deadline é 10 de Setembro.
 call-for-proposal--cta = Submeter no CFP
 
 ## Partners

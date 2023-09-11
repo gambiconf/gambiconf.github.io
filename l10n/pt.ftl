@@ -58,16 +58,9 @@ calendar--saturday = Sa
 
 call-for-proposal--title = Call for Proposal
 call-for-proposal--body-paragraph-1 =
-  Se você quiser compartilhar um trabalhado engenhoso num projeto pessoal ou algo underground envolvendo
-  ciência da computação, venha apresentar a sua <strong data-l10n-name='talk'>talk</strong>!
+  O CFP está encerrado. Em breve vamos responder todos que submeteram e divulgaremos em nossas redes sociais os aprovados.
 call-for-proposal--body-paragraph-2 =
-  Já se você prefere focar num hands-on com a comunidade, você pode optar em ministrar uma <strong data-l10n-name='sprint'>sprint</strong>.
-  Isto é, um momento onde você poderá orientar as pessoas a colaborar num projeto open source
-  ou ministrar um minicurso prático.
-call-for-proposal--body-paragraph-3 =
-  Caso esteja sem muitas ideias, se inspire vendo como foi a primeira edição da GambiConf: <a data-l10n-name='link'>leia essa thread</a>.
-call-for-proposal--body-paragraph-4 = O deadline é 10 de Setembro.
-call-for-proposal--cta = Submeter no CFP
+  Aguarde por novidades!
 
 ## Partners
 

@@ -57,15 +57,9 @@ calendar--saturday = Sa
 
 call-for-proposal--title = Call for Proposal
 call-for-proposal--body-paragraph-1 =
-  If you want to share a hacky personal project or thought of a unique-underground-workaroundish way
-  of doing something in CS, come and present your <strong data-l10n-name='talk'>talk</strong>!
+  The CFP is closed. Soon, we will respond to everyone who has submitted and announce the approved ones on our social media.
 call-for-proposal--body-paragraph-2 =
-  If you prefer to focus on a hands-on experience with the community, you can choose to lead a <strong data-l10n-name='sprint'>sprint</strong>.
-  This is a moment where you can guide people to collaborate on an open-source project or to provide a practical workshop.
-call-for-proposal--body-paragraph-3 =
-  In case you're lacking ideas, get inspired by checking out how was the first GambiConf edition: <a data-l10n-name='link'>read this thread</a>.
-call-for-proposal--body-paragraph-4 = The deadline is Sep 10.
-call-for-proposal--cta = Apply to the CFP
+  Stay tuned for updates!
 
 ## Partners
 

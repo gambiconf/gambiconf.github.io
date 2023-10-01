@@ -120,6 +120,23 @@ cfp--submit-success = Successfully submitted
 cfp--submit-error = Failed to submit
 cfp--clear-form = Clear form to submit a new entry
 
+## Schedule
+
+schedule--title = Schedule
+schedule--25-november = November 25th
+schedule--presentation-opening-ceremony-first-day-title = Opening Ceremony
+schedule--presentation-opening-ceremony-first-day-description = Welcome to the event!
+schedule--presentation-opening-ceremony-first-day-bio = Hey! I love engaging people in developing personal projects for fun and sharing out-of-the-box ideas - and organizing GambiConf is spreading that passion!
+schedule--26-november = November 26th
+schedule--presentation-opening-ceremony-second-day-title = Opening Ceremony (2nd day)
+schedule--presentation-opening-ceremony-second-day-description = Welcome to the event! Let's talk about the sprints!
+schedule--upcoming = New entries every Tuesday, Wednesday, and Thursday! Follow us on social media to be the first one to know!
+
+## EventTimeSlot
+
+event-time-slot--hours-prefix = At
+event-time-slot--by = By
+
 # ThemeSwitch
 theme--light = Switch to dark mode
 theme--dark = Switch to light mode

@@ -1,7 +1,7 @@
 <script lang="ts">
   import BulletsGutter from "../components/BulletsGutter.svelte"
   import Hero from "../components/Hero.svelte"
-  import RowCfp from "../components/RowCfp.svelte"
+  import RowSchedule from "../components/RowSchedule.svelte"
   import RowWhereAndWhen from "../components/RowWhereAndWhen.svelte"
   import RowPartners from "../components/RowPartners.svelte"
   import RowWhatIsGambiConf from "../components/RowWhatIsGambiConf.svelte"
@@ -24,7 +24,7 @@
     <BulletsGutter />
   </div>
 
-  <RowCfp />
+  <RowSchedule />
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />

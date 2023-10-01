@@ -1,51 +1,50 @@
 <script lang="ts">
+  import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { getGoogleCalendarLink } from "../utils/calendar"
   import SocialLinks from "./SocialLinks.svelte"
   import type { SocialLink } from "./SocialLinks.svelte"
 
-  export let talkTitle: string
-  export let speakers: Array<{ name: string; bio?: string }>
-  export let speakerImage: string
+  export let title: string
+  export let members: Array<{ name: string; bio?: string }>
+  export let image: string
   export let socialLinks: SocialLink[]
   export let date: string
-  export let hours: string
+  export let hours: string = ''
   export let duration: number
 
   const googleCalendarLink = getGoogleCalendarLink({
-    title: `[GambiConf Talk] ${talkTitle}`,
-    start: `${date} ${hours}:00 +0100`,
+    title: `[GambiConf] ${title}`,
+    start: `${date} ${hours}:00 -0300`,
     duration,
   })
 </script>
 
 <article class="talk">
   <div class="speaker-image-column">
-    <img class="speaker-image" src={speakerImage} alt="Speaker" />
+    <img class="speaker-image" src={image} alt="Speaker" />
 
     <SocialLinks links={socialLinks} />
   </div>
 
   <div class="description-column">
     <h6>
-      {talkTitle}
+      {title}
     </h6>
 
-    <p class="time">
-      At <a href={googleCalendarLink} target="_blank" rel="noopener">{hours}</a>
-    </p>
+    {#if hours}
+      <p class="time">
+        <Localized id="event-time-slot--hours-prefix"/> <a href={googleCalendarLink} target="_blank" rel="noopener">{hours}</a>
+      </p>
+    {/if}
 
     <p>
       <slot />
     </p>
 
-    {#each speakers as { name, bio }}
+    {#each members as { name, bio }}
       <h6 class="talk-speaker">
-        By
-        {#if name[0] === "@"}
-          <a href={`https://twitter.com/${name}`}>{name}</a>{#if bio}:{/if}
-        {:else}
-          {name}{#if bio}:{/if}
-        {/if}
+        <Localized id="event-time-slot--by"/>
+        {name}{#if bio}:{/if}
       </h6>
 
       <p>

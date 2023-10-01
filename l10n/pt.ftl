@@ -121,6 +121,23 @@ cfp--submit-success = Submetido com sucesso
 cfp--submit-error = Erro ao submter
 cfp--clear-form = Apagar formulário para submteter uma nova entrada
 
+## Schedule
+
+schedule--title = Agenda
+schedule--25-november = 25 de Novembro
+schedule--presentation-opening-ceremony-first-day-title = Cerimônia de Abertura
+schedule--presentation-opening-ceremony-first-day-description = Boas vindas ao evento!
+schedule--presentation-opening-ceremony-first-day-bio = Hey! Eu amo engajar as pessoas em desenvolverem projetos pessoais por diversão e compartilhar ideias fora da caixa - e organizar a GambiConf é disseminar essa paixão!
+schedule--26-november = 26 de Novembro
+schedule--presentation-opening-ceremony-second-day-title = Cerimônia de Abertura (Segundo dia)
+schedule--presentation-opening-ceremony-second-day-description = Boas vindas ao evento! Vamos falar das sprints!
+schedule--upcoming = Novos anúncios toda terça, quarta, e quinta! Siga nossas redes sociais para ser o primeiro a saber das surpresas!
+
+## EventTimeSlot
+
+event-time-slot--hours-prefix = Às
+event-time-slot--by = Por
+
 # ThemeSwitch
 theme--light = Trocar para dark mode
 theme--dark = Trocar para light mode

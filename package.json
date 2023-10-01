@@ -18,8 +18,8 @@
   "dependencies": {
     "@fluent/langneg": "^0.6.2",
     "@fontsource/ibm-plex-sans": "^4.5.13",
-    "@fortawesome/free-brands-svg-icons": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "dayjs": "1.11.6",
     "flag-icons": "^6.6.6",
     "jsdom": "^21.1.0",

@@ -23,6 +23,12 @@ header {
   box-shadow: 0px 2px 15px 2px rgb(0 0 0 / 5%);
 }
 
+a,
+header a,
+footer a {
+  color: rgb(84, 89, 95);
+}
+
 .button a {
   background-color: #f34b21;
   color: white;

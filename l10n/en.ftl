@@ -5,6 +5,7 @@ title = GambiConf - The Blow Your Mind Conference
 header--home = Home
 header--about = About
 header--cfp = CFP
+header--schedule = Schedule
 
 ## Hero
 

@@ -113,6 +113,30 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Sim, existe almoço grátis: Como hackeamos uma vending machine em 3 dias"
+        date="2023-11-25"
+        duration={20}
+        members={[
+          {
+            name: "Gabriel Barbosa (Gabu)",
+            bio: "Profissional com 5 anos de experiência em Pentest Web, Mobile e AppSec. Professor na FIAP. Criação de conteúdo de InfoSec e interesse por Homebrew de consoles.",
+          },
+        ]}
+        image={`${assets}/speakers/gabu.png`}
+        socialLinks={[
+          { type: "twitter", url: "https://twitter.com/gabu_sec" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/gabrielbarbosasouza/" },
+        ]}
+      >
+        Como burlamos o processo de compra numa vending machine através de vulnerabilidades encontradas na implementação do Bluetooth da máquina
+        - assim conseguindo snacks grátis :)
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <Localized id="schedule--upcoming" />
 

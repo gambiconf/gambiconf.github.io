@@ -137,6 +137,29 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="WAF Wars: A arte de bloquear ataques enquanto toma um cafezinho"
+        date="2023-11-25"
+        duration={20}
+        members={[
+          {
+            name: "Marcus Limna",
+            bio: "Há 10 anos desenvolve programas de qualidade duvidosa. Nas horas vagas, jogador de RPG que nunca lembra dos nomes dos NPCs",
+          },
+        ]}
+        image={`${assets}/speakers/marcus-limna.jpeg`}
+        socialLinks={[
+          { type: "twitter", url: "https://twitter.com/Marcsvll" },
+          { type: "github", url: "https://www.github.com/marcsvll" },
+        ]}
+      >
+        Mergulhe no mundo de webassembly para proxies e descubra como um WAF pode dançar salsa com diferentes tecnologias de proxy 🕺💃 
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <Localized id="schedule--upcoming" />
 

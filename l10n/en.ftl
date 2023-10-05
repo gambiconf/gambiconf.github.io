@@ -12,7 +12,7 @@ header--schedule = Schedule
 hero--subtitle = The Blow Your Mind Conference
 hero--date-first-line = November
 hero--date-second-line = 25th and 26th
-hero--location-first-line = USP - Campus Butantã
+hero--location-first-line = USP - Campus Butantã / IME - Bloco B
 hero--location-second-line = São Paulo, Brazil
 hero--location-see-map = See on the map
 hero--cta = Buy your ticket
@@ -41,7 +41,7 @@ row-what-is-gambiconf--body-paragraph-5 =
 ## Where and When
 
 where-and-when--title = Where and When
-where-and-when--body-paragraph-1 = November 25th and 26th, at <a data-l10n-name='link'>USP - Campus Butantã</a>.
+where-and-when--body-paragraph-1 = November 25th and 26th, at <a data-l10n-name='link'>USP - Campus Butantã / IME - Bloco B / Auditório Jacy Monteiro</a>.
 where-and-when--body-paragraph-2 = Free streaming on <a data-l10n-name='link'>YouTube</a>
 
 ## Calendar

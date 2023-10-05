@@ -44,8 +44,8 @@
     </p>
 
     <div class="action">
-      <Button url="https://twitter.com/gambiconf">
-        <Localized id="hero--twitter-cta" />
+      <Button url="https://www.eventbrite.com/e/gambiconf-terceira-edicao-tickets-732314732077">
+        <Localized id="hero--cta" />
       </Button>
     </div>
   </div>

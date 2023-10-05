@@ -14,7 +14,8 @@ hero--date-first-line = November
 hero--date-second-line = 25th and 26th
 hero--location-first-line = USP - Campus Butantã
 hero--location-second-line = São Paulo, Brazil
-hero--twitter-cta = Follow us on Twitter
+hero--location-see-map = See on the map
+hero--cta = Buy your ticket
 
 ## Row What Is GambiConf
 

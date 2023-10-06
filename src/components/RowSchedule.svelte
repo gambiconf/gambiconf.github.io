@@ -232,6 +232,30 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Teika From Scratch"
+        date="2023-11-26"
+        hours="14:25"
+        duration={180}
+        members={[
+          {
+            name: "Eduardo Rafael",
+            bio: "Programador, Hacker e anti floating point. Trabalhando muito para matar o JavaEscripto.",
+          },
+        ]}
+        image={`${assets}/speakers/eduardo-rafael.jpeg`}
+        socialLinks={[
+          { type: "twitter", url: "https://twitter.com/TheEduardoRFS" },
+          { type: "github", url: "https://github.com/EduardoRFS" },
+        ]}
+      >
+        Implementando estruturas de dados e integrações básicas para uma linguagem nova e um pouco diferente.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <Localized id="schedule--upcoming" />
 

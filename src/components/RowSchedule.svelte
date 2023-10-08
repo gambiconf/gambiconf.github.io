@@ -14,7 +14,7 @@
 <div id="schedule">
   <Window title={$t("schedule--title")}>
     <article class="content">
-      <h3><Localized id="schedule--25-november" /></h3>
+      <p class="schedule--date"><Localized id="schedule--25-november" /></p>
 
       <TimeSlot
         title={$t("schedule--presentation-opening-ceremony-first-day-title")}
@@ -206,7 +206,7 @@
         <div class="division" />
       </div>
 
-      <h3><Localized id="schedule--26-november" /></h3>
+      <p class="schedule--date"><Localized id="schedule--26-november" /></p>
 
       <TimeSlot
         title={$t("schedule--presentation-opening-ceremony-second-day-title")}
@@ -306,14 +306,6 @@
     padding: 25px;
   }
 
-  h3 {
-    margin-bottom: 25px;
-  }
-
-  .content > h3:first-of-type {
-    margin-top: 0;
-  }
-
   .division-wrapper {
     display: flex;
     flex-direction: row;
@@ -331,5 +323,11 @@
 
   .break {
     text-align: center;
+  }
+  .schedule--date {
+    font-size: 38.4px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 0;
   }
 </style>

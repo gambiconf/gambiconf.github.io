@@ -3,10 +3,11 @@
   import { assets } from "$app/paths"
   import Button from "./Button.svelte"
   import Link from "./Link.svelte"
+  import { useLazyImage as lazyImage } from 'svelte-lazy-image';
 </script>
 
 <section>
-  <div class="background-overlay" />
+  <img class="hero-background" src="/hero-background.png" alt="hero-background" use:lazyImage>
 
   <div class="message">
     <div class="mascot">
@@ -24,7 +25,7 @@
       </p>
     </div>
 
-    <h4 class="date">
+    <span class="date">
       <span>
         <Localized id="hero--date-first-line" />
       </span>
@@ -32,7 +33,7 @@
       <span>
         <Localized id="hero--date-second-line" />
       </span>
-    </h4>
+    </span>
 
     <p class="location">
       <span>
@@ -62,16 +63,11 @@
     height: 55vh;
   }
 
-  .background-overlay {
+  .hero-background{
     position: absolute;
-
     width: 100%;
     height: 100%;
-
-    background-image: url("/hero-background.png");
     background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     mix-blend-mode: overlay;
   }
 
@@ -112,7 +108,6 @@
     opacity: 70%;
   }
 
-  h4,
   p {
     margin: 0;
   }
@@ -121,6 +116,8 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    font-size: 33.6px;
+    font-weight: bold;
   }
 
   .location {

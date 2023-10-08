@@ -27,6 +27,7 @@
     "rough-notation": "^0.5.1",
     "svelte-fa": "^3.0.3",
     "svelte-flag-icons": "^0.2.1",
+    "svelte-lazy-image": "^0.5.1",
     "svelte-loading-spinners": "0.3.4",
     "svelte-rough-notation": "^0.1.4",
     "svelte-select": "^5.2.1"

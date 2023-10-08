@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { useLazyImage as lazyImage } from 'svelte-lazy-image';
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { getGoogleCalendarLink } from "../utils/calendar"
   import SocialLinks from "./SocialLinks.svelte"
@@ -21,15 +22,15 @@
 
 <article class="talk">
   <div class="speaker-image-column">
-    <img class="speaker-image" src={image} alt="Speaker" />
+    <img class="speaker-image" src={image} alt="Speaker" use:lazyImage  />
 
     <SocialLinks links={socialLinks} />
   </div>
 
   <div class="description-column">
-    <h6>
+    <p class="description-schedule-event">
       {title}
-    </h6>
+    </p>
 
     {#if hours}
       <p class="time">
@@ -42,10 +43,10 @@
     </p>
 
     {#each members as { name, bio }}
-      <h6 class="talk-speaker">
+      <p class="talk-speaker">
         <Localized id="event-time-slot--by"/>
         {name}{#if bio}:{/if}
-      </h6>
+      </p>
 
       <p>
         {@html bio ?? ""}
@@ -55,11 +56,6 @@
 </article>
 
 <style>
-  h6 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
   .time {
     margin: 0;
     font-weight: bold;
@@ -74,12 +70,10 @@
   }
 
   .speaker-image {
-    min-height: 200px;
-    max-height: 200px;
-    min-width: 200px;
-    max-width: 200px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
-    border-radius: 100px;
+    border-radius: 50%;
     border: solid 1px #f34b2122;
   }
 
@@ -88,6 +82,17 @@
   }
 
   .description-column > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .talk-speaker{
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .description-schedule-event {
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 0;
   }
 

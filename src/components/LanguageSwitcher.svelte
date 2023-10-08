@@ -22,6 +22,7 @@
   searchable={false}
   clearable={false}
   {items}
+  id="language-select"
   --background="none"
   --width="100px"
   --height="36px"
@@ -36,7 +37,6 @@
     {:else}
       <Us />
     {/if}
-
     {selection.label}
   </div>
 

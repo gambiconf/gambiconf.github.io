@@ -15,7 +15,7 @@
     <div>
       <p>
         <Overlay id="where-and-when--body-paragraph-1">
-          <Link l10n="link" href="https://goo.gl/maps/jWNykevGjq3BvQVj9" />
+          <Link l10n="link" href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7" />
         </Overlay>
       </p>
 

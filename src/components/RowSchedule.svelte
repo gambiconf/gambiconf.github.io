@@ -113,6 +113,53 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Sim, existe almoço grátis: Como hackeamos uma vending machine em 3 dias"
+        date="2023-11-25"
+        duration={20}
+        members={[
+          {
+            name: "Gabriel Barbosa (Gabu)",
+            bio: "Profissional com 5 anos de experiência em Pentest Web, Mobile e AppSec. Professor na FIAP. Criação de conteúdo de InfoSec e interesse por Homebrew de consoles.",
+          },
+        ]}
+        image={`${assets}/speakers/gabu.png`}
+        socialLinks={[
+          { type: "twitter", url: "https://twitter.com/gabu_sec" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/gabrielbarbosasouza/" },
+        ]}
+      >
+        Como burlamos o processo de compra numa vending machine através de vulnerabilidades encontradas na implementação do Bluetooth da máquina
+        - assim conseguindo snacks grátis :)
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="WAF Wars: A arte de bloquear ataques enquanto toma um cafezinho"
+        date="2023-11-25"
+        duration={20}
+        members={[
+          {
+            name: "Marcus Limna",
+            bio: "Há 10 anos desenvolve programas de qualidade duvidosa. Nas horas vagas, jogador de RPG que nunca lembra dos nomes dos NPCs",
+          },
+        ]}
+        image={`${assets}/speakers/marcus-limna.jpeg`}
+        socialLinks={[
+          { type: "twitter", url: "https://twitter.com/Marcsvll" },
+          { type: "github", url: "https://www.github.com/marcsvll" },
+        ]}
+      >
+        Mergulhe no mundo de webassembly para proxies e descubra como um WAF pode dançar salsa com diferentes tecnologias de proxy 🕺💃 
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <Localized id="schedule--upcoming" />
 
@@ -179,6 +226,30 @@
         ]}
       >
         <Localized id="schedule--presentation-opening-ceremony-second-day-description" />
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="Teika From Scratch"
+        date="2023-11-26"
+        hours="14:25"
+        duration={180}
+        members={[
+          {
+            name: "Eduardo Rafael",
+            bio: "Programador, Hacker e anti floating point. Trabalhando muito para matar o JavaEscripto.",
+          },
+        ]}
+        image={`${assets}/speakers/eduardo-rafael.jpeg`}
+        socialLinks={[
+          { type: "twitter", url: "https://twitter.com/TheEduardoRFS" },
+          { type: "github", url: "https://github.com/EduardoRFS" },
+        ]}
+      >
+        Implementando estruturas de dados e integrações básicas para uma linguagem nova e um pouco diferente.
       </TimeSlot>
 
       <div class="division-wrapper">

@@ -160,6 +160,30 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Hackeando roteadores domesticos"
+        date="2023-11-25"
+        duration={30}
+        members={[
+          {
+            name: "Renato Alencar",
+            bio: "Fã de cajuína e hacking, programador OCaml diretamente do Piauí.",
+          },
+        ]}
+        image={`${assets}/speakers/renato-alencar.jpg`}
+        socialLinks={[
+          { type: "twitter", url: "https://twitter.com/cajuinaoverflow" },
+          { type: "github", url: "https://github.com/renatoalencar" },
+        ]}
+      >
+        Achando um roteador comum shodan, comprando ele no mercado livre e achando uma vulnerabilidade facilmente.
+        Nessa talk faço um breve introdução a hardware hacking.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <Localized id="schedule--upcoming" />
 

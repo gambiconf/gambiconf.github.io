@@ -184,6 +184,34 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Da para fazer QR code na mão, Igual aos incas e os maias?"
+        date="2023-11-25"
+        duration={30}
+        members={[
+          {
+            name: "Danillo Bosco",
+            bio: "Bacharel em sistemas de informação, apaixonado por tecnologia e cultura maker. Streamer nas horas vagas. GaMbIaRa Is My PaSsIoN",
+          },
+        ]}
+        image={`${assets}/speakers/danillo-bosco.jpeg`}
+        socialLinks={[
+          { type: "twitter", url: "https://twitter.com/Tearing5tv" },
+          { type: "github", url: "https://github.com/danillo523" },
+          { type: "twitch", url: "https://www.twitch.tv/tearing5" },
+          { type: "instagram", url: "https://www.instagram.com/danillobosco" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/danillobosco" },
+          { type: "website", url: "https://5tr.in" },
+        ]}
+      >
+        Quem precisa de gerador de QR Code, né? Bora destrinchar os QR codes a fundo e no fim ser capaz de fazer um na mão.
+        Habilidate inútil? Até você precisar.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <Localized id="schedule--upcoming" />
 

@@ -308,6 +308,31 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Contribuindo com um Bot do Discord"
+        date="2023-11-26"
+        hours="14:25"
+        duration={180}
+        members={[
+          {
+            name: "Gabriel Pereira Falcão",
+            bio: "Estudante de Ciência da Computação na UFMS, Desenvolvedor de bots, entusiasta de Robótica, Open-source e Programação Competitiva e dono de gato!",
+          },
+        ]}
+        image={`${assets}/speakers/gabriel-pereira.jpeg`}
+        socialLinks={[
+          { type: "twitter", url: "https://twitter.com/falcao__g" },
+          { type: "github", url: "https://github.com/falcao-g"},
+          { type: "linkedin", url: "https://www.linkedin.com/in/falcao-g" },
+        ]}
+      >
+        Aprenda como funcionam bots do Discord e contribua com o Falbot, um bot open-source com foco em economia usando Javascript e MongoDB!
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <Localized id="schedule--upcoming" />
 

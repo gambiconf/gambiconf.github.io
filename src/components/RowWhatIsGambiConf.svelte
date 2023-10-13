@@ -54,6 +54,8 @@
 
   .icon {
     float: left;
+    width: 128px;
+    height: 128px;
   }
 
   .content p:first-of-type {

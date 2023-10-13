@@ -3,11 +3,12 @@
   import { base, assets } from "$app/paths"
   import LanguageSwitcher from "./LanguageSwitcher.svelte"
   import ThemeSwitcher from "./ThemeSwitcher.svelte"
+  import { useLazyImage as lazyImage } from 'svelte-lazy-image';
 </script>
 
 <header>
   <a href={`${base}/`}>
-    <img src={`${assets}/logo.png`} alt="logo" />
+    <img class="logo-header" src={`${assets}/logo.png`} alt="logo" use:lazyImage />
   </a>
 
   <nav>
@@ -34,6 +35,7 @@
     left: 5vw;
 
     height: 60px;
+    width: 90px;
 
     filter: drop-shadow(0px 17px 17px rgba(0, 0, 0, 11%));
   }
@@ -53,6 +55,7 @@
       left: 10vw;
 
       height: 70px;
+      width: 90px;
     }
 
     nav {

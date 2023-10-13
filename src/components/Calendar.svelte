@@ -70,7 +70,7 @@
 <style>
   .root {
     font-size: 1rem;
-
+    background-color: #FFFFFF;
     width: 315px;
     border: 1px solid var(--calendar-border-color);
     border-radius: 5px;
@@ -101,8 +101,8 @@
   }
 
   .regular-day {
-    color: #dac5b6;
-    opacity: 0.7;
+    color: #6E533A;
+    opacity: contrast(5.17);
   }
 
   .highlighted-day {

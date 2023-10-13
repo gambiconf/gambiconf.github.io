@@ -26,11 +26,11 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     gap: 25px;
-
     padding: 25px;
   }
 
   .content img {
+    width:175px;
     height: 175px;
     transition: filter 0.75s;
     filter: grayscale(1);

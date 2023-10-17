@@ -212,6 +212,29 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="HVM - uma arquitetura massivamente paralela"
+        date="2023-11-25"
+        duration={45}
+        members={[
+          {
+            name: "Victor Taelin",
+            bio: "Programador veterano e entusiasta em modelos de computação, Victor Taelin busca sempre questionar a maneira como as coisas são feitas, utilizando a elegância matemática como principal heurística em sua busca por ideias inovadoras.",
+          },
+        ]}
+        image={`${assets}/speakers/victor-taelin.png`}
+        socialLinks={[
+          { type: "twitter", url: "https://twitter.com/VictorTaelin" },
+          { type: "github", url: "https://github.com/VictorTaelin" },
+        ]}
+      >
+        Tudo que você precisa saber sobre o modelo computacional que almeja redefinir a maneira como computadores são arquitetados.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <Localized id="schedule--upcoming" />
 

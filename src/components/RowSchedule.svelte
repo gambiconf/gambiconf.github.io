@@ -286,8 +286,8 @@
       <TimeSlot
         title={$t("schedule--presentation-opening-ceremony-second-day-title")}
         date="2023-11-26"
-        hours="14:00"
-        duration={20}
+        hours="13:30"
+        duration={25}
         members={[
           {
             name: "Bruno Macabeus",
@@ -310,8 +310,8 @@
       <TimeSlot
         title="Teika From Scratch"
         date="2023-11-26"
-        hours="14:25"
-        duration={180}
+        hours="14:00"
+        duration={210}
         members={[
           {
             name: "Eduardo Rafael",
@@ -334,8 +334,8 @@
       <TimeSlot
         title="Contribuindo com um Bot do Discord"
         date="2023-11-26"
-        hours="14:25"
-        duration={180}
+        hours="14:00"
+        duration={210}
         members={[
           {
             name: "Gabriel Pereira Falcão",

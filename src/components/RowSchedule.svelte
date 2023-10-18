@@ -235,6 +235,30 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="A Rust desenferrujou o Flash Player"
+        date="2023-11-25"
+        duration={30}
+        members={[
+          {
+            name: "Leo Cavalcante",
+            bio: "Há mais de 15 anos atuando com engenharia de software, é Staff Engineer na PicPay, evangelista do PHP, membro dos projetos Swoole e Hyperf, representante na PHP-FIG (PHP Framework Interop Group) e idealizador da organização OpenCodeCo.",
+          },
+        ]}
+        image={`${assets}/speakers/leo-cavalcante.jpeg`}
+        socialLinks={[
+          { type: "twitter", url: "https://twitter.com/leocavalcante" },
+          { type: "github", url: "https://github.com/leocavalcante" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/leocavalcantee" },
+        ]}
+      >
+        Apresentando a Ruffle: como a linguagem Rust emulou o Flash Player nos navegadores usando WebAssembly.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <Localized id="schedule--upcoming" />
 

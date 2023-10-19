@@ -380,6 +380,34 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Implementando RT ou reply no @sseramemes"
+        date="2023-11-26"
+        hours="14:00"
+        duration={210}
+        members={[
+          {
+            name: "Pedro Arantes",
+            bio: 'Criador do <a href="https://twitter.com/sseramemes">@sseramemes</a>. The zueira never ends.',
+          },
+        ]}
+        image={`${assets}/speakers/pedro-arantes.png`}
+        socialLinks={[
+          { type: "twitter", url: "https://twitter.com/arantespp" },
+          { type: "github", url: "https://github.com/arantespp"},
+          { type: "linkedin", url: "https://linkedin.com/in/arantespp"},
+          { type: "instagram", url: "https://instagram.com/arantespp_"},
+          { type: "website", url: "https://arantespp.com/" },
+        ]}
+      >
+        Hoje o <a href="https://twitter.com/sseramemes">@sseramemes</a> não tem a funcionalidade de reply, apenas RT.
+        Precisamos implementá-la porque replies geram muitas visualizações.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <Localized id="schedule--upcoming" />
 

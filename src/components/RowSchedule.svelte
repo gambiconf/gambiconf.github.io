@@ -259,6 +259,31 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Arquiteturas Antigas"
+        date="2023-11-25"
+        duration={30}
+        members={[
+          {
+            name: "Jecel Mattos",
+            bio: "Depois de desenvolver vários computadores originais nos anos 1980 (o que era raro no Brasil) se formou em microeletrônica pela Poli-USP em 1990. Continua criando computadores e circuitos integrados.",
+          },
+        ]}
+        image={`${assets}/speakers/jecel-mattos.jpeg`}
+        socialLinks={[
+          { type: "github", url: "https://github.com/jeceljr" },
+          { type: "hackerNews", url: "https://news.ycombinator.com/user?id=jecel" },
+          { type: "website", url: "https://slashdot.org/~Jecel+Assumpcao+Jr" },
+        ]}
+      >
+        "Arquitetura de computador" é como o programador vê a máquina independentemente de como ela realmente é implementada.
+        Conhecer o passado ajuda a imaginar o futuro - como surgiram o que usamos hoje?
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <Localized id="schedule--upcoming" />
 

@@ -24,14 +24,14 @@
         members={[
           {
             name: "Bruno Macabeus",
+            image: `${assets}/speakers/bruno-macabeus.jpeg`,
             bio: $t("schedule--presentation-opening-ceremony-first-day-bio"),
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/bmacabeus" },
+              { type: "github", url: "https://github.com/macabeus" },
+              { type: "website", url: "http://macabeus.github.io/" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/bruno-macabeus.jpeg`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/bmacabeus" },
-          { type: "github", url: "https://github.com/macabeus" },
-          { type: "website", url: "http://macabeus.github.io/" },
         ]}
       >
         <Localized id="schedule--presentation-opening-ceremony-first-day-description" />
@@ -48,12 +48,12 @@
         members={[
           {
             name: "Anne",
+            image: `${assets}/speakers/anne.jpeg`,
             bio: "Head of Gambiarra / entusiasta de software embarcado e de kernel dev",
+            socialLinks: [
+              { type: "github", url: "https://github.com/retpolanne" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/anne.jpeg`}
-        socialLinks={[
-          { type: "github", url: "https://github.com/retpolanne" },
         ]}
       >
         Um monte de aventuras aleatórias envolvendo COM ports, RS232, UART e outras gambiarras.
@@ -70,15 +70,15 @@
         members={[
           {
             name: "Dave Aronson",
+            image: `${assets}/speakers/dave-aronson.jpeg`,
             bio: "Dave é consultor de desenvolvimento de software semi-aposentado, palestrante internacional (e.g., GambiConf 2022), e cervejeiro de hidromel, perto de Washington, DC, EUA.  Ele está aprendendo o português, e fará sua primeira palestra fora do inglês!",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/DaveAronson" },
+              { type: "github", url: "https://github.com/DaveAronson" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/DaveAronson" },
+              { type: "facebook", url: "https://www.facebook.com/dare2xl" }
+            ],
           },
-        ]}
-        image={`${assets}/speakers/dave-aronson.jpeg`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/DaveAronson" },
-          { type: "github", url: "https://github.com/DaveAronson" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/DaveAronson" },
-          { type: "facebook", url: "https://www.facebook.com/dare2xl" }
         ]}
       >
         Genaver é uma gambiarra para gerar rapidamente uma versão de uma palestra, customizada para uma conferência e
@@ -96,13 +96,13 @@
         members={[
           {
             name: "Lucas Lago",
+            image: `${assets}/speakers/lucas-lago.jpeg`,
             bio: "Mestre em Engenharia da Computação, ativista no Instituto Aaron Swartz e co-autor de dois relatórios desmascarando ataques as urnas nas eleições de 2022.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/lucaslago" },
+              { type: "website", url: "https://bsky.app/profile/lucaslago.projeto7c0.com.br" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/lucas-lago.jpeg`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/lucaslago" },
-          { type: "website", url: "https://bsky.app/profile/lucaslago.projeto7c0.com.br" },
         ]}
       >
         Vamos fazer um giro sobre o mundo das tecnologias eleitorais, passando por boas ideias,
@@ -120,13 +120,13 @@
         members={[
           {
             name: "Gabriel Barbosa (Gabu)",
+            image: `${assets}/speakers/gabu.png`,
             bio: "Profissional com 5 anos de experiência em Pentest Web, Mobile e AppSec. Professor na FIAP. Criação de conteúdo de InfoSec e interesse por Homebrew de consoles.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/gabu_sec" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/gabrielbarbosasouza/" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/gabu.png`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/gabu_sec" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/gabrielbarbosasouza/" },
         ]}
       >
         Como burlamos o processo de compra numa vending machine através de vulnerabilidades encontradas na implementação do Bluetooth da máquina
@@ -144,13 +144,13 @@
         members={[
           {
             name: "Marcus Limna",
+            image: `${assets}/speakers/marcus-limna.jpeg`,
             bio: "Há 10 anos desenvolve programas de qualidade duvidosa. Nas horas vagas, jogador de RPG que nunca lembra dos nomes dos NPCs",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/Marcsvll" },
+              { type: "github", url: "https://www.github.com/marcsvll" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/marcus-limna.jpeg`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/Marcsvll" },
-          { type: "github", url: "https://www.github.com/marcsvll" },
         ]}
       >
         Mergulhe no mundo de webassembly para proxies e descubra como um WAF pode dançar salsa com diferentes tecnologias de proxy 🕺💃 
@@ -167,13 +167,13 @@
         members={[
           {
             name: "Renato Alencar",
+            image: `${assets}/speakers/renato-alencar.jpg`,
             bio: "Fã de cajuína e hacking, programador OCaml diretamente do Piauí.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/cajuinaoverflow" },
+              { type: "github", url: "https://github.com/renatoalencar" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/renato-alencar.jpg`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/cajuinaoverflow" },
-          { type: "github", url: "https://github.com/renatoalencar" },
         ]}
       >
         Achando um roteador comum shodan, comprando ele no mercado livre e achando uma vulnerabilidade facilmente.
@@ -191,17 +191,17 @@
         members={[
           {
             name: "Danillo Bosco",
+            image: `${assets}/speakers/danillo-bosco.jpeg`,
             bio: "Bacharel em sistemas de informação, apaixonado por tecnologia e cultura maker. Streamer nas horas vagas. GaMbIaRa Is My PaSsIoN",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/Tearing5tv" },
+              { type: "github", url: "https://github.com/danillo523" },
+              { type: "twitch", url: "https://www.twitch.tv/tearing5" },
+              { type: "instagram", url: "https://www.instagram.com/danillobosco" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/danillobosco" },
+              { type: "website", url: "https://5tr.in" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/danillo-bosco.jpeg`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/Tearing5tv" },
-          { type: "github", url: "https://github.com/danillo523" },
-          { type: "twitch", url: "https://www.twitch.tv/tearing5" },
-          { type: "instagram", url: "https://www.instagram.com/danillobosco" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/danillobosco" },
-          { type: "website", url: "https://5tr.in" },
         ]}
       >
         Quem precisa de gerador de QR Code, né? Bora destrinchar os QR codes a fundo e no fim ser capaz de fazer um na mão.
@@ -219,13 +219,13 @@
         members={[
           {
             name: "Victor Taelin",
+            image: `${assets}/speakers/victor-taelin.png`,
             bio: "Programador veterano e entusiasta em modelos de computação, Victor Taelin busca sempre questionar a maneira como as coisas são feitas, utilizando a elegância matemática como principal heurística em sua busca por ideias inovadoras.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/VictorTaelin" },
+              { type: "github", url: "https://github.com/VictorTaelin" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/victor-taelin.png`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/VictorTaelin" },
-          { type: "github", url: "https://github.com/VictorTaelin" },
         ]}
       >
         Tudo que você precisa saber sobre o modelo computacional que almeja redefinir a maneira como computadores são arquitetados.
@@ -242,14 +242,14 @@
         members={[
           {
             name: "Leo Cavalcante",
+            image: `${assets}/speakers/leo-cavalcante.jpeg`,
             bio: "Há mais de 15 anos atuando com engenharia de software, é Staff Engineer na PicPay, evangelista do PHP, membro dos projetos Swoole e Hyperf, representante na PHP-FIG (PHP Framework Interop Group) e idealizador da organização OpenCodeCo.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/leocavalcante" },
+              { type: "github", url: "https://github.com/leocavalcante" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/leocavalcantee" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/leo-cavalcante.jpeg`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/leocavalcante" },
-          { type: "github", url: "https://github.com/leocavalcante" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/leocavalcantee" },
         ]}
       >
         Apresentando a Ruffle: como a linguagem Rust emulou o Flash Player nos navegadores usando WebAssembly.
@@ -266,14 +266,14 @@
         members={[
           {
             name: "Jecel Mattos",
+            image: `${assets}/speakers/jecel-mattos.jpeg`,
             bio: "Depois de desenvolver vários computadores originais nos anos 1980 (o que era raro no Brasil) se formou em microeletrônica pela Poli-USP em 1990. Continua criando computadores e circuitos integrados.",
+            socialLinks: [
+              { type: "github", url: "https://github.com/jeceljr" },
+              { type: "hackerNews", url: "https://news.ycombinator.com/user?id=jecel" },
+              { type: "website", url: "https://slashdot.org/~Jecel+Assumpcao+Jr" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/jecel-mattos.jpeg`}
-        socialLinks={[
-          { type: "github", url: "https://github.com/jeceljr" },
-          { type: "hackerNews", url: "https://news.ycombinator.com/user?id=jecel" },
-          { type: "website", url: "https://slashdot.org/~Jecel+Assumpcao+Jr" },
         ]}
       >
         "Arquitetura de computador" é como o programador vê a máquina independentemente de como ela realmente é implementada.
@@ -339,14 +339,14 @@
         duration={25}
         members={[
           {
+            image: `${assets}/speakers/bruno-macabeus.jpeg`,
             name: "Bruno Macabeus",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/bmacabeus" },
+              { type: "github", url: "https://github.com/macabeus" },
+              { type: "website", url: "http://macabeus.github.io/" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/bruno-macabeus.jpeg`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/bmacabeus" },
-          { type: "github", url: "https://github.com/macabeus" },
-          { type: "website", url: "http://macabeus.github.io/" },
         ]}
       >
         <Localized id="schedule--presentation-opening-ceremony-second-day-description" />
@@ -364,13 +364,13 @@
         members={[
           {
             name: "Eduardo Rafael",
+            image: `${assets}/speakers/eduardo-rafael.jpeg`,
             bio: "Programador, Hacker e anti floating point. Trabalhando muito para matar o JavaEscripto.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/TheEduardoRFS" },
+              { type: "github", url: "https://github.com/EduardoRFS" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/eduardo-rafael.jpeg`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/TheEduardoRFS" },
-          { type: "github", url: "https://github.com/EduardoRFS" },
         ]}
       >
         Implementando estruturas de dados e integrações básicas para uma linguagem nova e um pouco diferente.
@@ -388,14 +388,14 @@
         members={[
           {
             name: "Gabriel Pereira Falcão",
+            image: `${assets}/speakers/gabriel-pereira.jpeg`,
             bio: "Estudante de Ciência da Computação na UFMS, Desenvolvedor de bots, entusiasta de Robótica, Open-source e Programação Competitiva e dono de gato!",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/falcao__g" },
+              { type: "github", url: "https://github.com/falcao-g"},
+              { type: "linkedin", url: "https://www.linkedin.com/in/falcao-g" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/gabriel-pereira.jpeg`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/falcao__g" },
-          { type: "github", url: "https://github.com/falcao-g"},
-          { type: "linkedin", url: "https://www.linkedin.com/in/falcao-g" },
         ]}
       >
         Aprenda como funcionam bots do Discord e contribua com o Falbot, um bot open-source com foco em economia usando Javascript e MongoDB!
@@ -413,16 +413,16 @@
         members={[
           {
             name: "Pedro Arantes",
+            image: `${assets}/speakers/pedro-arantes.png`,
             bio: 'Criador do <a href="https://twitter.com/sseramemes">@sseramemes</a>. The zueira never ends.',
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/arantespp" },
+              { type: "github", url: "https://github.com/arantespp"},
+              { type: "linkedin", url: "https://linkedin.com/in/arantespp"},
+              { type: "instagram", url: "https://instagram.com/arantespp_"},
+              { type: "website", url: "https://arantespp.com/" },
+            ],
           },
-        ]}
-        image={`${assets}/speakers/pedro-arantes.png`}
-        socialLinks={[
-          { type: "twitter", url: "https://twitter.com/arantespp" },
-          { type: "github", url: "https://github.com/arantespp"},
-          { type: "linkedin", url: "https://linkedin.com/in/arantespp"},
-          { type: "instagram", url: "https://instagram.com/arantespp_"},
-          { type: "website", url: "https://arantespp.com/" },
         ]}
       >
         Hoje o <a href="https://twitter.com/sseramemes">@sseramemes</a> não tem a funcionalidade de reply, apenas RT.
@@ -433,47 +433,60 @@
         <div class="division" />
       </div>
 
-      <div class="break">
-        <Localized id="schedule--upcoming" />
-
-        <div class="social-links-container">
-          <a
-            href="https://twitter.com/gambiconf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faTwitter} />
-            </FaLayers>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/company/gambiconf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Linkedin"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faLinkedin} />
-            </FaLayers>
-          </a>
-
-          <a
-            href="https://www.instagram.com/gambiconf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faInstagram} />
-            </FaLayers>
-          </a>
-        </div>
-      </div>
+      <TimeSlot
+        title="Painel: Rinhas de Devs"
+        date="2023-11-26"
+        hours="18:00"
+        duration={45}
+        members={[
+          {
+            name: "Pedro Castilho (líder do painel)",
+            image: `${assets}/speakers/pedro-castilho.jpeg`,
+            bio: 'Pedro Castilho (<a href="https://twitter.com/coproduto">@coproduto</a>) é um desenvolvedor de software. Ele passa a maior parte de seu tempo trabalhando na <a href="https://twitter.com/appcumbuca">@appcumbuca</a>, escrevendo código em Elixir ou pensando um pouco sobre computadores rodando silenciosamente dentro de suas fontes.',
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/coproduto" },
+              { type: "github", url: "https://www.github.com/coproduto"},
+              { type: "linkedin", url: "https://www.linkedin.com/in/pcstl"},
+            ],
+          },
+          {
+            name: "Sofia Rodrigues",
+            image: `${assets}/speakers/sofia-rodrigues.jpeg`,
+            bio: 'Programadora Rust entusiasta de compiladores e linguagens funcionais.',
+            socialLinks: [
+              { type: 'twitter', url: 'https://twitter.com/algebraic_sofia' },
+              { type: 'github', url: 'https://github.com/algebraic-sofia' },
+              { type: 'website', url: 'https://algebraic.dev/' },
+            ],
+          },
+          {
+            name: "Gabi Guimarães",
+            image: `${assets}/speakers/gabi-guimaraes.jpeg`,
+            bio: 'Eu sou uma garota trans e autista que é apaixonada por type theory, gosta de Rust e Clojure. E eu gosto de pão frances',
+            socialLinks: [
+              { type: 'twitter', url: 'https://twitter.com/algebraic_gabi' },
+              { type: 'github', url: 'https://github.com/aripiprazole' },
+              { type: 'linkedin', url: 'https://www.linkedin.com/in/aripiprazole' },
+              { type: 'website', url: 'https://aripiprazole.dev/' },
+            ],
+          },
+          {
+            name: "Felippe Regazio",
+            image: `${assets}/speakers/felippe-regazio.jpeg`,
+            bio: 'Engenheiro de software, especialista frontend, generalista curioso, platform dx, open sourcerer, pai. Uma estranha forma de vida baseada em carbono.',
+            socialLinks: [
+              { type: 'twitter', url: 'https://twitter.com/FelippeRegazio' },
+              { type: 'github', url: 'https://github.com/felippe-regazio' },
+              { type: 'linkedin', url: 'https://www.linkedin.com/in/felippe-regazio' },
+              { type: 'website', url: 'https://felipperegazio.com/' },
+            ],
+          },
+        ]}
+      >
+        <p>Nos últimos meses, começamos a ter algo divertido na comunidade tech: rinhas!</p>
+        <p>Partindo da rinha de backend, passando pra de compiladores, e chegando na de front.</p>
+        <p>Então, que tal a gente discutir sobre elas, junto de quem está por trás delas?</p>
+      </TimeSlot>
     </article>
   </Window>
 </div>

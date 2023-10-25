@@ -5,9 +5,7 @@
   import type { SocialLink } from "./SocialLinks.svelte"
 
   export let title: string
-  export let members: Array<{ name: string; bio?: string }>
-  export let image: string
-  export let socialLinks: SocialLink[]
+  export let members: Array<{ image: string; socialLinks: SocialLink[]; name: string; bio?: string }>
   export let date: string
   export let hours: string = ''
   export let duration: number
@@ -21,9 +19,10 @@
 
 <article class="talk">
   <div class="speaker-image-column">
-    <img class="speaker-image" src={image} alt="Speaker" />
-
-    <SocialLinks links={socialLinks} />
+    {#each members as member}
+      <img class="speaker-image" src={member.image} alt="Speaker" />
+      <SocialLinks links={member.socialLinks} />
+    {/each}
   </div>
 
   <div class="description-column">

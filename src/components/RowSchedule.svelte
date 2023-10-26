@@ -284,47 +284,26 @@
         <div class="division" />
       </div>
 
-      <div class="break">
-        <Localized id="schedule--upcoming" />
-
-        <div class="social-links-container">
-          <a
-            href="https://twitter.com/gambiconf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faTwitter} />
-            </FaLayers>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/company/gambiconf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Linkedin"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faLinkedin} />
-            </FaLayers>
-          </a>
-
-          <a
-            href="https://www.instagram.com/gambiconf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faInstagram} />
-            </FaLayers>
-          </a>
-        </div>
-      </div>
+      <TimeSlot
+        title="Keynote"
+        date="2023-11-25"
+        duration={30}
+        members={[
+          {
+            name: "Fernando Mercês",
+            image: `${assets}/speakers/fernando-merces.png`,
+            bio: 'Fernando Mercês é fundador do <a href="https://www.mentebinaria.com.br/">Mente Binária</a> e pesquisador de segurança. Especialista em investigações e análise de malware, criou e mantém várias ferramentas livres na área de segurança.',
+            socialLinks: [
+              { type: "github", url: "https://github.com/merces" },
+              { type: "twitter", url: "https://twitter.com/mer0x36" },
+              { type: "googleScholar", url: "https://scholar.google.com/citations?user=R0gYgvoAAAAJ" },
+              { type: "website", url: "https://www.mentebinaria.com.br/" },
+            ],
+          },
+        ]}
+      >
+        Tema surpresa.
+      </TimeSlot>
 
       <div class="division-wrapper">
         <div class="division" />
@@ -517,9 +496,5 @@
     height: 1px;
     width: 70%;
     background-color: #f34b2133;
-  }
-
-  .break {
-    text-align: center;
   }
 </style>

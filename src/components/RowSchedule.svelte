@@ -285,14 +285,14 @@
       </div>
 
       <TimeSlot
-        title="Keynote"
+        title="Keynote: Como dizia um sábio chinês: malware bom usa BPF"
         date="2023-11-25"
         duration={30}
         members={[
           {
             name: "Fernando Mercês",
             image: `${assets}/speakers/fernando-merces.png`,
-            bio: 'Fernando Mercês é fundador do <a href="https://www.mentebinaria.com.br/">Mente Binária</a> e pesquisador de segurança. Especialista em investigações e análise de malware, criou e mantém várias ferramentas livres na área de segurança.',
+            bio: 'Fernando é Pesquisador de Ameaças na Trend Micro, onde atua como investigador de ciber crime, utilizando engenharia reversa e técnicas de inteligência de ameaças no time de Pesquisa de Ameaças Futuras (FTR). Criador de várias ferramentas livres na área, com frequência apresenta suas pesquisas nos principais eventos de segurança no Brasil e no exterior. É também professor e fundador da Mente Binária, uma instituição de ensino e pesquisa sem fins lucrativos comprometida com o ensino de computação no Brasil.',
             socialLinks: [
               { type: "github", url: "https://github.com/merces" },
               { type: "twitter", url: "https://twitter.com/mer0x36" },
@@ -302,7 +302,10 @@
           },
         ]}
       >
-        Tema surpresa.
+        <p>Certamente você já ouviu falar em BPF. Mesmo que não tenha ouvido, já usou com certeza.</p>
+        <p>Do ponto de vista dos sysadmins, BPF é uma bênção desde a rapidez com que este tipo de código inspeciona pacotes, na sua versão clássica, até as capacidades incríveis de observabilidade com baixa interferência de desempenho do eBPF.</p>
+        <p>No entanto, não é só sysadmin que gosta. Nesta palestra, vou explicar como um grupo de ataque atribuído à China passou a usar BPF para esconder suas backdoors instaladas em servidores de grandes empresas de telecomunicações em países como Turquia e Hong Kong. Mostrarei também como analisei os diversos samples que encontrei e como os categorizei de acordo com o código BPF clássico que eles inserem no kernel. No momento de escrita desta palestra, a backdoor segue ativa e vitimizando.</p>
+        <p>Acredito que qualquer administrador de sistema Linux preocupado com a segurança de seus sistemas precisa saber mais sobre ela, uma vez que a técnica já migrou para outros malwares, inclusive no Brasil!</p>
       </TimeSlot>
 
       <div class="division-wrapper">

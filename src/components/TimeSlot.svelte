@@ -91,10 +91,21 @@
 
   .speaker-description-column {
     flex: 1;
+  display: flex;
     text-align: left;
+     justify-content: center;
+  flex-direction: column;
     margin-left: 3rem;
   }
- 
+
+  .speaker-name {
+    margin: 0.75rem 0 0.75rem 0;
+  }
+
+  .speaker-bio {
+    margin-top: 1rem;
+  }
+
   @media screen and (min-width: 768px) {
     .talk {
       display: flex;

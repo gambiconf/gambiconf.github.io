@@ -40,12 +40,12 @@
       </div>
 
       <div class="speaker-description-column">
-        <h6 class="speaker-talk">
+        <h6 class="speaker-name">
           <Localized id="event-time-slot--by" />
           {member.name}{#if member.bio}:{/if}
         </h6>
 
-        <p>
+        <p class="speaker-bio">
           {@html member.bio ?? ""}
         </p>
       </div>
@@ -60,7 +60,7 @@
   }
   
   .talk-title {
-    margin-top: 1.5rem;
+    margin-top: 0.50rem;
     margin-bottom: 0;
   }
 
@@ -75,13 +75,8 @@
 
   .speaker {
     display: flex;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
- 
-  .speaker-image-column {
-    display: flex;
-    flex-direction: column;
+    margin-top: 0.50rem;
+    margin-bottom: 0.50rem;
   }
 
   .speaker-image {
@@ -100,18 +95,10 @@
     margin-left: 3rem;
   }
  
-  .description-column > *:first-child {
-    margin-top: 0;
-  }
-
-  .description-column > *:last-child {
-    margin-bottom: 0;
-  }
-
   @media screen and (min-width: 768px) {
     .talk {
       display: flex;
-      gap: 20px;
+      gap: 15px;
     }
   
     .speaker-image-column {

@@ -90,11 +90,11 @@
   }
 
   .speaker-description-column {
+    display: flex;
     flex: 1;
-  display: flex;
     text-align: left;
-     justify-content: center;
-  flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
     margin-left: 3rem;
   }
 

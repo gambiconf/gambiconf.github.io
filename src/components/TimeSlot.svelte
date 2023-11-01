@@ -111,6 +111,7 @@
       display: flex;
       gap: 15px;
     }
+
     .speaker-image-column {
       display: unset;
     }

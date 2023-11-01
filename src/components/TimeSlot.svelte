@@ -18,58 +18,65 @@
 </script>
 
 <article class="talk">
-  <div class="speaker-image-column">
-    {#each members as member}
-      <img class="speaker-image" src={member.image} alt="Speaker" />
-      <SocialLinks links={member.socialLinks} />
-    {/each}
-  </div>
+  <h6 class="talk-title">
+    {title}
+  </h6>
 
-  <div class="description-column">
-    <h6>
-      {title}
-    </h6>
-
-    {#if hours}
-      <p class="time">
-        <Localized id="event-time-slot--hours-prefix"/> <a href={googleCalendarLink} target="_blank" rel="noopener">{hours}</a>
-      </p>
-    {/if}
-
-    <p>
-      <slot />
+  {#if hours}
+    <p class="talk-time">
+      <Localized id="event-time-slot--hours-prefix"/> <a href={googleCalendarLink} target="_blank" rel="noopener">{hours}</a>
     </p>
+  {/if}
 
-    {#each members as { name, bio }}
-      <h6 class="talk-speaker">
-        <Localized id="event-time-slot--by"/>
-        {name}{#if bio}:{/if}
-      </h6>
+  <p class="talk-description">
+    <slot />
+  </p>
+  
+  {#each members as member}
+    <div class="speaker">
+      <div class="speaker-image-column">
+        <img class="speaker-image" src={member.image} alt={member.name} />
+        <SocialLinks links={member.socialLinks} />
+      </div>
 
-      <p>
-        {@html bio ?? ""}
-      </p>
-    {/each}
-  </div>
+      <div class="speaker-description-column">
+        <h6 class="speaker-name">
+          <Localized id="event-time-slot--by" />
+          {member.name}{#if member.bio}:{/if}
+        </h6>
+
+        <p class="speaker-bio">
+          {@html member.bio ?? ""}
+        </p>
+      </div>
+    </div>
+  {/each}
 </article>
 
 <style>
-  h6 {
-    margin-top: 0;
+  .talk {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .talk-title {
+    margin-top: 0.50rem;
     margin-bottom: 0;
   }
 
-  .time {
+  .talk-time {
     margin: 0;
     font-weight: bold;
   }
 
-  .speaker-image-column {
+  .talk-description {
+    margin-top: 0;
+   }
+
+  .speaker {
     display: flex;
-    flex-direction: column;
-  }
-  .speaker-image-column > img {
-    align-self: center;
+    margin-top: 0.50rem;
+    margin-bottom: 0.50rem;
   }
 
   .speaker-image {
@@ -82,22 +89,48 @@
     border: solid 1px #f34b2122;
   }
 
-  .description-column > *:first-child {
-    margin-top: 0;
+  .speaker-description-column {
+    display: flex;
+    flex: 1;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 3rem;
   }
 
-  .description-column > *:last-child {
-    margin-bottom: 0;
+  .speaker-name {
+    margin: 0.75rem 0 0.75rem 0;
+  }
+
+  .speaker-bio {
+    margin-top: 1rem;
   }
 
   @media screen and (min-width: 768px) {
     .talk {
       display: flex;
-      gap: 25px;
+      gap: 15px;
     }
 
     .speaker-image-column {
       display: unset;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .speaker {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .speaker-image-column {
+      align-items: center;
+    }
+
+    .speaker-description-column {
+      flex: 1;
+      text-align: left;
+      margin-left: 0;
     }
   }
 </style>

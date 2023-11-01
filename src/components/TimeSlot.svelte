@@ -126,7 +126,7 @@
     .speaker-image-column {
       align-items: center;
     }
-  
+
     .speaker-description-column {
       flex: 1;
       text-align: left;

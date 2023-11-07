@@ -463,6 +463,16 @@
               { type: 'website', url: 'https://felipperegazio.com/' },
             ],
           },
+          {
+            name: "Francisco Zanfranceschi",
+            image: `${assets}/speakers/francisco-zanfranceschi.png`,
+            bio: 'Entusiasta da engenharia de software que passou a maior parte da vida trabalhando com arquitetura de sistemas e atualmente trabalha no Nubank sofrendo com Clojure e sistemas distribuídos.',
+            socialLinks: [
+              { type: 'twitter', url: 'https://twitter.com/zanfranceschi' },
+              { type: 'linkedin', url: 'https://www.linkedin.com/in/francisco-zanfranceschi/' },
+              { type: 'website', url: 'https://dev.to/zanfranceschi' },
+            ],
+          },
         ]}
       >
         <p>Nos últimos meses, começamos a ter algo divertido na comunidade tech: rinhas!</p>

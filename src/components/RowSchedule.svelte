@@ -42,21 +42,24 @@
       </div>
 
       <TimeSlot
-        title="Serial Experiments Anne"
+        title="A Rust desenferrujou o Flash Player"
         date="2023-11-25"
-        duration={45}
+        hours="10:25"
+        duration={30}
         members={[
           {
-            name: "Anne",
-            image: `${assets}/speakers/anne.jpeg`,
-            bio: "Head of Gambiarra / entusiasta de software embarcado e de kernel dev",
+            name: "Leo Cavalcante",
+            image: `${assets}/speakers/leo-cavalcante.jpeg`,
+            bio: "Há mais de 15 anos atuando com engenharia de software, é Staff Engineer na PicPay, evangelista do PHP, membro dos projetos Swoole e Hyperf, representante na PHP-FIG (PHP Framework Interop Group) e idealizador da organização OpenCodeCo.",
             socialLinks: [
-              { type: "github", url: "https://github.com/retpolanne" },
+              { type: "twitter", url: "https://twitter.com/leocavalcante" },
+              { type: "github", url: "https://github.com/leocavalcante" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/leocavalcantee" },
             ],
           },
         ]}
       >
-        Um monte de aventuras aleatórias envolvendo COM ports, RS232, UART e outras gambiarras.
+        Apresentando a Ruffle: como a linguagem Rust emulou o Flash Player nos navegadores usando WebAssembly.
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -66,6 +69,7 @@
       <TimeSlot
         title="Multi-Talking (não é um typo!) com Genaver"
         date="2023-11-25"
+        hours="11:00"
         duration={30}
         members={[
           {
@@ -90,32 +94,9 @@
       </div>
 
       <TimeSlot
-        title="Imprimir voto é gambiarra?"
-        date="2023-11-25"
-        duration={45}
-        members={[
-          {
-            name: "Lucas Lago",
-            image: `${assets}/speakers/lucas-lago.jpeg`,
-            bio: "Mestre em Engenharia da Computação, ativista no Instituto Aaron Swartz e co-autor de dois relatórios desmascarando ataques as urnas nas eleições de 2022.",
-            socialLinks: [
-              { type: "twitter", url: "https://twitter.com/lucaslago" },
-              { type: "website", url: "https://bsky.app/profile/lucaslago.projeto7c0.com.br" },
-            ],
-          },
-        ]}
-      >
-        Vamos fazer um giro sobre o mundo das tecnologias eleitorais, passando por boas ideias,
-        péssimas ideias, criptografia de ponta e péssimas metáforas.
-      </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <TimeSlot
         title="Sim, existe almoço grátis: Como hackeamos uma vending machine em 3 dias"
         date="2023-11-25"
+        hours="11:35"
         duration={20}
         members={[
           {
@@ -137,9 +118,41 @@
         <div class="division" />
       </div>
 
+      <div class="break">
+        <Localized id="schedule--lunch" />
+      </div>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="Serial Experiments Anne"
+        date="2023-11-25"
+        hours="13:50"
+        duration={45}
+        members={[
+          {
+            name: "Anne",
+            image: `${assets}/speakers/anne.jpeg`,
+            bio: "Head of Gambiarra / entusiasta de software embarcado e de kernel dev",
+            socialLinks: [
+              { type: "github", url: "https://github.com/retpolanne" },
+            ],
+          },
+        ]}
+      >
+        Um monte de aventuras aleatórias envolvendo COM ports, RS232, UART e outras gambiarras.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <TimeSlot
         title="WAF Wars: A arte de bloquear ataques enquanto toma um cafezinho"
         date="2023-11-25"
+        hours="14:40"
         duration={20}
         members={[
           {
@@ -161,23 +174,58 @@
       </div>
 
       <TimeSlot
-        title="Hackeando roteadores domesticos"
+        title="Imprimir voto é gambiarra?"
         date="2023-11-25"
-        duration={30}
+        hours="15:05"
+        duration={45}
         members={[
           {
-            name: "Renato Alencar",
-            image: `${assets}/speakers/renato-alencar.jpg`,
-            bio: "Fã de cajuína e hacking, programador OCaml diretamente do Piauí.",
+            name: "Lucas Lago",
+            image: `${assets}/speakers/lucas-lago.jpeg`,
+            bio: "Mestre em Engenharia da Computação, ativista no Instituto Aaron Swartz e co-autor de dois relatórios desmascarando ataques as urnas nas eleições de 2022.",
             socialLinks: [
-              { type: "twitter", url: "https://twitter.com/cajuinaoverflow" },
-              { type: "github", url: "https://github.com/renatoalencar" },
+              { type: "twitter", url: "https://twitter.com/lucaslago" },
+              { type: "website", url: "https://bsky.app/profile/lucaslago.projeto7c0.com.br" },
             ],
           },
         ]}
       >
-        Achando um roteador comum shodan, comprando ele no mercado livre e achando uma vulnerabilidade facilmente.
-        Nessa talk faço um breve introdução a hardware hacking.
+        Vamos fazer um giro sobre o mundo das tecnologias eleitorais, passando por boas ideias,
+        péssimas ideias, criptografia de ponta e péssimas metáforas.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <div class="break">
+        <Localized id="schedule--coffe-break" />
+      </div>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="Arquiteturas Antigas"
+        date="2023-11-25"
+        hours="16:35"
+        duration={30}
+        members={[
+          {
+            name: "Jecel Mattos",
+            image: `${assets}/speakers/jecel-mattos.jpeg`,
+            bio: "Depois de desenvolver vários computadores originais nos anos 1980 (o que era raro no Brasil) se formou em microeletrônica pela Poli-USP em 1990. Continua criando computadores e circuitos integrados.",
+            socialLinks: [
+              { type: "github", url: "https://github.com/jeceljr" },
+              { type: "hackerNews", url: "https://news.ycombinator.com/user?id=jecel" },
+              { type: "website", url: "https://slashdot.org/~Jecel+Assumpcao+Jr" },
+            ],
+          },
+        ]}
+      >
+        "Arquitetura de computador" é como o programador vê a máquina independentemente de como ela realmente é implementada.
+        Conhecer o passado ajuda a imaginar o futuro - como surgiram o que usamos hoje?
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -187,6 +235,7 @@
       <TimeSlot
         title="Da para fazer QR code na mão, Igual aos incas e os maias?"
         date="2023-11-25"
+        hours="17:10"
         duration={30}
         members={[
           {
@@ -213,8 +262,34 @@
       </div>
 
       <TimeSlot
+        title="Hackeando roteadores domesticos"
+        date="2023-11-25"
+        hours="17:45"
+        duration={30}
+        members={[
+          {
+            name: "Renato Alencar",
+            image: `${assets}/speakers/renato-alencar.jpg`,
+            bio: "Fã de cajuína e hacking, programador OCaml diretamente do Piauí.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/cajuinaoverflow" },
+              { type: "github", url: "https://github.com/renatoalencar" },
+            ],
+          },
+        ]}
+      >
+        Achando um roteador comum shodan, comprando ele no mercado livre e achando uma vulnerabilidade facilmente.
+        Nessa talk faço um breve introdução a hardware hacking.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
         title="HVM - uma arquitetura massivamente paralela"
         date="2023-11-25"
+        hours="18:20"
         duration={45}
         members={[
           {
@@ -236,57 +311,9 @@
       </div>
 
       <TimeSlot
-        title="A Rust desenferrujou o Flash Player"
-        date="2023-11-25"
-        duration={30}
-        members={[
-          {
-            name: "Leo Cavalcante",
-            image: `${assets}/speakers/leo-cavalcante.jpeg`,
-            bio: "Há mais de 15 anos atuando com engenharia de software, é Staff Engineer na PicPay, evangelista do PHP, membro dos projetos Swoole e Hyperf, representante na PHP-FIG (PHP Framework Interop Group) e idealizador da organização OpenCodeCo.",
-            socialLinks: [
-              { type: "twitter", url: "https://twitter.com/leocavalcante" },
-              { type: "github", url: "https://github.com/leocavalcante" },
-              { type: "linkedin", url: "https://www.linkedin.com/in/leocavalcantee" },
-            ],
-          },
-        ]}
-      >
-        Apresentando a Ruffle: como a linguagem Rust emulou o Flash Player nos navegadores usando WebAssembly.
-      </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <TimeSlot
-        title="Arquiteturas Antigas"
-        date="2023-11-25"
-        duration={30}
-        members={[
-          {
-            name: "Jecel Mattos",
-            image: `${assets}/speakers/jecel-mattos.jpeg`,
-            bio: "Depois de desenvolver vários computadores originais nos anos 1980 (o que era raro no Brasil) se formou em microeletrônica pela Poli-USP em 1990. Continua criando computadores e circuitos integrados.",
-            socialLinks: [
-              { type: "github", url: "https://github.com/jeceljr" },
-              { type: "hackerNews", url: "https://news.ycombinator.com/user?id=jecel" },
-              { type: "website", url: "https://slashdot.org/~Jecel+Assumpcao+Jr" },
-            ],
-          },
-        ]}
-      >
-        "Arquitetura de computador" é como o programador vê a máquina independentemente de como ela realmente é implementada.
-        Conhecer o passado ajuda a imaginar o futuro - como surgiram o que usamos hoje?
-      </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <TimeSlot
         title="Keynote: Como dizia um sábio chinês: malware bom usa BPF"
         date="2023-11-25"
+        hours="19:10"
         duration={30}
         members={[
           {
@@ -306,6 +333,30 @@
         <p>Do ponto de vista dos sysadmins, BPF é uma bênção desde a rapidez com que este tipo de código inspeciona pacotes, na sua versão clássica, até as capacidades incríveis de observabilidade com baixa interferência de desempenho do eBPF.</p>
         <p>No entanto, não é só sysadmin que gosta. Nesta palestra, vou explicar como um grupo de ataque atribuído à China passou a usar BPF para esconder suas backdoors instaladas em servidores de grandes empresas de telecomunicações em países como Turquia e Hong Kong. Mostrarei também como analisei os diversos samples que encontrei e como os categorizei de acordo com o código BPF clássico que eles inserem no kernel. No momento de escrita desta palestra, a backdoor segue ativa e vitimizando.</p>
         <p>Acredito que qualquer administrador de sistema Linux preocupado com a segurança de seus sistemas precisa saber mais sobre ela, uma vez que a técnica já migrou para outros malwares, inclusive no Brasil!</p>
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="Encerramento"
+        date="2023-11-25"
+        hours="19:45"
+        duration={20}
+        members={[
+          {
+            name: "Bruno Macabeus",
+            image: `${assets}/speakers/bruno-macabeus.jpeg`,
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/bmacabeus" },
+              { type: "github", url: "https://github.com/macabeus" },
+              { type: "website", url: "http://macabeus.github.io/" },
+            ],
+          },
+        ]}
+      >
+        Encerramento do primeiro dia do evento! Bora jogar Kahoot e o vencedor receberá prêmios bem maneiro!
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -479,6 +530,30 @@
         <p>Partindo da rinha de backend, passando pra de compiladores, e chegando na de front.</p>
         <p>Então, que tal a gente discutir sobre elas, junto de quem está por trás delas?</p>
       </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="Encerramento do evento"
+        date="2023-11-26"
+        hours="18:50"
+        duration={20}
+        members={[
+          {
+            name: "Bruno Macabeus",
+            image: `${assets}/speakers/bruno-macabeus.jpeg`,
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/bmacabeus" },
+              { type: "github", url: "https://github.com/macabeus" },
+              { type: "website", url: "http://macabeus.github.io/" },
+            ],
+          },
+        ]}
+      >
+        Encerramento do evento! Até mais, e obrigado pelos peixes!
+      </TimeSlot>
     </article>
   </Window>
 </div>
@@ -509,5 +584,9 @@
     height: 1px;
     width: 70%;
     background-color: #f34b2133;
+  }
+
+  .break {
+    text-align: center;
   }
 </style>

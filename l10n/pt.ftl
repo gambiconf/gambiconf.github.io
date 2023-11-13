@@ -133,6 +133,8 @@ schedule--presentation-opening-ceremony-first-day-bio = Hey! Eu amo engajar as p
 schedule--26-november = 26 de Novembro
 schedule--presentation-opening-ceremony-second-day-title = Cerimônia de Abertura (Segundo dia)
 schedule--presentation-opening-ceremony-second-day-description = Boas vindas ao evento! Vamos falar das sprints!
+schedule--lunch = Almoço
+schedule--coffe-break = Coffee break
 schedule--upcoming = Novos anúncios toda terça, quarta, e quinta! Siga nossas redes sociais para ser o primeiro a saber das surpresas!
 
 ## EventTimeSlot

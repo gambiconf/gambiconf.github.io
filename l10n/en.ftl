@@ -132,6 +132,8 @@ schedule--presentation-opening-ceremony-first-day-bio = Hey! I love engaging peo
 schedule--26-november = November 26th
 schedule--presentation-opening-ceremony-second-day-title = Opening Ceremony (2nd day)
 schedule--presentation-opening-ceremony-second-day-description = Welcome to the event! Let's talk about the sprints!
+schedule--lunch = Lunch Time
+schedule--coffe-break = Coffee break
 schedule--upcoming = New entries every Tuesday, Wednesday, and Thursday! Follow us on social media to be the first one to know!
 
 ## EventTimeSlot

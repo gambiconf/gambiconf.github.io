@@ -43,6 +43,7 @@ row-what-is-gambiconf--body-paragraph-5 =
 where-and-when--title = Where and When
 where-and-when--body-paragraph-1 = November 25th and 26th, at <a data-l10n-name='link'>USP - Campus Butantã / IME - Bloco B / Auditório Jacy Monteiro</a>.
 where-and-when--body-paragraph-2 = Free streaming on <a data-l10n-name='link'>YouTube</a>
+where-and-when--body-paragraph-3 = Chat with us on <a data-l10n-name='link'>Discord</a>
 
 ## Calendar
 

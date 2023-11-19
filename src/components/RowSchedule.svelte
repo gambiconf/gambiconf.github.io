@@ -367,7 +367,8 @@
           },
         ]}
       >
-        Encerramento do primeiro dia do evento! Bora jogar Kahoot e o vencedor receberá prêmios bem maneiro!
+        Encerramento do primeiro dia do evento! Para finalizar, bora jogar um <a href="https://classquiz.de/" target="_blank" rel="noopener noreferrer">ClassQuiz</a>.
+        Teremos prêmios tanto para o vencedor presencial, como também para o remoto!
       </TimeSlot>
 
       <div class="division-wrapper">

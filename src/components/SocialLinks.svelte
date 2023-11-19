@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
   export type SocialLink = {
-    type: "github" | "linkedin" | "twitch" | "twitter" | "facebook" | "instagram" | "hackerNews" | "googleScholar" | "website"
+    type: "github" | "linkedin" | "twitch" | "twitter" | "facebook" | "instagram" | "hackerNews" | "bluesky" | "googleScholar" | "website"
     url: string
   }
 </script>
@@ -15,6 +15,7 @@
   import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook"
   import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram"
   import { faHackerNews } from "@fortawesome/free-brands-svg-icons/faHackerNews"
+  import { faSquare } from "@fortawesome/free-solid-svg-icons/faSquare"
   import { faEarth } from "@fortawesome/free-solid-svg-icons/faEarth"
   import { faMortarBoard } from "@fortawesome/free-solid-svg-icons/faMortarBoard"
   import type { IconDefinition } from "@fortawesome/fontawesome-common-types"
@@ -29,6 +30,7 @@
     facebook: faFacebook,
     instagram: faInstagram,
     hackerNews: faHackerNews,
+    bluesky: faSquare,
     website: faEarth,
     googleScholar: faMortarBoard,
   }

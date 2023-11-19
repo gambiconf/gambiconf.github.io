@@ -32,6 +32,17 @@
               { type: "website", url: "http://macabeus.github.io/" },
             ],
           },
+          {
+            name: "Ana Bastos",
+            image: `${assets}/speakers/ana-bastos.jpeg`,
+            bio: "Engenheira de software, formada na PUC-SP, gosto de paradigmas de computação, matematíquisses e musica. Às vezes palestrante, às vezes community manager, sempre shitposter.",
+            socialLinks: [
+              { type: "bluesky", url: "https://bsky.app/profile/anabastos.me" },
+              { type: "github", url: "https://github.com/anabastos" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/anabastos8/" },
+              { type: "website", url: "https://anabastos.me/" },
+            ],
+          },
         ]}
       >
         <Localized id="schedule--presentation-opening-ceremony-first-day-description" />

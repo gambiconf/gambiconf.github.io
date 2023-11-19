@@ -474,6 +474,27 @@
         Precisamos implementá-la porque replies geram muitas visualizações.
       </TimeSlot>
 
+      <TimeSlot
+        title="Adicionando features em uma linguagem nova!"
+        date="2023-11-26"
+        hours="14:00"
+        duration={210}
+        members={[
+          {
+            name: "Sofia Rodrigues",
+            image: `${assets}/speakers/sofia-rodrigues.jpeg`,
+            bio: 'Apaixonada por Rust e entusiasta de compiladores e linguagens funcionais como Lean4. ',
+            socialLinks: [
+              { type: 'twitter', url: 'https://twitter.com/algebraic_sofia' },
+              { type: 'github', url: 'https://github.com/algebraic-sofia' },
+              { type: 'website', url: 'https://algebraic.dev/' },
+            ],
+          },
+        ]}
+      >
+        Explore os fundamentos dos compiladores através de uma experiência prática, onde você terá a oportunidade de mergulhar na implementação da sintaxe JSX em uma linguagem ;)
+      </TimeSlot>
+
       <div class="division-wrapper">
         <div class="division" />
       </div>

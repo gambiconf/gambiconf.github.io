@@ -478,6 +478,14 @@
         <div class="division" />
       </div>
 
+      <div class="break">
+        <Localized id="schedule--coffe-break" />
+      </div>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <TimeSlot
         title="Painel: Rinhas de Devs"
         date="2023-11-26"

@@ -21,7 +21,7 @@ hero--date-second-line = 25th and 26th
 hero--location-first-line = USP - Campus Butantã / IME - Bloco B
 hero--location-second-line = São Paulo, Brazil
 hero--location-see-map = See on the map
-hero--cta = Buy your ticket
+hero--cta = Go to the live!
 
 ## Row What Is GambiConf
 
@@ -170,7 +170,7 @@ hero--date-second-line = Novembro
 hero--location-first-line = USP - Campus Butantã / IME - Bloco B
 hero--location-second-line = São Paulo, Brasil
 hero--location-see-map = Ver no mapa
-hero--cta = Compre o seu ingresso
+hero--cta = Veja a live!
 
 ## Row What Is GambiConf
 

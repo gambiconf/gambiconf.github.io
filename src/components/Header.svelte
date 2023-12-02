@@ -13,6 +13,7 @@
   <nav>
     <a href={`${base}/`}><Localized id="header--home" /></a>
     <a href={`${base}/#about`}><Localized id="header--about" /></a>
+    <a href={`${base}/album`}><Localized id="header--album" /></a>
     <a href={`${base}/#schedule`}><Localized id="header--schedule" /></a>
     <LanguageSwitcher />
     <ThemeSwitcher />

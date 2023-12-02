@@ -1,11 +1,13 @@
 <script>
   import { onMount, createEventDispatcher } from "svelte"
 
+  export let focusPoint = {}
+
   const dispatch = createEventDispatcher()
 
   let slotHolder = null
   let columns = []
-  const columnCount = 5
+  const columnCount = 4
 
   const handleClickPhoto = (e) => {
     dispatch("photoClick", { src: e.target.src })
@@ -19,9 +21,14 @@
     for (let i = 0; i < photos.length; i++) {
       const idx = i % columnCount
 
+      const { src, alt, className } = photos[i]
+
+      const imageFocusPoint = focusPoint[src.replace(/.*DSC/, '')]
+      const style = imageFocusPoint ? `object-position: ${imageFocusPoint}` : null
+
       columns[idx] = [
         ...columns[idx],
-        { src: photos[i].src, alt: photos[i].alt, class: photos[i].className },
+        { src, alt, class: className, style },
       ]
     }
   }
@@ -42,7 +49,13 @@
   {#each columns as column}
     <div class="column">
       {#each column as img}
-        <img src={img.src} alt={img.alt} on:click={handleClickPhoto} class="img-hover column" />
+        <img
+          src={img.src}
+          alt={img.alt}
+          on:click={handleClickPhoto}
+          class="img-hover column"
+          style={img.style}
+        />
       {/each}
     </div>
   {/each}
@@ -57,7 +70,7 @@
     display: grid;
     gap: 10px;
 
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .root .column {
@@ -67,8 +80,10 @@
 
   .root .column * {
     width: 100%;
+    height: 250px;
     margin-top: 10px;
     border-radius: 5px;
+    object-fit: cover;
   }
 
   .img-hover {

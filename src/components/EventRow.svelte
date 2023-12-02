@@ -1,15 +1,18 @@
 <script lang="ts">
+  import Fa from "svelte-fa/src/fa.svelte"
+  import { faPhotoFilm } from "@fortawesome/free-solid-svg-icons/faPhotoFilm"
+  import { t } from "../store/locale"
   import Window from "./Window.svelte"
 </script>
 
-<div id="schedule">
-  <Window title="Event">
+<div>
+  <Window title={$t("event-row--title")}>
     <article class="content">
       <div class="video-row">
         <div class="video-container">
           <iframe
             class="video"
-            src="https://www.youtube.com/embed/EVJZavbMThs"
+            src="https://www.youtube.com/embed/mhzBEaWYrr8?start=2196"
             title="YouTube video player / In-person Day"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -20,7 +23,7 @@
         <div class="video-container">
           <iframe
             class="video"
-            src="https://www.youtube.com/embed/qAiqKHG6uYM"
+            src="https://www.youtube.com/embed/CnzaXgc0LcQ?start=107"
             title="YouTube video player / Online Day"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -29,7 +32,7 @@
         </div>
       </div>
 
-      <a href="/album">📸 Go to the event album</a>
+      <a href="/album"><Fa icon={faPhotoFilm} /> {$t("event-row--go-to-album")}</a>
     </article>
   </Window>
 </div>

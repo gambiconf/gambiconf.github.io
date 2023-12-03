@@ -40,7 +40,7 @@ footer a {
 
 /* Background cover Home */
 
-main > section:not(.code-of-conduct) {
+main > section.hero {
   background-color: #08bf1b;
 }
 

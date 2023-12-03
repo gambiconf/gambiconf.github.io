@@ -5,6 +5,7 @@ title = GambiConf - The Blow Your Mind Conference
 header--home = Home
 header--about = About
 header--cfp = CFP
+header--album = Album
 header--schedule = Schedule
 
 ## Hero
@@ -15,7 +16,12 @@ hero--date-second-line = 25th and 26th
 hero--location-first-line = USP - Campus Butantã / IME - Bloco B
 hero--location-second-line = São Paulo, Brazil
 hero--location-see-map = See on the map
-hero--cta = Buy your ticket
+hero--cta = YouTube channel
+
+## Event Row
+
+event-row--title = Event
+event-row--go-to-album = Go to the event album
 
 ## Row What Is GambiConf
 
@@ -148,3 +154,7 @@ theme--dark = Switch to light mode
 
 # Code of Conduct
 code-of-conduct--title = Code of Conduct
+
+# Album
+album--title = Photos
+album--description = Photos taken by <a data-l10n-name='author-website'>Hugo Borges</a>. <a data-l10n-name='download'>Download all photos</a>.

@@ -5,7 +5,7 @@
   import Link from "./Link.svelte"
 </script>
 
-<section>
+<section class="hero">
   <div class="background-overlay" />
 
   <div class="message">
@@ -49,7 +49,7 @@
     </p>
 
     <div class="action">
-      <Button url="https://www.eventbrite.com/e/gambiconf-terceira-edicao-tickets-732314732077">
+      <Button url="https://www.youtube.com/@gambiconf/videos">
         <Localized id="hero--cta" />
       </Button>
     </div>
@@ -136,12 +136,12 @@
   }
 
   :global(.hero-link) {
-    color: black;
+    color: black !important;
     opacity: 80%;
   }
 
   :global(.hero-link:hover) {
-    color: black;
+    color: black !important;
     opacity: 100%;
   }
 

@@ -23,7 +23,7 @@
 
       const { src, alt, className } = photos[i]
 
-      const imageFocusPoint = focusPoint[src.replace(/.*DSC/, '')]
+      const imageFocusPoint = focusPoint[src.match(/DSC\d+/)] ?? []
       const style = imageFocusPoint ? `object-position: ${imageFocusPoint}` : null
 
       columns[idx] = [

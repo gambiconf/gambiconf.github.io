@@ -12,8 +12,8 @@
         <div class="video-container">
           <iframe
             class="video"
-            src="https://www.youtube.com/embed/mhzBEaWYrr8?start=2196"
-            title="YouTube video player / In-person Day"
+            src="https://www.youtube.com/embed/gHW1SRT-hOY?si=lXTd2ZGO1rAEe_Zx"
+            title="YouTube video player / 2023 Sao Paulo Edition"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -23,8 +23,8 @@
         <div class="video-container">
           <iframe
             class="video"
-            src="https://www.youtube.com/embed/CnzaXgc0LcQ?start=107"
-            title="YouTube video player / Online Day"
+            src="https://www.youtube.com/embed/c-QTni2bXgw?si=FAkRO6kO4IvjNavD"
+            title="YouTube video player / 2022 EU Edition"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen

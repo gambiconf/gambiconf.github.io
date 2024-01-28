@@ -21,6 +21,7 @@ hero--cta = YouTube channel
 ## Event Row
 
 event-row--title = Event
+event-row--go-to-playlist = Go to the playlist
 event-row--go-to-album = Go to the event album
 
 ## Row What Is GambiConf

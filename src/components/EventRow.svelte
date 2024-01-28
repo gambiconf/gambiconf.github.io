@@ -1,6 +1,7 @@
 <script lang="ts">
   import Fa from "svelte-fa/src/fa.svelte"
   import { faPhotoFilm } from "@fortawesome/free-solid-svg-icons/faPhotoFilm"
+  import { faVideo } from "@fortawesome/free-solid-svg-icons/faVideo"
   import { t } from "../store/locale"
   import Window from "./Window.svelte"
 </script>
@@ -12,19 +13,8 @@
         <div class="video-container">
           <iframe
             class="video"
-            src="https://www.youtube.com/embed/mhzBEaWYrr8?start=2196"
-            title="YouTube video player / In-person Day"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
-        </div>
-
-        <div class="video-container">
-          <iframe
-            class="video"
-            src="https://www.youtube.com/embed/CnzaXgc0LcQ?start=107"
-            title="YouTube video player / Online Day"
+            src="https://www.youtube.com/embed/gHW1SRT-hOY?si=lXTd2ZGO1rAEe_Zx"
+            title="YouTube video player / 2023 Edition"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -32,7 +22,17 @@
         </div>
       </div>
 
-      <a href="/album"><Fa icon={faPhotoFilm} /> {$t("event-row--go-to-album")}</a>
+      <div class="links">
+        <a href="https://www.youtube.com/playlist?list=PL5Vh5eXgFvetvlqkc6mzw8PfOezNi65zQ" target="_blank" rel="noopener">
+          <Fa icon={faVideo} />
+          {$t("event-row--go-to-playlist")}
+        </a>
+
+        <a href="/album">
+          <Fa icon={faPhotoFilm} />
+          {$t("event-row--go-to-album")}
+        </a>
+      </div>
     </article>
   </Window>
 </div>
@@ -66,6 +66,11 @@
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
   }
 
   @media screen and (min-width: 768px) {

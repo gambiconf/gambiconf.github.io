@@ -1,6 +1,5 @@
 <script lang="ts">
-  import Fa from "svelte-fa/src/fa.svelte"
-  import FaLayers from "svelte-fa/src/fa-layers.svelte"
+  import { Fa, FaLayers } from "svelte-fa"
   import { faExternalLink } from "@fortawesome/free-solid-svg-icons"
 
   export let l10n: string = ''

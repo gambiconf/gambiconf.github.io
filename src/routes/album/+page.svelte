@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Overlay } from "@nubolab-ffwd/svelte-fluent"
-  import Fa from "svelte-fa/src/fa.svelte"
-  import FaLayers from "svelte-fa/src/fa-layers.svelte"
+  import { Fa, FaLayers } from "svelte-fa"
   import { faX } from "@fortawesome/free-solid-svg-icons/faX"
   import { t } from "../../store/locale"
   import Link from "../../components/Link.svelte"

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Fa from "svelte-fa/src/fa.svelte"
+  import { Fa } from "svelte-fa"
   import { faLocationPin } from "@fortawesome/free-solid-svg-icons/faLocationPin"
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
   import { faDiscord } from "@fortawesome/free-brands-svg-icons/faDiscord"

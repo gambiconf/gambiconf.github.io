@@ -1,6 +1,5 @@
 <script>
-  import Fa from "svelte-fa/src/fa.svelte"
-  import FaLayers from "svelte-fa/src/fa-layers.svelte"
+  import { Fa, FaLayers } from "svelte-fa"
   import { theme } from "../store/theme"
   import { faMoon } from "@fortawesome/free-solid-svg-icons/faMoon"
   import { faSun } from "@fortawesome/free-solid-svg-icons/faSun"

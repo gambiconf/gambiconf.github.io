@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount } from "svelte"
-  import { base } from "$app/paths"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { Circle } from "svelte-loading-spinners"
   import { getSubmissions, postSubmissions, putSubmissions } from "../../network/submissions"
@@ -11,7 +10,6 @@
   import { tweetLength } from "../../utils/tweet"
   import { t } from "../../store/locale"
   import { capitalize } from "../../utils/capitalize"
-  import { theme } from "../../store/theme"
 
   let currentSubmissionId = ""
   let showSubmitNewEntryButton = false

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
+  import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
   import { t } from "../store/locale"
   import Window from "./Window.svelte"

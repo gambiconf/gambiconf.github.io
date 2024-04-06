@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
-  import Fa from "svelte-fa/src/fa.svelte"
-  import FaLayers from "svelte-fa/src/fa-layers.svelte"
+  import { Fa, FaLayers } from "svelte-fa"
   import { assets } from "$app/paths"
   import { faCircle } from "@fortawesome/free-solid-svg-icons/faCircle"
   import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"

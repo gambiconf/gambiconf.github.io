@@ -6,8 +6,7 @@
 </script>
 
 <script lang="ts">
-  import Fa from "svelte-fa/src/fa.svelte"
-  import FaLayers from "svelte-fa/src/fa-layers.svelte"
+  import { Fa, FaLayers } from "svelte-fa"
   import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
   import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
   import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin"

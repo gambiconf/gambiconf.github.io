@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Fa from "svelte-fa/src/fa.svelte"
+  import { Fa } from "svelte-fa"
   import { faPhotoFilm } from "@fortawesome/free-solid-svg-icons/faPhotoFilm"
   import { faVideo } from "@fortawesome/free-solid-svg-icons/faVideo"
   import { t } from "../store/locale"

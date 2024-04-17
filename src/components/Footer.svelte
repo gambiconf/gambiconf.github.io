@@ -23,12 +23,7 @@
       <div>
         <a href="/"><Localized id="footer--home" /></a>
         <a href="/#about"><Localized id="footer--about" /></a>
-        <a href="https://gambiconf.dev/2021" target="_blank" rel="noopener noreferrer">
-          <Localized id="footer--2021-edition" />
-        </a>
-        <a href="https://gambiconf.dev/2022" target="_blank" rel="noopener noreferrer">
-          <Localized id="footer--2022-edition" />
-        </a>
+        <a href="/previous-editions"><Localized id="footer--previous-editions" /></a>
         <a href="/code-of-conduct"><Localized id="footer--code-of-conduct" /></a>
         <a href={$t('footer--media-kit-href', { assets }).replace(/\p{C}/gu, "")} target="_blank" rel="noopener noreferrer">
           <Localized id="footer--media-kit" />

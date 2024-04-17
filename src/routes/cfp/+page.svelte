@@ -209,7 +209,7 @@
           <label for="type">{attrs.label}</label>
           <select name="type" required bind:value={type}>
             <option value="talk">{attrs.optionTalk} </option>
-            <option value="sprint">{attrs.optionSprint} </option>
+            <option value="workshop">{attrs.optionWorkshop} </option>
           </select>
           <label for="type" class="sublabel">{attrs.sublabel}</label>
         </Localized>
@@ -338,7 +338,7 @@
   }
 
   .page {
-    margin-top: 60px;
+    margin-top: 100px;
     margin-bottom: 30px;
   }
 

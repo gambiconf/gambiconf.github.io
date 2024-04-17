@@ -133,7 +133,7 @@
   }
 
   h1 {
-    margin-top: 60px;
+    margin-top: 75px;
   }
 
   .selected-photo-background {

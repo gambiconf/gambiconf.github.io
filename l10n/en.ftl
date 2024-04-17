@@ -11,12 +11,12 @@ header--schedule = Schedule
 ## Hero
 
 hero--subtitle = The Blow Your Mind Conference
-hero--date-first-line = November
-hero--date-second-line = 25th and 26th
+hero--date-first-line = October
+hero--date-second-line = 19th and 20th
 hero--location-first-line = USP - Campus Butantã / IME - Bloco B
 hero--location-second-line = São Paulo, Brazil
 hero--location-see-map = See on the map
-hero--cta = YouTube channel
+hero--cta = Follow us on Twitter
 
 ## Event Row
 
@@ -40,21 +40,21 @@ row-what-is-gambiconf--body-paragraph-3 =
   and exploration.
 row-what-is-gambiconf--body-paragraph-4 =
   Based on conferences like <a data-l10n-name='link-bangbangcon'>!!Con</a> and <a data-l10n-name='link-sigbovik'>SIGBOVIK</a>,
-  we organized the first online edition in <a data-l10n-name='link-gambiconf-2021'>2021</a>, the second one in
-  <a data-l10n-name='link-gambiconf-2022'>2022</a>, in Portugal, and this year we are in-person in Brazil!
+  it'll be our 4th edition!<br />
+  <a data-l10n-name='link-old-editions'>Check here</a> how was the previous editions!
 row-what-is-gambiconf--body-paragraph-5 =
   You can check <a data-l10n-name='link-1'>our presentation post</a> to find out more about our purpose.
 
 ## Where and When
 
 where-and-when--title = Where and When
-where-and-when--body-paragraph-1 = November 25th and 26th, at <a data-l10n-name='link'>USP - Campus Butantã / IME - Bloco B / Auditório Jacy Monteiro</a>.
+where-and-when--body-paragraph-1 = October 19th and 20th, at <a data-l10n-name='link'>USP - Campus Butantã / IME - Bloco B / Auditório Jacy Monteiro</a>.
 where-and-when--body-paragraph-2 = Free streaming on <a data-l10n-name='link'>YouTube</a>
 where-and-when--body-paragraph-3 = Chat with us on <a data-l10n-name='link'>Discord</a>
 
 ## Calendar
 
-calendar--month = November 2023
+calendar--month = October 2024
 calendar--sunday = Su
 calendar--monday = Mo
 calendar--tuesday = Tu
@@ -67,9 +67,14 @@ calendar--saturday = Sa
 
 call-for-proposal--title = Call for Proposal
 call-for-proposal--body-paragraph-1 =
-  The CFP is closed. Soon, we will respond to everyone who has submitted and announce the approved ones on our social media.
+  If you want to share a hacky personal project or thought of a unique-underground-workaroundish way
+  of doing something in computing, come and present your <strong data-l10n-name='talk'>talk</strong>!
 call-for-proposal--body-paragraph-2 =
-  Stay tuned for updates!
+  If you prefer to focus on a hands-on experience with the community, you can choose to lead a <strong data-l10n-name='workshop'>workshop</strong>.
+call-for-proposal--body-paragraph-3 =
+  In case you're lacking ideas, <a data-l10n-name='link'>get inspired by checking out the previous editions</a>.
+call-for-proposal--body-paragraph-4 = The deadline is May 26th.
+call-for-proposal--cta = Apply to the CFP
 
 ## Partners
 
@@ -84,8 +89,7 @@ partners--become-a-partner = _
 footer--site-map = Site Map
 footer--home = Home
 footer--about = About
-footer--2021-edition = 2021 Edition
-footer--2022-edition = 2022 Edition
+footer--previous-editions = Previous Editions
 footer--code-of-conduct = Code of Conduct
 footer--media-kit = Media Kit
 footer--media-kit-href = { $assets }/mediakit-en.pdf
@@ -102,8 +106,8 @@ cfp--field-twitter-handler = _
 cfp--field-type = _
   .label = What are you going to lead?
   .optionTalk = A talk
-  .optionSprint = A sprint
-  .sublabel = Talks are presentations lasting 15 to 45 minutes. On the flip side, sprints are focused on hands-on with a duration longer than 1 hour.
+  .optionWorkshop = A workshop
+  .sublabel = Talks are presentations lasting 15 to 45 minutes. On the flip side, workshops are 3-hour long hands-on.
 cfp--field-title = Title
 cfp--field-description = Description
 cfp--field-ideal-duration = _
@@ -159,3 +163,7 @@ code-of-conduct--title = Code of Conduct
 # Album
 album--title = Photos
 album--description = Photos taken by <a data-l10n-name='author-website'>Hugo Borges</a>. <a data-l10n-name='download'>Download all photos</a>.
+
+# Previous Editions
+
+previous-editions--title = Previous Editions

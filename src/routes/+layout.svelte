@@ -27,8 +27,24 @@
   <title><Localized id="title" /></title>
 
   <Header />
+
   <main>
     <slot />
   </main>
+
   <Footer />
 </LocalizationProvider>
+
+<style>
+  :global(body) {
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+</style>

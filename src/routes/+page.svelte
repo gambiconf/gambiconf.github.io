@@ -1,23 +1,16 @@
 <script lang="ts">
   import BulletsGutter from "../components/BulletsGutter.svelte"
   import Hero from "../components/Hero.svelte"
-  import RowSchedule from "../components/RowSchedule.svelte"
+  import RowCfp from "../components/RowCfp.svelte"
   import RowWhereAndWhen from "../components/RowWhereAndWhen.svelte"
   import RowPartners from "../components/RowPartners.svelte"
   import RowWhatIsGambiConf from "../components/RowWhatIsGambiConf.svelte"
-  import EventRow from "../components/EventRow.svelte"
 </script>
 
 <Hero />
 
 <div class="wrapper-content">
   <div class="hero-margin" />
-
-  <EventRow />
-
-  <div class="bullters-gutter-wrapper">
-    <BulletsGutter />
-  </div>
 
   <RowWhatIsGambiConf />
 
@@ -31,7 +24,7 @@
     <BulletsGutter />
   </div>
 
-  <RowSchedule />
+  <RowCfp />
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />

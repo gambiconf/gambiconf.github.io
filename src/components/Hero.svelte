@@ -49,7 +49,7 @@
     </p>
 
     <div class="action">
-      <Button url="https://www.youtube.com/@gambiconf/videos">
+      <Button url="https://twitter.com/gambiconf">
         <Localized id="hero--cta" />
       </Button>
     </div>

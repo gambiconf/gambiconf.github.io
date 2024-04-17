@@ -3,7 +3,7 @@
   import Window from "../../components/Window.svelte"
 </script>
 
-<section class="code-of-conduct">
+<div class="page">
   <Window title={$t("code-of-conduct--title")}>
     <div class="code-of-conduct-content">
       <article>
@@ -173,7 +173,7 @@
       </article>
     </div>
   </Window>
-</section>
+</div>
 
 <style>
   :global(body) {
@@ -184,11 +184,9 @@
     min-width: 100vw;
   }
 
-  section {
-    display: flex;
-    flex-direction: column;
-
-    margin: 5rem;
+  .page {
+    margin-top: 100px;
+    margin-bottom: 30px;
   }
 
   .code-of-conduct-content {

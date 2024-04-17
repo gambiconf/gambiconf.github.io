@@ -2,12 +2,12 @@
   import { onMount, createEventDispatcher } from "svelte"
 
   export let focusPoint = {}
+  export let columnCount = 4
 
   const dispatch = createEventDispatcher()
 
   let slotHolder = null
   let columns = []
-  const columnCount = 4
 
   const handleClickPhoto = (e) => {
     dispatch("photoClick", { src: e.target.src })
@@ -45,7 +45,7 @@
   <slot />
 </div>
 
-<div class="root">
+<div class="root" style="--columns-count: {columnCount}">
   {#each columns as column}
     <div class="column">
       {#each column as img}
@@ -70,7 +70,7 @@
     display: grid;
     gap: 10px;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(var(--columns-count), 1fr);
   }
 
   .root .column {

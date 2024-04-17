@@ -30,8 +30,7 @@
         <Overlay id="row-what-is-gambiconf--body-paragraph-4">
           <Link l10n="link-bangbangcon" href="https://bangbangcon.com/" />
           <Link l10n="link-sigbovik" href="http://sigbovik.org/" />
-          <Link l10n="link-gambiconf-2021" href="https://gambiconf.dev/2021" />
-          <Link l10n="link-gambiconf-2022" href="https://gambiconf.dev/2022" />
+          <Link l10n="link-old-editions" href="/previous-editions" />
         </Overlay>
       </p>
 

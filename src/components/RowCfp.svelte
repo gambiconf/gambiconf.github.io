@@ -1,7 +1,9 @@
 <script lang="ts">
-  import { Localized } from "@nubolab-ffwd/svelte-fluent"
+  import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
-  import { t } from "../store/locale"
+  import { base } from "$app/paths"
+  import { locale, t } from "../store/locale"
+  import Link from "./Link.svelte"
   import Window from "./Window.svelte"
 </script>
 
@@ -14,13 +16,31 @@
 
       <div>
         <p>
-          <Localized id="call-for-proposal--body-paragraph-1" />
+          <Overlay id="call-for-proposal--body-paragraph-1">
+            <strong data-l10n-name="talk" />
+          </Overlay>
         </p>
 
         <p>
-          <Localized id="call-for-proposal--body-paragraph-2" />
+          <Overlay id="call-for-proposal--body-paragraph-2">
+            <strong data-l10n-name="workshop" />
+          </Overlay>
+        </p>
+
+        <p>
+          <Overlay id="call-for-proposal--body-paragraph-3">
+            <Link l10n="link" href="/previous-editions" />
+          </Overlay>
+        </p>
+
+        <p>
+          <Localized id="call-for-proposal--body-paragraph-4" />
         </p>
       </div>
+    </div>
+
+    <div class="button">
+      <a class="button-cfp" href={`${base}/cfp`}><Localized id="call-for-proposal--cta" /></a>
     </div>
   </div>
 </Window>
@@ -37,6 +57,28 @@
 
   p {
     margin-top: 0;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-cfp {
+    padding: 10px;
+    border-radius: 4px;
+    min-width: 25%;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.4s;
+  }
+  .button-cfp:visited {
+    color: white;
+  }
+  .button-cfp:hover {
+    transform: scale(0.99);
+    filter: brightness(0.9);
   }
 
   @media screen and (min-width: 768px) {

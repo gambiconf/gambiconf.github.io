@@ -11,12 +11,12 @@ header--schedule = Agenda
 ## Hero
 
 hero--subtitle = The Blow Your Mind Conference
-hero--date-first-line = 25 e 26 de
-hero--date-second-line = Novembro
+hero--date-first-line = 19 e 20 de
+hero--date-second-line = Outubro
 hero--location-first-line = USP - Campus Butantã / IME - Bloco B
 hero--location-second-line = São Paulo, Brasil
 hero--location-see-map = Ver no mapa
-hero--cta = Canal no YouTube
+hero--cta = Acompanhe no Twitter
 
 ## Event Row
 
@@ -40,22 +40,21 @@ row-what-is-gambiconf--body-paragraph-3 =
   novas coisas, pelo simples prazer da curiosidade e exploração.
 row-what-is-gambiconf--body-paragraph-4 =
   Baseado em conferências como a <a data-l10n-name='link-bangbangcon'>!!Con</a> e da
-  <a data-l10n-name='link-sigbovik'>SIGBOVIK</a>, tivemos a primeira edição online da GambiConf em
-  <a data-l10n-name='link-gambiconf-2021'>2021</a>, a segunda em <a data-l10n-name='link-gambiconf-2022'>2022</a>,
-  em Portugal, e esse ano estaremos presencialmente no Brasil!
+  <a data-l10n-name='link-sigbovik'>SIGBOVIK</a>, já estamos indo para a quarta edição!<br />
+  <a data-l10n-name='link-old-editions'>Veja aqui</a> como foram as edições passadas!
 row-what-is-gambiconf--body-paragraph-5 =
   Você pode conferir <a data-l10n-name='link-1'>nosso post de apresentação</a> para ver mais sobre o propósito da GambiConf.
 
 ## Where and When
 
 where-and-when--title = Onde e quando
-where-and-when--body-paragraph-1 = 25 e 26 de Novembro, na <a data-l10n-name='link'>USP - Campus Butantã / IME - Bloco B / Auditório Jacy Monteiro</a>.
+where-and-when--body-paragraph-1 = 19 e 20 de Outubro, na <a data-l10n-name='link'>USP - Campus Butantã / IME - Bloco B / Auditório Jacy Monteiro</a>.
 where-and-when--body-paragraph-2 = Streaming gratuito no <a data-l10n-name='link'>YouTube</a>
 where-and-when--body-paragraph-3 = Converse conosco no <a data-l10n-name='link'>Discord</a>
 
 ## Calendar
 
-calendar--month = Novembro 2023
+calendar--month = Outubro 2024
 calendar--sunday = Do
 calendar--monday = 2ª
 calendar--tuesday = 3ª
@@ -68,9 +67,14 @@ calendar--saturday = Sa
 
 call-for-proposal--title = Call for Proposal
 call-for-proposal--body-paragraph-1 =
-  O CFP está encerrado. Em breve vamos responder todos que submeteram e divulgaremos em nossas redes sociais os aprovados.
+  Se você quiser compartilhar um trabalhado engenhoso num projeto pessoal ou algo underground envolvendo
+  computação, venha apresentar a sua <strong data-l10n-name='talk'>talk</strong>!
 call-for-proposal--body-paragraph-2 =
-  Aguarde por novidades!
+  Já se você prefere focar num hands-on com a comunidade, você pode optar em ministrar um <strong data-l10n-name='workshop'>workshop</strong>.
+call-for-proposal--body-paragraph-3 =
+  Caso esteja sem muitas ideias, <a data-l10n-name='link'>se inspire vendo as edições passadas</a>.
+call-for-proposal--body-paragraph-4 = O deadline é 26 de Maio.
+call-for-proposal--cta = Submeter no CFP
 
 ## Partners
 
@@ -85,8 +89,7 @@ partners--become-a-partner = _
 footer--site-map = Site Map
 footer--home = Home
 footer--about = Sobre
-footer--2021-edition = Edição de 2021
-footer--2022-edition = Edição de 2022
+footer--previous-editions = Edições Passadas
 footer--code-of-conduct = Código de Conduta
 footer--media-kit = Media Kit
 footer--media-kit-href = { $assets }/mediakit-pt.pdf
@@ -103,8 +106,8 @@ cfp--field-twitter-handler = _
 cfp--field-type = _
   .label = O que você vai conduzir?
   .optionTalk = Uma talk
-  .optionSprint = Uma sprint
-  .sublabel = Talks são apresentações de 15 a 45 minutos. Já sprints, são focadas em hands-on com duração maior que 1 hora.
+  .optionWorkshop = Um workshop
+  .sublabel = Talks são apresentações de 15 a 45 minutos. Já workshops, são hands-on com duração de 3 horas.
 cfp--field-title = Título
 cfp--field-description = Descrição
 cfp--field-ideal-duration = _
@@ -160,3 +163,7 @@ code-of-conduct--title = Código de Conduta
 # Album
 album--title = Fotos
 album--description = Fotos tirada pelo <a data-l10n-name='author-website'>Hugo Borges</a>. <a data-l10n-name='download'>Download de todas as fotos</a>.
+
+# Previous Editions
+
+previous-editions--title = Edições Passadas

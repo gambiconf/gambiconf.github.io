@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
+  import { theme } from "../store/theme"
   import Button from "./Button.svelte"
   import Link from "./Link.svelte"
 </script>
@@ -43,7 +44,12 @@
         <Localized id="hero--location-second-line" />
       </span>
 
-      <Link href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7" class="hero-link" externalIcon>
+      <Link
+        href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7"
+        externalIcon
+        --color={$theme === 'light' ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)'}
+        --hover-color={$theme === 'light' ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.7)'}
+      >
         <Localized id="hero--location-see-map" />
       </Link>
     </p>
@@ -133,16 +139,6 @@
 
   .action {
     margin-top: 25px;
-  }
-
-  :global(.hero-link) {
-    color: black !important;
-    opacity: 80%;
-  }
-
-  :global(.hero-link:hover) {
-    color: black !important;
-    opacity: 100%;
   }
 
   @media screen and (min-width: 768px) {

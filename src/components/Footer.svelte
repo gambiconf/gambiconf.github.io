@@ -9,6 +9,7 @@
   import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
   import { t } from "../store/locale"
+  import Link from "./Link.svelte"
 </script>
 
 <footer>
@@ -21,13 +22,13 @@
       <h1><Localized id="footer--site-map" /></h1>
 
       <div>
-        <a href="/"><Localized id="footer--home" /></a>
-        <a href="/#about"><Localized id="footer--about" /></a>
-        <a href="/previous-editions"><Localized id="footer--previous-editions" /></a>
-        <a href="/code-of-conduct"><Localized id="footer--code-of-conduct" /></a>
-        <a href={$t('footer--media-kit-href', { assets }).replace(/\p{C}/gu, "")} target="_blank" rel="noopener noreferrer">
+        <Link href="/" variant="secondary"><Localized id="footer--home" /></Link>
+        <Link href="/#about" variant="secondary"><Localized id="footer--about" /></Link>
+        <Link href="/previous-editions" variant="secondary"><Localized id="footer--previous-editions" /></Link>
+        <Link href="/code-of-conduct" variant="secondary"><Localized id="footer--code-of-conduct" /></Link>
+        <Link href={$t('footer--media-kit-href', { assets }).replace(/\p{C}/gu, "")} variant="secondary" target="_blank" rel="noopener noreferrer">
           <Localized id="footer--media-kit" />
-        </a>
+        </Link>
       </div>
     </div>
 
@@ -35,7 +36,7 @@
       <h1><Localized id="footer--contacts" /></h1>
 
       <div>
-        <a href="mailto:mambi@gambiconf.dev" class="email">mambi@gambiconf.dev</a>
+        <Link href="mailto:mambi@gambiconf.dev" variant="secondary">mambi@gambiconf.dev</Link>
 
         <div class="social-links-container">
           <a
@@ -137,7 +138,7 @@
     margin-top: 0;
   }
 
-  a {
+  :global(footer a) {
     font-size: 16px;
   }
 

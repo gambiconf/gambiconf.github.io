@@ -13,6 +13,8 @@
   onMount(() => {
     let currentTheme = localStorage.getItem("theme") ?? "light"
     theme.set(currentTheme)
+
+    document.getElementsByTagName("body")[0].setAttribute('theme', currentTheme)
   })
 </script>
 

@@ -11,6 +11,7 @@
 
     theme.subscribe((value) => {
       localStorage.setItem("theme", value)
+      document.getElementsByTagName("body")[0].setAttribute('theme', value)
     })
   }
 </script>

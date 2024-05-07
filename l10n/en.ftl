@@ -11,9 +11,9 @@ header--schedule = Schedule
 ## Hero
 
 hero--subtitle = The Blow Your Mind Conference
-hero--date-first-line = October
-hero--date-second-line = 19th and 20th
-hero--location-first-line = USP - Campus Butantã / IME - Bloco B
+hero--date-first-line = November
+hero--date-second-line = 02nd and 03rd
+hero--location-first-line = USP - Campus Butantã
 hero--location-second-line = São Paulo, Brazil
 hero--location-see-map = See on the map
 hero--cta = Follow us on Twitter
@@ -32,7 +32,7 @@ row-what-is-gambiconf--body-paragraph-2 =
   It features projects and ideas that are definitely outside the box. Let's expand the boundaries of what's possible,
   unlocking unknown knowledge — just like we did in the past editions when we learned
   <a data-l10n-name='link-talk-water'>how to build computers using only water</a> and
-  <a data-l10n-name='link-talk-satellite'>how to do reverse engineering in the satellite communication</a>!
+  <a data-l10n-name='link-talk-satellite'>how to do reverse engineering in satellite communication</a>!
 row-what-is-gambiconf--body-paragraph-3 =
   This is a multilingual, not limited to a specific technology, conference. We try to focus more on the purpose
   of the presented projects, the unique nature of the sessions, and what one can learn from a random, very unusual,
@@ -48,13 +48,13 @@ row-what-is-gambiconf--body-paragraph-5 =
 ## Where and When
 
 where-and-when--title = Where and When
-where-and-when--body-paragraph-1 = October 19th and 20th, at <a data-l10n-name='link'>USP - Campus Butantã / IME - Bloco B / Auditório Jacy Monteiro</a>.
+where-and-when--body-paragraph-1 = November 02nd and 03rd, at USP - Campus Butantã.
 where-and-when--body-paragraph-2 = Free streaming on <a data-l10n-name='link'>YouTube</a>
 where-and-when--body-paragraph-3 = Chat with us on <a data-l10n-name='link'>Discord</a>
 
 ## Calendar
 
-calendar--month = October 2024
+calendar--month = November 2024
 calendar--sunday = Su
 calendar--monday = Mo
 calendar--tuesday = Tu
@@ -73,7 +73,7 @@ call-for-proposal--body-paragraph-2 =
   If you prefer to focus on a hands-on experience with the community, you can choose to lead a <strong data-l10n-name='workshop'>workshop</strong>.
 call-for-proposal--body-paragraph-3 =
   In case you're lacking ideas, <a data-l10n-name='link'>get inspired by checking out the previous editions</a>.
-call-for-proposal--body-paragraph-4 = The deadline is May 26th.
+call-for-proposal--body-paragraph-4 = The deadline is June 02nd.
 call-for-proposal--cta = Apply to the CFP
 
 ## Partners

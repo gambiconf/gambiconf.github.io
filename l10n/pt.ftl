@@ -11,9 +11,9 @@ header--schedule = Agenda
 ## Hero
 
 hero--subtitle = The Blow Your Mind Conference
-hero--date-first-line = 19 e 20 de
-hero--date-second-line = Outubro
-hero--location-first-line = USP - Campus Butantã / IME - Bloco B
+hero--date-first-line = 02 e 03 de
+hero--date-second-line = Novembro
+hero--location-first-line = USP - Campus Butantã
 hero--location-second-line = São Paulo, Brasil
 hero--location-see-map = Ver no mapa
 hero--cta = Acompanhe no Twitter
@@ -48,13 +48,13 @@ row-what-is-gambiconf--body-paragraph-5 =
 ## Where and When
 
 where-and-when--title = Onde e quando
-where-and-when--body-paragraph-1 = 19 e 20 de Outubro, na <a data-l10n-name='link'>USP - Campus Butantã / IME - Bloco B / Auditório Jacy Monteiro</a>.
+where-and-when--body-paragraph-1 = 02 e 03 de Novembro, na USP - Campus Butantã.
 where-and-when--body-paragraph-2 = Streaming gratuito no <a data-l10n-name='link'>YouTube</a>
 where-and-when--body-paragraph-3 = Converse conosco no <a data-l10n-name='link'>Discord</a>
 
 ## Calendar
 
-calendar--month = Outubro 2024
+calendar--month = Novembro 2024
 calendar--sunday = Do
 calendar--monday = 2ª
 calendar--tuesday = 3ª
@@ -73,7 +73,7 @@ call-for-proposal--body-paragraph-2 =
   Já se você prefere focar num hands-on com a comunidade, você pode optar em ministrar um <strong data-l10n-name='workshop'>workshop</strong>.
 call-for-proposal--body-paragraph-3 =
   Caso esteja sem muitas ideias, <a data-l10n-name='link'>se inspire vendo as edições passadas</a>.
-call-for-proposal--body-paragraph-4 = O deadline é 26 de Maio.
+call-for-proposal--body-paragraph-4 = O deadline é 02 de Junho.
 call-for-proposal--cta = Submeter no CFP
 
 ## Partners

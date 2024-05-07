@@ -2,6 +2,7 @@
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { base, assets } from "$app/paths"
   import LanguageSwitcher from "./LanguageSwitcher.svelte"
+  import Link from "./Link.svelte"
   import ThemeSwitcher from "./ThemeSwitcher.svelte"
 </script>
 
@@ -11,9 +12,9 @@
   </a>
 
   <nav>
-    <a href={`${base}/`}><Localized id="header--home" /></a>
-    <a href={`${base}/#about`}><Localized id="header--about" /></a>
-    <a href={`${base}/cfp`}><Localized id="header--cfp" /></a>
+    <Link href={`${base}/`} variant="secondary"><Localized id="header--home" /></Link>
+    <Link href={`${base}/#about`} variant="secondary"><Localized id="header--about" /></Link>
+    <Link href={`${base}/cfp`} variant="secondary"><Localized id="header--cfp" /></Link>
     <LanguageSwitcher />
     <ThemeSwitcher />
   </nav>

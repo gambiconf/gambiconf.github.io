@@ -27,7 +27,7 @@
 <meta name="twitter:url" content="https://gambiconf.dev/" />
 <meta
   name="twitter:description"
-  content="A GambiConf é um evento de tech onde buscamos assuntos fora da caixa, como projetos pessoais, soluções inusitadas para problemas reais, ou apenas algo divertido"
+  content="Evento de computação onde buscamos temas ousados e divertidos!"
 />
 <meta name="twitter:image" content="https://gambiconf.dev/favicon.png" />
 <meta

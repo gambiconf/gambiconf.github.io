@@ -6,7 +6,7 @@ const mapEnvironmentToBasePath = {
   production: "",
   staging: "/website-staging",
 };
-const basePath = mapEnvironmentToBasePath[environment];
+const basePath = mapEnvironmentToBasePath[environment] ?? process.env.BASE_PATH;
 console.warn(`Unknown environment: "${environment}"`);
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -35,9 +35,6 @@ const config = {
       base: basePath,
     },
     adapter: staticAdapter(),
-    paths: {
-      base: process.argv.includes('dev') ? '' : process.env.BASE_PATH,
-    },
   },
 };
 

@@ -369,6 +369,8 @@
 
   .sublabel {
     font-size: 12px;
+    text-align: justify;
+    margin-top: 2px;
   }
 
   .warning-limit {
@@ -395,10 +397,9 @@
     padding: 10px;
     border: unset;
     border-radius: 4px;
-    width: 50%;
+    width: 100%;
 
     margin-top: 20px;
-
     color: white;
     text-decoration: none;
 

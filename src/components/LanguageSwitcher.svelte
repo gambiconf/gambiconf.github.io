@@ -29,6 +29,7 @@
   --border-hover="none"
   --border-focused="none"
   --selected-item-padding="0 16px 0 0"
+  class="container"
 >
   <div slot="selection" class="item" let:selection>
     {#if selection.label === "PT"}
@@ -58,6 +59,15 @@
 
   :global(.svelte-select input) {
     cursor: pointer !important;
+  }
+
+  :global(.svelte-select) {
+    --padding: 0;
+    --width: 70px;
+
+    @media screen and (min-width: 768px) {
+      --width: unset;
+    }
   }
 
   .item {

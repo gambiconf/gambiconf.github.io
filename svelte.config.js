@@ -34,10 +34,10 @@ const config = {
     paths: {
       base: basePath,
     },
-    adapter: staticAdapter({
-      fallback: "index.html",
-    }),
-    prerender: { entries: [] },
+    adapter: staticAdapter(),
+    paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		}
   },
 };
 

@@ -1,20 +1,20 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
-  import { base, assets } from "$app/paths"
+  import { assets } from "$app/paths"
   import LanguageSwitcher from "./LanguageSwitcher.svelte"
   import Link from "./Link.svelte"
   import ThemeSwitcher from "./ThemeSwitcher.svelte"
 </script>
 
 <header>
-  <a href={`${base}/`}>
+  <Link href="/">
     <img src={`${assets}/logo.png`} alt="logo" />
-  </a>
+  </Link>
 
   <nav>
-    <Link href={`${base}/`} variant="secondary"><Localized id="header--home" /></Link>
-    <Link href={`${base}/#about`} variant="secondary"><Localized id="header--about" /></Link>
-    <Link href={`${base}/cfp`} variant="secondary"><Localized id="header--cfp" /></Link>
+    <Link href="/" variant="secondary"><Localized id="header--home" /></Link>
+    <Link href="/#about" variant="secondary"><Localized id="header--about" /></Link>
+    <Link href="/cfp" variant="secondary"><Localized id="header--cfp" /></Link>
     <LanguageSwitcher />
     <ThemeSwitcher />
   </nav>

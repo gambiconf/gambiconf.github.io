@@ -27,7 +27,7 @@
 <meta name="twitter:url" content="https://gambiconf.dev/" />
 <meta
   name="twitter:description"
-  content="Evento de computação onde buscamos temas ousados e divertidos!"
+  content="Evento de computação onde buscamos temas fora da caixa e divertido!"
 />
 <meta name="twitter:image" content="https://gambiconf.dev/favicon.png" />
 <meta

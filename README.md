@@ -38,6 +38,9 @@ Deploying to GitHub Pages is an easy task. Just run it:
 npm run build:prod && npm run deploy:prod
 ```
 
+> [!IMPORTANT]  
+> If you're deploying outside the root path (example: youruser.github.io/gambiconf), you need to set the environment variable `BASE_PATH` to the target base path (example: `/gambiconf`).
+
 ### Staging
 
 We have a [staging repository/environmnet](https://github.com/gambiconf/website-staging).

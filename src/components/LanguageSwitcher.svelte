@@ -64,9 +64,12 @@
   :global(.svelte-select) {
     --padding: 0;
     --width: 70px;
+    --item-padding: 0;
+    --font-size: 1em;
 
     @media screen and (min-width: 768px) {
       --width: unset;
+      --item-padding: unset;
     }
   }
 

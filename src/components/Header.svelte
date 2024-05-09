@@ -27,14 +27,15 @@
     width: 100vw;
     z-index: 1;
     height: var(--header-height);
+    box-sizing: border-box;
   }
 
   img {
     position: absolute;
-    top: 15px;
-    left: 5vw;
+    top: 10px;
+    left: 3vw;
 
-    height: 60px;
+    height: 50px;
 
     filter: drop-shadow(0px 17px 17px rgba(0, 0, 0, 11%));
   }
@@ -45,7 +46,8 @@
     align-items: center;
     height: 100%;
     margin-right: 5vw;
-    gap: 20px;
+    max-width: 100%;
+    gap: 18px;
   }
 
   @media screen and (min-width: 768px) {

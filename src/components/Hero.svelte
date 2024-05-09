@@ -66,7 +66,7 @@
 <style>
   section {
     position: relative;
-    height: 55vh;
+    height: max(55vh, 500px);
   }
 
   .background-overlay {

@@ -33,6 +33,8 @@
     height: 175px;
     transition: filter 0.75s;
     filter: grayscale(1);
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .content img:hover {

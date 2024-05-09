@@ -35,7 +35,9 @@
     <div class="header">
       <div class="meta">
         <span class="nickname">GambiConf</span>
-        <span class="handle">@gambiconf ·</span>
+        <span class="handle">
+          @gambiconf <span class="date-separator">·</span>
+        </span>
         <span class="date">July 1, 2022</span>
       </div>
 
@@ -80,9 +82,11 @@
     grid-template-columns: auto 1fr;
     grid-gap: 10px;
 
-    max-width: 600px;
-    min-width: 400px;
+    max-width: 100%;
+    width: 600px;
     padding: 15px;
+    
+    box-sizing: border-box;
   }
 
   .profile-pic {
@@ -109,6 +113,7 @@
     grid-template-columns: 1fr auto;
     grid-gap: 2px;
   }
+
   .meta .date,
   .meta .handle {
     color: rgb(101, 119, 134);
@@ -138,6 +143,10 @@
 
   .icons img {
     filter: invert(51%) sepia(2%) saturate(3913%) hue-rotate(166deg) brightness(87%) contrast(74%);
+
+    @media screen and (max-width: 768px) {
+      max-width: 20px;
+    }
   }
 
   .text {
@@ -147,5 +156,11 @@
 
   .tweet-handler {
     color: rgb(29, 155, 240);
+  }
+
+  @media (max-width: 650px) {
+    .date, .date-separator {
+      display: none;
+    }
   }
 </style>

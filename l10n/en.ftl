@@ -73,7 +73,7 @@ call-for-proposal--body-paragraph-2 =
   If you prefer to focus on a hands-on experience with the community, you can choose to lead a <strong data-l10n-name='workshop'>workshop</strong>.
 call-for-proposal--body-paragraph-3 =
   In case you're lacking ideas, <a data-l10n-name='link'>get inspired by checking out the previous editions</a>.
-call-for-proposal--body-paragraph-4 = The deadline is June 02nd.
+call-for-proposal--body-paragraph-4 = The deadline is June 16th.
 call-for-proposal--cta = Apply to the CFP
 
 ## Partners

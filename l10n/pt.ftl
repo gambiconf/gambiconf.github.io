@@ -73,7 +73,7 @@ call-for-proposal--body-paragraph-2 =
   Já se você prefere focar num hands-on com a comunidade, você pode optar em ministrar um <strong data-l10n-name='workshop'>workshop</strong>.
 call-for-proposal--body-paragraph-3 =
   Caso esteja sem muitas ideias, <a data-l10n-name='link'>se inspire vendo as edições passadas</a>.
-call-for-proposal--body-paragraph-4 = O deadline é 02 de Junho.
+call-for-proposal--body-paragraph-4 = O deadline é 16 de Junho.
 call-for-proposal--cta = Submeter no CFP
 
 ## Partners

@@ -67,13 +67,8 @@ calendar--saturday = Sa
 
 call-for-proposal--title = Call for Proposal
 call-for-proposal--body-paragraph-1 =
-  If you want to share a hacky personal project or thought of a unique-underground-workaroundish way
-  of doing something in computing, come and present your <strong data-l10n-name='talk'>talk</strong>!
-call-for-proposal--body-paragraph-2 =
-  If you prefer to focus on a hands-on experience with the community, you can choose to lead a <strong data-l10n-name='workshop'>workshop</strong>.
-call-for-proposal--body-paragraph-3 =
-  In case you're lacking ideas, <a data-l10n-name='link'>get inspired by checking out the previous editions</a>.
-call-for-proposal--body-paragraph-4 = The deadline is June 16th.
+  The CFP is closed. Soon, we will respond to everyone who has submitted and announce the approved ones on our social media.
+call-for-proposal--body-paragraph-2 = Follow us to get updates as soon as we have news!
 call-for-proposal--cta = Apply to the CFP
 
 ## Partners

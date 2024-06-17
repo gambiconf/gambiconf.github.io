@@ -3,12 +3,17 @@
   import { assets } from "$app/paths"
   import { t } from "../store/locale"
   import Window from "./Window.svelte"
+  import { utmSource } from "../utils/constants"
 </script>
 
 <Window title={$t("partners--title")}>
   <div class="content">
-    <a href="https://symcomp.ime.usp.br/" target="_blank" rel="noopener">
+    <a href={`https://symcomp.ime.usp.br/?${utmSource}`} target="_blank" rel="noopener">
       <img src={`${assets}/symcomp.png`} alt="SymComp" />
+    </a>
+
+    <a href={`https://elixiremfoco.com/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={`${assets}/elixir-em-foco.png`} alt="Elixir em foco" />
     </a>
 
     <Localized id="partners--become-a-partner" args={{ assets }} let:attrs>
@@ -22,7 +27,7 @@
 <style>
   .content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 25px;
 
@@ -35,6 +40,7 @@
     filter: grayscale(1);
     max-width: 100%;
     max-height: 100%;
+    object-fit: contain;
   }
 
   .content img:hover {

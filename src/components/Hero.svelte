@@ -44,19 +44,18 @@
         <Localized id="hero--location-second-line" />
       </span>
 
-      <!-- Comment it out until we have a more specific location -->
-      <!-- <Link
+      <Link
         href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7"
         externalIcon
         --color={$theme === 'light' ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)'}
         --hover-color={$theme === 'light' ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.7)'}
       >
         <Localized id="hero--location-see-map" />
-      </Link> -->
+      </Link>
     </p>
 
     <div class="action">
-      <Button url="https://twitter.com/gambiconf">
+      <Button url="https://www.eventbrite.com/e/gambiconf-quarta-edicao-tickets-937165847277">
         <Localized id="hero--cta" />
       </Button>
     </div>

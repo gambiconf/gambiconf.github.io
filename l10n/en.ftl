@@ -16,7 +16,7 @@ hero--date-second-line = 02nd and 03rd
 hero--location-first-line = USP - Campus Butantã
 hero--location-second-line = São Paulo, Brazil
 hero--location-see-map = See on the map
-hero--cta = Follow us on Twitter
+hero--cta = Buy your ticket
 
 ## Event Row
 

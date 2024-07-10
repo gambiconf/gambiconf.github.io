@@ -16,7 +16,7 @@ hero--date-second-line = Novembro
 hero--location-first-line = USP - Campus Butantã
 hero--location-second-line = São Paulo, Brasil
 hero--location-see-map = Ver no mapa
-hero--cta = Acompanhe no Twitter
+hero--cta = Compre o seu ingresso
 
 ## Event Row
 

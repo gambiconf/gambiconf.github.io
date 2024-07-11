@@ -3,6 +3,7 @@
   import { getGoogleCalendarLink } from "../utils/calendar"
   import SocialLinks from "./SocialLinks.svelte"
   import type { SocialLink } from "./SocialLinks.svelte"
+  import Link from "./Link.svelte"
 
   export let title: string
   export let members: Array<{ image: string; socialLinks: SocialLink[]; name: string; bio?: string }>
@@ -24,7 +25,7 @@
 
   {#if hours}
     <p class="talk-time">
-      <Localized id="event-time-slot--hours-prefix"/> <a href={googleCalendarLink} target="_blank" rel="noopener">{hours}</a>
+      <Localized id="event-time-slot--hours-prefix"/> <Link href={googleCalendarLink}>{hours}</Link>
     </p>
   {/if}
 

@@ -119,13 +119,20 @@
   }
 
   @media screen and (max-width: 768px) {
+    .talk-title {
+      text-align: center;
+      font-size: calc(var(--h6-size) + 20%);
+    }
+
     .speaker {
       display: flex;
       flex-direction: column;
     }
 
     .speaker-image-column {
+      display: flex;
       align-items: center;
+      flex-direction: column;
     }
 
     .speaker-description-column {

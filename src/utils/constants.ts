@@ -1,1 +1,1 @@
-export const utmSource = "utm_source=gambiconf"
+export const utmSource = "utm_source=gambiconf";

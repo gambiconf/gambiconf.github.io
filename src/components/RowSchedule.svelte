@@ -2,6 +2,7 @@
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
   import { t } from "../store/locale"
+  import { utmSource } from "../utils/constants"
   import ScheduleUpcoming from "./ScheduleUpcoming.svelte"
   import Window from "./Window.svelte"
   import TimeSlot from "./TimeSlot.svelte"
@@ -105,7 +106,30 @@
         <div class="division" />
       </div>
 
-      <div class="break">
+      <TimeSlot
+        title="Identificando Armadilhas Digitais: Uma Introdução a Honeypots"
+        date="2024-11-03"
+        hours="14:00"
+        duration={210}
+        members={[
+          {
+            name: "Mike Garcia",
+            image: `${assets}/speakers/mike-garcia.png`,
+            bio: "Analista de Segurança da Informação, com 10 anos de experiência em expressivas empresas do mercado nacional e atuando com segurança  defensiva na Tempest desde 2020 onde, atualmente, faz parte do Time de CSIRT.",
+            socialLinks: [
+              { type: "linkedin", url: "https://www.linkedin.com/in/mike-garcia-351689b5/" },
+            ],
+          },
+        ]}
+      >
+        Em parceria com a <a href={`https://www.tempest.com.br/?${utmSource}`} target="_blank" rel="noopener">Tempest</a>.
+      </TimeSlot>
+
+    <div class="division-wrapper">
+      <div class="division" />
+    </div>
+
+    <div class="break">
         <ScheduleUpcoming />
       </div>
     </article>

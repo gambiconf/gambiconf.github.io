@@ -72,6 +72,28 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Como eu fiz um Flappy Bird em Assembly aos 16 anos"
+        date="2024-11-02"
+        duration={35}
+        members={[
+          {
+            name: "Ana Carolina Hernandes",
+            image: `${assets}/speakers/ana-carolina-hernandes.png`,
+            bio: "Doutoranda em Matemática pela USP. Apaixonada por Lógica e Programação em Baixo Nível.",
+            socialLinks: [
+              { type: "twitter", url: "https://x.com/anakurisu01" },
+            ],
+          },
+        ]}
+      >
+        Descubra todas as gambiarras que fiz para recriar uma versão do Flappy Bird em Assembly 8086! ^-^
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <ScheduleUpcoming />
       </div>

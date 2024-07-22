@@ -94,6 +94,28 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Machine Learning distribuído com Elixir"
+        date="2024-11-02"
+        duration={30}
+        members={[
+          {
+            name: "Paulo Valente",
+            image: `${assets}/speakers/paulo-valente.jpg`,
+            bio: "Paulo Valente é co-mantenedor do ecossistema Nx em Elixir, formado em Engenharia Eletrônica pela UFRJ. Atualmente, trabalha para a <a href='https://x.com/DockYard'>@DockYard</a> como engenheiro de R&D",
+            socialLinks: [
+              { type: "github", url: "https://github.com/polvalente" },
+            ],
+          },
+        ]}
+      >
+        Nesta palestra, veremos como Elixir pode ser utilizado para construir um sistema de captura e processamento de dados através do ecossistema Nx de bibliotecas junto ao Phoenix LiveView.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <ScheduleUpcoming />
       </div>

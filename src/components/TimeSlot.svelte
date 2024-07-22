@@ -107,6 +107,10 @@
     margin-top: 1rem;
   }
 
+  :global(.speaker-bio a) {
+    color: var(--color, rgb(159, 91, 1));
+  }
+
   @media screen and (min-width: 768px) {
     .talk {
       display: flex;

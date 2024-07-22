@@ -20,6 +20,10 @@
       <img src={`${assets}/elixir-em-foco.png`} alt="Elixir em foco" />
     </a>
 
+    <a href={`https://www.meteor.com/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={`${assets}/meteor.png`} alt="Meteor" />
+    </a>
+
     <Localized id="partners--become-a-partner" args={{ assets }} let:attrs>
       <a href={attrs.href.replace(/\p{C}/gu, "")} target="_blank" rel="noopener">
         <img src={attrs.src.replace(/\p{C}/gu, "")} alt={attrs.alt} />
@@ -53,7 +57,7 @@
 
   @media screen and (min-width: 768px) {
     .content {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 </style>

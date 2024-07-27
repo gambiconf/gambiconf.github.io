@@ -169,6 +169,48 @@
         Em parceria com a <a href={`https://www.tempest.com.br/?${utmSource}`} target="_blank" rel="noopener">Tempest</a>.
       </TimeSlot>
 
+      <TimeSlot
+        title="Construindo apps real-time com Meteor.js 3.0 e React"
+        date="2024-11-03"
+        hours="14:00"
+        duration={210}
+        members={[
+          {
+            name: "Frederico Maia Arantes",
+            image: `${assets}/speakers/fred-maia.jpg`,
+            bio: "Nascido em Goiânia, já morou no RJ, Irlanda, foi nômade por 2 anos e hoje mora em Floripa. Programador desde 2008, deu aulas de programação e palestrou em eventos como TDC e FLISOL. Hoje é CEO da Meteor Software, criadora do Meteor.js e do Galaxy.",
+            socialLinks: [
+              { type: "github", url: "https://github.com/fredmaiaarantes" },
+              { type: "linkedin", url: "https://linkedin.com/in/fredmaiaarantes" },
+              { type: "twitter", url: "https://twitter.com/fredmaiaarantes" },
+              { type: "website", url: "https://fredmaia.dev" },
+            ],
+          },
+          {
+            name: "Camila Rosa",
+            image: `${assets}/speakers/camila-rosa.jpeg`,
+            bio: "Me chamo Cami, formei em Rádio, TV e Internet e fiz transição de carreira para tech no fim de 2023. Entrei como Tech Community Manager na Meteor Software. Sou muito otaku e coleciono mangás!",
+            socialLinks: [
+              { type: "linkedin", url: "https://www.linkedin.com/in/camilarosa-2403" },
+              { type: "twitter", url: "https://x.com/acamikuro" },
+            ],
+          },
+          {
+            name: "Gabs Ferreira",
+            image: `${assets}/speakers/gabs-ferreira.png`,
+            bio: "Developer advocate na Meteor Software, podcaster e criador de conteúdo tech",
+            socialLinks: [
+              { type: "github", url: "https://github.com/gabsferreira" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/gabsferreira" },
+              { type: "twitter", url: "https://x.com/o_gabsferreira" },
+              { type: "website", url: "https://gabsferreira.com" },
+            ],
+          },
+        ]}
+      >
+        Entenda conceitos importantes como RPC com <a href={`https://meteor.com/?${utmSource}`} target="_blank" rel="noopener">Meteor</a> Methods, publications e subscriptions para real-time, crie collections e um sistema de autenticação.
+        Do zero ao deploy no <a href={`https://www.meteor.com/cloud?${utmSource}`} target="_blank" rel="noopener">Galaxy</a>!
+      </TimeSlot>
     <div class="division-wrapper">
       <div class="division" />
     </div>

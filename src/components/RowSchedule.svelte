@@ -116,6 +116,29 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Como uma pinça derrotou a segurança do Nintendo Wii"
+        date="2024-11-02"
+        duration={30}
+        members={[
+          {
+            name: "Gabu",
+            image: `${assets}/speakers/gabu.png`,
+            bio: "Profissional com 5 anos de experiência em Pentest Web, Mobile e AppSec. Também atuo como professor na FIAP, onde compartilho minha paixão pela área e organizo eventos de Capture the Flag.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/gabu_sec" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/gabrielbarbosasouza"}
+            ],
+          },
+        ]}
+      >
+        Em 2007, pesquisadores de segurança descobriram uma forma de comprometer a segurança do Wii utilizando uma pinça para manipular componentes internos do console e ganhar acesso ao dispositivo.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <ScheduleUpcoming />
       </div>

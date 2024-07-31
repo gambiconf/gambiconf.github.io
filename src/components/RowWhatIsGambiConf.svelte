@@ -18,7 +18,7 @@
       <p>
         <Overlay id="row-what-is-gambiconf--body-paragraph-2">
           <Link l10n="link-talk-water" href="https://www.youtube.com/watch?v=UWiXNTdmL2Q" />
-          <Link l10n="link-talk-satellite" href="https://www.youtube.com/watch?v=UWiXNTdmL2Q" />
+          <Link l10n="link-talk-satellite" href="https://www.youtube.com/watch?v=6msRiv4PJVk" />
         </Overlay>
       </p>
 

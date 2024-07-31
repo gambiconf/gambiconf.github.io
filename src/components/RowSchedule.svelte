@@ -192,6 +192,10 @@
         Em parceria com a <a href={`https://www.tempest.com.br/?${utmSource}`} target="_blank" rel="noopener">Tempest</a>.
       </TimeSlot>
 
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <TimeSlot
         title="Construindo apps real-time com Meteor.js 3.0 e React"
         date="2024-11-03"
@@ -234,9 +238,35 @@
         Entenda conceitos importantes como RPC com <a href={`https://meteor.com/?${utmSource}`} target="_blank" rel="noopener">Meteor</a> Methods, publications e subscriptions para real-time, crie collections e um sistema de autenticação.
         Do zero ao deploy no <a href={`https://www.meteor.com/cloud?${utmSource}`} target="_blank" rel="noopener">Galaxy</a>!
       </TimeSlot>
-    <div class="division-wrapper">
-      <div class="division" />
-    </div>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="O lispy de Norvig: um interpretador em 132 linhas"
+        date="2024-11-03"
+        hours="14:00"
+        duration={210}
+        members={[
+          {
+            name: "Luciano Ramalho",
+            image: `${assets}/speakers/luciano-ramalho.jpeg`,
+            bio: "Autor de Fluent Python (O’Reilly 2022)",
+            socialLinks: [
+              { type: "twitter", url: "https://www.twitter.com/ramalhoorg" },
+              { type: "github", url: "https://www.github.com/Ramalho" },
+              { type: "mastodon", url: "https://ciberlandia.pt/@lr" },
+            ],
+          },
+        ]}
+      >
+        Peter Norvig professor em Stanford criou o lis.py, um interpretador de um pequeno dialeto de Lisp em 132 linhas de código Python muito legível. Nessa oficina veremos como ele funciona!
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
 
     <div class="break">
         <ScheduleUpcoming />

@@ -139,6 +139,28 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Ressuscitando textos milenares das cinzas do Vesúvio"
+        date="2024-11-02"
+        duration={30}
+        members={[
+          {
+            name: "Elian Rafael Dal Prá",
+            image: `${assets}/speakers/elian-rafael.png`,
+            bio: "Mestrando em Física Computacional na USP e um dos segundos colocados no Vesuvius Challenge 2023 Grand Prize.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/elianrafaeldp" },
+            ],
+          },
+        ]}
+      >
+        Nessa talk, veremos como revelar textos de papiros carbonizados a partir de técnicas de Visão Computacional e Inteligência Artificial.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <ScheduleUpcoming />
       </div>

@@ -290,7 +290,34 @@
         <div class="division" />
       </div>
 
-    <div class="break">
+      <TimeSlot
+        title="Construindo uma aplicação serverless com AWS CDK"
+        date="2024-11-03"
+        hours="14:00"
+        duration={210}
+        members={[
+          {
+            name: "Léo Igor Nunes",
+            image: `${assets}/speakers/leo-igor-nunes.jpg`,
+            bio: "Estudante de Ciência da computação, engenheiro de dados, entusiasta de Tecnologia.",
+            socialLinks: [
+              { type: "twitter", url: "https://www.twitter.com/leoigornunes" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/leoigornunes/" },
+              { type: "website", url: "https://c4p1t4n.github.io/bc4p1t4n/pt-br/" },
+            ],
+          },
+        ]}
+      >
+        - Conceitos essenciais de Infraestrutura como Código (IaC)<br />
+        - Introdução aos conceitos do AWS CDK<br />
+        - Criação de uma aplicação web na AWS utilizando serverless
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <div class="break">
         <ScheduleUpcoming />
       </div>
     </article>

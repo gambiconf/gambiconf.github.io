@@ -161,6 +161,30 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Bluetooth pra quê? Fazendo streaming pela porta USB"
+        date="2024-11-02"
+        duration={30}
+        members={[
+          {
+            name: "Ricardo Gomes da Silva",
+            image: `${assets}/speakers/ricardo-gomes.jpg`,
+            bio: "Dev backend formado em Ciência da Computação pela UFRGS e TU Berlin. Faço mais gambiarras do que deveria ser permitido por lei, e desmonto eletrônicos só matar tédio. Ah, e se sobrar algum parafuso, eu digo que caiu da minha cabeça mesmo.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/debugweshell" },
+              { type: "mastodon", url: "https://mas.to/@debugweshell" },
+              { type: "website", url: "https://blog.rgsilva.com" },
+            ],
+          },
+        ]}
+      >
+        Que atire a primeira pedra quem nunca quis ouvir Spotify em um rádio que só aceitava pendrive! Mas... e se o pendrive não fosse bem um pendrive, e ainda conectasse no streaming?!
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <ScheduleUpcoming />
       </div>

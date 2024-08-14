@@ -341,6 +341,30 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Hackeando roteadores na prática"
+        date="2024-11-03"
+        hours="14:00"
+        duration={210}
+        members={[
+          {
+            name: "Renato Alencar",
+            image: `${assets}/speakers/renato-alencar.jpg`,
+            bio: "Hacker Piauiense, fã de cajuína e jogador de CTF.",
+            socialLinks: [
+              { type: "twitter", url: "https://www.twitter.com/cajuinaoverflow" },
+              { type: "github", url: "https://www.github.com/renatoalencar" },
+            ],
+          },
+        ]}
+      >
+        Como explorar e achar vulnerabilidades em um roteador em uma situação real. Vamos pegar vários roteadores, abrir, extrair firmware, fazer engenharia reversa e tentar conseguir um shell.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <ScheduleUpcoming />
       </div>
@@ -378,5 +402,9 @@
 
   .break {
     text-align: center;
+  }
+
+  a {
+    color: rgb(159, 91, 1);
   }
 </style>

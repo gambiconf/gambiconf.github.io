@@ -208,6 +208,30 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Arquiteturas de compiladores"
+        date="2024-11-02"
+        duration={20}
+        members={[
+          {
+            name: "Gabrielle Oliveira",
+            image: `${assets}/speakers/gabrielle-oliveira.jpeg`,
+            bio: "Me chamo Gabrielle Oliveira, participei da primeira rinha de backend com Lean4 e organizei a rinha de compiladores, programo Clojure, Rust e OCaml e brinco com compiladores por ai :)",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/io_gabx" },
+              { type: "github", url: "https://github.com/aripiprazole" },
+              { type: "website", url: "https://gabx.io" },
+            ],
+          },
+        ]}
+      >
+        Como integrar e fazer um compilador rápido que tenha uma infraestutura legal e estruturar o código para que a manutenção seja mais simples
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <ScheduleUpcoming />
       </div>

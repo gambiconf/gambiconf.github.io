@@ -185,6 +185,29 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Analise de malware: R$2 ou 1 arquivo misterioso?"
+        date="2024-11-02"
+        duration={25}
+        members={[
+          {
+            name: "Cleber Soares",
+            image: `${assets}/speakers/cleber-soares.jpeg`,
+            bio: "Entusiasta em hardware hacking e biohacking, é pesquisador em Segurança da Informação e adepto da cultura do software livre. Com mais de 20 anos de experiência na área de tecnologia, possui pós-graduação em CyberSecurity e, atualmente, trabalha como Analista de Segurança da Informação, com foco em Análise de Malwares, Resposta a Incidentes, Segurança Ofensiva e Computação Forense. É professor de pós-graduação e instrutor acadêmico. É líder fundador do Capítulo OWASP Belém e autor regular das revistas Hacker Culture, eForenscs Magazine e Hackin9 Magazine.",
+            socialLinks: [
+              { type: "linkedin", url: "https://www.linkedin.com/in/clebersoaresbelem" },
+              { type: "instagram", url: "https://www.instagram.com/clebersoares_sec" },
+            ],
+          },
+        ]}
+      >
+        A palestra tem um objetivo educacional, com foco na análise de malware com ferramentas. Com estudos de caso reais e demonstrações práticas, os participantes aprenderão a detectar e neutralizar malware, contribuindo para a segurança digital.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <ScheduleUpcoming />
       </div>

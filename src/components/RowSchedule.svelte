@@ -232,6 +232,30 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Como adicionar multiplayer em um jogo sem autorização do desenvolvedor"
+        date="2024-11-02"
+        duration={25}
+        members={[
+          {
+            name: "Vitor Norton",
+            image: `${assets}/speakers/vitor-norton.jpg`,
+            bio: "Microsoft MVP há mais tempo do que me lembro, +10 anos como Full Stack trabalhando com C#, TypeScript, React e Angular. Trabalho como Dev Advocate na SuperViz. Apaixonado por criar pontes entre pessoas.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/vt_norton" },
+              { type: "github", url: "https://github.com/vtnorton" },
+              { type: "instagram", url: "https://instagram.com/vt_norton" },
+            ],
+          },
+        ]}
+      >
+        Fiquei horas viciado no Infinite Craft. Tão viciado que precisei arranjar uma desculpa no trabalho pra ficar jogando mais. Daí fiz um projeto pro trampo com ele.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <ScheduleUpcoming />
       </div>

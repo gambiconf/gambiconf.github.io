@@ -256,6 +256,31 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Posso ser invadido só por jogar Counter-Strike?"
+        date="2024-11-02"
+        duration={25}
+        members={[
+          {
+            name: "Renan Dias",
+            image: `${assets}/speakers/renan-dias.jpg`,
+            bio: "Cursando Defesa Cibernética na FIAP, atualmente sou Analista de Cybersegurança no Agibank e pesquisador de segurança nas horas vagas! Definitivamente, invadir e burlar jogos é meu maior hobby 😁",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/rez1ns" },
+              { type: "github", url: "https://github.com/WHrez1ns" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/renan-dias-da-costa-563830264" },
+              { type: "medium", url: "https://medium.com/@whrez1ns" },
+            ],
+          },
+        ]}
+      >
+        Em 2017, pesquisadores encontraram uma vulnerabilidade no SDK da Valve que permitia acesso remoto ao computador do oponente caso ele morresse uma única vez na partida. Nessa talk, vou mostrar como.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <ScheduleUpcoming />
       </div>

@@ -24,6 +24,7 @@
             image: `${assets}/speakers/bruno-macabeus.jpeg`,
             bio: $t("schedule--presentation-opening-ceremony-first-day-bio"),
             socialLinks: [
+              { type: "bluesky", url: "https://bsky.app/profile/macabeus.bsky.social" },
               { type: "twitter", url: "https://twitter.com/bmacabeus" },
               { type: "github", url: "https://github.com/macabeus" },
               { type: "website", url: "http://macabeus.github.io/" },

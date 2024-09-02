@@ -7,6 +7,7 @@
   import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram"
   import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin"
   import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
+  import { faBluesky } from "@fortawesome/free-brands-svg-icons/faBluesky"
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
   import { t } from "../store/locale"
   import Link from "./Link.svelte"
@@ -39,6 +40,19 @@
         <Link href="mailto:mambi@gambiconf.dev" variant="secondary">mambi@gambiconf.dev</Link>
 
         <div class="social-links-container">
+          <a
+            href="https://bsky.app/profile/gambiconf.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Bluesky"
+            class="social-media-icon"
+          >
+            <FaLayers size="2x">
+              <Fa icon={faCircle} />
+              <Fa color="white" scale={0.6} icon={faBluesky} />
+            </FaLayers>
+          </a>
+
           <a
             href="https://twitter.com/gambiconf"
             target="_blank"

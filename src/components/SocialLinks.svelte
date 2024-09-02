@@ -16,7 +16,7 @@
   import { faHackerNews } from "@fortawesome/free-brands-svg-icons/faHackerNews"
   import { faMastodon } from "@fortawesome/free-brands-svg-icons/faMastodon"
   import { faMedium } from "@fortawesome/free-brands-svg-icons/faMedium"
-  import { faSquare } from "@fortawesome/free-solid-svg-icons/faSquare"
+  import { faBluesky } from "@fortawesome/free-brands-svg-icons/faBluesky"
   import { faEarth } from "@fortawesome/free-solid-svg-icons/faEarth"
   import { faMortarBoard } from "@fortawesome/free-solid-svg-icons/faMortarBoard"
   import type { IconDefinition } from "@fortawesome/fontawesome-common-types"
@@ -33,7 +33,7 @@
     hackerNews: faHackerNews,
     mastodon: faMastodon,
     medium: faMedium,
-    bluesky: faSquare,
+    bluesky: faBluesky,
     website: faEarth,
     googleScholar: faMortarBoard,
   }

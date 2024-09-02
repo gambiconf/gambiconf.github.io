@@ -7,7 +7,17 @@
 </script>
 
 <Window title={$t("partners--title")}>
-  <div class="content">
+  <h3 class="title"><Localized id="partners--sponsors" /></h3>
+
+  <div class="grid grid-sponsors">
+    <a href={`https://contaaberta.info/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={`${assets}/conta-aberta.png`} alt="Conta Aberta" />
+    </a>
+  </div>
+
+  <h3 class="title"><Localized id="partners--supporters" /></h3>
+
+  <div class="grid grid-partners">
     <a href={`https://symcomp.ime.usp.br/?${utmSource}`} target="_blank" rel="noopener">
       <img src={`${assets}/symcomp.png`} alt="SymComp" />
     </a>
@@ -33,16 +43,20 @@
 </Window>
 
 <style>
-  .content {
+  .title {
+    padding: 10px 25px;
+    margin: 0;
+  }
+
+  .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     gap: 25px;
 
     padding: 25px;
   }
 
-  .content img {
+  .grid img {
     height: 175px;
     transition: filter 0.75s;
     filter: grayscale(1);
@@ -51,12 +65,24 @@
     object-fit: contain;
   }
 
-  .content img:hover {
+  .grid img:hover {
     filter: grayscale(0);
   }
 
+  .grid-sponsors {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-sponsors img {
+    height: 100px;
+  }
+
+  .grid-partners {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @media screen and (min-width: 768px) {
-    .content {
+    .grid-partners {
       grid-template-columns: repeat(3, 1fr);
     }
   }

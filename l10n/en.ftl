@@ -78,6 +78,8 @@ partners--become-a-partner = _
   .href = { $assets }/mediakit-en.pdf
   .src = { $assets }/become-a-partner.png
   .alt = The GambiConf mascot holding a lifting a board written 'Become a partner'
+partners--sponsors = Sponsors
+partners--supporters = Supporters
 
 ## Footer
 

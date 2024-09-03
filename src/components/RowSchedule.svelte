@@ -282,6 +282,30 @@
         <div class="division" />
       </div>
 
+      <TimeSlot
+        title="Janta Grátis? Como Hackear Drones de Delivery, só pelo roleplay"
+        date="2024-11-02"
+        duration={45}
+        members={[
+          {
+            name: "Luiz Custódio",
+            image: `${assets}/speakers/luiz-custodio.jpeg`,
+            bio: "Doutor em Ciência da Computação pela UEM, atualmente é techlead na Conviso Application Security e membro do MannaTeam desenvolvendo pesquisas em segurança em internet dos drones.",
+            socialLinks: [
+              { type: "github", url: "https://github.com/luhenrique06" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/luhenrique" },
+              { type: "instagram", url: "https://www.instagram.com/luhenrique06" },
+            ],
+          },
+        ]}
+      >
+        Drones de delivery, já é uma realidade. Já pensou como um hacker poderia roubar a sua janta hackeando um drone? Nesta talk vou mostrar para você como é simples.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
       <div class="break">
         <ScheduleUpcoming />
       </div>

@@ -7,6 +7,7 @@ header--about = About
 header--cfp = CFP
 header--album = Album
 header--schedule = Schedule
+header--financial-report = Financial Report
 
 ## Hero
 

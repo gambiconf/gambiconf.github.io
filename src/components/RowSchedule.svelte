@@ -3,7 +3,6 @@
   import { assets } from "$app/paths"
   import { t } from "../store/locale"
   import { utmSource } from "../utils/constants"
-  import ScheduleUpcoming from "./ScheduleUpcoming.svelte"
   import Window from "./Window.svelte"
   import TimeSlot from "./TimeSlot.svelte"
 </script>
@@ -306,9 +305,25 @@
         <div class="division" />
       </div>
 
-      <div class="break">
-        <ScheduleUpcoming />
-      </div>
+      <TimeSlot
+        title="(Quase) tudo que você que você sabe sobre computadores (provavelmente) está errado"
+        date="2024-11-02"
+        duration={30}
+        members={[
+          {
+            name: "Renato Alencar",
+            image: `${assets}/speakers/renato-alencar.jpg`,
+            bio: "Hacker Piauiense e fã de cajuína, com experiência em campeonatos de CTF, compiladores e jogos de azar.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/cajuinaoverflow" },
+              { type: "github", url: "https://github.com/renatoalencar" },
+              { type: "bluesky", url: "https://bsky.app/profile/cajuinaoverflow.bsky.social" },
+            ],
+          },
+        ]}
+      >
+        Você acha que seu programa é compilado/executado diretamente em instruções sequenciais? Que computadores sempre funcionam só com zeros e uns? Você tá errado!
+      </TimeSlot>
 
       <div class="division-wrapper">
         <div class="division" />
@@ -475,20 +490,13 @@
             socialLinks: [
               { type: "twitter", url: "https://www.twitter.com/cajuinaoverflow" },
               { type: "github", url: "https://www.github.com/renatoalencar" },
+              { type: "bluesky", url: "https://bsky.app/profile/cajuinaoverflow.bsky.social" },
             ],
           },
         ]}
       >
         Como explorar e achar vulnerabilidades em um roteador em uma situação real. Vamos pegar vários roteadores, abrir, extrair firmware, fazer engenharia reversa e tentar conseguir um shell.
       </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <div class="break">
-        <ScheduleUpcoming />
-      </div>
     </article>
   </Window>
 </div>

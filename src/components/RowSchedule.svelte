@@ -497,6 +497,57 @@
       >
         Como explorar e achar vulnerabilidades em um roteador em uma situação real. Vamos pegar vários roteadores, abrir, extrair firmware, fazer engenharia reversa e tentar conseguir um shell.
       </TimeSlot>
+
+      <TimeSlot
+        title="Painel: Urna Eletrônica e Segurança Eleitoral"
+        date="2024-11-03"
+        hours="18:00"
+        duration={45}
+        members={[
+          {
+            name: "Pedro Castilho (líder do painel)",
+            image: `${assets}/speakers/pedro-castilho.jpeg`,
+            bio: 'Pedro Castilho (<a href="https://bsky.app/profile/coprodu.to">@coproduto</a>) é um desenvolvedor de software. Ele passa a maior parte de seu tempo trabalhando na <a href="https://www.cumbuca.com">Cumbuca</a>, escrevendo código em Elixir ou pensando um pouco sobre computadores rodando silenciosamente dentro de suas fontes.',
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/coproduto" },
+              { type: "github", url: "https://www.github.com/coproduto"},
+              { type: "linkedin", url: "https://www.linkedin.com/in/pcstl"},
+              { type: "bluesky", url: "https://bsky.app/profile/coprodu.to"},
+            ],
+          },
+          {
+            name: "Lucas Lago",
+            image: `${assets}/speakers/lucas-lago.jpeg`,
+            bio: "Mestre em Engenharia da Computação, ativista no Instituto Aaron Swartz e co-autor de dois relatórios desmascarando ataques às urnas nas eleições de 2022.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/lucaslago" },
+              { type: "bluesky", url: "https://bsky.app/profile/lucaslago.projeto7c0.com.br" },
+            ],
+          },
+          {
+            name: "Marcos Simplicio",
+            image: `${assets}/speakers/marcos-simplicio.png`,
+            bio: "Recebeu doutorado em Engenharia Elétrica/Computação na USP (2010) - Universidade de São Paulo, Escola Politécnica, e atualmente é Professor Associado e pesquisador na mesma instituição. Está envolvido em projetos relacionados à cibersegurança desde 2007, cobrindo cenários como sistemas de votação eletrônica, redes veiculares, computação em nuvem, sistemas de transmissão de dados multimídia, redes peer-to-peer (P2P), mobile health, armazenamento seguro de senhas, transações bancárias, blockchain, e IoT. Resultou em mais de cem publicações relacionadas à cibersegurança, incluindo artigos acadêmicos premiados, patentes internacionais e padrões internacionais. ",
+            socialLinks: [
+              { type: "linkedin", url: "https://www.linkedin.com/in/marcos-simplicio-a2263822" },
+              { type: "googleScholar", url: "https://scholar.google.com.br/citations?user=E7n_ohsAAAAJ"}
+            ],
+          },
+          {
+            name: "Eduardo Lopes Cominetti",
+            image: `${assets}/speakers/eduardo-lopes-cominetti.jpg`,
+            bio: "Doutor em Engenharia da Computação pela Escola Politécnica da USP. Sua tese de doutorado trata da elaboração de sistemas de verificação fim-a-fim para o aprimoramento do sistema de votação brasileiro. É participante do projeto USP-TSE com enfoque na segurança do sistema eletrônico de votação. Além deste projeto, trabalha no desenvolvimento e implementação de algoritmos de criptografia resistentes a ataques de computadores quânticos, conhecidos como algoritmos pós-quânticos.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/ECominetti" },
+              { type: "googleScholar", url: "https://scholar.google.com/citations?user=CVwL_CgAAAAJ" },
+            ],
+          },
+        ]}
+      >
+        <p>Estamos cheios de eleições esse ano!</p>
+        <p>Tivemos as polêmicas na eleição da Venezuela, em Outubro teremos eleição no Brasil, e em Novembro a eleição nos EUA.</p>
+        <p>No meio do turbilhão de informação e desinformação, nós precisamos ser serenos e discutir esse assunto do ponto de vista técnico, com pesquisadores de urna eletrônica e segurança eleitoral.</p>
+      </TimeSlot>
     </article>
   </Window>
 </div>

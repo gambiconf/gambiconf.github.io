@@ -14,7 +14,7 @@
   <nav>
     <Link href="/" variant="secondary"><Localized id="header--home" /></Link>
     <Link href="/#about" variant="secondary"><Localized id="header--about" /></Link>
-    <Link href="/cfp" variant="secondary"><Localized id="header--cfp" /></Link>
+    <!-- <Link href="/cfp" variant="secondary"><Localized id="header--cfp" /></Link> -->
     <LanguageSwitcher />
     <ThemeSwitcher />
   </nav>

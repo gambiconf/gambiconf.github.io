@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Fa } from "svelte-fa"
-  import { faLocationPin } from "@fortawesome/free-solid-svg-icons/faLocationPin"
+  import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot"
   import { faHotel } from "@fortawesome/free-solid-svg-icons/faHotel"
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
   import { faDiscord } from "@fortawesome/free-brands-svg-icons/faDiscord"
@@ -19,7 +19,7 @@
 
     <div>
       <p>
-        <Fa icon={faLocationPin} />
+        <Fa icon={faLocationDot} />
 
         <Overlay id="where-and-when--body-paragraph-1">
           <Link l10n="link" href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7" />

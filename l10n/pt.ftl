@@ -51,6 +51,12 @@ where-and-when--title = Onde e quando
 where-and-when--body-paragraph-1 = 02 e 03 de Novembro, na USP - Campus Butantã.
 where-and-when--body-paragraph-2 = Streaming gratuito no <a data-l10n-name='link'>YouTube</a>
 where-and-when--body-paragraph-3 = Converse conosco no <a data-l10n-name='link'>Discord</a>
+where-and-when--body-paragraph-4 =
+  Se você vem de outra cidade para participar da da GambiConf, recomendamos que se hospede na <a data-l10n-name='link-villa-sophia'>Villa Sophia</a>!<br />
+  Faça a reserva diretamente com a proprietária via WhatsApp, e diga que vem para a GambiConf para ganhar um desconto!<br />
+  Diária para uma pessoa: R$ 190<br />
+  Endereço: <a data-l10n-name='link-address'>Rua Paulo Angelo Lanzarini 93, Butantã</a><br />
+  WhatsApp: <a data-l10n-name='link-telephone'>(11) 94728-0323</a>
 
 ## Calendar
 

@@ -51,12 +51,6 @@ where-and-when--title = Where and When
 where-and-when--body-paragraph-1 = November 02nd and 03rd, at USP - Campus Butantã.
 where-and-when--body-paragraph-2 = Free streaming on <a data-l10n-name='link'>YouTube</a>
 where-and-when--body-paragraph-3 = Chat with us on <a data-l10n-name='link'>Discord</a>
-where-and-when--body-paragraph-4 =
-  If you're coming from another city to attend GambiConf, we recommend staying at <a data-l10n-name='link-villa-sophia'>Villa Sophia</a>!<br />
-  Book directly with the owner via WhatsApp, and mention you're attending GambiConf to get a discount!<br />
-  Rate for one person: R$ 190<br />
-  Address: <a data-l10n-name='link-address'>Rua Paulo Angelo Lanzarini 93, Butantã</a><br />
-  WhatsApp: <a data-l10n-name='link-telephone'>(11) 94728-0323</a>
 
 ## Calendar
 

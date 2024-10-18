@@ -88,7 +88,7 @@ footer--home = Home
 footer--about = About
 footer--previous-editions = Previous Editions
 footer--code-of-conduct = Code of Conduct
-footer--media-kit = Media Kit
+footer--media-kit = Media Kit - Become a partner
 footer--media-kit-href = { $assets }/mediakit-en.pdf
 footer--contacts = Contacts
 

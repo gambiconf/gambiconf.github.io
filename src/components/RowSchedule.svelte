@@ -50,75 +50,9 @@
       </div>
 
       <TimeSlot
-        title="Keynote: A história por trás da criação do Elixir"
-        date="2024-11-02"
-        duration={45}
-        members={[
-          {
-            name: "Hugo Baraúna",
-            image: `${assets}/speakers/hugo-barauna.jpg`,
-            bio: "Hugo Baraúna é developer advocate do Livebook e founder da Elixir Radar. Antes disso, ele foi co-fundador da Plataformatec, onde o Elixir foi criado.",
-            socialLinks: [
-              { type: "twitter", url: "https://x.com/hugobarauna" },
-              { type: "github", url: "https://github.com/hugobarauna" },
-            ],
-          },
-        ]}
-      >
-        Nesta palestra vamos aprender sobre a história da criação do Elixir, uma linguagem de programação brasileira usada no mundo inteiro.
-      </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <TimeSlot
-        title="Como eu fiz um Flappy Bird em Assembly aos 16 anos"
-        date="2024-11-02"
-        duration={35}
-        members={[
-          {
-            name: "Ana Carolina Hernandes",
-            image: `${assets}/speakers/ana-carolina-hernandes.png`,
-            bio: "Doutoranda em Matemática pela USP. Apaixonada por Lógica e Programação em Baixo Nível.",
-            socialLinks: [
-              { type: "twitter", url: "https://x.com/anakurisu01" },
-            ],
-          },
-        ]}
-      >
-        Descubra todas as gambiarras que fiz para recriar uma versão do Flappy Bird em Assembly 8086! ^-^
-      </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <TimeSlot
-        title="Machine Learning distribuído com Elixir"
-        date="2024-11-02"
-        duration={30}
-        members={[
-          {
-            name: "Paulo Valente",
-            image: `${assets}/speakers/paulo-valente.jpg`,
-            bio: "Paulo Valente é co-mantenedor do ecossistema Nx em Elixir, formado em Engenharia Eletrônica pela UFRJ. Atualmente, trabalha para a <a href='https://x.com/DockYard'>@DockYard</a> como engenheiro de R&D",
-            socialLinks: [
-              { type: "github", url: "https://github.com/polvalente" },
-            ],
-          },
-        ]}
-      >
-        Nesta palestra, veremos como Elixir pode ser utilizado para construir um sistema de captura e processamento de dados através do ecossistema Nx de bibliotecas junto ao Phoenix LiveView.
-      </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <TimeSlot
         title="Como uma pinça derrotou a segurança do Nintendo Wii"
         date="2024-11-02"
+        hours="9:55"
         duration={30}
         members={[
           {
@@ -140,101 +74,9 @@
       </div>
 
       <TimeSlot
-        title="Ressuscitando textos milenares das cinzas do Vesúvio"
-        date="2024-11-02"
-        duration={30}
-        members={[
-          {
-            name: "Elian Rafael Dal Prá",
-            image: `${assets}/speakers/elian-rafael.png`,
-            bio: "Mestrando em Física Computacional na USP e um dos segundos colocados no Vesuvius Challenge 2023 Grand Prize.",
-            socialLinks: [
-              { type: "twitter", url: "https://twitter.com/elianrafaeldp" },
-            ],
-          },
-        ]}
-      >
-        Nessa talk, veremos como revelar textos de papiros carbonizados a partir de técnicas de Visão Computacional e Inteligência Artificial.
-      </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <TimeSlot
-        title="Bluetooth pra quê? Fazendo streaming pela porta USB"
-        date="2024-11-02"
-        duration={30}
-        members={[
-          {
-            name: "Ricardo Gomes da Silva",
-            image: `${assets}/speakers/ricardo-gomes.jpg`,
-            bio: "Dev backend formado em Ciência da Computação pela UFRGS e TU Berlin. Faço mais gambiarras do que deveria ser permitido por lei, e desmonto eletrônicos só matar tédio. Ah, e se sobrar algum parafuso, eu digo que caiu da minha cabeça mesmo.",
-            socialLinks: [
-              { type: "twitter", url: "https://twitter.com/debugweshell" },
-              { type: "mastodon", url: "https://mas.to/@debugweshell" },
-              { type: "website", url: "https://blog.rgsilva.com" },
-            ],
-          },
-        ]}
-      >
-        Que atire a primeira pedra quem nunca quis ouvir Spotify em um rádio que só aceitava pendrive! Mas... e se o pendrive não fosse bem um pendrive, e ainda conectasse no streaming?!
-      </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <TimeSlot
-        title="Analise de malware: R$2 ou 1 arquivo misterioso?"
-        date="2024-11-02"
-        duration={25}
-        members={[
-          {
-            name: "Cleber Soares",
-            image: `${assets}/speakers/cleber-soares.jpeg`,
-            bio: "Entusiasta em hardware hacking e biohacking, é pesquisador em Segurança da Informação e adepto da cultura do software livre. Com mais de 20 anos de experiência na área de tecnologia, possui pós-graduação em CyberSecurity e, atualmente, trabalha como Analista de Segurança da Informação, com foco em Análise de Malwares, Resposta a Incidentes, Segurança Ofensiva e Computação Forense. É professor de pós-graduação e instrutor acadêmico. É líder fundador do Capítulo OWASP Belém e autor regular das revistas Hacker Culture, eForenscs Magazine e Hackin9 Magazine.",
-            socialLinks: [
-              { type: "linkedin", url: "https://www.linkedin.com/in/clebersoaresbelem" },
-              { type: "instagram", url: "https://www.instagram.com/clebersoares_sec" },
-            ],
-          },
-        ]}
-      >
-        A palestra tem um objetivo educacional, com foco na análise de malware com ferramentas. Com estudos de caso reais e demonstrações práticas, os participantes aprenderão a detectar e neutralizar malware, contribuindo para a segurança digital.
-      </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <TimeSlot
-        title="Arquiteturas de compiladores"
-        date="2024-11-02"
-        duration={20}
-        members={[
-          {
-            name: "Gabrielle Oliveira",
-            image: `${assets}/speakers/gabrielle-oliveira.jpeg`,
-            bio: "Me chamo Gabrielle Oliveira, participei da primeira rinha de backend com Lean4 e organizei a rinha de compiladores, programo Clojure, Rust e OCaml e brinco com compiladores por ai :)",
-            socialLinks: [
-              { type: "twitter", url: "https://twitter.com/io_gabx" },
-              { type: "github", url: "https://github.com/aripiprazole" },
-              { type: "website", url: "https://gabx.io" },
-            ],
-          },
-        ]}
-      >
-        Como integrar e fazer um compilador rápido que tenha uma infraestutura legal e estruturar o código para que a manutenção seja mais simples
-      </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division" />
-      </div>
-
-      <TimeSlot
         title="Como adicionar multiplayer em um jogo sem autorização do desenvolvedor"
         date="2024-11-02"
+        hours="10:30"
         duration={25}
         members={[
           {
@@ -257,8 +99,168 @@
       </div>
 
       <TimeSlot
+        title="Machine Learning distribuído com Elixir"
+        date="2024-11-02"
+        hours="11:00"
+        duration={30}
+        members={[
+          {
+            name: "Paulo Valente",
+            image: `${assets}/speakers/paulo-valente.jpg`,
+            bio: "Paulo Valente é co-mantenedor do ecossistema Nx em Elixir, formado em Engenharia Eletrônica pela UFRJ. Atualmente, trabalha para a <a href='https://x.com/DockYard'>@DockYard</a> como engenheiro de R&D",
+            socialLinks: [
+              { type: "github", url: "https://github.com/polvalente" },
+            ],
+          },
+        ]}
+      >
+        Nesta palestra, veremos como Elixir pode ser utilizado para construir um sistema de captura e processamento de dados através do ecossistema Nx de bibliotecas junto ao Phoenix LiveView.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="Janta Grátis? Como Hackear Drones de Delivery, só pelo roleplay"
+        date="2024-11-02"
+        hours="11:35"
+        duration={45}
+        members={[
+          {
+            name: "Luiz Custódio",
+            image: `${assets}/speakers/luiz-custodio.jpeg`,
+            bio: "Doutor em Ciência da Computação pela UEM, atualmente é techlead na Conviso Application Security e membro do MannaTeam desenvolvendo pesquisas em segurança em internet dos drones.",
+            socialLinks: [
+              { type: "github", url: "https://github.com/luhenrique06" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/luhenrique" },
+              { type: "instagram", url: "https://www.instagram.com/luhenrique06" },
+            ],
+          },
+        ]}
+      >
+        Drones de delivery, já é uma realidade. Já pensou como um hacker poderia roubar a sua janta hackeando um drone? Nesta talk vou mostrar para você como é simples.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <div class="break">
+        <Localized id="schedule--lunch" />
+      </div>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="Ressuscitando textos milenares das cinzas do Vesúvio"
+        date="2024-11-02"
+        hours="14:00"
+        duration={30}
+        members={[
+          {
+            name: "Elian Rafael Dal Prá",
+            image: `${assets}/speakers/elian-rafael.png`,
+            bio: "Mestrando em Física Computacional na USP e um dos segundos colocados no Vesuvius Challenge 2023 Grand Prize.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/elianrafaeldp" },
+            ],
+          },
+        ]}
+      >
+        Nessa talk, veremos como revelar textos de papiros carbonizados a partir de técnicas de Visão Computacional e Inteligência Artificial.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="Analise de malware: R$2 ou 1 arquivo misterioso?"
+        date="2024-11-02"
+        hours="14:35"
+        duration={25}
+        members={[
+          {
+            name: "Cleber Soares",
+            image: `${assets}/speakers/cleber-soares.jpeg`,
+            bio: "Entusiasta em hardware hacking e biohacking, é pesquisador em Segurança da Informação e adepto da cultura do software livre. Com mais de 20 anos de experiência na área de tecnologia, possui pós-graduação em CyberSecurity e, atualmente, trabalha como Analista de Segurança da Informação, com foco em Análise de Malwares, Resposta a Incidentes, Segurança Ofensiva e Computação Forense. É professor de pós-graduação e instrutor acadêmico. É líder fundador do Capítulo OWASP Belém e autor regular das revistas Hacker Culture, eForenscs Magazine e Hackin9 Magazine.",
+            socialLinks: [
+              { type: "linkedin", url: "https://www.linkedin.com/in/clebersoaresbelem" },
+              { type: "instagram", url: "https://www.instagram.com/clebersoares_sec" },
+            ],
+          },
+        ]}
+      >
+        A palestra tem um objetivo educacional, com foco na análise de malware com ferramentas. Com estudos de caso reais e demonstrações práticas, os participantes aprenderão a detectar e neutralizar malware, contribuindo para a segurança digital.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="Bluetooth pra quê? Fazendo streaming pela porta USB"
+        date="2024-11-02"
+        hours="15:05"
+        duration={30}
+        members={[
+          {
+            name: "Ricardo Gomes da Silva",
+            image: `${assets}/speakers/ricardo-gomes.jpg`,
+            bio: "Dev backend formado em Ciência da Computação pela UFRGS e TU Berlin. Faço mais gambiarras do que deveria ser permitido por lei, e desmonto eletrônicos só matar tédio. Ah, e se sobrar algum parafuso, eu digo que caiu da minha cabeça mesmo.",
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/debugweshell" },
+              { type: "mastodon", url: "https://mas.to/@debugweshell" },
+              { type: "website", url: "https://blog.rgsilva.com" },
+            ],
+          },
+        ]}
+      >
+        Que atire a primeira pedra quem nunca quis ouvir Spotify em um rádio que só aceitava pendrive! Mas... e se o pendrive não fosse bem um pendrive, e ainda conectasse no streaming?!
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="Como eu fiz um Flappy Bird em Assembly aos 16 anos"
+        date="2024-11-02"
+        hours="15:40"
+        duration={35}
+        members={[
+          {
+            name: "Ana Carolina Hernandes",
+            image: `${assets}/speakers/ana-carolina-hernandes.png`,
+            bio: "Doutoranda em Matemática pela USP. Apaixonada por Lógica e Programação em Baixo Nível.",
+            socialLinks: [
+              { type: "twitter", url: "https://x.com/anakurisu01" },
+            ],
+          },
+        ]}
+      >
+        Descubra todas as gambiarras que fiz para recriar uma versão do Flappy Bird em Assembly 8086! ^-^
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <div class="break">
+        <Localized id="schedule--coffe-break" />
+      </div>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
         title="Posso ser invadido só por jogar Counter-Strike?"
         date="2024-11-02"
+        hours="16:55"
         duration={25}
         members={[
           {
@@ -282,23 +284,24 @@
       </div>
 
       <TimeSlot
-        title="Janta Grátis? Como Hackear Drones de Delivery, só pelo roleplay"
+        title="Arquiteturas de compiladores"
         date="2024-11-02"
-        duration={45}
+        hours="17:20"
+        duration={20}
         members={[
           {
-            name: "Luiz Custódio",
-            image: `${assets}/speakers/luiz-custodio.jpeg`,
-            bio: "Doutor em Ciência da Computação pela UEM, atualmente é techlead na Conviso Application Security e membro do MannaTeam desenvolvendo pesquisas em segurança em internet dos drones.",
+            name: "Gabrielle Oliveira",
+            image: `${assets}/speakers/gabrielle-oliveira.jpeg`,
+            bio: "Me chamo Gabrielle Oliveira, participei da primeira rinha de backend com Lean4 e organizei a rinha de compiladores, programo Clojure, Rust e OCaml e brinco com compiladores por ai :)",
             socialLinks: [
-              { type: "github", url: "https://github.com/luhenrique06" },
-              { type: "linkedin", url: "https://www.linkedin.com/in/luhenrique" },
-              { type: "instagram", url: "https://www.instagram.com/luhenrique06" },
+              { type: "twitter", url: "https://twitter.com/io_gabx" },
+              { type: "github", url: "https://github.com/aripiprazole" },
+              { type: "website", url: "https://gabx.io" },
             ],
           },
         ]}
       >
-        Drones de delivery, já é uma realidade. Já pensou como um hacker poderia roubar a sua janta hackeando um drone? Nesta talk vou mostrar para você como é simples.
+        Como integrar e fazer um compilador rápido que tenha uma infraestutura legal e estruturar o código para que a manutenção seja mais simples
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -308,6 +311,7 @@
       <TimeSlot
         title="(Quase) tudo que você que você sabe sobre computadores (provavelmente) está errado"
         date="2024-11-02"
+        hours="17:45"
         duration={30}
         members={[
           {
@@ -323,6 +327,29 @@
         ]}
       >
         Você acha que seu programa é compilado/executado diretamente em instruções sequenciais? Que computadores sempre funcionam só com zeros e uns? Você tá errado!
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division" />
+      </div>
+
+      <TimeSlot
+        title="Keynote: A história por trás da criação do Elixir"
+        date="2024-11-02"
+        duration={45}
+        members={[
+          {
+            name: "Hugo Baraúna",
+            image: `${assets}/speakers/hugo-barauna.jpg`,
+            bio: "Hugo Baraúna é developer advocate do Livebook e founder da Elixir Radar. Antes disso, ele foi co-fundador da Plataformatec, onde o Elixir foi criado.",
+            socialLinks: [
+              { type: "twitter", url: "https://x.com/hugobarauna" },
+              { type: "github", url: "https://github.com/hugobarauna" },
+            ],
+          },
+        ]}
+      >
+        Nesta palestra vamos aprender sobre a história da criação do Elixir, uma linguagem de programação brasileira usada no mundo inteiro.
       </TimeSlot>
 
       <div class="division-wrapper">

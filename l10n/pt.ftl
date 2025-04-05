@@ -5,7 +5,7 @@ title = GambiConf - The Blow Your Mind Conference
 header--home = Home
 header--about = Sobre
 header--cfp = CFP
-header--album = Album
+header--album = Álbum
 header--schedule = Agenda
 
 ## Hero
@@ -22,7 +22,7 @@ hero--cta = Compre o seu ingresso
 
 event-row--title = Evento
 event-row--go-to-playlist = Ver a playlist
-event-row--go-to-album = Ver o album
+event-row--go-to-album = Ver o álbum
 
 ## Row What Is GambiConf
 
@@ -158,8 +158,8 @@ theme--dark = Trocar para light mode
 code-of-conduct--title = Código de Conduta
 
 # Album
-album--title = Fotos
-album--description = Fotos tirada pelo <a data-l10n-name='author-website'>Hugo Borges</a>. <a data-l10n-name='download'>Download de todas as fotos</a>.
+album--title = Álbum
+album--description = Fotos tiradas pelo <a data-l10n-name='link-author-1'>Hugo Borges</a> e <a data-l10n-name='link-author-2'>João de Mello</a>. <a data-l10n-name='download'>Download de todas as fotos</a>.
 
 # Previous Editions
 

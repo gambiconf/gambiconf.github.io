@@ -9,71 +9,35 @@
   let selectedPhoto: string | null = null
 
   const focusPoint = {
-    'DSC05628': '0 0',
-    'DSC05632': '0 21%',
-    'DSC05636': '0 15%',
-    'DSC05637': '0 15%',
-    'DSC05647': '0 0',
-    'DSC05648': '0 0',
-    'DSC05650': '0 0',
-    'DSC05656': '0 0',
-    'DSC05663': '0 0',
-    'DSC05666': '0 18%',
-    'DSC05668': '0 13%',
-    'DSC05671': '0 0',
-    'DSC05690': '0 22%',
-    'DSC05699': '0 22%',
-    'DSC05700': '0 25%',
-    'DSC05711': '0 9%',
-    'DSC05721': '0 5%',
-    'DSC05723': '0 12%',
-    'DSC05731': '0 5%',
-    'DSC05732': '0 5%',
-    'DSC05734': '0 26%',
-    'DSC05735': '0 0',
-    'DSC05736': '0 0',
-    'DSC05737': '0 0',
-    'DSC05765': '0 0',
-    'DSC05768': '0 0',
-    'DSC05770': '0 40%',
-    'DSC05781': '0 40%',
-    'DSC05783': '0 7%',
-    'DSC05786': '0 9%',
-    'DSC05788': '0 0',
-    'DSC05792': '0 0',
-    'DSC05797': '0 0',
-    'DSC05804': '0 0',
-    'DSC05805': '0 9%',
-    'DSC05808': '0 0',
-    'DSC05812': '0 0',
-    'DSC05814': '0 13%',
-    'DSC05815': '0 18%',
-    'DSC05822': '0 14%',
-    'DSC05823': '0 7%',
-    'DSC05825': '0 8%',
-    'DSC05826': '0 0',
-    'DSC05847': '0 0',
-    'DSC05869': '0 37%',
-    'DSC05871': '0 21%',
-    'DSC05874': '0 0',
-    'DSC05880': '0 0',
-    'DSC05902': '0 31%',
-    'DSC05913': '0 0',
-    'DSC05918': '0 21%',
+    DSC06987: "0 16%",
+    DSC06988: "0 4%",
+    DSC06991: "0 30%",
+    DSC07005: "0 3%",
+    DSC07014: "0 0",
+    DSC07017: "0 0",
+    DSC07018: "0 35%",
+    DSC07028: "0 90%",
+    DSC07040: "0 28%",
+    DSC07097: "0 37%",
+    DSC07099: "0 36%",
+    DSC07107: "0 68%",
+    DSC07108: "0 68%",
+    DSC07123: "0 64%",
+    DSC07151: "0 2%",
+    DSC07153: "0 6%",
   }
 
   const handlePhotoClick = (e) => {
     selectedPhoto = e.detail.src
       .replace(/-[\w\d]+/, "")
-      .replace(/.*DSC/, "https://storage.googleapis.com/gambiconf-2023-photos/DSC")
-      .replace(".jpeg", ".JPG")
+      .replace(/.*DSC/, "https://storage.googleapis.com/gambiconf-2024-photos/DSC")
   }
 
   const handleClickSelectedPhotoBackground = () => {
     selectedPhoto = null
   }
 
-  const importPhotos = import.meta.glob("../../../static/photos/*.jpeg")
+  const importPhotos = import.meta.glob("../../../static/photos/*.jpg")
   let photos: string[] = []
 
   const loadPhotos = async () => {
@@ -104,17 +68,21 @@
 {/if}
 
 <section>
-  <h1>{$t('album--title')}</h1>
+  <h1>{$t("album--title")}</h1>
 
   <span>
     <Overlay id="album--description">
-      <Link l10n="author-website" href="https://twitter.com/agaelebe" />
-      <Link l10n="download" href="https://storage.googleapis.com/gambiconf-2023-photos/gambiconf-2023-photos.zip" />
+      <Link l10n="link-author-1" href="https://twitter.com/agaelebe" />
+      <Link l10n="link-author-2" href="https://www.instagram.com/duckthemadquacker" />
+      <Link
+        l10n="download"
+        href="https://storage.googleapis.com/gambiconf-2024-photos/gambiconf-2024-photos.zip"
+      />
     </Overlay>
   </span>
 
   <div class="gallery">
-    <Gallery on:photoClick={handlePhotoClick} focusPoint={focusPoint}>
+    <Gallery on:photoClick={handlePhotoClick} {focusPoint}>
       {#each photos as photo}
         <img src={photo} />
       {/each}

@@ -159,7 +159,7 @@ code-of-conduct--title = Code of Conduct
 
 # Album
 album--title = Photos
-album--description = Photos taken by <a data-l10n-name='author-website'>Hugo Borges</a>. <a data-l10n-name='download'>Download all photos</a>.
+album--description = Photos by <a data-l10n-name='link-author-1'>Hugo Borges</a> and <a data-l10n-name='link-author-2'>João de Mello</a>. <a data-l10n-name='download'>Download all photos</a>.
 
 # Previous Editions
 

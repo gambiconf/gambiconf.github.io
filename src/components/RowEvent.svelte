@@ -8,18 +8,37 @@
 </script>
 
 <div>
-  <Window title={$t("event-row--title")}>
+  <Window title={$t("row-event--title")}>
     <article class="content">
-      <div class="video-row">
-        <div class="video-container">
-          <iframe
-            class="video"
-            src="https://www.youtube.com/embed/videoseries?si=OB21isYlfUUr6cxd&amp;list=PL5Vh5eXgFvesu0Y9izrwaxCYxH_J0iY77"
-            title="YouTube video player / 2024 Edition"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
+      <div class="videos-row">
+        <div>
+          <span>{$t("row-event--talks")}</span>
+
+          <div class="video-container">
+            <iframe
+              class="video"
+              src="https://www.youtube.com/embed/videoseries?si=OB21isYlfUUr6cxd&amp;list=PL5Vh5eXgFvesu0Y9izrwaxCYxH_J0iY77"
+              title="YouTube video player / GambiConf 2024 Edition"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+        </div>
+
+        <div>
+          <span>{$t("row-event--panel")}</span>
+
+          <div class="video-container">
+            <iframe
+              class="video"
+              src="https://www.youtube.com/embed/Ip20X5l2ZHo?si=Ynxc-vWHdB3F0WsV"
+              title="YouTube video player / Gambiconf 2024 Painel"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
         </div>
       </div>
 
@@ -30,12 +49,12 @@
           rel="noopener"
         >
           <Fa icon={faVideo} />
-          {$t("event-row--go-to-playlist")}
+          {$t("row-event--go-to-playlist")}
         </Link>
 
         <Link href="/album">
           <Fa icon={faPhotoFilm} />
-          {$t("event-row--go-to-album")}
+          {$t("row-event--go-to-album")}
         </Link>
       </div>
     </article>
@@ -47,7 +66,7 @@
     padding: 25px;
   }
 
-  .video-row {
+  .videos-row {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
@@ -79,7 +98,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    .video-row {
+    .videos-row {
       grid-template-columns: 1fr 1fr;
     }
   }

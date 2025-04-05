@@ -20,9 +20,11 @@ hero--cta = Buy your ticket
 
 ## Event Row
 
-event-row--title = Event
-event-row--go-to-playlist = Go to the playlist
-event-row--go-to-album = Go to the event album
+row-event--title = Event
+row-event--talks = Talks
+row-event--panel = Panel
+row-event--go-to-playlist = Go to the playlist
+row-event--go-to-album = Go to the event album
 
 ## Row What Is GambiConf
 

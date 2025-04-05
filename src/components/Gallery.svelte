@@ -3,6 +3,7 @@
 
   export let focusPoint = {}
   export let columnCount = 4
+  export let imageHeight = "250px"
 
   const dispatch = createEventDispatcher()
 
@@ -14,22 +15,25 @@
   }
 
   const draw = () => {
-    const photos = Array.from(slotHolder.childNodes).filter((child) => child.tagName === "IMG")
+    const nodes = Array.from(slotHolder.childNodes).filter(
+      (child) =>
+        child.tagName === "IMG" ||
+        (child.tagName === "A" && child.childNodes[0].tagName === "IMG"),
+    )
 
     columns = new Array(columnCount).fill([])
 
-    for (let i = 0; i < photos.length; i++) {
+    for (let i = 0; i < nodes.length; i++) {
       const idx = i % columnCount
 
-      const { src, alt, className } = photos[i]
+      const href = nodes[i].tagName === "A" ? nodes[i].href : null
+      const photo = nodes[i].tagName === "IMG" ? nodes[i] : nodes[i].childNodes[0]
+      const { src, alt, className } = photo
 
-      const imageFocusPoint = focusPoint[src.match(/DSC\d+/)] ?? []
+      const imageFocusPoint = focusPoint[src.match(/DSC\d+/)]
       const style = imageFocusPoint ? `object-position: ${imageFocusPoint}` : null
 
-      columns[idx] = [
-        ...columns[idx],
-        { src, alt, class: className, style },
-      ]
+      columns[idx] = [...columns[idx], { src, alt, class: className, style, href }]
     }
   }
 
@@ -47,17 +51,29 @@
   <slot />
 </div>
 
-<div class="root" style="--columns-count: {columnCount}">
+<div class="root" style="--columns-count: {columnCount}; --image-height: {imageHeight}">
   {#each columns as column}
     <div class="column">
       {#each column as img}
-        <img
-          src={img.src}
-          alt={img.alt}
-          on:click={handleClickPhoto}
-          class="img-hover column"
-          style={img.style}
-        />
+        {#if img.href}
+          <a href={img.href} target="_blank" rel="noopener noreferrer">
+            <img
+              src={img.src}
+              alt={img.alt}
+              on:click={handleClickPhoto}
+              class="img-hover column"
+              style={img.style}
+            />
+          </a>
+        {:else}
+          <img
+            src={img.src}
+            alt={img.alt}
+            on:click={handleClickPhoto}
+            class="img-hover column"
+            style={img.style}
+          />
+        {/if}
       {/each}
     </div>
   {/each}
@@ -82,7 +98,7 @@
 
   .root .column * {
     width: 100%;
-    height: 250px;
+    height: var(--image-height);
     margin-top: 10px;
     border-radius: 5px;
     object-fit: cover;

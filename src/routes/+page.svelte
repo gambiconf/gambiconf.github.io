@@ -5,12 +5,19 @@
   import RowWhereAndWhen from "../components/RowWhereAndWhen.svelte"
   import RowPartners from "../components/RowPartners.svelte"
   import RowWhatIsGambiConf from "../components/RowWhatIsGambiConf.svelte"
+  import RowEvent from "../components/RowEvent.svelte"
 </script>
 
 <Hero />
 
 <div class="wrapper-content">
   <div class="hero-margin" />
+
+  <RowEvent />
+
+  <div class="bullters-gutter-wrapper">
+    <BulletsGutter />
+  </div>
 
   <RowWhatIsGambiConf />
 

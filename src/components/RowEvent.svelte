@@ -4,6 +4,7 @@
   import { faVideo } from "@fortawesome/free-solid-svg-icons/faVideo"
   import { t } from "../store/locale"
   import Window from "./Window.svelte"
+  import Link from "./Link.svelte"
 </script>
 
 <div>
@@ -13,8 +14,8 @@
         <div class="video-container">
           <iframe
             class="video"
-            src="https://www.youtube.com/embed/gHW1SRT-hOY?si=lXTd2ZGO1rAEe_Zx"
-            title="YouTube video player / 2023 Edition"
+            src="https://www.youtube.com/embed/videoseries?si=OB21isYlfUUr6cxd&amp;list=PL5Vh5eXgFvesu0Y9izrwaxCYxH_J0iY77"
+            title="YouTube video player / 2024 Edition"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -23,15 +24,19 @@
       </div>
 
       <div class="links">
-        <a href="https://www.youtube.com/playlist?list=PL5Vh5eXgFvetvlqkc6mzw8PfOezNi65zQ" target="_blank" rel="noopener">
+        <Link
+          href="https://youtube.com/playlist?list=PL5Vh5eXgFvesu0Y9izrwaxCYxH_J0iY77"
+          target="_blank"
+          rel="noopener"
+        >
           <Fa icon={faVideo} />
           {$t("event-row--go-to-playlist")}
-        </a>
+        </Link>
 
-        <a href="/album">
+        <Link href="/album">
           <Fa icon={faPhotoFilm} />
           {$t("event-row--go-to-album")}
-        </a>
+        </Link>
       </div>
     </article>
   </Window>

@@ -32,6 +32,10 @@ body {
   margin: 0;
 }
 
+.body-content {
+  display: contents;
+}
+
 h1 {
   font-size: var(--h1-size);
 }

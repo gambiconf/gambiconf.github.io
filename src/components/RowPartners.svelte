@@ -34,10 +34,12 @@
       <img src={`${assets}/meteor.png`} alt="Meteor" />
     </a>
 
-    <Localized id="partners--become-a-partner" args={{ assets }} let:attrs>
-      <a href={attrs.href.replace(/\p{C}/gu, "")} target="_blank" rel="noopener">
-        <img src={attrs.src.replace(/\p{C}/gu, "")} alt={attrs.alt} />
-      </a>
+    <Localized id="partners--become-a-partner" args={{ assets }} >
+      {#snippet children({ attrs })}
+        <a href={attrs.href.replace(/\p{C}/gu, "")} target="_blank" rel="noopener">
+          <img src={attrs.src.replace(/\p{C}/gu, "")} alt={attrs.alt} />
+        </a>
+      {/snippet}
     </Localized>
   </div>
 </Window>

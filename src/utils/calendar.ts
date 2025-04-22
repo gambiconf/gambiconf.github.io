@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { stringify } from "query-string";
+import qs from "query-string";
 
 type CalendarEventParams = {
   title: string;
@@ -19,7 +19,7 @@ const getGoogleCalendarLink = ({ start, duration, title }: CalendarEventParams) 
     dates: `${startDate}/${endDate}`,
   };
 
-  return `https://calendar.google.com/calendar/render?${stringify(details)}`;
+  return `https://calendar.google.com/calendar/render?${qs.stringify(details)}`;
 };
 
 export { getGoogleCalendarLink };

@@ -11,7 +11,7 @@
   import "../app.css"
 
   onMount(() => {
-    let currentTheme = localStorage.getItem("theme") ?? "light"
+    const currentTheme = localStorage.getItem("theme") ?? "light"
     theme.set(currentTheme)
 
     document.getElementsByTagName("body")[0].setAttribute('theme', currentTheme)

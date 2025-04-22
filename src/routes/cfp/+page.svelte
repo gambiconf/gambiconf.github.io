@@ -182,36 +182,42 @@
       </div>
 
       <div class="field">
-        <Localized id="cfp--field-twitter-handler" let:attrs>
-          <label for="name">{attrs.label}</label>
-          <input
-            name="name"
-            type="text"
-            placeholder={attrs.placeholder}
-            bind:value={twitterHandler}
-          />
+        <Localized id="cfp--field-twitter-handler">
+          {#snippet children({ attrs })}
+            <label for="name">{attrs.label}</label>
+            <input
+              name="name"
+              type="text"
+              placeholder={attrs.placeholder}
+              bind:value={twitterHandler}
+            />
+          {/snippet}
         </Localized>
       </div>
 
       <div class="field">
-        <Localized id="cfp--field-language" let:attrs>
-          <label for="language">{attrs.label}</label>
-          <select name="language" required bind:value={language}>
-            <option value="only_portuguese">{attrs.optionPortuguese}</option>
-            <option value="only_english">{attrs.optionEnglish}</option>
-            <option value="portuguese_or_english">{attrs.optionPortugueseOrEnglish}</option>
-          </select>
+        <Localized id="cfp--field-language">
+          {#snippet children({ attrs })}  
+            <label for="language">{attrs.label}</label>
+            <select name="language" required bind:value={language}>
+              <option value="only_portuguese">{attrs.optionPortuguese}</option>
+              <option value="only_english">{attrs.optionEnglish}</option>
+              <option value="portuguese_or_english">{attrs.optionPortugueseOrEnglish}</option>
+            </select>
+          {/snippet}
         </Localized>
       </div>
 
       <div class="field">
-        <Localized id="cfp--field-type" let:attrs>
-          <label for="type">{attrs.label}</label>
-          <select name="type" required bind:value={type}>
-            <option value="talk">{attrs.optionTalk} </option>
-            <option value="workshop">{attrs.optionWorkshop} </option>
-          </select>
-          <label for="type" class="sublabel">{attrs.sublabel}</label>
+        <Localized id="cfp--field-type">
+          {#snippet children({ attrs })}
+            <label for="type">{attrs.label}</label>
+            <select name="type" required bind:value={type}>
+              <option value="talk">{attrs.optionTalk} </option>
+              <option value="workshop">{attrs.optionWorkshop} </option>
+            </select>
+            <label for="type" class="sublabel">{attrs.sublabel}</label>
+          {/snippet}
         </Localized>
       </div>
 
@@ -222,19 +228,21 @@
 
       <div class="field">
         <label for="description"><Localized id="cfp--field-description" /></label>
-        <textarea name="description" rows="4" required bind:value={description} />
+        <textarea name="description" rows="4" required bind:value={description}></textarea>
       </div>
 
       {#if type === "talk"}
         <div class="field">
-          <Localized id="cfp--field-ideal-duration" let:attrs>
-            <label for="duration">{attrs.label}</label>
-            <select name="duration" required bind:value={duration}>
-              <option value="15">{attrs.option15minutes} </option>
-              <option value="20">{attrs.option20minutes} </option>
-              <option value="30">{attrs.option30minutes} </option>
-              <option value="45">{attrs.option45minutes} </option>
-            </select>
+          <Localized id="cfp--field-ideal-duration">
+            {#snippet children({ attrs })}
+              <label for="duration">{attrs.label}</label>
+              <select name="duration" required bind:value={duration}>
+                <option value="15">{attrs.option15minutes} </option>
+                <option value="20">{attrs.option20minutes} </option>
+                <option value="30">{attrs.option30minutes} </option>
+                <option value="45">{attrs.option45minutes} </option>
+              </select>
+            {/snippet}
           </Localized>
         </div>
       {/if}
@@ -260,7 +268,7 @@
 
       <div class="field">
         <label for="bio"><Localized id="cfp--field-bio" /></label>
-        <textarea name="bio" rows="4" required bind:value={speakerBio} />
+        <textarea name="bio" rows="4" required bind:value={speakerBio}></textarea>
       </div>
 
       <span>
@@ -290,7 +298,7 @@
           rows="3"
           required
           bind:value={speakerSocialMedias}
-        />
+        ></textarea>
       </div>
 
       <div class="field">
@@ -300,7 +308,7 @@
 
       <div class="field">
         <label for="email"><Localized id="cfp--field-notes" /></label>
-        <textarea name="notes" rows="3" bind:value={notes} />
+        <textarea name="notes" rows="3" bind:value={notes}></textarea>
       </div>
 
       {#if submitState.status === "success" || submitState.status === "error"}

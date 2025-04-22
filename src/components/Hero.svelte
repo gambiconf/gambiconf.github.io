@@ -7,7 +7,7 @@
 </script>
 
 <section class="hero">
-  <div class="background-overlay" />
+  <div class="background-overlay"></div>
 
   <div class="message">
     <div class="mascot">

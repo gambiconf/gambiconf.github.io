@@ -54,7 +54,7 @@
 </script>
 
 {#if selectedPhoto}
-  <div class="selected-photo-background" on:click={handleClickSelectedPhotoBackground} />
+  <div class="selected-photo-background" on:click={handleClickSelectedPhotoBackground}></div>
 
   <div class="selected-photo-overlay">
     <img src={selectedPhoto} />

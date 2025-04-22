@@ -11,7 +11,7 @@
 <Hero />
 
 <div class="wrapper-content">
-  <div class="hero-margin" />
+  <div class="hero-margin"></div>
 
   <RowEvent />
 

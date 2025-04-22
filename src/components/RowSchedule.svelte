@@ -46,7 +46,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -70,7 +70,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -95,7 +95,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -118,7 +118,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -143,7 +143,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <div class="break">
@@ -151,7 +151,7 @@
       </div>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -174,7 +174,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -198,7 +198,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -223,7 +223,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -246,7 +246,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <div class="break">
@@ -254,7 +254,7 @@
       </div>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -280,7 +280,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -305,7 +305,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -330,7 +330,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -353,7 +353,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <h3><Localized id="schedule--second-day" /></h3>
@@ -379,7 +379,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -402,7 +402,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -449,7 +449,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -474,7 +474,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -501,7 +501,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot

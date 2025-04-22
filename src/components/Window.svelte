@@ -5,9 +5,9 @@
 <div class="window">
   <div class="title-bar">
     <div class="title-buttons">
-      <div class="button-close" />
-      <div class="button-minimize" />
-      <div class="button-expand" />
+      <div class="button-close"></div>
+      <div class="button-minimize"></div>
+      <div class="button-expand"></div>
     </div>
 
     <div>

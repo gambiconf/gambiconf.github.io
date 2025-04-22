@@ -294,7 +294,7 @@
         <label for="social"><Localized id="cfp--field-social-medias" /></label>
         <textarea
           name="social"
-          placeholder={"GitHub: macabeus\nStack Overflow: macabeus\n..."}
+          placeholder="GitHub: macabeus\nStack Overflow: macabeus\n..."
           rows="3"
           required
           bind:value={speakerSocialMedias}

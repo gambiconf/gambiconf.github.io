@@ -29,7 +29,7 @@
 </script>
 
 <div class="tweet">
-  <div class="profile-pic" style="background-image: url({`${assets}/tweet/avatar.png`})" />
+  <div class="profile-pic" style="background-image: url({`${assets}/tweet/avatar.png`})"></div>
 
   <div class="content">
     <div class="header">
@@ -45,7 +45,7 @@
     </div>
 
     <div class="text">
-      {#each body.split(/(\s)/) as word}
+      {#each body.split(/(\s)/) as word, i (i)}
         {#if word === "\n"}
           <br />
         {:else if word[0] === "@"}
@@ -53,7 +53,7 @@
         {:else}
           {word}
         {/if}
-        {" "}
+        {@html " "}
       {/each}
     </div>
 

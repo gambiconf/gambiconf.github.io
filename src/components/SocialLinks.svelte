@@ -40,7 +40,7 @@
 </script>
 
 <div class="social-links">
-  {#each links as link}
+  {#each links as link (link.url)}
     <a
       href={link.url}
       target="_blank"

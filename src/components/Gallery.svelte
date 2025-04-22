@@ -52,9 +52,9 @@
 </div>
 
 <div class="root" style="--columns-count: {columnCount}; --image-height: {imageHeight}">
-  {#each columns as column}
+  {#each columns as column, i (i)}
     <div class="column">
-      {#each column as img}
+      {#each column as img (img.src)}
         {#if img.href}
           <a href={img.href} target="_blank" rel="noopener noreferrer">
             <img

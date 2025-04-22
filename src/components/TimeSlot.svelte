@@ -33,7 +33,7 @@
     <slot />
   </p>
   
-  {#each members as member}
+  {#each members as member (member.name)}
     <div class="speaker">
       <div class="speaker-image-column">
         <img class="speaker-image" src={member.image} alt={member.name} />

@@ -83,7 +83,7 @@
 
   <div class="gallery">
     <Gallery on:photoClick={handlePhotoClick} {focusPoint}>
-      {#each photos as photo}
+      {#each photos as photo (photo)}
         <img src={photo} />
       {/each}
     </Gallery>

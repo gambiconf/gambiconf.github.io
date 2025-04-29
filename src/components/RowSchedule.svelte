@@ -530,6 +530,7 @@
         date="2024-11-03"
         hours="18:00"
         duration={45}
+        hasParagraph
         members={[
           {
             name: "Pedro Castilho (líder do painel)",

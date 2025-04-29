@@ -11,6 +11,7 @@
     date: string;
     hours?: string;
     duration: number;
+    hasParagraph?: boolean;
     children?: import('svelte').Snippet;
   }
 
@@ -20,6 +21,7 @@
     date,
     hours = '',
     duration,
+    hasParagraph = false,
     children
   }: Props = $props();
 
@@ -41,9 +43,15 @@
     </p>
   {/if}
 
-  <p class="talk-description">
-    {@render children?.()}
-  </p>
+  {#if hasParagraph}
+    <div class="talk-description">
+      {@render children?.()}
+    </div>
+  {:else}
+    <p class="talk-description">
+      {@render children?.()}
+    </p>
+  {/if}
   
   {#each members as member (member.name)}
     <div class="speaker">

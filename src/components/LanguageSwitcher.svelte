@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Br, Us } from "svelte-flag-icons"
   import Select from "svelte-select"
-  import { locale } from "../store/locale"
+  import { localeState } from "../store/locale.svelte";
 
   let language = $state("PT")
 
@@ -12,7 +12,7 @@
 
   const handleChange = (e) => {
     language = e.detail.label
-    locale.set(e.detail.label)
+    localeState.locale = e.detail.label;
   }
 </script>
 

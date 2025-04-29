@@ -4,17 +4,16 @@
   import { negotiateLanguages } from "@fluent/langneg"
   import translationsEn from "../../l10n/en.ftl?raw"
   import translationsPt from "../../l10n/pt.ftl?raw"
-  import { locale, bundle } from "../store/locale"
+  import { localeState } from "../store/locale.svelte"
 
   
   interface Props {
     // this could be stored in a user profile or browser localStorage
-    selectedLocale?: string;
     navigatorLanguages?: readonly string[];
     children?: import('svelte').Snippet;
   }
 
-  let { selectedLocale = $bindable(""), navigatorLanguages = "navigator" in globalThis ? globalThis.navigator.languages : [], children }: Props = $props();
+  let { navigatorLanguages = "navigator" in globalThis ? globalThis.navigator.languages : [], children }: Props = $props();
 
   const defaultLocale = "pt"
   const resources = {
@@ -35,17 +34,11 @@
       const fluentBundle = new FluentBundle(locale)
       fluentBundle.addResource(resources[locale])
 
-      bundle.set(fluentBundle)
-
       return fluentBundle
     })
   }
-
-  locale.subscribe((value) => {
-    selectedLocale = value
-  })
 </script>
 
-<FluentProvider bundles={generateBundles(selectedLocale ? [selectedLocale] : navigatorLanguages)}>
+<FluentProvider bundles={generateBundles(localeState.locale ? [localeState.locale] : navigatorLanguages)}>
   {@render children?.()}
 </FluentProvider>

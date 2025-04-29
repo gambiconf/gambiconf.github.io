@@ -4,13 +4,13 @@
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
   import { faDiscord } from "@fortawesome/free-brands-svg-icons/faDiscord"
   import { Overlay } from "@nubolab-ffwd/svelte-fluent"
-  import { t } from "../store/locale"
+  import { t } from "../store/locale.svelte"
   import Calendar from "./Calendar.svelte"
   import Link from "./Link.svelte"
   import Window from "./Window.svelte"
 </script>
 
-<Window title={$t("where-and-when--title")}>
+<Window title={t("where-and-when--title")}>
   <div class="content">
     <div class="calendar">
       <Calendar />

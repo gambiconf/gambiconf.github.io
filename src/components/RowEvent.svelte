@@ -2,17 +2,17 @@
   import { Fa } from "svelte-fa"
   import { faPhotoFilm } from "@fortawesome/free-solid-svg-icons/faPhotoFilm"
   import { faVideo } from "@fortawesome/free-solid-svg-icons/faVideo"
-  import { t } from "../store/locale"
+  import { t } from "../store/locale.svelte"
   import Window from "./Window.svelte"
   import Link from "./Link.svelte"
 </script>
 
 <div>
-  <Window title={$t("row-event--title")}>
+  <Window title={t("row-event--title")}>
     <article class="content">
       <div class="videos-row">
         <div>
-          <span>{$t("row-event--talks")}</span>
+          <span>{t("row-event--talks")}</span>
 
           <div class="video-container">
             <iframe
@@ -27,7 +27,7 @@
         </div>
 
         <div>
-          <span>{$t("row-event--panel")}</span>
+          <span>{t("row-event--panel")}</span>
 
           <div class="video-container">
             <iframe
@@ -49,12 +49,12 @@
           rel="noopener"
         >
           <Fa icon={faVideo} />
-          {$t("row-event--go-to-playlist")}
+          {t("row-event--go-to-playlist")}
         </Link>
 
         <Link href="/album">
           <Fa icon={faPhotoFilm} />
-          {$t("row-event--go-to-album")}
+          {t("row-event--go-to-album")}
         </Link>
       </div>
     </article>

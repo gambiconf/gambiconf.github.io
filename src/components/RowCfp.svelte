@@ -6,11 +6,11 @@
   import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
-  import { t } from "../store/locale"
+  import { t } from "../store/locale.svelte"
   import Window from "./Window.svelte"
 </script>
 
-<Window title={$t("call-for-proposal--title")}>
+<Window title={t("call-for-proposal--title")}>
   <div class="content">
     <div class="row">
       <div class="icon">

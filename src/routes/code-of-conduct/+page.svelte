@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { t } from "../../store/locale"
+  import { t } from "../../store/locale.svelte"
   import Window from "../../components/Window.svelte"
 </script>
 
 <div class="page">
-  <Window title={$t("code-of-conduct--title")}>
+  <Window title={t("code-of-conduct--title")}>
     <div class="code-of-conduct-content">
       <article>
         <h4>English</h4>

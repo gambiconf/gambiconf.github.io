@@ -2,7 +2,7 @@
   import { Overlay } from "@nubolab-ffwd/svelte-fluent"
   import { Fa, FaLayers } from "svelte-fa"
   import { faX } from "@fortawesome/free-solid-svg-icons/faX"
-  import { t } from "../../store/locale"
+  import { t } from "../../store/locale.svelte"
   import Link from "../../components/Link.svelte"
   import Gallery from "../../components/Gallery.svelte"
 
@@ -67,7 +67,7 @@
 {/if}
 
 <section>
-  <h1>{$t("album--title")}</h1>
+  <h1>{t("album--title")}</h1>
 
   <span>
     <!-- <Overlay id="album--description">

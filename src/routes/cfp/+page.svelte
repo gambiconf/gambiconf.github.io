@@ -10,7 +10,7 @@
   import type { TweetStatus } from "../../components/Tweet.svelte"
   import Window from "../../components/Window.svelte"
   import { tweetLength } from "../../utils/tweet"
-  import { t } from "../../store/locale"
+  import { t } from "../../store/locale.svelte"
   import { capitalize } from "../../utils/capitalize"
 
   let currentSubmissionId = $state("")
@@ -82,9 +82,9 @@
       })
 
       if (result) {
-        submitState = { status: "success", message: $t("cfp--submit-success") }
+        submitState = { status: "success", message: t("cfp--submit-success") }
       } else {
-        submitState = { status: "error", message: $t("cfp--submit-error") }
+        submitState = { status: "error", message: t("cfp--submit-error") }
       }
     } else {
       const result = await postSubmissions({
@@ -109,9 +109,9 @@
         url.searchParams.set("id", result.id)
         window.history.pushState(null, "", url.toString())
 
-        submitState = { status: "success", message: $t("cfp--submit-success") }
+        submitState = { status: "success", message: t("cfp--submit-success") }
       } else {
-        submitState = { status: "error", message: $t("cfp--submit-error") }
+        submitState = { status: "error", message: t("cfp--submit-error") }
       }
     }
   }
@@ -175,7 +175,7 @@
 </script>
 
 <div class="page">
-  <Window title={$t("cfp--title")}>
+  <Window title={t("cfp--title")}>
     <form onsubmit={handleSubmit}>
       <h4><Localized id="cfp--section-main" /></h4>
 

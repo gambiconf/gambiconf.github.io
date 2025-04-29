@@ -1,13 +1,13 @@
 <script lang="ts">
   import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
-  import { t } from "../store/locale"
+  import { t } from "../store/locale.svelte"
   import Link from "./Link.svelte"
   import Window from "./Window.svelte"
 </script>
 
 <div id="about">
-  <Window title={$t("row-what-is-gambiconf--title")}>
+  <Window title={t("row-what-is-gambiconf--title")}>
     <div class="content">
       <img class="icon" src={`${assets}/favicon.png`} alt="GambiConf icon" />
 

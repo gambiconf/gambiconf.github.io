@@ -1,12 +1,12 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
-  import { t } from "../store/locale"
+  import { t } from "../store/locale.svelte"
   import Window from "./Window.svelte"
   import { utmSource } from "../utils/constants"
 </script>
 
-<Window title={$t("partners--title")}>
+<Window title={t("partners--title")}>
   <h3 class="title"><Localized id="partners--sponsors" /></h3>
 
   <div class="grid grid-sponsors">

@@ -262,8 +262,8 @@
 
       <Tweet
         body={talkTweetPreview}
-        on:tweetStatusChanged={(event) => {
-          tweetTalkOnAlert = event.detail.tweetStatus
+        tweetStatusChanged={(status) => {
+          tweetTalkOnAlert = status
         }}
       />
 
@@ -286,8 +286,8 @@
 
       <Tweet
         body={speakerTweetPreview}
-        on:tweetStatusChanged={(event) => {
-          tweetBioOnAlert = event.detail.tweetStatus
+        tweetStatusChanged={(status) => {
+          tweetBioOnAlert = status
         }}
       />
 

@@ -1,36 +1,61 @@
-<script>
-  import { onMount, createEventDispatcher } from "svelte"
+<script lang="ts">
+  import { onMount } from "svelte"
 
-  export let focusPoint = {}
-  export let columnCount = 4
-  export let imageHeight = "250px"
+  interface Column {
+    href: string | null
+    src: string
+    alt: string
+    class: string
+    style: string | null
+  }
+  
+  interface ImageFocusPoint {
+    [key: string]: string
+  }
 
-  const dispatch = createEventDispatcher()
+  interface Props {
+    focusPoint?: ImageFocusPoint;
+    columnCount?: number;
+    imageHeight?: string;
+    photoClick?: (args: { src: string }) => void;
+    children?: import('svelte').Snippet;
+  }
 
-  let slotHolder = null
-  let columns = []
+  let {
+    focusPoint = {},
+    columnCount = 4,
+    imageHeight = "250px",
+    photoClick,
+    children
+  }: Props = $props();
+
+  let slotHolder = $state<HTMLDivElement | null>(null)
+  let columns = $state<Column[][]>([])
 
   const handleClickPhoto = (e) => {
-    dispatch("photoClick", { src: e.target.src })
+    photoClick?.({ src: e.target.src })
   }
 
   const draw = () => {
+    if (!slotHolder) return
+
     const nodes = Array.from(slotHolder.childNodes).filter(
       (child) =>
-        child.tagName === "IMG" ||
-        (child.tagName === "A" && child.childNodes[0].tagName === "IMG"),
-    )
+        child instanceof HTMLElement &&
+        (child.tagName === "IMG" ||
+        (child.tagName === "A" && child.childNodes[0] instanceof HTMLElement && child.childNodes[0].tagName === "IMG")),
+    ) as HTMLElement[]
 
     columns = new Array(columnCount).fill([])
 
     for (let i = 0; i < nodes.length; i++) {
       const idx = i % columnCount
 
-      const href = nodes[i].tagName === "A" ? nodes[i].href : null
+      const href = nodes[i].tagName === "A" ? (nodes[i] as HTMLAnchorElement).href : null
       const photo = nodes[i].tagName === "IMG" ? nodes[i] : nodes[i].childNodes[0]
-      const { src, alt, className } = photo
+      const { src, alt, className } = photo as HTMLImageElement
 
-      const imageFocusPoint = focusPoint[src.match(/DSC\d+/)]
+      const imageFocusPoint = focusPoint[src?.match(/DSC\d+/)?.toString() ?? ""]
       const style = imageFocusPoint ? `object-position: ${imageFocusPoint}` : null
 
       columns[idx] = [...columns[idx], { src, alt, class: className, style, href }]
@@ -41,14 +66,14 @@
     draw()
 
     const observer = new MutationObserver(draw)
-    observer.observe(slotHolder, { childList: true })
+    observer.observe(slotHolder as Node, { childList: true })
 
     return () => observer.disconnect()
   })
 </script>
 
 <div class="slot-holder" bind:this={slotHolder}>
-  <slot />
+  {@render children?.()}
 </div>
 
 <div class="root" style="--columns-count: {columnCount}; --image-height: {imageHeight}">
@@ -60,7 +85,7 @@
             <img
               src={img.src}
               alt={img.alt}
-              on:click={handleClickPhoto}
+              onclick={handleClickPhoto}
               class="img-hover column"
               style={img.style}
             />
@@ -69,7 +94,7 @@
           <img
             src={img.src}
             alt={img.alt}
-            on:click={handleClickPhoto}
+            onclick={handleClickPhoto}
             class="img-hover column"
             style={img.style}
           />

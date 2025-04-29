@@ -6,7 +6,7 @@
   import Link from "../../components/Link.svelte"
   import Gallery from "../../components/Gallery.svelte"
 
-  let selectedPhoto: string | null = null
+  let selectedPhoto: string | null = $state(null)
 
   const focusPoint = {
     DSC06987: "0 16%",
@@ -37,15 +37,14 @@
     selectedPhoto = null
   }
 
-  const importPhotos = import.meta.glob("../../../static/photos/*.jpg")
-  let photos: string[] = []
+  const importPhotos = import.meta.glob<{default: string}>("../../../static/photos/*.jpg")
+  let photos: string[] = $state([])
 
   const loadPhotos = async () => {
     const sortedPhotos = Object.keys(importPhotos).sort((a, b) => a.localeCompare(b))
 
     for (const path of sortedPhotos) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const mod = (await importPhotos[path]()) as any
+      const mod = (await importPhotos[path]())
       photos = [...photos, mod.default]
     }
   }
@@ -54,12 +53,12 @@
 </script>
 
 {#if selectedPhoto}
-  <div class="selected-photo-background" on:click={handleClickSelectedPhotoBackground}></div>
+  <div class="selected-photo-background" onclick={handleClickSelectedPhotoBackground}></div>
 
   <div class="selected-photo-overlay">
     <img src={selectedPhoto} />
 
-    <div class="close" on:click={handleClickSelectedPhotoBackground}>
+    <div class="close" onclick={handleClickSelectedPhotoBackground}>
       <FaLayers size="2x">
         <Fa scale={0.6} icon={faX} />
       </FaLayers>
@@ -82,7 +81,7 @@
   </span>
 
   <div class="gallery">
-    <Gallery on:photoClick={handlePhotoClick} {focusPoint}>
+    <Gallery photoClick={handlePhotoClick} {focusPoint}>
       {#each photos as photo (photo)}
         <img src={photo} />
       {/each}

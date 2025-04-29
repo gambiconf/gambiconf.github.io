@@ -1,6 +1,10 @@
 <script lang="ts">
-  export let status: "success" | "error"
-  export let message: string
+  interface Props {
+    status: "success" | "error";
+    message: string;
+  }
+
+  let { status, message }: Props = $props();
 </script>
 
 <div class={status}>

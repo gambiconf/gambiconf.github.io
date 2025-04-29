@@ -3,7 +3,7 @@
   import Select from "svelte-select"
   import { locale } from "../store/locale"
 
-  let language = "PT"
+  let language = $state("PT")
 
   let items = [
     { flag: "br", label: "PT" },

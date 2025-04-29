@@ -5,11 +5,23 @@
   import type { SocialLink } from "./SocialLinks.svelte"
   import Link from "./Link.svelte"
 
-  export let title: string
-  export let members: Array<{ image: string; socialLinks: SocialLink[]; name: string; bio?: string }>
-  export let date: string
-  export let hours: string = ''
-  export let duration: number
+  interface Props {
+    title: string;
+    members: Array<{ image: string; socialLinks: SocialLink[]; name: string; bio?: string }>;
+    date: string;
+    hours?: string;
+    duration: number;
+    children?: import('svelte').Snippet;
+  }
+
+  let {
+    title,
+    members,
+    date,
+    hours = '',
+    duration,
+    children
+  }: Props = $props();
 
   const googleCalendarLink = getGoogleCalendarLink({
     title: `[GambiConf] ${title}`,
@@ -30,7 +42,7 @@
   {/if}
 
   <p class="talk-description">
-    <slot />
+    {@render children?.()}
   </p>
   
   {#each members as member (member.name)}

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { base } from "$app/paths"
   import { onMount } from "svelte"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
@@ -7,12 +7,18 @@
   import Header from "../components/Header.svelte"
   import LocalizationProvider from "../providers/LocalizationProvider.svelte"
   import { theme } from "../store/theme"
-
+  import type { Theme } from "../store/theme"
   import "../app.css"
+
+  interface Props {
+    children?: import('svelte').Snippet;
+  }
+
+  let { children }: Props = $props();
 
   onMount(() => {
     const currentTheme = localStorage.getItem("theme") ?? "light"
-    theme.set(currentTheme)
+    theme.set(currentTheme as Theme)
 
     document.getElementsByTagName("body")[0].setAttribute('theme', currentTheme)
   })
@@ -26,12 +32,15 @@
 </svelte:head>
 
 <LocalizationProvider>
-  <title><Localized id="title" /></title>
-
+  <Localized id="title">
+    {#snippet children({ text })}
+      <title>{text}</title>
+    {/snippet}
+  </Localized>
   <Header />
 
   <main>
-    <slot />
+    {@render children?.()}
   </main>
 
   <Footer />

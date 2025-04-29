@@ -1,4 +1,4 @@
-<script context="module" lang="ts">
+<script module lang="ts">
   export type SocialLink = {
     type: "github" | "linkedin" | "twitch" | "twitter" | "facebook" | "instagram" | "hackerNews" | "mastodon" | "medium" | "bluesky" | "googleScholar" | "website"
     url: string
@@ -21,7 +21,11 @@
   import { faMortarBoard } from "@fortawesome/free-solid-svg-icons/faMortarBoard"
   import type { IconDefinition } from "@fortawesome/fontawesome-common-types"
 
-  export let links: SocialLink[]
+  interface Props {
+    links: SocialLink[];
+  }
+
+  let { links }: Props = $props();
 
   const mapLinkTypeToIcon: { [link in SocialLink["type"]]: IconDefinition } = {
     github: faGithub,

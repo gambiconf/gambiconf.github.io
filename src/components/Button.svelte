@@ -1,10 +1,15 @@
 <script lang="ts">
-  export let url: string
+  interface Props {
+    url: string;
+    children?: import('svelte').Snippet;
+  }
+
+  let { url, children }: Props = $props();
 </script>
 
 <div class="button">
   <a href={url} target="_blank" rel="noopener noreferrer">
-    <slot />
+    {@render children?.()}
   </a>
 </div>
 

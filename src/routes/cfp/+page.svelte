@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { preventDefault } from 'svelte/legacy';
+
   import { onMount } from "svelte"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { Circle } from "svelte-loading-spinners"
@@ -11,35 +13,35 @@
   import { t } from "../../store/locale"
   import { capitalize } from "../../utils/capitalize"
 
-  let currentSubmissionId = ""
-  let showSubmitNewEntryButton = false
+  let currentSubmissionId = $state("")
+  let showSubmitNewEntryButton = $state(false)
 
-  let speakerName = ""
-  let twitterHandler = ""
-  let type = ""
-  let title = ""
-  let description = ""
-  let duration = ""
-  let language = ""
-  let speakerBio = ""
-  let speakerSocialMedias = ""
-  let speakerEmail = ""
-  let notes = ""
+  let speakerName = $state("")
+  let twitterHandler = $state("")
+  let type = $state("")
+  let title = $state("")
+  let description = $state("")
+  let duration = $state("")
+  let language = $state("")
+  let speakerBio = $state("")
+  let speakerSocialMedias = $state("")
+  let speakerEmail = $state("")
+  let notes = $state("")
 
-  let tweetTalkOnAlert: TweetStatus = "ok"
-  let tweetBioOnAlert: TweetStatus = "ok"
+  let tweetTalkOnAlert: TweetStatus = $state("ok")
+  let tweetBioOnAlert: TweetStatus = $state("ok")
 
-  $: talkTweetPreview =
-    language === "only_english"
+  let talkTweetPreview =
+    $derived(language === "only_english"
       ? `${capitalize(type)} "${title}" by ${
           twitterHandler || speakerName
         } (in 🇺🇸)\n\n${description}`
-      : `${capitalize(type)} "${title}" por ${twitterHandler || speakerName}\n\n${description}`
+      : `${capitalize(type)} "${title}" por ${twitterHandler || speakerName}\n\n${description}`)
 
-  $: speakerTweetPreview =
-    language === "only_english"
+  let speakerTweetPreview =
+    $derived(language === "only_english"
       ? `About the speaker:\n${speakerBio}`
-      : `Sobre o palestrante:\n${speakerBio}`
+      : `Sobre o palestrante:\n${speakerBio}`)
 
   let submitState:
     | { status: "submitting" }
@@ -47,9 +49,10 @@
     | {
         status: "success" | "error"
         message: string
-      } = { status: "idle" }
+      } = $state({ status: "idle" })
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e: Event) => {
+    e.preventDefault()
     if (tweetLength(talkTweetPreview) > 270) {
       submitState = { status: "error", message: "Tweet talk exceeds 270 characters" }
       return
@@ -173,7 +176,7 @@
 
 <div class="page">
   <Window title={$t("cfp--title")}>
-    <form on:submit|preventDefault={handleSubmit}>
+    <form onsubmit={handleSubmit}>
       <h4><Localized id="cfp--section-main" /></h4>
 
       <div class="field">
@@ -328,7 +331,7 @@
       </button>
 
       {#if showSubmitNewEntryButton}
-        <button type="submit" class="outline" on:click={clearForm}>
+        <button type="submit" class="outline" onclick={clearForm}>
           <Localized id="cfp--clear-form" />
         </button>
       {/if}

@@ -6,9 +6,15 @@
   import translationsPt from "../../l10n/pt.ftl?raw"
   import { locale, bundle } from "../store/locale"
 
-  // this could be stored in a user profile or browser localStorage
-  export let selectedLocale = ""
-  export let navigatorLanguages = "navigator" in globalThis ? globalThis.navigator.languages : []
+  
+  interface Props {
+    // this could be stored in a user profile or browser localStorage
+    selectedLocale?: string;
+    navigatorLanguages?: readonly string[];
+    children?: import('svelte').Snippet;
+  }
+
+  let { selectedLocale = $bindable(""), navigatorLanguages = "navigator" in globalThis ? globalThis.navigator.languages : [], children }: Props = $props();
 
   const defaultLocale = "pt"
   const resources = {
@@ -41,5 +47,5 @@
 </script>
 
 <FluentProvider bundles={generateBundles(selectedLocale ? [selectedLocale] : navigatorLanguages)}>
-  <slot />
+  {@render children?.()}
 </FluentProvider>

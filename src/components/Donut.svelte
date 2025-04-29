@@ -1,15 +1,24 @@
-<script>
-  export let size = 100
-  export let percent = 0
-  export let bgColor = "#304BA5"
-  export let fgColor = "#E5E5E5"
+<script lang="ts">
+  interface Props {
+    size?: number;
+    percent?: number;
+    bgColor?: string;
+    fgColor?: string;
+  }
 
-  $: viewBox = `0 0 ${size} ${size}`
+  let {
+    size = 100,
+    percent = 0,
+    bgColor = "#304BA5",
+    fgColor = "#E5E5E5"
+  }: Props = $props();
 
-  $: radius = size / 2
-  $: halfCircumference = Math.PI * radius
-  $: pieSize = halfCircumference * (percent / 100)
-  $: dashArray = `0 ${halfCircumference - pieSize} ${pieSize}`
+  let viewBox = $derived(`0 0 ${size} ${size}`)
+
+  let radius = $derived(size / 2)
+  let halfCircumference = $derived(Math.PI * radius)
+  let pieSize = $derived(halfCircumference * (percent / 100))
+  let dashArray = $derived(`0 ${halfCircumference - pieSize} ${pieSize}`)
 </script>
 
 <svg width={size} height={size} {viewBox}>

@@ -16,7 +16,7 @@
   }
 </script>
 
-<div class="theme-switch-wrapper" on:click={toggleTheme}>
+<div class="theme-switch-wrapper" onclick={toggleTheme}>
   <div class="icons">
     {#if $theme === "light"}
       <FaLayers>

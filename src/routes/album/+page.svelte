@@ -28,7 +28,7 @@
   }
 
   const handlePhotoClick = (e) => {
-    selectedPhoto = e.detail.src
+    selectedPhoto = e.src
       .replace(/-[\w\d]+/, "")
       .replace(/.*DSC/, "https://storage.googleapis.com/gambiconf-2024-photos/DSC")
   }
@@ -70,14 +70,14 @@
   <h1>{$t("album--title")}</h1>
 
   <span>
-    <Overlay id="album--description">
+    <!-- <Overlay id="album--description">
       <Link l10n="link-author-1" href="https://twitter.com/agaelebe" />
       <Link l10n="link-author-2" href="https://www.instagram.com/duckthemadquacker" />
       <Link
         l10n="download"
         href="https://storage.googleapis.com/gambiconf-2024-photos/gambiconf-2024-photos.zip"
       />
-    </Overlay>
+    </Overlay> -->
   </span>
 
   <div class="gallery">

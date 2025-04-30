@@ -3,7 +3,7 @@
   import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot"
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
   import { faDiscord } from "@fortawesome/free-brands-svg-icons/faDiscord"
-  import { Overlay } from "@nubolab-ffwd/svelte-fluent"
+  import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { t } from "../store/locale.svelte"
   import Calendar from "./Calendar.svelte"
   import Link from "./Link.svelte"
@@ -20,25 +20,28 @@
       <p>
         <Fa icon={faLocationDot} />
 
-        <Overlay id="where-and-when--body-paragraph-1">
-          <Link l10n="link" href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7" />
-        </Overlay>
+        <Localized id="where-and-when--body-paragraph-1-part-1" />
+        <Link l10n="link" href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7">
+          <Localized id="where-and-when--body-paragraph-1-link" />
+        </Link>
       </p>
 
       <p>
         <Fa icon={faYoutube} />
 
-        <Overlay id="where-and-when--body-paragraph-2">
-          <Link l10n="link" href="https://www.youtube.com/@gambiconf" />
-        </Overlay>
+        <Localized id="where-and-when--body-paragraph-2-part-1" />
+        <Link l10n="link" href="https://www.youtube.com/@gambiconf">
+          <Localized id="where-and-when--body-paragraph-2-link" />
+        </Link>
       </p>
 
       <p>
         <Fa icon={faDiscord} />
 
-        <Overlay id="where-and-when--body-paragraph-3">
-          <Link l10n="link" href="https://discord.gg/P2tR4xnqfJ" />
-        </Overlay>
+        <Localized id="where-and-when--body-paragraph-3-part-1" />
+        <Link l10n="link" href="https://discord.gg/P2tR4xnqfJ">
+          <Localized id="where-and-when--body-paragraph-3-link" />
+        </Link>
       </p>
     </div>
   </div>

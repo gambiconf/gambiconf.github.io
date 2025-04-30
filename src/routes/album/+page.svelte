@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Overlay } from "@nubolab-ffwd/svelte-fluent"
+  import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { Fa, FaLayers } from "svelte-fa"
   import { faX } from "@fortawesome/free-solid-svg-icons/faX"
   import { t } from "../../store/locale.svelte"
@@ -37,14 +37,14 @@
     selectedPhoto = null
   }
 
-  const importPhotos = import.meta.glob<{default: string}>("../../../static/photos/*.jpg")
+  const importPhotos = import.meta.glob<{ default: string }>("../../../static/photos/*.jpg")
   let photos: string[] = $state([])
 
   const loadPhotos = async () => {
     const sortedPhotos = Object.keys(importPhotos).sort((a, b) => a.localeCompare(b))
 
     for (const path of sortedPhotos) {
-      const mod = (await importPhotos[path]())
+      const mod = await importPhotos[path]()
       photos = [...photos, mod.default]
     }
   }
@@ -70,14 +70,21 @@
   <h1>{t("album--title")}</h1>
 
   <span>
-    <!-- <Overlay id="album--description">
-      <Link l10n="link-author-1" href="https://twitter.com/agaelebe" />
-      <Link l10n="link-author-2" href="https://www.instagram.com/duckthemadquacker" />
-      <Link
-        l10n="download"
-        href="https://storage.googleapis.com/gambiconf-2024-photos/gambiconf-2024-photos.zip"
-      />
-    </Overlay> -->
+    <Localized id="album--description-part-1" />
+    <Link l10n="link-author-1" href="https://twitter.com/agaelebe">
+      <Localized id="album--description-link-author-1" />
+    </Link>
+    <Localized id="album--description-part-2" />
+    <Link l10n="link-author-2" href="https://www.instagram.com/duckthemadquacker">
+      <Localized id="album--description-link-author-2" />
+    </Link>
+    <Localized id="album--description-part-3" />
+    <Link
+      l10n="download"
+      href="https://storage.googleapis.com/gambiconf-2024-photos/gambiconf-2024-photos.zip"
+    >
+      <Localized id="album--description-link-download" />
+    </Link>
   </span>
 
   <div class="gallery">

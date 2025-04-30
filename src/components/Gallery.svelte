@@ -83,6 +83,7 @@
         {#if img.href}
           <a href={img.href} target="_blank" rel="noopener noreferrer">
             <img
+              loading="lazy"
               src={img.src}
               alt={img.alt}
               onclick={handleClickPhoto}
@@ -92,6 +93,7 @@
           </a>
         {:else}
           <img
+            loading="lazy"
             src={img.src}
             alt={img.alt}
             onclick={handleClickPhoto}

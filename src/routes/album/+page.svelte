@@ -91,7 +91,7 @@
   <div class="gallery">
     <Gallery photoClick={handlePhotoClick} {focusPoint}>
       {#each photos as photo (photo)}
-        <img src={photo} />
+        <img src={photo} loading="lazy" />
       {/each}
     </Gallery>
   </div>

@@ -6,6 +6,7 @@
   import RowPartners from "../components/RowPartners.svelte"
   import RowWhatIsGambiConf from "../components/RowWhatIsGambiConf.svelte"
   import RowEvent from "../components/RowEvent.svelte"
+  import RowCfp from "../components/RowCfp.svelte"
 </script>
 
 <Hero />
@@ -13,12 +14,12 @@
 <div class="wrapper-content">
   <div class="hero-margin"></div>
 
-  <RowEvent />
+  <!-- <RowEvent />
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />
   </div>
-
+ -->
   <RowWhatIsGambiConf />
 
   <div class="bullters-gutter-wrapper">
@@ -31,7 +32,9 @@
     <BulletsGutter />
   </div>
 
-  <RowSchedule />
+  <RowCfp />
+
+  <!-- <RowSchedule /> -->
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />

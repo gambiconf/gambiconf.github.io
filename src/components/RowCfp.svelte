@@ -1,13 +1,10 @@
 <script lang="ts">
-  import { Fa, FaLayers } from "svelte-fa"
-  import { faCircle } from "@fortawesome/free-solid-svg-icons/faCircle"
-  import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram"
-  import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin"
-  import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
-  import { Localized } from "@nubolab-ffwd/svelte-fluent"
+  import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
-  import { t } from "../store/locale.svelte"
+  import { base } from "$app/paths"
+  import Link from "./Link.svelte"
   import Window from "./Window.svelte"
+  import { t } from "../store/locale.svelte"
 </script>
 
 <Window title={t("call-for-proposal--title")}>
@@ -19,56 +16,33 @@
 
       <div>
         <p>
-          <Localized id="call-for-proposal--body-paragraph-1" />
+          <Localized id="call-for-proposal--body-paragraph-1-part-1" />
+          <strong><Localized id="call-for-proposal--body-paragraph-1-talk" /></strong>
+          <Localized id="call-for-proposal--body-paragraph-1-part-2" />
         </p>
 
         <p>
-          <Localized id="call-for-proposal--body-paragraph-2" />
+          <Localized id="call-for-proposal--body-paragraph-2-part-1" />
+          <strong><Localized id="call-for-proposal--body-paragraph-2-workshop" /></strong>
+          <Localized id="call-for-proposal--body-paragraph-2-part-2" />
+        </p>
+
+        <p>
+          <Localized id="call-for-proposal--body-paragraph-3-part-1" />
+          <Link l10n="link" href="/previous-editions">
+            <Localized id="call-for-proposal--body-paragraph-3-link" />
+          </Link>
+          <Localized id="call-for-proposal--body-paragraph-3-part-2" />
+        </p>
+
+        <p>
+          <Localized id="call-for-proposal--body-paragraph-4" />
         </p>
       </div>
     </div>
 
-    <div class="social-links-container">
-      <div>
-        <a
-          href="https://twitter.com/gambiconf"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Twitter"
-          class="social-media-icon"
-        >
-          <FaLayers size="2x">
-            <Fa icon={faCircle} />
-            <Fa color="white" scale={0.6} icon={faTwitter} />
-          </FaLayers>
-        </a>
-
-        <a
-          href="https://www.linkedin.com/company/gambiconf"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Linkedin"
-          class="social-media-icon"
-        >
-          <FaLayers size="2x">
-            <Fa icon={faCircle} />
-            <Fa color="white" scale={0.6} icon={faLinkedin} />
-          </FaLayers>
-        </a>
-
-        <a
-          href="https://www.instagram.com/gambiconf"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          class="social-media-icon"
-        >
-          <FaLayers size="2x">
-            <Fa icon={faCircle} />
-            <Fa color="white" scale={0.6} icon={faInstagram} />
-          </FaLayers>
-        </a>
-      </div>
+    <div class="button">
+      <a class="button-cfp" href={`${base}/cfp`}><Localized id="call-for-proposal--cta" /></a>
     </div>
   </div>
 </Window>
@@ -87,16 +61,26 @@
     margin-top: 0;
   }
 
-  .social-links-container {
+  .button {
     display: flex;
     justify-content: center;
   }
 
-  .social-media-icon {
-    color: #f34b21;
+  .button-cfp {
+    padding: 10px;
+    border-radius: 4px;
+    min-width: 25%;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.4s;
   }
-  .social-media-icon:hover {
-    filter: brightness(0.8);
+  .button-cfp:visited {
+    color: white;
+  }
+  .button-cfp:hover {
+    transform: scale(0.99);
+    filter: brightness(0.9);
   }
 
   @media screen and (min-width: 768px) {

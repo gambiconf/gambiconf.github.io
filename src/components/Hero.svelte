@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { Fa } from "svelte-fa"
+  import { faMapLocation } from "@fortawesome/free-solid-svg-icons/faMapLocation"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
   import { theme } from "../store/theme"
@@ -36,26 +38,45 @@
     </h4>
 
     <p class="location">
-      <span>
-        <Localized id="hero--location-first-line" />
-      </span>
+      <Link
+        href="https://maps.app.goo.gl/PadW6Y4RLhYqxz796"
+        externalIcon
+        --color={$theme === "light" ? "rgba(0, 0, 0)" : "rgba(255, 255, 255)"}
+        --hover-color={$theme === "light" ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.7)"}
+      >
+        <strong>Sábado:</strong>
 
-      <span>
-        <Localized id="hero--location-second-line" />
-      </span>
+        <Localized id="hero--location-first-line" />
+
+        <Fa icon={faMapLocation} />
+
+        Ver Mapa
+      </Link>
 
       <Link
         href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7"
         externalIcon
-        --color={$theme === 'light' ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)'}
-        --hover-color={$theme === 'light' ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.7)'}
+        --color={$theme === "light" ? "rgba(0, 0, 0)" : "rgba(255, 255, 255)"}
+        --hover-color={$theme === "light" ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.7)"}
       >
-        <Localized id="hero--location-see-map" />
+        <strong>Domingo:</strong>
+
+        <Localized id="hero--location-second-line" />
+
+        <Fa icon={faMapLocation} />
+
+        Ver Mapa
       </Link>
+
+      <br />
+
+      <span>
+        <Localized id="hero--location-third-line" />
+      </span>
     </p>
 
     <div class="action">
-      <Button url="https://www.eventbrite.com/e/gambiconf-quarta-edicao-tickets-937165847277">
+      <Button url="/cfp">
         <Localized id="hero--cta" />
       </Button>
     </div>
@@ -87,7 +108,7 @@
     height: 50vh;
     width: 100%;
 
-    top: 85%;
+    top: 90%;
   }
   .mascot img {
     max-height: 100%;
@@ -139,6 +160,8 @@
 
   .action {
     margin-top: 25px;
+    width: 50%;
+    margin-inline: auto;
   }
 
   @media screen and (min-width: 768px) {
@@ -147,16 +170,20 @@
       height: 60vh;
 
       top: auto;
-      right: 230px;
+      right: 300px;
 
       margin-top: 20vh;
     }
 
     .message {
-      max-width: 330px;
+      max-width: 350px;
 
       margin-right: auto;
       margin-left: auto;
+    }
+
+    .action {
+      width: 100%;
     }
   }
 </style>

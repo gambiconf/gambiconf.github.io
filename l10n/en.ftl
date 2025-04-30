@@ -11,12 +11,13 @@ header--schedule = Schedule
 ## Hero
 
 hero--subtitle = The Blow Your Mind Conference
-hero--date-first-line = November
-hero--date-second-line = 02nd and 03rd
-hero--location-first-line = USP - Campus Butantã
-hero--location-second-line = São Paulo, Brazil
+hero--date-first-line = Weekend of
+hero--date-second-line = 29th and 30th
+hero--location-first-line = TOTVS -
+hero--location-second-line = USP Butantã -
+hero--location-third-line = São Paulo, Brazil
 hero--location-see-map = See on the map
-hero--cta = Buy your ticket
+hero--cta = Apply for the CFP
 
 ## Event Row
 
@@ -47,7 +48,7 @@ row-what-is-gambiconf--body-paragraph-4-part-1 = Based on conferences like
 row-what-is-gambiconf--body-paragraph-4-link-bangbangcon = !!Con
 row-what-is-gambiconf--body-paragraph-4-part-2 = and
 row-what-is-gambiconf--body-paragraph-4-link-sigbovik = SIGBOVIK
-row-what-is-gambiconf--body-paragraph-4-part-3 = it'll be our 4th edition!
+row-what-is-gambiconf--body-paragraph-4-part-3 = it'll be our 5th edition!
 row-what-is-gambiconf--body-paragraph-4-link-old-editions = Check here
 row-what-is-gambiconf--body-paragraph-4-part-4 = how was the previous editions!
 
@@ -70,7 +71,7 @@ where-and-when--body-paragraph-3-part-2 = .
 
 ## Calendar
 
-calendar--month = November 2024
+calendar--month = November 2025
 calendar--sunday = Su
 calendar--monday = Mo
 calendar--tuesday = Tu
@@ -82,10 +83,19 @@ calendar--saturday = Sa
 ## Call for Proposal
 
 call-for-proposal--title = Call for Proposal
-call-for-proposal--body-paragraph-1 =
-  The CFP is closed. Soon, we will respond to everyone who has submitted and announce the approved ones on our social media.
-call-for-proposal--body-paragraph-2 = Follow us to get updates as soon as we have news!
-call-for-proposal--cta = Apply to the CFP
+call-for-proposal--body-paragraph-1-part-1 =
+  If you want to share an ingenious work on a personal project or something underground involving
+  computing, come present your
+call-for-proposal--body-paragraph-1-talk = talk
+call-for-proposal--body-paragraph-1-part-2 = on Saturday!
+call-for-proposal--body-paragraph-2-part-1 = If you prefer to focus on a hands-on experience with the community, you can choose to lead a
+call-for-proposal--body-paragraph-2-workshop = workshop
+call-for-proposal--body-paragraph-2-part-2 = on Sunday!
+call-for-proposal--body-paragraph-3-part-1 = If you're short on ideas, check out
+call-for-proposal--body-paragraph-3-link = the previous editions
+call-for-proposal--body-paragraph-3-part-2 = for inspiration.
+call-for-proposal--body-paragraph-4 = The deadline is June 1st.
+call-for-proposal--cta = Submit to CFP
 
 ## Partners
 
@@ -150,11 +160,11 @@ cfp--clear-form = Clear form to submit a new entry
 ## Schedule
 
 schedule--title = Schedule
-schedule--first-day = November 02nd
+schedule--first-day = November 29th
 schedule--presentation-opening-ceremony-first-day-title = Opening Ceremony
 schedule--presentation-opening-ceremony-first-day-description = Welcome to the event!
 schedule--presentation-opening-ceremony-first-day-bio = Hey! I love engaging people in developing personal projects for fun and sharing out-of-the-box ideas - and organizing GambiConf is spreading that passion!
-schedule--second-day = November 03rd
+schedule--second-day = November 30th
 schedule--presentation-opening-ceremony-second-day-title = Opening Ceremony (2nd day)
 schedule--presentation-opening-ceremony-second-day-description = Welcome to the event! Let's talk about the workshops! Note: All workshops happen at the same time, and you need to choose one of them.
 schedule--lunch = Lunch Time

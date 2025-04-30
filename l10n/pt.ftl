@@ -11,12 +11,12 @@ header--schedule = Agenda
 ## Hero
 
 hero--subtitle = The Blow Your Mind Conference
-hero--date-first-line = 02 e 03 de
-hero--date-second-line = Novembro
-hero--location-first-line = USP - Campus Butantã
-hero--location-second-line = São Paulo, Brasil
-hero--location-see-map = Ver no mapa
-hero--cta = Compre o seu ingresso
+hero--date-first-line = Fim de semana de
+hero--date-second-line = 29 e 30 de Novembro
+hero--location-first-line = TOTVS -
+hero--location-second-line = USP Butantã -
+hero--location-third-line = São Paulo, Brasil
+hero--cta = Submeta no CFP
 
 ## Event Row
 
@@ -47,7 +47,7 @@ row-what-is-gambiconf--body-paragraph-4-part-1 = Inspirada em conferências como
 row-what-is-gambiconf--body-paragraph-4-link-bangbangcon = !!Con
 row-what-is-gambiconf--body-paragraph-4-part-2 = e da
 row-what-is-gambiconf--body-paragraph-4-link-sigbovik = SIGBOVIK
-row-what-is-gambiconf--body-paragraph-4-part-3 = estamos indo para a quarta edição!
+row-what-is-gambiconf--body-paragraph-4-part-3 = estamos indo para a quinta edição!
 row-what-is-gambiconf--body-paragraph-4-link-old-editions = Veja aqui
 row-what-is-gambiconf--body-paragraph-4-part-4 = como foram as edições passadas!
 
@@ -58,7 +58,7 @@ row-what-is-gambiconf--body-paragraph-5-part-2 = para ver mais sobre o propósit
 ## Where and When
 
 where-and-when--title = Onde e quando
-where-and-when--body-paragraph-1-part-1 = 02 e 03 de Novembro, na
+where-and-when--body-paragraph-1-part-1 = Em 29 e 30 de Novembro, com cada dia sendo em localidades diferentes:
 where-and-when--body-paragraph-1-link = USP - Campus Butantã
 where-and-when--body-paragraph-2-part-1 = Streaming gratuito no
 where-and-when--body-paragraph-2-link = YouTube
@@ -67,7 +67,7 @@ where-and-when--body-paragraph-3-link = Discord
 
 ## Calendar
 
-calendar--month = Novembro 2024
+calendar--month = Novembro 2025
 calendar--sunday = Do
 calendar--monday = 2ª
 calendar--tuesday = 3ª
@@ -79,9 +79,18 @@ calendar--saturday = Sa
 ## Call for Proposal
 
 call-for-proposal--title = Call for Proposal
-call-for-proposal--body-paragraph-1 =
-  O CFP está encerrado. Em breve vamos responder todos que submeteram e divulgaremos em nossas redes sociais os aprovados.
-call-for-proposal--body-paragraph-2 = Nos siga para saber assim que tivermos novidades!
+call-for-proposal--body-paragraph-1-part-1 =
+  Se você quiser compartilhar um trabalhado engenhoso num projeto pessoal ou algo underground envolvendo
+  computação, venha apresentar a sua
+call-for-proposal--body-paragraph-1-talk = talk
+call-for-proposal--body-paragraph-1-part-2 = no sábado!
+call-for-proposal--body-paragraph-2-part-1 = Já se você prefere focar num hands-on com a comunidade, você pode optar em ministrar um
+call-for-proposal--body-paragraph-2-workshop = workshop
+call-for-proposal--body-paragraph-2-part-2 = no domingo!
+call-for-proposal--body-paragraph-3-part-1 = Caso esteja sem muitas ideias, veja como foram
+call-for-proposal--body-paragraph-3-link = as edições passadas
+call-for-proposal--body-paragraph-3-part-2 = para se inspirar.
+call-for-proposal--body-paragraph-4 = O deadline é 1° de Junho.
 call-for-proposal--cta = Submeter no CFP
 
 ## Partners
@@ -135,7 +144,7 @@ cfp--tweet-preview = Preview do Tweet
 cfp--section-about-you = Sobre você
 cfp--field-bio = Bio
 cfp--section-contacts = Contatos
-cfp--field-social-medias = Medias sociais (isso será público)
+cfp--field-social-medias = Redes sociais (isso será público)
 cfp--field-email = E-Mail para o feedback (não será publicado)
 cfp--field-notes = Qualquer observação adicional?
 cfp--submit = Submeter
@@ -147,11 +156,11 @@ cfp--clear-form = Apagar formulário para submteter uma nova entrada
 ## Schedule
 
 schedule--title = Agenda
-schedule--first-day = 02 de Novembro
+schedule--first-day = 29 de Novembro
 schedule--presentation-opening-ceremony-first-day-title = Cerimônia de Abertura
 schedule--presentation-opening-ceremony-first-day-description = Boas vindas ao evento!
 schedule--presentation-opening-ceremony-first-day-bio = Hey! Eu amo engajar as pessoas em desenvolverem projetos pessoais por diversão e compartilhar ideias fora da caixa - e organizar a GambiConf é disseminar essa paixão!
-schedule--second-day = 03 de Novembro
+schedule--second-day = 30 de Novembro
 schedule--presentation-opening-ceremony-second-day-title = Cerimônia de Abertura (Segundo dia)
 schedule--presentation-opening-ceremony-second-day-description = Boas vindas ao evento! Vamos falar dos workshops! Nota: Todos os workshops acontecem ao mesmo tempo, e você deverá escolher um deles para participar.
 schedule--lunch = Almoço

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Fa } from "svelte-fa"
   import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot"
+  import { faMapLocation } from "@fortawesome/free-solid-svg-icons/faMapLocation"
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
   import { faDiscord } from "@fortawesome/free-brands-svg-icons/faDiscord"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
@@ -17,14 +18,35 @@
     </div>
 
     <div>
-      <p>
+      <div>
         <Fa icon={faLocationDot} />
 
         <Localized id="where-and-when--body-paragraph-1-part-1" />
-        <Link l10n="link" href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7">
-          <Localized id="where-and-when--body-paragraph-1-link" />
-        </Link>
-      </p>
+
+        <ul>
+          <li>
+            <Link href="https://maps.app.goo.gl/PadW6Y4RLhYqxz796" externalIcon>
+              <strong>Sábado:</strong>
+
+              <Localized id="hero--location-first-line" />
+
+              <Fa icon={faMapLocation} />
+              Ver Mapa
+            </Link>
+          </li>
+
+          <li>
+            <Link href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7" externalIcon>
+              <strong>Domingo:</strong>
+
+              <Localized id="hero--location-second-line" />
+
+              <Fa icon={faMapLocation} />
+              Ver Mapa
+            </Link>
+          </li>
+        </ul>
+      </div>
 
       <p>
         <Fa icon={faYoutube} />

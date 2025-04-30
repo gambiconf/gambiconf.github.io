@@ -8,7 +8,11 @@
 <div class="page">
   <Window title={t("previous-editions--title")}>
     <div class="gallery">
-      <Gallery columnCount={3} imageHeight="350px">
+      <Gallery columnCount={2} imageHeight="350px">
+        <a href="https://gambiconf.dev/2024">
+          <img src={`${assets}/previous-editions/e2024.jpg`} />
+        </a>
+
         <a href="https://gambiconf.dev/2023">
           <img src={`${assets}/previous-editions/e2023.jpg`} />
         </a>

@@ -29,17 +29,19 @@
   let tweetTalkOnAlert: TweetStatus = $state("ok")
   let tweetBioOnAlert: TweetStatus = $state("ok")
 
-  let talkTweetPreview =
-    $derived(language === "only_english"
+  let talkTweetPreview = $derived(
+    language === "only_english"
       ? `${capitalize(type)} "${title}" by ${
           twitterHandler || speakerName
         } (in 🇺🇸)\n\n${description}`
-      : `${capitalize(type)} "${title}" por ${twitterHandler || speakerName}\n\n${description}`)
+      : `${capitalize(type)} "${title}" por ${twitterHandler || speakerName}\n\n${description}`,
+  )
 
-  let speakerTweetPreview =
-    $derived(language === "only_english"
+  let speakerTweetPreview = $derived(
+    language === "only_english"
       ? `About the speaker:\n${speakerBio}`
-      : `Sobre o palestrante:\n${speakerBio}`)
+      : `Sobre o palestrante:\n${speakerBio}`,
+  )
 
   let submitState:
     | { status: "submitting" }
@@ -151,7 +153,7 @@
 
       if (!givenSubmission) {
         window.alert(
-          "We could not load a submission with the given id. Please, report the issue by sending us an email (mambi@gambiconf.dev) or opening an issue on https://github.com/gambiconf/gambiconf.github.io"
+          "We could not load a submission with the given id. Please, report the issue by sending us an email (mambi@gambiconf.dev) or opening an issue on https://github.com/gambiconf/gambiconf.github.io",
         )
         return
       }
@@ -201,7 +203,7 @@
 
       <div class="field">
         <Localized id="cfp--field-language">
-          {#snippet children({ attrs })}  
+          {#snippet children({ attrs })}
             <label for="language">{attrs.label}</label>
             <select name="language" required bind:value={language}>
               <option value="only_portuguese">{attrs.optionPortuguese}</option>
@@ -298,7 +300,7 @@
         <label for="social"><Localized id="cfp--field-social-medias" /></label>
         <textarea
           name="social"
-          placeholder="GitHub: macabeus\nStack Overflow: macabeus\n..."
+          placeholder="GitHub: macabeus&#013;Stack Overflow: macabeus&#013;..."
           rows="3"
           required
           bind:value={speakerSocialMedias}

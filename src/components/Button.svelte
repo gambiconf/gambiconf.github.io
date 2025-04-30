@@ -1,14 +1,15 @@
 <script lang="ts">
   interface Props {
-    url: string;
-    children?: import('svelte').Snippet;
+    url: string
+    newPage?: boolean
+    children?: import("svelte").Snippet
   }
 
-  let { url, children }: Props = $props();
+  let { url, newPage, children }: Props = $props()
 </script>
 
 <div class="button">
-  <a href={url} target="_blank" rel="noopener noreferrer">
+  <a href={url} rel="noopener noreferrer" target={newPage ? "_blank" : "_self"}>
     {@render children?.()}
   </a>
 </div>
@@ -17,12 +18,13 @@
   .button {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   a {
     padding: 10px;
     border-radius: 4px;
-    min-width: 25%;
+    width: 100%;
 
     text-decoration: none;
     text-align: center;

@@ -18,23 +18,23 @@
   <h3 class="title"><Localized id="partners--supporters" /></h3>
 
   <div class="grid grid-partners">
-    <a href={`https://symcomp.ime.usp.br/?${utmSource}`} target="_blank" rel="noopener">
-      <img src={`${assets}/symcomp.png`} alt="SymComp" />
+    <a href={`https://usp.br/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={`${assets}/usp.png`} alt="USP" />
     </a>
 
-    <a href={`https://www.tempest.com.br/?${utmSource}`} target="_blank" rel="noopener">
-      <img src={`${assets}/tempest.svg`} alt="Tempest" />
+    <a href={`https://www.totvs.com/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={`${assets}/totvs.jpg`} alt="TOTVS" />
+    </a>
+
+    <a href={`https://symcomp.ime.usp.br/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={`${assets}/symcomp.png`} alt="SymComp" />
     </a>
 
     <a href={`https://elixiremfoco.com/?${utmSource}`} target="_blank" rel="noopener">
       <img src={`${assets}/elixir-em-foco.png`} alt="Elixir em foco" />
     </a>
 
-    <a href={`https://www.meteor.com/?${utmSource}`} target="_blank" rel="noopener">
-      <img src={`${assets}/meteor.png`} alt="Meteor" />
-    </a>
-
-    <Localized id="partners--become-a-partner" args={{ assets }} >
+    <Localized id="partners--become-a-partner" args={{ assets }}>
       {#snippet children({ attrs })}
         <a href={attrs.href.replace(/\p{C}/gu, "")} target="_blank" rel="noopener">
           <img src={attrs.src.replace(/\p{C}/gu, "")} alt={attrs.alt} />

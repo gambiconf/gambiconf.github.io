@@ -30,6 +30,7 @@
   const handlePhotoClick = (e) => {
     selectedPhoto = e.src
       .replace(/-[\w\d]+/, "")
+      .replace(/\.[\w\d]+\./, ".")
       .replace(/.*DSC/, "https://storage.googleapis.com/gambiconf-2024-photos/DSC")
   }
 

@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { preventDefault } from 'svelte/legacy';
-
   import { onMount } from "svelte"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { Circle } from "svelte-loading-spinners"
@@ -51,6 +49,9 @@
         message: string
       } = $state({ status: "idle" })
 
+  const submitSuccessMessage = t("cfp--submit-success")
+  const submitErrorMessage = t("cfp--submit-error")
+
   const handleSubmit = async (e: Event) => {
     e.preventDefault()
     if (tweetLength(talkTweetPreview) > 270) {
@@ -82,9 +83,9 @@
       })
 
       if (result) {
-        submitState = { status: "success", message: t("cfp--submit-success") }
+        submitState = { status: "success", message: submitSuccessMessage }
       } else {
-        submitState = { status: "error", message: t("cfp--submit-error") }
+        submitState = { status: "error", message: submitErrorMessage }
       }
     } else {
       const result = await postSubmissions({
@@ -109,9 +110,9 @@
         url.searchParams.set("id", result.id)
         window.history.pushState(null, "", url.toString())
 
-        submitState = { status: "success", message: t("cfp--submit-success") }
+        submitState = { status: "success", message: submitSuccessMessage }
       } else {
-        submitState = { status: "error", message: t("cfp--submit-error") }
+        submitState = { status: "error", message: submitErrorMessage }
       }
     }
   }

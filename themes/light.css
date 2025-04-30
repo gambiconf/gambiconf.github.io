@@ -14,7 +14,8 @@
 
 body,
 .wrapper-content {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
     url("/mambi-icon-oulined.png");
 }
 

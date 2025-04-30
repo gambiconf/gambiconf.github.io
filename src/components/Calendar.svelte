@@ -14,11 +14,11 @@
   <span class="weekday"><Localized id="calendar--friday" /></span>
   <span class="weekday"><Localized id="calendar--saturday" /></span>
 
-  <span />
-  <span />
-  <span />
-  <span />
-  <span />
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
   <span class="regular-day">1</span>
   <span
     class="highlighted-day"

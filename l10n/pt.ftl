@@ -30,29 +30,40 @@ row-event--go-to-album = Ver o álbum
 
 row-what-is-gambiconf--title = O que é a GambiConf?
 row-what-is-gambiconf--body-paragraph-1 = GambiConf é um evento tech único que vai explodir a sua mente!
-row-what-is-gambiconf--body-paragraph-2 =
-  Apresentamos projetos e ideias que definitivamente são fora da caixa. Vamos expandir a fronteira
-  do que é possível, desbloqueando conhecimentos obscuros - tal como fizemos nas edições passadas, onde
-  aprendemos <a data-l10n-name='link-talk-water'>como fazer um computador só com água</a> e a
-  <a data-l10n-name='link-talk-satellite'>fazer engenharia reversa na comunicação dum satélite</a>!
+
+row-what-is-gambiconf--body-paragraph-2-part-1 = Apresentamos projetos e ideias que definitivamente são fora da caixa. Vamos expandir a fronteira do que é possível, desbloqueando conhecimentos obscuros - tal como fizemos nas edições passadas, onde aprendemos
+row-what-is-gambiconf--body-paragraph-2-link-water = como fazer um computador só com água
+row-what-is-gambiconf--body-paragraph-2-part-2 =  e a
+row-what-is-gambiconf--body-paragraph-2-link-satellite = fazer engenharia reversa na comunicação dum satélite
+row-what-is-gambiconf--body-paragraph-2-part-3 = !
+
 row-what-is-gambiconf--body-paragraph-3 =
   Essa é uma conferência multilingue, não limitada numa única tecnologia específica. Buscamos se focar mais
   no propósito dos projetos apresentados, na natureza única de cada sessão, e o que podemos aprender a partir
   de uma ideia bem aleatória e inusitada. Queremos encorajar as pessoas a testarem novas ideias e descobrirem
   novas coisas, pelo simples prazer da curiosidade e exploração.
-row-what-is-gambiconf--body-paragraph-4 =
-  Baseado em conferências como a <a data-l10n-name='link-bangbangcon'>!!Con</a> e da
-  <a data-l10n-name='link-sigbovik'>SIGBOVIK</a>, já estamos indo para a quarta edição!<br />
-  <a data-l10n-name='link-old-editions'>Veja aqui</a> como foram as edições passadas!
-row-what-is-gambiconf--body-paragraph-5 =
-  Você pode conferir <a data-l10n-name='link-1'>nosso post de apresentação</a> para ver mais sobre o propósito da GambiConf.
+
+row-what-is-gambiconf--body-paragraph-4-part-1 = Inspirada em conferências como a
+row-what-is-gambiconf--body-paragraph-4-link-bangbangcon = !!Con
+row-what-is-gambiconf--body-paragraph-4-part-2 = e da
+row-what-is-gambiconf--body-paragraph-4-link-sigbovik = SIGBOVIK
+row-what-is-gambiconf--body-paragraph-4-part-3 = estamos indo para a quarta edição!
+row-what-is-gambiconf--body-paragraph-4-link-old-editions = Veja aqui
+row-what-is-gambiconf--body-paragraph-4-part-4 = como foram as edições passadas!
+
+row-what-is-gambiconf--body-paragraph-5-part-1 = Você pode conferir
+row-what-is-gambiconf--body-paragraph-5-link-1 = nosso post de apresentação
+row-what-is-gambiconf--body-paragraph-5-part-2 = para ver mais sobre o propósito da GambiConf.
 
 ## Where and When
 
 where-and-when--title = Onde e quando
-where-and-when--body-paragraph-1 = 02 e 03 de Novembro, na USP - Campus Butantã.
-where-and-when--body-paragraph-2 = Streaming gratuito no <a data-l10n-name='link'>YouTube</a>
-where-and-when--body-paragraph-3 = Converse conosco no <a data-l10n-name='link'>Discord</a>
+where-and-when--body-paragraph-1-part-1 = 02 e 03 de Novembro, na
+where-and-when--body-paragraph-1-link = USP - Campus Butantã
+where-and-when--body-paragraph-2-part-1 = Streaming gratuito no
+where-and-when--body-paragraph-2-link = YouTube
+where-and-when--body-paragraph-3-part-1 = Converse conosco no
+where-and-when--body-paragraph-3-link = Discord
 
 ## Calendar
 
@@ -161,7 +172,12 @@ code-of-conduct--title = Código de Conduta
 
 # Album
 album--title = Álbum
-album--description = Fotos tiradas pelo <a data-l10n-name='link-author-1'>Hugo Borges</a> e <a data-l10n-name='link-author-2'>João de Mello</a>. <a data-l10n-name='download'>Download de todas as fotos</a>.
+album--description-part-1 = Fotos tiradas pelo
+album--description-link-author-1 = Hugo Borges
+album--description-part-2 = e
+album--description-link-author-2 = João de Mello
+album--description-part-3 = -
+album--description-link-download = Download de todas as fotos
 
 # Previous Editions
 

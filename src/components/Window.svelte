@@ -1,13 +1,18 @@
 <script lang="ts">
-  export let title: string
+  interface Props {
+    title: string;
+    children?: import('svelte').Snippet;
+  }
+
+  let { title, children }: Props = $props();
 </script>
 
 <div class="window">
   <div class="title-bar">
     <div class="title-buttons">
-      <div class="button-close" />
-      <div class="button-minimize" />
-      <div class="button-expand" />
+      <div class="button-close"></div>
+      <div class="button-minimize"></div>
+      <div class="button-expand"></div>
     </div>
 
     <div>
@@ -15,7 +20,7 @@
     </div>
   </div>
 
-  <slot />
+  {@render children?.()}
 </div>
 
 <style>

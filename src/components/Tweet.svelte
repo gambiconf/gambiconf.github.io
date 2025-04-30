@@ -1,35 +1,39 @@
-<script context="module" lang="ts">
+<script module lang="ts">
   export type TweetStatus = "ok" | "warning" | "exceeded"
 </script>
 
 <script lang="ts">
-  import { createEventDispatcher } from "svelte"
   import { assets } from "$app/paths"
   import { tweetLength } from "../utils/tweet"
   import Donut from "./Donut.svelte"
 
-  export let body = ""
-
-  $: donutPercent = (tweetLength(body) * 100) / 270
-
-  const dispatch = createEventDispatcher()
-
-  let tweetStatus: TweetStatus = "ok"
-
-  $: if (donutPercent > 100 && tweetStatus !== "exceeded") {
-    tweetStatus = "exceeded"
-    dispatch("tweetStatusChanged", { tweetStatus })
-  } else if (donutPercent > 75 && donutPercent <= 100 && tweetStatus !== "warning") {
-    tweetStatus = "warning"
-    dispatch("tweetStatusChanged", { tweetStatus })
-  } else if (donutPercent <= 75 && tweetStatus !== "ok") {
-    tweetStatus = "ok"
-    dispatch("tweetStatusChanged", { tweetStatus })
+  interface Props {
+    body?: string;
+    tweetStatusChanged?: (status: TweetStatus) => void;
   }
+
+  let { body = "", tweetStatusChanged }: Props = $props();
+
+  let donutPercent = $derived((tweetLength(body) * 100) / 270)
+
+  let tweetStatus: TweetStatus = $state("ok")
+
+  $effect(() => {
+    if (donutPercent > 100 && tweetStatus !== "exceeded") {
+      tweetStatus = "exceeded"
+      tweetStatusChanged?.(tweetStatus)
+    } else if (donutPercent > 75 && donutPercent <= 100 && tweetStatus !== "warning") {
+      tweetStatus = "warning"
+      tweetStatusChanged?.(tweetStatus)
+    } else if (donutPercent <= 75 && tweetStatus !== "ok") {
+      tweetStatus = "ok"
+      tweetStatusChanged?.(tweetStatus)
+    }
+  });
 </script>
 
 <div class="tweet">
-  <div class="profile-pic" style="background-image: url({`${assets}/tweet/avatar.png`})" />
+  <div class="profile-pic" style="background-image: url({`${assets}/tweet/avatar.png`})"></div>
 
   <div class="content">
     <div class="header">
@@ -45,7 +49,7 @@
     </div>
 
     <div class="text">
-      {#each body.split(/(\s)/) as word}
+      {#each body.split(/(\s)/) as word, i (i)}
         {#if word === "\n"}
           <br />
         {:else if word[0] === "@"}
@@ -53,7 +57,7 @@
         {:else}
           {word}
         {/if}
-        {" "}
+        {@html " "}
       {/each}
     </div>
 

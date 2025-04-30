@@ -3,22 +3,41 @@
   import { Fa, FaLayers } from "svelte-fa"
   import { faExternalLink } from "@fortawesome/free-solid-svg-icons"
 
-  export let l10n: string = ''
-  export let href: string
-  export let variant: 'primary' | 'secondary' = 'primary'
-  export let externalIcon: boolean = false
+  interface Props {
+    l10n?: string;
+    href: string;
+    variant?: 'primary' | 'secondary';
+    externalIcon?: boolean;
+    children?: import('svelte').Snippet;
+    class?: string;
+    target?: string;
+    rel?: string;
+  }
+
+  let {
+    l10n = '',
+    href,
+    variant = 'primary',
+    externalIcon = false,
+    target,
+    rel,
+    children,
+    ...rest
+  }: Props = $props();
 
   const url = href.startsWith('/') ? `${base}${href}` : href
 </script>
 
 <a
-  class={`link ${$$restProps.class}`}
+  class={`link ${rest.class}`}
   data-l10n-name={l10n}
   data-variant={variant}
   href={url}
+  target={target}
+  rel={rel}
   {...href.startsWith('/') ? {} : {target: "_blank", rel: "noopener" }}
 >
-  <slot />
+  {@render children?.()}
 
   {#if externalIcon}
     <FaLayers size="0.8x">

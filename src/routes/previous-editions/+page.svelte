@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { t } from "../../store/locale"
+  import { t } from "../../store/locale.svelte"
   import Gallery from "../../components/Gallery.svelte"
   import Window from "../../components/Window.svelte"
   import { assets } from "$app/paths"
 </script>
 
 <div class="page">
-  <Window title={$t("previous-editions--title")}>
+  <Window title={t("previous-editions--title")}>
     <div class="gallery">
       <Gallery columnCount={3} imageHeight="350px">
         <a href="https://gambiconf.dev/2023">

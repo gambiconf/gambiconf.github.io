@@ -1,19 +1,19 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
-  import { t } from "../store/locale"
+  import { t } from "../store/locale.svelte"
   import { utmSource } from "../utils/constants"
   import Window from "./Window.svelte"
   import TimeSlot from "./TimeSlot.svelte"
 </script>
 
 <div id="schedule">
-  <Window title={$t("schedule--title")}>
+  <Window title={t("schedule--title")}>
     <article class="content">
       <h3><Localized id="schedule--first-day" /></h3>
 
       <TimeSlot
-        title={$t("schedule--presentation-opening-ceremony-first-day-title")}
+        title={t("schedule--presentation-opening-ceremony-first-day-title")}
         date="2024-11-02"
         hours="9:30"
         duration={20}
@@ -21,7 +21,7 @@
           {
             name: "Bruno Macabeus",
             image: `${assets}/speakers/bruno-macabeus.jpeg`,
-            bio: $t("schedule--presentation-opening-ceremony-first-day-bio"),
+            bio: t("schedule--presentation-opening-ceremony-first-day-bio"),
             socialLinks: [
               { type: "bluesky", url: "https://bsky.app/profile/macabeus.bsky.social" },
               { type: "twitter", url: "https://twitter.com/bmacabeus" },
@@ -46,7 +46,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -70,7 +70,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -95,7 +95,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -118,7 +118,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -143,7 +143,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <div class="break">
@@ -151,7 +151,7 @@
       </div>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -174,7 +174,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -198,7 +198,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -223,7 +223,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -246,7 +246,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <div class="break">
@@ -254,7 +254,7 @@
       </div>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -280,7 +280,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -305,7 +305,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -330,7 +330,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -353,13 +353,13 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <h3><Localized id="schedule--second-day" /></h3>
 
       <TimeSlot
-        title={$t("schedule--presentation-opening-ceremony-second-day-title")}
+        title={t("schedule--presentation-opening-ceremony-second-day-title")}
         date="2024-11-03"
         hours="13:30"
         duration={25}
@@ -379,7 +379,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -402,7 +402,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -449,7 +449,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -474,7 +474,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -501,7 +501,7 @@
       </TimeSlot>
 
       <div class="division-wrapper">
-        <div class="division" />
+        <div class="division"></div>
       </div>
 
       <TimeSlot
@@ -530,6 +530,7 @@
         date="2024-11-03"
         hours="18:00"
         duration={45}
+        hasParagraph
         members={[
           {
             name: "Pedro Castilho (líder do painel)",

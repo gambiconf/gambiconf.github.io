@@ -16,7 +16,8 @@ hero--date-second-line = 29 e 30 de Novembro
 hero--location-first-line = TOTVS -
 hero--location-second-line = USP Butantã -
 hero--location-third-line = São Paulo, Brasil
-hero--cta = Submeta no CFP
+hero--cfp = Submeta no CFP
+hero--tickets = Compre seu ingresso
 
 ## Event Row
 

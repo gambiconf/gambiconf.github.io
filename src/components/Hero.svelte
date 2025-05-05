@@ -77,7 +77,15 @@
 
     <div class="action">
       <Button url="/cfp">
-        <Localized id="hero--cta" />
+        <Localized id="hero--cfp" />
+      </Button>
+
+      <Button
+        url="https://www.eventbrite.com.br/e/gambiconf-5a-edicao-29-de-novembro-na-totvs-30-de-novembro-na-usp-tickets-1333243771009?utm-campaign=website"
+        variant="secondary"
+        newPage
+      >
+        <Localized id="hero--tickets" />
       </Button>
     </div>
   </div>
@@ -162,6 +170,10 @@
     margin-top: 25px;
     width: 50%;
     margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   @media screen and (min-width: 768px) {

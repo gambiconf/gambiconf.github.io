@@ -65,7 +65,7 @@ a {
   transition: 0.4s;
 }
 
-a:hover {
+a:hover:not(.button *) {
   color: #ff8915;
 }
 

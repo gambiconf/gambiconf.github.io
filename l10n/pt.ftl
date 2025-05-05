@@ -30,23 +30,25 @@ row-event--go-to-album = Ver o álbum
 
 row-what-is-gambiconf--title = O que é a GambiConf?
 row-what-is-gambiconf--body-paragraph-1 = GambiConf é um evento tech único que vai explodir a sua mente!
-
-row-what-is-gambiconf--body-paragraph-2-part-1 = Apresentamos projetos e ideias que definitivamente são fora da caixa. Vamos expandir a fronteira do que é possível, desbloqueando conhecimentos obscuros - tal como fizemos nas edições passadas, onde aprendemos
-row-what-is-gambiconf--body-paragraph-2-link-water = como fazer um computador só com água
-row-what-is-gambiconf--body-paragraph-2-part-2 =  e a
-row-what-is-gambiconf--body-paragraph-2-link-satellite = fazer engenharia reversa na comunicação dum satélite
-row-what-is-gambiconf--body-paragraph-2-part-3 = !
+row-what-is-gambiconf--body-paragraph-2-part-1 =
+  A GambiConf é sobre a alegria de explorar algo novo.
+  Apresentamos projetos e ideias que são fora da caixa - tal como fizemos nas edições passadas, onde aprendemos como
+row-what-is-gambiconf--body-paragraph-2-link-water = fazer um computador só com água
+row-what-is-gambiconf--body-paragraph-2-part-2 = ,
+row-what-is-gambiconf--body-paragraph-2-link-satellite = fazer engenharia reversa na comunicação de um satélite
+row-what-is-gambiconf--body-paragraph-2-part-3 = e também
+row-what-is-gambiconf--body-paragraph-2-link-flappy-bird = como escrever um Flappy Bird em Assembly!
 
 row-what-is-gambiconf--body-paragraph-3 =
-  Essa é uma conferência multilingue, não limitada numa única tecnologia específica. Buscamos se focar mais
+  Essa é uma conferência multilingue, não limitada numa única tecnologia específica. Se focamos mais
   no propósito dos projetos apresentados, na natureza única de cada sessão, e o que podemos aprender a partir
-  de uma ideia bem aleatória e inusitada. Queremos encorajar as pessoas a testarem novas ideias e descobrirem
-  novas coisas, pelo simples prazer da curiosidade e exploração.
+  de uma ideia diferente e, talvez, inusitada! Queremos encorajar as pessoas a serem ainda mais criativas
+  e descobrirem novidades - tudo pelo simples prazer de saciar a curiosidade.
 
 row-what-is-gambiconf--body-paragraph-4-part-1 = Inspirada em conferências como a
 row-what-is-gambiconf--body-paragraph-4-link-bangbangcon = !!Con
 row-what-is-gambiconf--body-paragraph-4-part-2 = e da
-row-what-is-gambiconf--body-paragraph-4-link-sigbovik = SIGBOVIK
+row-what-is-gambiconf--body-paragraph-4-link-sigbovik = SIGBOVIK,
 row-what-is-gambiconf--body-paragraph-4-part-3 = estamos indo para a quinta edição!
 row-what-is-gambiconf--body-paragraph-4-link-old-editions = Veja aqui
 row-what-is-gambiconf--body-paragraph-4-part-4 = como foram as edições passadas!

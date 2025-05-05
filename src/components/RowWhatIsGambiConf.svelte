@@ -25,6 +25,9 @@
           <Localized id="row-what-is-gambiconf--body-paragraph-2-link-satellite" />
         </Link>
         <Localized id="row-what-is-gambiconf--body-paragraph-2-part-3" />
+        <Link l10n="link-talk-satellite" href="https://www.youtube.com/watch?v=MxJcbTLeck0">
+          <Localized id="row-what-is-gambiconf--body-paragraph-2-link-flappy-bird" />
+        </Link>
       </p>
 
       <p>

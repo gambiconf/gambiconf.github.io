@@ -31,12 +31,14 @@ row-event--go-to-album = Go to the event album
 
 row-what-is-gambiconf--title = What is GambiConf?
 row-what-is-gambiconf--body-paragraph-1 = GambiConf is a unique tech conference that's gonna blow your mind! 🐒
-
-row-what-is-gambiconf--body-paragraph-2-part-1 = It features projects and ideas that are definitely outside the box. Let's expand the boundaries of what's possible, unlocking unknown knowledge — just like we did in the past editions when we learned
-row-what-is-gambiconf--body-paragraph-2-link-water = how to build computers using only water
-row-what-is-gambiconf--body-paragraph-2-part-2 =  and
-row-what-is-gambiconf--body-paragraph-2-link-satellite = how to do reverse engineering in satellite communication
-row-what-is-gambiconf--body-paragraph-2-part-3 = !
+row-what-is-gambiconf--body-paragraph-2-part-1 =
+  GambiConf is about the joy of exploring something new.
+  We present projects and ideas that are out of the box - just like we did in previous editions, where we learned how to
+row-what-is-gambiconf--body-paragraph-2-link-water = make a computer with water
+row-what-is-gambiconf--body-paragraph-2-part-2 = ,
+row-what-is-gambiconf--body-paragraph-2-link-satellite = reverse engineer a satellite communication
+row-what-is-gambiconf--body-paragraph-2-part-3 = and also
+row-what-is-gambiconf--body-paragraph-2-link-flappy-bird = how to write a Flappy Bird in Assembly!
 
 row-what-is-gambiconf--body-paragraph-3 =
   This is a multilingual, not limited to a specific technology, conference. We try to focus more on the purpose

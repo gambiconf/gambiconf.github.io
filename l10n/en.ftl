@@ -97,7 +97,7 @@ call-for-proposal--body-paragraph-2-part-2 = on Sunday!
 call-for-proposal--body-paragraph-3-part-1 = If you're short on ideas, check out
 call-for-proposal--body-paragraph-3-link = the previous editions
 call-for-proposal--body-paragraph-3-part-2 = for inspiration.
-call-for-proposal--body-paragraph-4 = The deadline is June 1st.
+call-for-proposal--body-paragraph-4 = The deadline is June 15th.
 call-for-proposal--cta = Submit to CFP
 
 ## Partners

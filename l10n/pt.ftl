@@ -93,7 +93,7 @@ call-for-proposal--body-paragraph-2-part-2 = no domingo!
 call-for-proposal--body-paragraph-3-part-1 = Caso esteja sem muitas ideias, veja como foram
 call-for-proposal--body-paragraph-3-link = as edições passadas
 call-for-proposal--body-paragraph-3-part-2 = para se inspirar.
-call-for-proposal--body-paragraph-4 = O deadline é 1° de Junho.
+call-for-proposal--body-paragraph-4 = O deadline é 15 de Junho.
 call-for-proposal--cta = Submeter no CFP
 
 ## Partners

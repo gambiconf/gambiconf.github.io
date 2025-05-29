@@ -9,6 +9,7 @@
   import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
   import { faBluesky } from "@fortawesome/free-brands-svg-icons/faBluesky"
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
+  import { faNewspaper } from "@fortawesome/free-solid-svg-icons/faNewspaper"
   import { t } from "../store/locale.svelte"
   import Link from "./Link.svelte"
 </script>
@@ -117,6 +118,19 @@
               <Fa color="white" scale={0.6} icon={faYoutube} />
             </FaLayers>
           </a>
+
+          <a
+            href="https://gambiconf.substack.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Substack"
+            class="social-media-icon"
+          >
+            <FaLayers size="2x">
+              <Fa icon={faCircle} />
+              <Fa color="white" scale={0.6} icon={faNewspaper} />
+            </FaLayers>
+          </a>
         </div>
       </div>
     </address>
@@ -191,7 +205,7 @@
 
     .social-links-container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-row-gap: 5px;
       justify-items: center;
     }

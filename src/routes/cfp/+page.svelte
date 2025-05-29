@@ -21,13 +21,13 @@
   let description = $state("")
   let duration = $state("")
   let language = $state("")
-  let speakerBio = $state("")
+  let speakerBio = $state([""])
   let speakerSocialMedias = $state("")
   let speakerEmail = $state("")
   let notes = $state("")
 
   let tweetTalkOnAlert: TweetStatus = $state("ok")
-  let tweetBioOnAlert: TweetStatus = $state("ok")
+  let tweetBioOnAlert: TweetStatus[] = $state(["ok"])
 
   let talkTweetPreview = $derived(
     language === "only_english"
@@ -37,10 +37,10 @@
       : `${capitalize(type)} "${title}" por ${twitterHandler || speakerName}\n\n${description}`,
   )
 
-  let speakerTweetPreview = $derived(
-    language === "only_english"
-      ? `About the speaker:\n${speakerBio}`
-      : `Sobre o palestrante:\n${speakerBio}`,
+  let speakerTweetPreviews = $derived(
+    speakerBio.map((bio) =>
+      language === "only_english" ? `About the speaker:\n${bio}` : `Sobre o palestrante:\n${bio}`,
+    ),
   )
 
   let submitState:
@@ -54,6 +54,18 @@
   const submitSuccessMessage = t("cfp--submit-success")
   const submitErrorMessage = t("cfp--submit-error")
 
+  const addSpeaker = () => {
+    speakerBio = [...speakerBio, ""]
+    tweetBioOnAlert = [...tweetBioOnAlert, "ok"]
+  }
+
+  const removeSpeaker = (index: number) => {
+    if (speakerBio.length > 1) {
+      speakerBio = speakerBio.filter((_, i) => i !== index)
+      tweetBioOnAlert = tweetBioOnAlert.filter((_, i) => i !== index)
+    }
+  }
+
   const handleSubmit = async (e: Event) => {
     e.preventDefault()
     if (tweetLength(talkTweetPreview) > 270) {
@@ -61,9 +73,20 @@
       return
     }
 
-    if (tweetLength(speakerTweetPreview) > 270) {
-      submitState = { status: "error", message: "Tweet bio exceeds 270 characters" }
-      return
+    const filteredSpeakerBios = speakerBio.filter((bio) => bio.trim())
+    for (let i = 0; i < filteredSpeakerBios.length; i++) {
+      const bioTweetPreview =
+        language === "only_english"
+          ? `About the speaker${filteredSpeakerBios.length > 1 ? ` ${i + 1}` : ""}:\n${filteredSpeakerBios[i]}`
+          : `Sobre o palestrante${filteredSpeakerBios.length > 1 ? ` ${i + 1}` : ""}:\n${filteredSpeakerBios[i]}`
+
+      if (tweetLength(bioTweetPreview) > 270) {
+        submitState = {
+          status: "error",
+          message: `Tweet bio for speaker ${i + 1} exceeds 270 characters`,
+        }
+        return
+      }
     }
 
     submitState = { status: "submitting" }
@@ -78,7 +101,7 @@
         description,
         duration: Number(duration),
         language,
-        speakerBio,
+        speakerBio: speakerBio.filter((bio) => bio.trim()).join(" | "),
         speakerSocialMedias,
         speakerEmail,
         notes,
@@ -98,7 +121,7 @@
         description,
         duration: Number(duration),
         language,
-        speakerBio,
+        speakerBio: speakerBio.filter((bio) => bio.trim()).join(" | "),
         speakerSocialMedias,
         speakerEmail,
         notes,
@@ -131,7 +154,8 @@
     description = ""
     duration = ""
     language = ""
-    speakerBio = ""
+    speakerBio = [""]
+    tweetBioOnAlert = ["ok"]
     speakerSocialMedias = ""
     speakerEmail = ""
     notes = ""
@@ -165,7 +189,8 @@
       description = givenSubmission.description
       duration = `${givenSubmission.duration}`
       language = givenSubmission.language
-      speakerBio = givenSubmission.speakerBio
+      speakerBio = givenSubmission.speakerBio ? givenSubmission.speakerBio.split(" | ") : [""]
+      tweetBioOnAlert = new Array(speakerBio.length).fill("ok")
       speakerSocialMedias = givenSubmission.speakerSocialMedias
       speakerEmail = givenSubmission.speakerEmail
       notes = givenSubmission.notes
@@ -185,6 +210,7 @@
       <div class="field">
         <label for="name"><Localized id="cfp--field-name" /></label>
         <input name="name" type="text" required bind:value={speakerName} />
+        <label for="name" class="sublabel"><Localized id="cfp--field-name-sublabel" /></label>
       </div>
 
       <div class="field">
@@ -272,27 +298,54 @@
 
       <h4><Localized id="cfp--section-about-you" /></h4>
 
-      <div class="field">
-        <label for="bio"><Localized id="cfp--field-bio" /></label>
-        <textarea name="bio" rows="4" required bind:value={speakerBio}></textarea>
-      </div>
+      {#each speakerBio as bio, index}
+        <div class="field">
+          <div class="bio-header">
+            <label for="bio-{index}">
+              <Localized id="cfp--field-bio" />
+              {#if speakerBio.length > 1}
+                (Palestrante {index + 1})
+              {/if}
+            </label>
+            <div class="bio-buttons">
+              {#if speakerBio.length > 1}
+                <button type="button" class="remove-speaker" onclick={() => removeSpeaker(index)}>
+                  &#x2212;
+                </button>
+              {/if}
+              {#if index === speakerBio.length - 1}
+                <button type="button" class="add-speaker" onclick={addSpeaker}>
+                  <Localized id="cfp--add-speaker" />
+                </button>
+              {/if}
+            </div>
+          </div>
+          <textarea
+            name="bio-{index}"
+            rows="4"
+            required={index === 0}
+            bind:value={speakerBio[index]}
+          ></textarea>
 
-      <span>
-        <Localized id="cfp--tweet-preview" />
-        <span
-          class:warning-limit={tweetBioOnAlert === "warning"}
-          class:exceeded-limit={tweetBioOnAlert === "exceeded"}
-        >
-          ({tweetLength(speakerTweetPreview)}/270)
-        </span>
-      </span>
+          <span>
+            <Localized id="cfp--tweet-preview" />
 
-      <Tweet
-        body={speakerTweetPreview}
-        tweetStatusChanged={(status) => {
-          tweetBioOnAlert = status
-        }}
-      />
+            <span
+              class:warning-limit={tweetBioOnAlert[index] === "warning"}
+              class:exceeded-limit={tweetBioOnAlert[index] === "exceeded"}
+            >
+              ({tweetLength(speakerTweetPreviews[index])}/270)
+            </span>
+          </span>
+
+          <Tweet
+            body={speakerTweetPreviews[index]}
+            tweetStatusChanged={(status) => {
+              tweetBioOnAlert[index] = status
+            }}
+          />
+        </div>
+      {/each}
 
       <h4><Localized id="cfp--section-contacts" /></h4>
 
@@ -379,6 +432,50 @@
     flex-direction: column;
 
     margin-bottom: 20px;
+  }
+
+  .bio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  .bio-buttons {
+    display: flex;
+    gap: 8px;
+  }
+
+  .add-speaker {
+    width: 200px;
+  }
+
+  .remove-speaker {
+    width: 33px;
+  }
+
+  .add-speaker,
+  .remove-speaker {
+    height: 32px;
+    border-radius: 12px;
+    border: 2px solid #f34b21;
+    background-color: white;
+    color: #f34b21;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    transition: 0.2s;
+  }
+
+  .add-speaker:hover,
+  .remove-speaker:hover {
+    transform: scale(0.99);
+    filter: brightness(0.9);
   }
 
   .sublabel {

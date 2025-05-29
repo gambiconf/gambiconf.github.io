@@ -3,12 +3,31 @@
   import Gallery from "../../components/Gallery.svelte"
   import Window from "../../components/Window.svelte"
   import { assets } from "$app/paths"
+  import { onMount } from "svelte"
+
+  let isMobile = $state(false)
+  let columnCount = $derived(isMobile ? 1 : 2)
+
+  onMount(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)")
+    isMobile = mediaQuery.matches
+
+    const handler = (e: MediaQueryListEvent) => {
+      isMobile = e.matches
+    }
+
+    mediaQuery.addEventListener("change", handler)
+
+    return () => {
+      mediaQuery.removeEventListener("change", handler)
+    }
+  })
 </script>
 
 <div class="page">
   <Window title={t("previous-editions--title")}>
     <div class="gallery">
-      <Gallery columnCount={2} imageHeight="350px">
+      <Gallery {columnCount} imageHeight="350px">
         <a href="https://gambiconf.dev/2024">
           <img src={`${assets}/previous-editions/e2024.jpg`} alt="GambiConf 2024" />
         </a>

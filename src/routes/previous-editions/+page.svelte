@@ -10,19 +10,19 @@
     <div class="gallery">
       <Gallery columnCount={2} imageHeight="350px">
         <a href="https://gambiconf.dev/2024">
-          <img src={`${assets}/previous-editions/e2024.jpg`} />
+          <img src={`${assets}/previous-editions/e2024.jpg`} alt="GambiConf 2024" />
         </a>
 
         <a href="https://gambiconf.dev/2023">
-          <img src={`${assets}/previous-editions/e2023.jpg`} />
+          <img src={`${assets}/previous-editions/e2023.jpg`} alt="GambiConf 2023" />
         </a>
 
         <a href="https://gambiconf.dev/2022">
-          <img src={`${assets}/previous-editions/e2022.jpg`} />
+          <img src={`${assets}/previous-editions/e2022.jpg`} alt="GambiConf 2022" />
         </a>
 
         <a href="https://gambiconf.dev/2021">
-          <img src={`${assets}/previous-editions/e2021.jpg`} />
+          <img src={`${assets}/previous-editions/e2021.jpg`} alt="GambiConf 2021" />
         </a>
       </Gallery>
     </div>

@@ -34,6 +34,10 @@
       <img src={`${assets}/elixir-em-foco.png`} alt="Elixir em foco" />
     </a>
 
+    <a href={`https://github.com/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={`${assets}/github.png`} alt="GitHub" />
+    </a>
+
     <Localized id="partners--become-a-partner" args={{ assets }}>
       {#snippet children({ attrs })}
         <a href={attrs.href.replace(/\p{C}/gu, "")} target="_blank" rel="noopener">

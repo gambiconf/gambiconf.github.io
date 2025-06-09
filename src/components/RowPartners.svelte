@@ -38,6 +38,10 @@
       <img src={`${assets}/github.png`} alt="GitHub" />
     </a>
 
+    <a href={`https://magalu.cloud/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={`${assets}/magalu-cloud.svg`} alt="Magalu Cloud" />
+    </a>
+
     <Localized id="partners--become-a-partner" args={{ assets }}>
       {#snippet children({ attrs })}
         <a href={attrs.href.replace(/\p{C}/gu, "")} target="_blank" rel="noopener">
@@ -89,7 +93,7 @@
 
   @media screen and (min-width: 768px) {
     .grid-partners {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 </style>

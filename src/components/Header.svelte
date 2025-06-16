@@ -15,7 +15,9 @@
     <Link href="/" variant="secondary"><Localized id="header--home" /></Link>
     <Link href="/#about" variant="secondary"><Localized id="header--about" /></Link>
     <!-- <Link href="/album" variant="secondary"><Localized id="header--album" /></Link> -->
-    <Link href="/cfp" variant="secondary"><Localized id="header--cfp" /></Link>
+    <Link href="https://gambiconf.substack.com" variant="secondary">
+      <Localized id="header--blog" />
+    </Link>
     <LanguageSwitcher />
     <ThemeSwitcher />
   </nav>

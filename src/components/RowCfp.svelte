@@ -16,34 +16,26 @@
 
       <div>
         <p>
-          <Localized id="call-for-proposal--body-paragraph-1-part-1" />
-          <strong><Localized id="call-for-proposal--body-paragraph-1-talk" /></strong>
-          <Localized id="call-for-proposal--body-paragraph-1-part-2" />
+          <Localized id="call-for-proposal--body-paragraph-1" />
         </p>
 
         <p>
           <Localized id="call-for-proposal--body-paragraph-2-part-1" />
-          <strong><Localized id="call-for-proposal--body-paragraph-2-workshop" /></strong>
-          <Localized id="call-for-proposal--body-paragraph-2-part-2" />
-        </p>
-
-        <p>
-          <Localized id="call-for-proposal--body-paragraph-3-part-1" />
-          <Link l10n="link" href="/previous-editions">
-            <Localized id="call-for-proposal--body-paragraph-3-link" />
+          <Link l10n="link" href="https://gambiconf.substack.com/" externalIcon>
+            <Localized id="call-for-proposal--body-paragraph-2-link" />
           </Link>
-          <Localized id="call-for-proposal--body-paragraph-3-part-2" />
         </p>
 
         <p>
-          <Localized id="call-for-proposal--body-paragraph-4" />
+          <Localized id="call-for-proposal--body-paragraph-3" />
+          <Link href="mailto:mambi@gambiconf.dev">mambi@gambiconf.dev</Link>
         </p>
       </div>
     </div>
 
-    <div class="button">
+    <!-- <div class="button">
       <a class="button-cfp" href={`${base}/cfp`}><Localized id="call-for-proposal--cta" /></a>
-    </div>
+    </div> -->
   </div>
 </Window>
 

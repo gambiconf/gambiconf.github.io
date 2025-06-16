@@ -5,6 +5,7 @@ title = GambiConf - The Blow Your Mind Conference
 header--home = Home
 header--about = Sobre
 header--cfp = CFP
+header--blog = Blog
 header--album = Álbum
 header--schedule = Agenda
 
@@ -82,18 +83,10 @@ calendar--saturday = Sa
 ## Call for Proposal
 
 call-for-proposal--title = Call for Proposal
-call-for-proposal--body-paragraph-1-part-1 =
-  Se você quiser compartilhar um trabalhado engenhoso num projeto pessoal ou algo underground envolvendo
-  computação, venha apresentar a sua
-call-for-proposal--body-paragraph-1-talk = talk
-call-for-proposal--body-paragraph-1-part-2 = no sábado!
-call-for-proposal--body-paragraph-2-part-1 = Já se você prefere focar num hands-on com a comunidade, você pode optar em ministrar um
-call-for-proposal--body-paragraph-2-workshop = workshop
-call-for-proposal--body-paragraph-2-part-2 = no domingo!
-call-for-proposal--body-paragraph-3-part-1 = Caso esteja sem muitas ideias, veja como foram
-call-for-proposal--body-paragraph-3-link = as edições passadas
-call-for-proposal--body-paragraph-3-part-2 = para se inspirar.
-call-for-proposal--body-paragraph-4 = O deadline é 15 de Junho.
+call-for-proposal--body-paragraph-1 = O CFP já está encerrado, mas ainda dá tempo de participar da GambiConf!
+call-for-proposal--body-paragraph-2-part-1 = Vamos publicar uma revista impressa da GambiConf e incluir nela alguns artigos
+call-for-proposal--body-paragraph-2-link = do nosso blog
+call-for-proposal--body-paragraph-3 = Caso você tenha interesse em escrever para o blog, envie um e-mail contando sobre o que gostaria de falar:
 call-for-proposal--cta = Submeter no CFP
 
 ## Partners

@@ -110,7 +110,7 @@ footer--home = Home
 footer--about = About
 footer--previous-editions = Previous Editions
 footer--code-of-conduct = Code of Conduct
-footer--media-kit = Media Kit - Become a partner
+footer--media-kit = Media Kit — Become a partner
 footer--media-kit-href = { $assets }/mediakit-en.pdf
 footer--contacts = Contacts
 
@@ -167,7 +167,7 @@ schedule--presentation-opening-ceremony-second-day-title = Opening Ceremony (2nd
 schedule--presentation-opening-ceremony-second-day-description = Welcome to the event! Let's talk about the workshops! Note: All workshops happen at the same time, and you need to choose one of them.
 schedule--lunch = Lunch Time
 schedule--coffe-break = Coffee break
-schedule--upcoming = New entries every Tuesday and Thursday! Follow us on social media to be the first one to know!
+schedule--upcoming = New announcements every Monday, Wednesday, and Friday! Follow our social media to be the first to know about the surprises!
 
 ## EventTimeSlot
 

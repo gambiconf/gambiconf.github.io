@@ -32,9 +32,13 @@
     <BulletsGutter />
   </div>
 
-  <RowCfp />
+  <RowSchedule />
 
-  <!-- <RowSchedule /> -->
+  <div class="bullters-gutter-wrapper">
+    <BulletsGutter />
+  </div>
+
+  <RowCfp />
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />

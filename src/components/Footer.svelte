@@ -1,17 +1,9 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
-  import { Fa, FaLayers } from "svelte-fa"
   import { assets } from "$app/paths"
-  import { faCircle } from "@fortawesome/free-solid-svg-icons/faCircle"
-  import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
-  import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram"
-  import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin"
-  import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
-  import { faBluesky } from "@fortawesome/free-brands-svg-icons/faBluesky"
-  import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
-  import { faNewspaper } from "@fortawesome/free-solid-svg-icons/faNewspaper"
   import { t } from "../store/locale.svelte"
   import Link from "./Link.svelte"
+  import GambiConfSocialLinks from "./GambiConfSocialLinks.svelte"
 </script>
 
 <footer>
@@ -26,9 +18,18 @@
       <div>
         <Link href="/" variant="secondary"><Localized id="footer--home" /></Link>
         <Link href="/#about" variant="secondary"><Localized id="footer--about" /></Link>
-        <Link href="/previous-editions" variant="secondary"><Localized id="footer--previous-editions" /></Link>
-        <Link href="/code-of-conduct" variant="secondary"><Localized id="footer--code-of-conduct" /></Link>
-        <Link href={t('footer--media-kit-href', { assets }).replace(/\p{C}/gu, "")} variant="secondary" target="_blank" rel="noopener noreferrer">
+        <Link href="/previous-editions" variant="secondary"
+          ><Localized id="footer--previous-editions" /></Link
+        >
+        <Link href="/code-of-conduct" variant="secondary"
+          ><Localized id="footer--code-of-conduct" /></Link
+        >
+        <Link
+          href={t("footer--media-kit-href", { assets }).replace(/\p{C}/gu, "")}
+          variant="secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Localized id="footer--media-kit" />
         </Link>
       </div>
@@ -40,98 +41,7 @@
       <div>
         <Link href="mailto:mambi@gambiconf.dev" variant="secondary">mambi@gambiconf.dev</Link>
 
-        <div class="social-links-container">
-          <a
-            href="https://bsky.app/profile/gambiconf.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Bluesky"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faCircle} />
-              <Fa color="white" scale={0.6} icon={faBluesky} />
-            </FaLayers>
-          </a>
-
-          <a
-            href="https://twitter.com/gambiconf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faCircle} />
-              <Fa color="white" scale={0.6} icon={faTwitter} />
-            </FaLayers>
-          </a>
-
-          <a
-            href="https://github.com/gambiconf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faCircle} />
-              <Fa color="white" scale={0.6} icon={faGithub} />
-            </FaLayers>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/company/gambiconf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Linkedin"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faCircle} />
-              <Fa color="white" scale={0.6} icon={faLinkedin} />
-            </FaLayers>
-          </a>
-
-          <a
-            href="https://www.instagram.com/gambiconf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faCircle} />
-              <Fa color="white" scale={0.6} icon={faInstagram} />
-            </FaLayers>
-          </a>
-
-          <a
-            href="https://www.youtube.com/@gambiconf/videos"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faCircle} />
-              <Fa color="white" scale={0.6} icon={faYoutube} />
-            </FaLayers>
-          </a>
-
-          <a
-            href="https://gambiconf.substack.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Substack"
-            class="social-media-icon"
-          >
-            <FaLayers size="2x">
-              <Fa icon={faCircle} />
-              <Fa color="white" scale={0.6} icon={faNewspaper} />
-            </FaLayers>
-          </a>
-        </div>
+        <GambiConfSocialLinks largeScreenRows={3} smallScreenRows={1} />
       </div>
     </address>
   </div>
@@ -180,13 +90,6 @@
     gap: 5px;
   }
 
-  .social-media-icon {
-    color: #f34b21;
-  }
-  .social-media-icon:hover {
-    filter: brightness(0.8);
-  }
-
   @media screen and (min-width: 768px) {
     footer {
       text-align: left;
@@ -201,13 +104,6 @@
 
     .logo-image {
       height: 150px;
-    }
-
-    .social-links-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-row-gap: 5px;
-      justify-items: center;
     }
   }
 </style>

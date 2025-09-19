@@ -1,6 +1,21 @@
 <script module lang="ts">
   export type SocialLink = {
-    type: "github" | "linkedin" | "twitch" | "twitter" | "facebook" | "instagram" | "hackerNews" | "mastodon" | "medium" | "bluesky" | "googleScholar" | "website"
+    type:
+      | "github"
+      | "linkedin"
+      | "twitch"
+      | "twitter"
+      | "facebook"
+      | "instagram"
+      | "hackerNews"
+      | "mastodon"
+      | "medium"
+      | "bluesky"
+      | "googleScholar"
+      | "youtube"
+      | "gitlab"
+      | "stackoverflow"
+      | "website"
     url: string
   }
 </script>
@@ -17,15 +32,18 @@
   import { faMastodon } from "@fortawesome/free-brands-svg-icons/faMastodon"
   import { faMedium } from "@fortawesome/free-brands-svg-icons/faMedium"
   import { faBluesky } from "@fortawesome/free-brands-svg-icons/faBluesky"
+  import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
+  import { faGitlab } from "@fortawesome/free-brands-svg-icons/faGitlab"
+  import { faStackOverflow } from "@fortawesome/free-brands-svg-icons/faStackoverflow"
   import { faEarth } from "@fortawesome/free-solid-svg-icons/faEarth"
   import { faMortarBoard } from "@fortawesome/free-solid-svg-icons/faMortarBoard"
   import type { IconDefinition } from "@fortawesome/fontawesome-common-types"
 
   interface Props {
-    links: SocialLink[];
+    links: SocialLink[]
   }
 
-  let { links }: Props = $props();
+  let { links }: Props = $props()
 
   const mapLinkTypeToIcon: { [link in SocialLink["type"]]: IconDefinition } = {
     github: faGithub,
@@ -38,6 +56,9 @@
     mastodon: faMastodon,
     medium: faMedium,
     bluesky: faBluesky,
+    youtube: faYoutube,
+    gitlab: faGitlab,
+    stackoverflow: faStackOverflow,
     website: faEarth,
     googleScholar: faMortarBoard,
   }

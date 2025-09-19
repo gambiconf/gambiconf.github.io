@@ -163,7 +163,7 @@ schedule--presentation-opening-ceremony-second-day-title = Cerimônia de Abertur
 schedule--presentation-opening-ceremony-second-day-description = Boas vindas ao evento! Vamos falar dos workshops! Nota: Todos os workshops acontecem ao mesmo tempo, e você deverá escolher um deles para participar.
 schedule--lunch = Almoço
 schedule--coffe-break = Coffee break
-schedule--upcoming = Novos anúncios toda terça e quinta! Siga nossas redes sociais para ser o primeiro a saber das surpresas!
+schedule--upcoming = Novos anúncios toda segunda, quarta e sexta! Siga nossas redes sociais para ser o primeiro a saber das surpresas!
 
 ## EventTimeSlot
 

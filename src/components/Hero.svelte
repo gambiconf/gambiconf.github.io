@@ -76,13 +76,8 @@
     </p>
 
     <div class="action">
-      <Button url="/cfp">
-        <Localized id="hero--cfp" />
-      </Button>
-
       <Button
         url="https://www.eventbrite.com.br/e/gambiconf-5a-edicao-29-de-novembro-na-totvs-30-de-novembro-na-usp-tickets-1333243771009?utm-campaign=website"
-        variant="secondary"
         newPage
       >
         <Localized id="hero--tickets" />

@@ -5,6 +5,10 @@
   import { utmSource } from "../utils/constants"
   import Window from "./Window.svelte"
   import TimeSlot from "./TimeSlot.svelte"
+  import Link from "./Link.svelte"
+  import GambiConfSocialLinks from "./GambiConfSocialLinks.svelte"
+  import Fa from "svelte-fa"
+  import { faMapLocation } from "@fortawesome/free-solid-svg-icons"
 </script>
 
 <div id="schedule">
@@ -13,10 +17,30 @@
       <h3><Localized id="schedule--first-day" /></h3>
 
       <TimeSlot
+        title="Abertura dos portões"
+        date="2024-11-02"
+        hours="9:00"
+        duration={20}
+        members={[]}
+      >
+        Nesse dia, o evento acontecerá na TOTVS - <Link
+          href="https://maps.app.goo.gl/PadW6Y4RLhYqxz796"
+          externalIcon
+        >
+          <Fa icon={faMapLocation} />
+          Ver Mapa
+        </Link>
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division"></div>
+      </div>
+
+      <TimeSlot
         title={t("schedule--presentation-opening-ceremony-first-day-title")}
         date="2024-11-02"
-        hours="9:30"
-        duration={20}
+        hours="9:20"
+        duration={25}
         members={[
           {
             name: "Bruno Macabeus",
@@ -50,23 +74,24 @@
       </div>
 
       <TimeSlot
-        title="Como uma pinça derrotou a segurança do Nintendo Wii"
-        date="2024-11-02"
-        hours="9:55"
+        title="Usando Clojure para Gerar Javascript para rodar Clojure que Executa Ruby (e Python)"
+        date="2024-11-29"
+        hours="9:50"
         duration={30}
         members={[
           {
-            name: "Gabu",
-            image: `${assets}/speakers/gabu.png`,
-            bio: "Profissional com 5 anos de experiência em Pentest Web, Mobile e AppSec. Também atuo como professor na FIAP, onde compartilho minha paixão pela área e organizo eventos de Capture the Flag.",
+            name: "Maurício Szabo",
+            image: `${assets}/speakers/mauricio-szabo.jpg`,
+            bio: "Desenvolvedor poliglota, apaixonado por desenvolvimento interativo e feedback cycles minúsculos, sigo tentando mudar alguns paradigmas sobre desenvolvimento.",
             socialLinks: [
-              { type: "twitter", url: "https://twitter.com/gabu_sec" },
-              { type: "linkedin", url: "https://www.linkedin.com/in/gabrielbarbosasouza"}
+              { type: "gitlab", url: "https://gitlab.com/mauricioszabo" },
+              { type: "bluesky", url: "https://bsky.app/profile/mauricioszabo.bsky.social" },
             ],
           },
         ]}
       >
-        Em 2007, pesquisadores de segurança descobriram uma forma de comprometer a segurança do Wii utilizando uma pinça para manipular componentes internos do console e ganhar acesso ao dispositivo.
+        Interactive coding (estilo LISP/Smalltalk) para linguagens tipo Ruby e Python? Sim, é
+        possível, é melhor do que você imagina, já existe, e você já pode usar!
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -74,24 +99,26 @@
       </div>
 
       <TimeSlot
-        title="Como adicionar multiplayer em um jogo sem autorização do desenvolvedor"
-        date="2024-11-02"
-        hours="10:30"
-        duration={25}
+        title="Usando a VM do SQLite para criar uma linguagem de programação"
+        date="2024-11-29"
+        hours="10:25"
+        duration={30}
         members={[
           {
-            name: "Vitor Norton",
-            image: `${assets}/speakers/vitor-norton.jpg`,
-            bio: "Microsoft MVP há mais tempo do que me lembro, +10 anos como Full Stack trabalhando com C#, TypeScript, React e Angular. Trabalho como Dev Advocate na SuperViz. Apaixonado por criar pontes entre pessoas.",
+            name: "Diego Reis",
+            image: `${assets}/speakers/diego-reis.jpg`,
+            bio: 'Estudante de Ciência da Computação, trabalha na <a href="https://x.com/tursodatabase">@tursodatabase</a> no desenvolvimento do Limbo, rewrite assíncrono do SQLite em Rust. Apaixonado por paçoca e usar ferramentas de forma que não foram pensadas.',
             socialLinks: [
-              { type: "twitter", url: "https://twitter.com/vt_norton" },
-              { type: "github", url: "https://github.com/vtnorton" },
-              { type: "instagram", url: "https://instagram.com/vt_norton" },
+              { type: "twitter", url: "https://twitter.com/el_yawd" },
+              { type: "github", url: "https://github.com/el-yawd" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/the-diego-reis" },
             ],
           },
         ]}
       >
-        Fiquei horas viciado no Infinite Craft. Tão viciado que precisei arranjar uma desculpa no trabalho pra ficar jogando mais. Daí fiz um projeto pro trampo com ele.
+        SQLite é o banco de dados mais utilizado do mundo e, internamente, uma VM é usada para
+        executar as queries SQL. Assim, e se usássemos essa VM para criar uma linguagem de
+        programação?
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -99,22 +126,28 @@
       </div>
 
       <TimeSlot
-        title="Machine Learning distribuído com Elixir"
-        date="2024-11-02"
+        title="Criando um MMO RPG com Erlang, PostgreSQL, Zig, Nix e muita gambiarra"
+        date="2024-11-29"
         hours="11:00"
-        duration={30}
+        duration={35}
         members={[
           {
-            name: "Paulo Valente",
-            image: `${assets}/speakers/paulo-valente.jpg`,
-            bio: "Paulo Valente é co-mantenedor do ecossistema Nx em Elixir, formado em Engenharia Eletrônica pela UFRJ. Atualmente, trabalha para a <a href='https://x.com/DockYard'>@DockYard</a> como engenheiro de R&D",
+            name: "Marcos Benevides",
+            image: `${assets}/speakers/marcos-benevides.png`,
+            bio: "Programador F#/OCaml, apreciador de Haskell, maximalista de Nix/NixOS",
             socialLinks: [
-              { type: "github", url: "https://github.com/polvalente" },
+              { type: "github", url: "https://github.com/schonfinkel" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/schonfinkel" },
+              {
+                type: "stackoverflow",
+                url: "https://stackoverflow.com/users/4614840/schonfinkel",
+              },
             ],
           },
         ]}
       >
-        Nesta palestra, veremos como Elixir pode ser utilizado para construir um sistema de captura e processamento de dados através do ecossistema Nx de bibliotecas junto ao Phoenix LiveView.
+        A experiência (e os perrengues) de criar um MMO RPG utilizando uma combinação pouco
+        convencional: Erlang, PostgreSQL, Zig e Nix. Gambiarras declarativas são inevitáveis.
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -122,24 +155,23 @@
       </div>
 
       <TimeSlot
-        title="Janta Grátis? Como Hackear Drones de Delivery, só pelo roleplay"
-        date="2024-11-02"
-        hours="11:35"
-        duration={45}
+        title="Sala Secreta? Como verificar as eleições por você mesmo"
+        date="2024-11-29"
+        hours="11:40"
+        duration={30}
         members={[
           {
-            name: "Luiz Custódio",
-            image: `${assets}/speakers/luiz-custodio.jpeg`,
-            bio: "Doutor em Ciência da Computação pela UEM, atualmente é techlead na Conviso Application Security e membro do MannaTeam desenvolvendo pesquisas em segurança em internet dos drones.",
+            name: "Leonardo Toshinobu Kimura",
+            image: `${assets}/speakers/leonardo-kimura.jpg`,
+            bio: "Doutorando em Engenharia de Computação pela USP, pesquisando como deixar as eleições mais seguras e transparentes.",
             socialLinks: [
-              { type: "github", url: "https://github.com/luhenrique06" },
-              { type: "linkedin", url: "https://www.linkedin.com/in/luhenrique" },
-              { type: "instagram", url: "https://www.instagram.com/luhenrique06" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/leonardo-kimura/" },
             ],
           },
         ]}
       >
-        Drones de delivery, já é uma realidade. Já pensou como um hacker poderia roubar a sua janta hackeando um drone? Nesta talk vou mostrar para você como é simples.
+        Muitas pessoas acreditam que o TSE manipula os votos durante a contagem. Nessa palestra,
+        vamos ver na prática se isso é verdade.
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -155,22 +187,25 @@
       </div>
 
       <TimeSlot
-        title="Ressuscitando textos milenares das cinzas do Vesúvio"
-        date="2024-11-02"
-        hours="14:00"
+        title="Games in PostScript – Play Chess Against Your Printer"
+        date="2024-11-29"
+        hours="13:40"
         duration={30}
         members={[
           {
-            name: "Elian Rafael Dal Prá",
-            image: `${assets}/speakers/elian-rafael.png`,
-            bio: "Mestrando em Física Computacional na USP e um dos segundos colocados no Vesuvius Challenge 2023 Grand Prize.",
+            name: "Nicolas Seriot",
+            image: `${assets}/speakers/nicolas-seriot.jpg`,
+            bio: "Swiss software engineering manager. Fascinated by weird stuff and broken process. Nature lover, ultra-trail runner.",
             socialLinks: [
-              { type: "twitter", url: "https://twitter.com/elianrafaeldp" },
+              { type: "twitter", url: "https://x.com/nst021" },
+              { type: "github", url: "https://github.com/nst" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/nseriot" },
             ],
           },
         ]}
       >
-        Nessa talk, veremos como revelar textos de papiros carbonizados a partir de técnicas de Visão Computacional e Inteligência Artificial.
+        Write games in PostScript, the '80s printer language. Sokoban & Tetris running on desktop,
+        Tic-Tac-Toe & Chess on printer, printer vs human.
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -178,48 +213,25 @@
       </div>
 
       <TimeSlot
-        title="Analise de malware: R$2 ou 1 arquivo misterioso?"
-        date="2024-11-02"
-        hours="14:35"
-        duration={25}
-        members={[
-          {
-            name: "Cleber Soares",
-            image: `${assets}/speakers/cleber-soares.jpeg`,
-            bio: "Entusiasta em hardware hacking e biohacking, é pesquisador em Segurança da Informação e adepto da cultura do software livre. Com mais de 20 anos de experiência na área de tecnologia, possui pós-graduação em CyberSecurity e, atualmente, trabalha como Analista de Segurança da Informação, com foco em Análise de Malwares, Resposta a Incidentes, Segurança Ofensiva e Computação Forense. É professor de pós-graduação e instrutor acadêmico. É líder fundador do Capítulo OWASP Belém e autor regular das revistas Hacker Culture, eForenscs Magazine e Hackin9 Magazine.",
-            socialLinks: [
-              { type: "linkedin", url: "https://www.linkedin.com/in/clebersoaresbelem" },
-              { type: "instagram", url: "https://www.instagram.com/clebersoares_sec" },
-            ],
-          },
-        ]}
-      >
-        A palestra tem um objetivo educacional, com foco na análise de malware com ferramentas. Com estudos de caso reais e demonstrações práticas, os participantes aprenderão a detectar e neutralizar malware, contribuindo para a segurança digital.
-      </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division"></div>
-      </div>
-
-      <TimeSlot
-        title="Bluetooth pra quê? Fazendo streaming pela porta USB"
-        date="2024-11-02"
-        hours="15:05"
+        title="LEAN Fullstack: Codando no Assistente de Provas."
+        date="2024-11-29"
+        hours="14:15"
         duration={30}
         members={[
           {
-            name: "Ricardo Gomes da Silva",
-            image: `${assets}/speakers/ricardo-gomes.jpg`,
-            bio: "Dev backend formado em Ciência da Computação pela UFRGS e TU Berlin. Faço mais gambiarras do que deveria ser permitido por lei, e desmonto eletrônicos só matar tédio. Ah, e se sobrar algum parafuso, eu digo que caiu da minha cabeça mesmo.",
+            name: "Sofia Rodrigues",
+            image: `${assets}/speakers/sofia-rodrigues.png`,
+            bio: 'Oi!! Eu sou a Sofia, uma desenvolvedora de 22 anos apaixonada por compiladores e linguagens funcionais. Vivo estudando teoria de tipos e tentando aplicar na programação "real" especialmente nas minhas linguagens favoritas: Haskell e LEAN.',
             socialLinks: [
-              { type: "twitter", url: "https://twitter.com/debugweshell" },
-              { type: "mastodon", url: "https://mas.to/@debugweshell" },
-              { type: "website", url: "https://blog.rgsilva.com" },
+              { type: "twitter", url: "https://twitter.com/algebraic_dev" },
+              { type: "github", url: "https://github.com/algebraic-dev" },
             ],
           },
         ]}
       >
-        Que atire a primeira pedra quem nunca quis ouvir Spotify em um rádio que só aceitava pendrive! Mas... e se o pendrive não fosse bem um pendrive, e ainda conectasse no streaming?!
+        Nessa talk, vamos ver os avanços recentes da Std da linguagem LEAN e como esses avanços a
+        tornam não só um excelente assistente de prova, mas também uma ferramenta viável para
+        programação.
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -227,22 +239,51 @@
       </div>
 
       <TimeSlot
-        title="Como eu fiz um Flappy Bird em Assembly aos 16 anos"
-        date="2024-11-02"
-        hours="15:40"
-        duration={35}
+        title="Como tocar música com um monitor LCD e um rádio"
+        date="2024-11-29"
+        hours="14:50"
+        duration={30}
         members={[
           {
-            name: "Ana Carolina Hernandes",
-            image: `${assets}/speakers/ana-carolina-hernandes.png`,
-            bio: "Doutoranda em Matemática pela USP. Apaixonada por Lógica e Programação em Baixo Nível.",
+            name: "Luana Barbisa",
+            image: `${assets}/speakers/luana-barbosa.jpg`,
+            bio: "Luana Barbosa (ela/dela) - formada em Ciência da Computação pelo IME-USP.",
+            socialLinks: [{ type: "github", url: "https://github.com/luamfb" }],
+          },
+        ]}
+      >
+        Além de luz, monitores LCD também emitem ondas de rádio.<br />
+        Usando um rádio AM e imagens específicas, é possível tocar uma sequência de notas.<br />
+        Repositório no GitHub:
+        <Link href="https://github.com/luamfb/tempest-lcd"
+          >https://github.com/luamfb/tempest-lcd</Link
+        >
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division"></div>
+      </div>
+
+      <TimeSlot
+        title="Web-Cafeteiras em Haskell: Implementando a RFC 2324"
+        date="2024-11-29"
+        hours="15:25"
+        duration={30}
+        members={[
+          {
+            name: "Pablo Gustavo Fernandes Maia",
+            image: `${assets}/speakers/pablo-gustavo.jpeg`,
+            bio: "Sou de Natal-RN, estudante de Tecnologia da Informação na UFRN, desenvolvedor full stack e curioso por natureza. Estou constantemente flertando com Ciências da Computação e Matemática.",
             socialLinks: [
-              { type: "twitter", url: "https://x.com/anakurisu01" },
+              { type: "twitter", url: "https://twitter.com/pablo1gustavo" },
+              { type: "github", url: "https://github.com/Pablo1Gustavo" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/pablo-gustavo" },
             ],
           },
         ]}
       >
-        Descubra todas as gambiarras que fiz para recriar uma versão do Flappy Bird em Assembly 8086! ^-^
+        Exploraremos a história do erro 418 "I'm a teapot", implementando um servidor web em
+        Haskell e abordando temas como programação funcional e o protocolo HTTP.
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -258,25 +299,26 @@
       </div>
 
       <TimeSlot
-        title="Posso ser invadido só por jogar Counter-Strike?"
-        date="2024-11-02"
-        hours="16:55"
-        duration={25}
+        title="Go no PlayStation 2: como virar um péssimo dev de jogos"
+        date="2024-11-29"
+        hours="16:35"
+        duration={40}
         members={[
           {
-            name: "Renan Dias",
-            image: `${assets}/speakers/renan-dias.jpg`,
-            bio: "Cursando Defesa Cibernética na FIAP, atualmente sou Analista de Cybersegurança no Agibank e pesquisador de segurança nas horas vagas! Definitivamente, invadir e burlar jogos é meu maior hobby 😁",
+            name: "Ricardo Gomes",
+            image: `${assets}/speakers/ricardo-gomes.jpg`,
+            bio: "Dev backend formado em Ciência da Computação pela UFRGS e TU Berlin. Autor de infinitos projetos inacabados, faço mais gambiarras do que deveria ser permitido por lei e modifico eletrônicos por pura diversão - e até hoje só um pegou fogo!",
             socialLinks: [
-              { type: "twitter", url: "https://twitter.com/rez1ns" },
-              { type: "github", url: "https://github.com/WHrez1ns" },
-              { type: "linkedin", url: "https://www.linkedin.com/in/renan-dias-da-costa-563830264" },
-              { type: "medium", url: "https://medium.com/@whrez1ns" },
+              { type: "bluesky", url: "https://bsky.app/profile/rgsilva.com" },
+              { type: "mastodon", url: "https://mas.to/@debugweshell" },
+              { type: "website", url: "https://rgsilva.com/" },
             ],
           },
         ]}
       >
-        Em 2017, pesquisadores encontraram uma vulnerabilidade no SDK da Valve que permitia acesso remoto ao computador do oponente caso ele morresse uma única vez na partida. Nessa talk, vou mostrar como.
+        Quem nunca pensou em desenvolver jogos né? E que tal usar Go e um PS2 para isso? É isso
+        que vamos explorar nesta talk sobre gambiarras baremetal, hacks no compilador e até mesmo
+        bugs da Sony!
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -284,24 +326,26 @@
       </div>
 
       <TimeSlot
-        title="Arquiteturas de compiladores"
-        date="2024-11-02"
+        title="ABC: Onde Python começou"
+        date="2024-11-29"
         hours="17:20"
         duration={20}
         members={[
           {
-            name: "Gabrielle Oliveira",
-            image: `${assets}/speakers/gabrielle-oliveira.jpeg`,
-            bio: "Me chamo Gabrielle Oliveira, participei da primeira rinha de backend com Lean4 e organizei a rinha de compiladores, programo Clojure, Rust e OCaml e brinco com compiladores por ai :)",
+            name: "Luciano Ramalho",
+            image: `${assets}/speakers/luciano-ramalho.jpg`,
+            bio: "Luciano Ramalho escreveu Fluent Python e ajudou a criar o Garoa Hacker Clube. Ramalho é foragido do IME/USP, de onde escapou logo no início de sua pena.",
             socialLinks: [
-              { type: "twitter", url: "https://twitter.com/io_gabx" },
-              { type: "github", url: "https://github.com/aripiprazole" },
-              { type: "website", url: "https://gabx.io" },
+              { type: "github", url: "https://github.com/ramalho" },
+              { type: "mastodon", url: "https://ciberlandia.pt/@lr" },
+              { type: "website", url: "https://ramalho.org" },
             ],
           },
         ]}
       >
-        Como integrar e fazer um compilador rápido que tenha uma infraestutura legal e estruturar o código para que a manutenção seja mais simples
+        Antes de criar Python, Guido van Rossum trabalhou anos na linguagem ABC, criada no centro
+        de pesquisa CWI em Amsterdam.<br />
+        Conheça ABC e veja a origem de ideias centrais de Python, como tuplas, o laço for e muito mais.
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -309,48 +353,40 @@
       </div>
 
       <TimeSlot
-        title="(Quase) tudo que você que você sabe sobre computadores (provavelmente) está errado"
-        date="2024-11-02"
+        title="Dirty Hacks e Gambiarras Elegantes"
+        date="2024-11-29"
         hours="17:45"
         duration={30}
         members={[
           {
-            name: "Renato Alencar",
-            image: `${assets}/speakers/renato-alencar.jpg`,
-            bio: "Hacker Piauiense e fã de cajuína, com experiência em campeonatos de CTF, compiladores e jogos de azar.",
+            name: 'Felipe "Juca" Sanches',
+            image: `${assets}/speakers/felipe-sanches.jpg`,
+            bio: "Desenvolvedor de software livre, tanto profissionalmente, como também no tempo de lazer, desenvolvendo emuladores junto ao Projeto MAME.\nÉ co-fundador do Garoa Hacker Clube.",
             socialLinks: [
-              { type: "twitter", url: "https://twitter.com/cajuinaoverflow" },
-              { type: "github", url: "https://github.com/renatoalencar" },
-              { type: "bluesky", url: "https://bsky.app/profile/cajuinaoverflow.bsky.social" },
+              { type: "twitter", url: "https://twitter.com/juca_gnu" },
+              { type: "github", url: "https://github.com/felipesanches" },
+              { type: "youtube", url: "https://www.youtube.com/c/HappyHackingVideoBlog" },
+              { type: "website", url: "https://forum.fiozera.com.br/" },
             ],
           },
         ]}
       >
-        Você acha que seu programa é compilado/executado diretamente em instruções sequenciais? Que computadores sempre funcionam só com zeros e uns? Você tá errado!
+        História de um apanhado de diversos projetos pessoais, desde a adolescência até os dias
+        atuais.<br />
+        Parte foi engavetada, outra concluída, e até houve casos que se transformaram em atuação profissional!
       </TimeSlot>
 
-      <div class="division-wrapper">
-        <div class="division"></div>
-      </div>
+      <!-- <div class="break">
+        <Localized id="schedule--upcoming" />
 
-      <TimeSlot
-        title="Keynote: A história por trás da criação do Elixir"
-        date="2024-11-02"
-        duration={45}
-        members={[
-          {
-            name: "Hugo Baraúna",
-            image: `${assets}/speakers/hugo-barauna.jpg`,
-            bio: "Hugo Baraúna é developer advocate do Livebook e founder da Elixir Radar. Antes disso, ele foi co-fundador da Plataformatec, onde o Elixir foi criado.",
-            socialLinks: [
-              { type: "twitter", url: "https://x.com/hugobarauna" },
-              { type: "github", url: "https://github.com/hugobarauna" },
-            ],
-          },
-        ]}
-      >
-        Nesta palestra vamos aprender sobre a história da criação do Elixir, uma linguagem de programação brasileira usada no mundo inteiro.
-      </TimeSlot>
+        <div class="gambiconf-social-links">
+          <GambiConfSocialLinks
+            largeScreenRows={1}
+            smallScreenRows={1}
+            exclude={["github", "youtube", "substack"]}
+          />
+        </div>
+      </div> -->
 
       <div class="division-wrapper">
         <div class="division"></div>
@@ -359,15 +395,37 @@
       <h3><Localized id="schedule--second-day" /></h3>
 
       <TimeSlot
+        title="Abertura dos portões"
+        date="2024-11-02"
+        hours="13:00"
+        duration={30}
+        members={[]}
+      >
+        Nesse dia, o evento acontecerá na USP, Campus Butantã, no auditório do IME - <Link
+          href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7"
+          externalIcon
+        >
+          <Fa icon={faMapLocation} />
+          Ver Mapa
+        </Link>
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division"></div>
+      </div>
+
+      <TimeSlot
         title={t("schedule--presentation-opening-ceremony-second-day-title")}
-        date="2024-11-03"
+        date="2024-11-02"
         hours="13:30"
-        duration={25}
+        duration={35}
         members={[
           {
-            image: `${assets}/speakers/bruno-macabeus.jpeg`,
             name: "Bruno Macabeus",
+            image: `${assets}/speakers/bruno-macabeus.jpeg`,
+            bio: t("schedule--presentation-opening-ceremony-first-day-bio"),
             socialLinks: [
+              { type: "bluesky", url: "https://bsky.app/profile/macabeus.bsky.social" },
               { type: "twitter", url: "https://twitter.com/bmacabeus" },
               { type: "github", url: "https://github.com/macabeus" },
               { type: "website", url: "http://macabeus.github.io/" },
@@ -375,7 +433,47 @@
           },
         ]}
       >
-        <Localized id="schedule--presentation-opening-ceremony-second-day-description" />
+        <Localized id="schedule--presentation-opening-ceremony-first-day-description" />
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division"></div>
+      </div>
+
+      <div class="break">
+        <strong>Observação sobre os workshops:</strong>
+        <span>
+          Todos acontecerão simultaneamente. Então, no dia do evento, escolha apenas um para
+          participar. Além disso, traga o seu notebook.
+        </span>
+      </div>
+
+      <div class="division-wrapper">
+        <div class="division"></div>
+      </div>
+
+      <TimeSlot
+        title="Videogames: das portas lógicas ao software"
+        date="2024-11-30"
+        hours="14:10"
+        duration={210}
+        members={[
+          {
+            name: "Jecel Mattos de Assumpção Júnior",
+            image: `${assets}/speakers/jecel-mattos.jpg`,
+            bio: "Depois de desenvolver vários computadores originais nos anos 1980 (o que era raro no Brasil), Jecel se formou em microeletrônica pela Poli-USP em 1990. Continua criando computadores e circuitos integrados.",
+            socialLinks: [{ type: "github", url: "https://github.com/jeceljr" }],
+          },
+          {
+            name: "Mário Gazziro",
+            image: `${assets}/speakers/mario-gazziro.jpg`,
+            bio: "Mario Gazziro é doutor em Física Computacional pela USP. É professor na Universidade Federal do ABC. Tem experiência na área de instrumentação eletrônica e ciência da computação, com ênfase em arquitetura de sistemas de computação.",
+            socialLinks: [{ type: "youtube", url: "https://www.youtube.com/@mario.gazziro" }],
+          },
+        ]}
+      >
+        Este workshop usa o simulador Digital para mostrar como as portas lógicas podem ser usadas
+        em blocos maiores até formar um videogame implementado numa placa FPGA.
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -383,22 +481,46 @@
       </div>
 
       <TimeSlot
-        title="Identificando Armadilhas Digitais: Uma Introdução a Honeypots"
-        date="2024-11-03"
-        hours="14:00"
+        title="Contribuindo com Open Source com a ajuda do GitHub Copilot"
+        date="2024-11-30"
+        hours="14:10"
         duration={210}
         members={[
           {
-            name: "Mike Garcia",
-            image: `${assets}/speakers/mike-garcia.png`,
-            bio: "Analista de Segurança da Informação, com 10 anos de experiência em expressivas empresas do mercado nacional e atuando com segurança  defensiva na Tempest desde 2020 onde, atualmente, faz parte do Time de CSIRT.",
+            name: "Pachi Parra",
+            image: `${assets}/speakers/pachi-parra.jpg`,
+            bio: "Pachi Parra atua como Developer Advocate no GitHub.  Palestra e cria pontes para tornar a tecnologia mais acessível, diversa e colaborativa.",
             socialLinks: [
-              { type: "linkedin", url: "https://www.linkedin.com/in/mike-garcia-351689b5/" },
+              { type: "twitter", url: "http://twitter.com/pachicodes" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/pachicodes" },
+              { type: "bluesky", url: "https://bsky.app/profile/abacatinhos.dev" },
+              { type: "github", url: "https://github.com/pachicodes" },
+            ],
+          },
+          {
+            name: "Morganna Giovanelli",
+            image: `${assets}/speakers/morganna-giovanelli.jpg`,
+            bio: "Morganna espalha a palavra da Ada Lovelace por aí e, para ela, Pessoas > Tecnologia. Trabalha como Developer Advocate com plataformas de Inteligência Artificial e é reconhecida como Embaixadora LINUXtips.",
+            socialLinks: [
+              { type: "linkedin", url: "https://www.linkedin.com/in/morgannadev/" },
+              { type: "bluesky", url: "https://bsky.app/profile/morgannadev.bsky.social" },
+              { type: "github", url: "https://github.com/morgannadev" },
+              { type: "website", url: "https://morganna.dev/" },
+            ],
+          },
+          {
+            name: "Samuel Henrique",
+            image: `${assets}/speakers/samuel-henrique.jpg`,
+            bio: "Samuel atua como Desenvolvedor Full-Stack e é membro ativo em várias comunidades de tecnologia. Está sempre buscando aprender mais, trocar experiências e colaborar com o crescimento coletivo do ecossistema tech.",
+            socialLinks: [
+              { type: "linkedin", url: "https://www.linkedin.com/in/sanarielsen/" },
+              { type: "github", url: "https://github.com/Sanarielsen" },
             ],
           },
         ]}
       >
-        Em parceria com a <a href={`https://www.tempest.com.br/?${utmSource}`} target="_blank" rel="noopener">Tempest</a>.
+        Vamos aprendera usar o GitHub Copilot para contribuir com um projeto Open Source,
+        passo-a-passo.
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -406,46 +528,32 @@
       </div>
 
       <TimeSlot
-        title="Construindo apps real-time com Meteor.js 3.0 e React"
-        date="2024-11-03"
-        hours="14:00"
+        title="Extensibilidade do PostgreSQL"
+        date="2024-11-30"
+        hours="14:10"
         duration={210}
         members={[
           {
-            name: "Frederico Maia Arantes",
-            image: `${assets}/speakers/fred-maia.jpg`,
-            bio: "Nascido em Goiânia, já morou no RJ, Irlanda, foi nômade por 2 anos e hoje mora em Floripa. Programador desde 2008, deu aulas de programação e palestrou em eventos como TDC e FLISOL. Hoje é CEO da Meteor Software, criadora do Meteor.js e do Galaxy.",
+            name: "Fabrízio de Royes Mello",
+            image: `${assets}/speakers/fabrizio-mello.jpg`,
+            bio: "Sócio da Timbira Inteligência em PostgreSQL e Engenheiro de Software na TigerData desenvolvendo o TimescaleDB, uma extensão PostgreSQL para análises de alto desempenho em tempo real em séries temporais e dados de eventos.",
             socialLinks: [
-              { type: "github", url: "https://github.com/fredmaiaarantes" },
-              { type: "linkedin", url: "https://linkedin.com/in/fredmaiaarantes" },
-              { type: "twitter", url: "https://twitter.com/fredmaiaarantes" },
-              { type: "website", url: "https://fredmaia.dev" },
+              { type: "twitter", url: "http://twitter.com/fabriziomello" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/fabriziomello" },
+              { type: "github", url: "http://github.com/fabriziomello" },
             ],
           },
           {
-            name: "Camila Rosa",
-            image: `${assets}/speakers/camila-rosa.jpeg`,
-            bio: "Me chamo Cami, formei em Rádio, TV e Internet e fiz transição de carreira para tech no fim de 2023. Entrei como Tech Community Manager na Meteor Software. Sou muito otaku e coleciono mangás!",
-            socialLinks: [
-              { type: "linkedin", url: "https://www.linkedin.com/in/camilarosa-2403" },
-              { type: "twitter", url: "https://x.com/acamikuro" },
-            ],
-          },
-          {
-            name: "Gabs Ferreira",
-            image: `${assets}/speakers/gabs-ferreira.png`,
-            bio: "Developer advocate na Meteor Software, podcaster e criador de conteúdo tech",
-            socialLinks: [
-              { type: "github", url: "https://github.com/gabsferreira" },
-              { type: "linkedin", url: "https://www.linkedin.com/in/gabsferreira" },
-              { type: "twitter", url: "https://x.com/o_gabsferreira" },
-              { type: "website", url: "https://gabsferreira.com" },
-            ],
+            name: "Dickson Guedes",
+            image: `${assets}/speakers/dickson-guedes.jpg`,
+            bio: "Consultor pela Timbira Inteligência em Postgres, atua na área de tecnologia há mais de 20 anos, experiência em software livre, banco de dados PostgreSQL e análise de dados. Entusiasta de IA e Computação Quântica, desenvolve em Python, Ruby e Rust.",
+            socialLinks: [{ type: "linkedin", url: "https://www.linkedin.com/in/dicksonguedes" }],
           },
         ]}
       >
-        Entenda conceitos importantes como RPC com <a href={`https://meteor.com/?${utmSource}`} target="_blank" rel="noopener">Meteor</a> Methods, publications e subscriptions para real-time, crie collections e um sistema de autenticação.
-        Do zero ao deploy no <a href={`https://www.meteor.com/cloud?${utmSource}`} target="_blank" rel="noopener">Galaxy</a>!
+        O Postgres oferece inúmeros mecanismos de extensibilidade onde é possível, sem alterar seu
+        núcleo, adicionar novas funcionalidades e até mesmo modificar comportamento existente.
+        Bora criar uma extensão juntos?
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -453,24 +561,31 @@
       </div>
 
       <TimeSlot
-        title="O lispy de Norvig: um interpretador em 132 linhas"
-        date="2024-11-03"
-        hours="14:00"
+        title="Minicurso de Kubernetes por Magalu Cloud"
+        date="2024-11-30"
+        hours="14:10"
         duration={210}
         members={[
           {
-            name: "Luciano Ramalho",
-            image: `${assets}/speakers/luciano-ramalho.jpeg`,
-            bio: "Autor de Fluent Python (O’Reilly 2022)",
+            name: "Fernando Ravagnani",
+            image: `${assets}/speakers/fernando-ravagnani.jpeg`,
+            bio: "Fernando está na área tech há mais de 25 anos, sendo que 22 foram na Magalu e Magalu Cloud. Pegou desde o começo do surgimento do devops e tem muita vivência para compartilhar.",
             socialLinks: [
-              { type: "twitter", url: "https://www.twitter.com/ramalhoorg" },
-              { type: "github", url: "https://www.github.com/Ramalho" },
-              { type: "mastodon", url: "https://ciberlandia.pt/@lr" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/fernando-ravagnani" },
+            ],
+          },
+          {
+            name: "Erivaldo Lopes",
+            image: `${assets}/speakers/erivaldo-lopes.jpeg`,
+            bio: "Erivaldo está há 19 anos no mercado de tecnologia, dos quais 13 foram dedicados em aprimorar ambientes de datacenter, com foco especial em cloud.",
+            socialLinks: [
+              { type: "linkedin", url: "https://www.linkedin.com/in/erivaldolopes" },
+              { type: "website", url: "https://erivaldolopes.io" },
             ],
           },
         ]}
       >
-        Peter Norvig professor em Stanford criou o lis.py, um interpretador de um pequeno dialeto de Lisp em 132 linhas de código Python muito legível. Nessa oficina veremos como ele funciona!
+        Veja na prática como usar kubernetes, do básico ao deploy na Magalu Cloud.
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -478,26 +593,25 @@
       </div>
 
       <TimeSlot
-        title="Construindo uma aplicação serverless com AWS CDK"
-        date="2024-11-03"
-        hours="14:00"
+        title="Introdução à programação com Python"
+        date="2024-11-30"
+        hours="14:10"
         duration={210}
         members={[
           {
-            name: "Léo Igor Nunes",
-            image: `${assets}/speakers/leo-igor-nunes.jpg`,
-            bio: "Estudante de Ciência da computação, engenheiro de dados, entusiasta de Tecnologia.",
+            name: "PyLadies São Paulo",
+            image: `${assets}/speakers/pyladies-saopaulo.png`,
+            bio: "A PyLadies é uma comunidade global focada em aumentar a atividade e a liderança das mulheres na comunidade Python. O capítulo de SP nasceu em 2015, e desde então buscamos cumprir este objetivo através de encontros para ensinar e aprender Python ❤️",
             socialLinks: [
-              { type: "twitter", url: "https://www.twitter.com/leoigornunes" },
-              { type: "linkedin", url: "https://www.linkedin.com/in/leoigornunes/" },
-              { type: "website", url: "https://c4p1t4n.github.io/bc4p1t4n/pt-br/" },
+              { type: "linkedin", url: "https://www.linkedin.com/company/pyladiessp" },
+              { type: "instagram", url: "https://www.instagram.com/pyladies.saopaulo" },
             ],
           },
         ]}
       >
-        - Conceitos essenciais de Infraestrutura como Código (IaC)<br />
-        - Introdução aos conceitos do AWS CDK<br />
-        - Criação de uma aplicação web na AWS utilizando serverless
+        Neste workshop vamos introduzir conceitos básicos da programação como condição, repetição,
+        funções e variáveis, utilizando o Python! Não é necessário saber programar em outras
+        linguagens!
       </TimeSlot>
 
       <div class="division-wrapper">
@@ -505,76 +619,87 @@
       </div>
 
       <TimeSlot
-        title="Hackeando roteadores na prática"
-        date="2024-11-03"
-        hours="14:00"
+        title="Impressão 3d completo: modelagem, fatiamento, acabamento, e comércio"
+        date="2024-11-30"
+        hours="14:10"
         duration={210}
         members={[
           {
-            name: "Renato Alencar",
-            image: `${assets}/speakers/renato-alencar.jpg`,
-            bio: "Hacker Piauiense, fã de cajuína e jogador de CTF.",
+            name: "Marco Worms",
+            image: `${assets}/speakers/marco-worms.jpg`,
+            bio: "Trabalho há mais de 10 anos no setor de tecnologia, ja trabalhei como desenvolvedor, gestor, recrutador, e até em lugares onde quase todos são anônimos, gosto muito de Ethereum, Bitcoin, Impressão 3d, Drones, e IA, não necessariamente nessa ordem!",
             socialLinks: [
-              { type: "twitter", url: "https://www.twitter.com/cajuinaoverflow" },
-              { type: "github", url: "https://www.github.com/renatoalencar" },
-              { type: "bluesky", url: "https://bsky.app/profile/cajuinaoverflow.bsky.social" },
+              { type: "github", url: "https://www.github.com/MarcoWorms" },
+              { type: "instagram", url: "https://www.instagram.com/worms.fpv" },
             ],
           },
         ]}
       >
-        Como explorar e achar vulnerabilidades em um roteador em uma situação real. Vamos pegar vários roteadores, abrir, extrair firmware, fazer engenharia reversa e tentar conseguir um shell.
+        Um guia completo de como funciona o processo de criação de uma peça em 3d, quais
+        ferramentas aprender, e como cada passo impacta a comercialização de uma peça.
       </TimeSlot>
 
+      <div class="division-wrapper">
+        <div class="division"></div>
+      </div>
+
       <TimeSlot
-        title="Painel: Urna Eletrônica e Segurança Eleitoral"
-        date="2024-11-03"
-        hours="18:00"
-        duration={45}
-        hasParagraph
+        title="Linguagens de Domínio Específico Embarcadas"
+        date="2024-11-30"
+        hours="14:10"
+        duration={210}
         members={[
           {
-            name: "Pedro Castilho (líder do painel)",
+            name: "Pedro Castilho",
             image: `${assets}/speakers/pedro-castilho.jpeg`,
-            bio: 'Pedro Castilho (<a href="https://bsky.app/profile/coprodu.to">@coproduto</a>) é um desenvolvedor de software. Ele passa a maior parte de seu tempo trabalhando na <a href="https://www.cumbuca.com">Cumbuca</a>, escrevendo código em Elixir ou pensando um pouco sobre computadores rodando silenciosamente dentro de suas fontes.',
+            bio: "Castilho programa há mais de 15 anos, é viciado em programação funcional e acredita veementemente que é possível melhorar como criamos software. Aplica programação funcional no mundo real como CTO da Cumbuca.",
             socialLinks: [
               { type: "twitter", url: "https://twitter.com/coproduto" },
-              { type: "github", url: "https://www.github.com/coproduto"},
-              { type: "linkedin", url: "https://www.linkedin.com/in/pcstl"},
-              { type: "bluesky", url: "https://bsky.app/profile/coprodu.to"},
-            ],
-          },
-          {
-            name: "Lucas Lago",
-            image: `${assets}/speakers/lucas-lago.jpeg`,
-            bio: "Mestre em Engenharia da Computação, ativista no Instituto Aaron Swartz e co-autor de dois relatórios desmascarando ataques às urnas nas eleições de 2022.",
-            socialLinks: [
-              { type: "twitter", url: "https://twitter.com/lucaslago" },
-              { type: "bluesky", url: "https://bsky.app/profile/lucaslago.projeto7c0.com.br" },
-            ],
-          },
-          {
-            name: "Marcos Simplicio",
-            image: `${assets}/speakers/marcos-simplicio.png`,
-            bio: "Recebeu doutorado em Engenharia Elétrica/Computação na USP (2010) - Universidade de São Paulo, Escola Politécnica, e atualmente é Professor Associado e pesquisador na mesma instituição. Está envolvido em projetos relacionados à cibersegurança desde 2007, cobrindo cenários como sistemas de votação eletrônica, redes veiculares, computação em nuvem, sistemas de transmissão de dados multimídia, redes peer-to-peer (P2P), mobile health, armazenamento seguro de senhas, transações bancárias, blockchain, e IoT. Resultou em mais de cem publicações relacionadas à cibersegurança, incluindo artigos acadêmicos premiados, patentes internacionais e padrões internacionais. ",
-            socialLinks: [
-              { type: "linkedin", url: "https://www.linkedin.com/in/marcos-simplicio-a2263822" },
-              { type: "googleScholar", url: "https://scholar.google.com.br/citations?user=E7n_ohsAAAAJ"}
-            ],
-          },
-          {
-            name: "Eduardo Lopes Cominetti",
-            image: `${assets}/speakers/eduardo-lopes-cominetti.jpg`,
-            bio: "Doutor em Engenharia da Computação pela Escola Politécnica da USP. Sua tese de doutorado trata da elaboração de sistemas de verificação fim-a-fim para o aprimoramento do sistema de votação brasileiro. É participante do projeto USP-TSE com enfoque na segurança do sistema eletrônico de votação. Além deste projeto, trabalha no desenvolvimento e implementação de algoritmos de criptografia resistentes a ataques de computadores quânticos, conhecidos como algoritmos pós-quânticos.",
-            socialLinks: [
-              { type: "twitter", url: "https://twitter.com/ECominetti" },
-              { type: "googleScholar", url: "https://scholar.google.com/citations?user=CVwL_CgAAAAJ" },
+              { type: "github", url: "https://github.com/coproduto" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/pcstl" },
+              { type: "bluesky", url: "https://bsky.app/profile/coprodu.to" },
             ],
           },
         ]}
       >
-        <p>Estamos cheios de eleições esse ano!</p>
-        <p>Tivemos as polêmicas na eleição da Venezuela, em Outubro teremos eleição no Brasil, e em Novembro a eleição nos EUA.</p>
-        <p>No meio do turbilhão de informação e desinformação, nós precisamos ser serenos e discutir esse assunto do ponto de vista técnico, com pesquisadores de urna eletrônica e segurança eleitoral.</p>
+        Linguagens de Domínio Específico são uma das técnicas mais poderosas e robustas de
+        construção de software complexo. Vamos aprender na prática como e quando criá-las <strong
+          >dentro da sua lang favorita</strong
+        >.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division"></div>
+      </div>
+
+      <div class="break">
+        <Localized id="schedule--coffe-break" />
+      </div>
+
+      <div class="division-wrapper">
+        <div class="division"></div>
+      </div>
+
+      <TimeSlot
+        title="[Painel]"
+        date="2024-11-03"
+        hours="18:20"
+        duration={45}
+        hasParagraph
+        members={[]}
+      >
+        O painel será anunciado em Novembro. Siga nossas redes sociais para ser o primeiro a saber
+        quando sair!
+
+        <center>
+          <div class="gambiconf-social-links">
+            <GambiConfSocialLinks
+              largeScreenRows={1}
+              smallScreenRows={1}
+              exclude={["github", "youtube", "substack"]}
+            />
+          </div>
+        </center>
       </TimeSlot>
     </article>
   </Window>
@@ -610,9 +735,15 @@
 
   .break {
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
-  a {
-    color: rgb(159, 91, 1);
+  .gambiconf-social-links {
+    padding-top: 10px;
+    max-width: 300px;
   }
 </style>

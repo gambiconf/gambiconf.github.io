@@ -63,8 +63,10 @@ row-what-is-gambiconf--body-paragraph-5-part-2 = to find out more about our purp
 ## Where and When
 
 where-and-when--title = Where and When
-where-and-when--body-paragraph-1-part-1 = November 02nd and 03rd, at
+where-and-when--body-paragraph-1-part-1 = The main days are 29th and 30th of November. Each day is at a different location:
 where-and-when--body-paragraph-1-link = USP - Campus Butantã
+where-and-when--body-warm-up = Also, on November 27th we have the warm-up! See more
+where-and-when--body-warm-up-link = at the meetup page
 where-and-when--body-paragraph-1-part-2 = .
 where-and-when--body-paragraph-2-part-1 = Free streaming on
 where-and-when--body-paragraph-2-link = YouTube

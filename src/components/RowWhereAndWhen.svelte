@@ -2,6 +2,7 @@
   import { Fa } from "svelte-fa"
   import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot"
   import { faMapLocation } from "@fortawesome/free-solid-svg-icons/faMapLocation"
+  import { faBeer } from "@fortawesome/free-solid-svg-icons/faBeer"
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
   import { faDiscord } from "@fortawesome/free-brands-svg-icons/faDiscord"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
@@ -47,6 +48,15 @@
           </li>
         </ul>
       </div>
+
+      <p>
+        <Fa icon={faBeer} />
+
+        <Localized id="where-and-when--body-warm-up" />
+        <Link l10n="link" href="https://www.meetup.com/import-beer/events/311111393">
+          <Localized id="where-and-when--body-warm-up-link" />
+        </Link>
+      </p>
 
       <p>
         <Fa icon={faYoutube} />

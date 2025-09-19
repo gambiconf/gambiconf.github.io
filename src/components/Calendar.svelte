@@ -46,7 +46,18 @@
   <span class="regular-day">24</span>
   <span class="regular-day">25</span>
   <span class="regular-day">26</span>
-  <span class="regular-day">27</span>
+  <span
+    class="highlighted-day"
+    use:annotate={{
+      type: "circle",
+      iterations: 2,
+      visible: true,
+      padding: -5,
+      color: "var(--calendar-highlighted-warm-up-color)",
+    }}
+  >
+    27
+  </span>
   <span class="regular-day">28</span>
   <span
     class="highlighted-day"

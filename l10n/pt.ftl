@@ -62,8 +62,10 @@ row-what-is-gambiconf--body-paragraph-5-part-2 = para ver mais sobre o propósit
 ## Where and When
 
 where-and-when--title = Onde e quando
-where-and-when--body-paragraph-1-part-1 = Em 29 e 30 de Novembro, com cada dia sendo em localidades diferentes:
+where-and-when--body-paragraph-1-part-1 = Os dias principais são 29 e 30 de Novembro. Cada dia é numa localidade diferente:
 where-and-when--body-paragraph-1-link = USP - Campus Butantã
+where-and-when--body-warm-up = Além disso, dia 27 de Novembro teremos o esquenta! Veja mais
+where-and-when--body-warm-up-link = na página do meetup
 where-and-when--body-paragraph-2-part-1 = Streaming gratuito no
 where-and-when--body-paragraph-2-link = YouTube
 where-and-when--body-paragraph-3-part-1 = Converse conosco no

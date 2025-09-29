@@ -245,7 +245,7 @@
         duration={30}
         members={[
           {
-            name: "Luana Barbisa",
+            name: "Luana Barbosa",
             image: `${assets}/speakers/luana-barbosa.jpg`,
             bio: "Luana Barbosa (ela/dela) - formada em Ciência da Computação pelo IME-USP.",
             socialLinks: [{ type: "github", url: "https://github.com/luamfb" }],

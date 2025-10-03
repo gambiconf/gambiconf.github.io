@@ -619,31 +619,6 @@
       </div>
 
       <TimeSlot
-        title="Impressão 3d completo: modelagem, fatiamento, acabamento, e comércio"
-        date="2024-11-30"
-        hours="14:10"
-        duration={210}
-        members={[
-          {
-            name: "Marco Worms",
-            image: `${assets}/speakers/marco-worms.jpg`,
-            bio: "Trabalho há mais de 10 anos no setor de tecnologia, ja trabalhei como desenvolvedor, gestor, recrutador, e até em lugares onde quase todos são anônimos, gosto muito de Ethereum, Bitcoin, Impressão 3d, Drones, e IA, não necessariamente nessa ordem!",
-            socialLinks: [
-              { type: "github", url: "https://www.github.com/MarcoWorms" },
-              { type: "instagram", url: "https://www.instagram.com/worms.fpv" },
-            ],
-          },
-        ]}
-      >
-        Um guia completo de como funciona o processo de criação de uma peça em 3d, quais
-        ferramentas aprender, e como cada passo impacta a comercialização de uma peça.
-      </TimeSlot>
-
-      <div class="division-wrapper">
-        <div class="division"></div>
-      </div>
-
-      <TimeSlot
         title="Linguagens de Domínio Específico Embarcadas"
         date="2024-11-30"
         hours="14:10"

@@ -655,25 +655,66 @@
       </div>
 
       <TimeSlot
-        title="[Painel]"
+        title="Painel: Privacidade e Censura na Internet"
         date="2024-11-03"
         hours="18:20"
         duration={45}
         hasParagraph
-        members={[]}
+        members={[
+          {
+            name: "Pedro Castilho (mediador)",
+            image: `${assets}/speakers/pedro-castilho.jpeg`,
+            socialLinks: [
+              { type: "twitter", url: "https://twitter.com/coproduto" },
+              { type: "github", url: "https://github.com/coproduto" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/pcstl" },
+              { type: "bluesky", url: "https://bsky.app/profile/coprodu.to" },
+            ],
+          },
+          {
+            name: "Vinicius Zavam",
+            image: `${assets}/speakers/vinicius-zavam.jpg`,
+            bio: `Cearense. Engenheiro da Computação, formado pelo IFCE, trabalhando em áreas com foco em automatização/orquestramento de sistemas e confortável em trabalhar com culturas e práticas categorizadas como DevOps e SRE. Interessado em construir infraestrutura de alta disponibilidade e soluções de alta qualidade, seja na nuvem ou não.<br />
+              Evangelista de sistemas com linhagem BSD, entusiasta de IPv6 e colaborador voluntário em diversos projetos de software livre e código aberto.<br />
+              FreeBSD ports committer e membro do Core Team no projeto Tor. Nas horas vagas, aparentemente um atleta híbrido.`,
+            socialLinks: [
+              { type: "github", url: "https://github.com/egypcio" },
+              { type: "linkedin", url: "https://www.linkedin.com/in/viniciuszavam" },
+            ],
+          },
+          {
+            name: "Douglas Fischer",
+            image: `${assets}/speakers/douglas-fischer.jpg`,
+            bio: `Filho, Esposo, Pai³. 42 anos.<br />
+              Engenheiro de telecomunicações.<br />
+              Atuo no mercado de computação e telecomunicações há mais de 20 anos.<br />
+              Gosto de ajudar os operadores de rede da cadeia de provimento de acesso a Internet a "fazer as coisas" da maneira o mais correta o possível.<br />
+              Me considero um tretísta por vocação. Adoro comprar brigas com quem geralmente as pessoas evitam comprar brigas para ajudar a resolver aqueles problemas que todos sabem que é um problema, mas nos vemos de mãos atadas pra resolver.`,
+            socialLinks: [
+              { type: "linkedin", url: "https://www.linkedin.com/in/fischerdouglas" },
+              { type: "twitter", url: "https://twitter.com/fischerdouglas" },
+            ],
+          },
+          {
+            name: "Rodrigo Silva",
+            image: `${assets}/speakers/rodrigo-silva.jpg`,
+            bio: `Profissional sênior em Cibersegurança (Resposta a Incidentes, Analista de Segurança, Inteligência de Ameaças, Analista de SOC e Teste de Penetração), Governança de TI e Regulação de Tecnologia/Internet, com forte habilidade de engajamento com stakeholders.<br />
+            Liderou iniciativas estratégicas no CGI.br | NIC.br e contribuiu para as atividades de resposta a incidentes e desenvolvimento de políticas do CERT.br. Atualmente é Professor Doutor na Universidade Presbiteriana Mackenzie e líder do CYBERSEC LAB, conduzindo projetos de pesquisa em cibersegurança e formando futuros profissionais de tecnologia.`,
+            socialLinks: [
+              {
+                type: "linkedin",
+                url: "https://www.linkedin.com/in/rodrigo-securityanalyst-associateprofessor",
+              },
+              {
+                type: "googleScholar",
+                url: "https://www.researchgate.net/profile/Rodrigo-Silva-87",
+              },
+            ],
+          },
+        ]}
       >
-        O painel será anunciado em Novembro. Siga nossas redes sociais para ser o primeiro a saber
-        quando sair!
-
-        <center>
-          <div class="gambiconf-social-links">
-            <GambiConfSocialLinks
-              largeScreenRows={1}
-              smallScreenRows={1}
-              exclude={["github", "youtube", "substack"]}
-            />
-          </div>
-        </center>
+        Um olhar técnico sobre privacidade e censura: vamos discutir sobre como a tecnologia
+        influencia o acesso e o controle da informação online.
       </TimeSlot>
     </article>
   </Window>

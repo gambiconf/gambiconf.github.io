@@ -698,8 +698,7 @@
           {
             name: "Rodrigo Silva",
             image: `${assets}/speakers/rodrigo-silva.jpg`,
-            bio: `Profissional sênior em Cibersegurança (Resposta a Incidentes, Analista de Segurança, Inteligência de Ameaças, Analista de SOC e Teste de Penetração), Governança de TI e Regulação de Tecnologia/Internet, com forte habilidade de engajamento com stakeholders.<br />
-            Liderou iniciativas estratégicas no CGI.br | NIC.br e contribuiu para as atividades de resposta a incidentes e desenvolvimento de políticas do CERT.br. Atualmente é Professor Doutor na Universidade Presbiteriana Mackenzie e líder do CYBERSEC LAB, conduzindo projetos de pesquisa em cibersegurança e formando futuros profissionais de tecnologia.`,
+            bio: `Eu quase fui um físico astrônomo, mas a computação chamou mais a minha atenção. Então, hoje eu escolhi viver na fronteira, onde a tecnologia encontra o infinito a cada bit e "estrela". Toda a minha bagagem como profissional sênior em Cyber, eu transfiro para a Universidade Mackenzie através das salas de aula e o CYBERSEC LAB, aonde euajudo a formar alunos que, para mim, são como lançar sondas no universo: mentes capazes de ir além da órbita segura do comum.`,
             socialLinks: [
               {
                 type: "linkedin",

@@ -13,6 +13,10 @@
     <a href={`https://contaaberta.info/?${utmSource}`} target="_blank" rel="noopener">
       <img src={`${assets}/conta-aberta.png`} alt="Conta Aberta" />
     </a>
+
+    <a href={`https://www.codeminer42.com/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={`${assets}/codeminer42.svg`} alt="Conta Aberta" />
+    </a>
   </div>
 
   <h3 class="title"><Localized id="partners--supporters" /></h3>

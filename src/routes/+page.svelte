@@ -7,9 +7,13 @@
   import RowWhatIsGambiConf from "../components/RowWhatIsGambiConf.svelte"
   import RowEvent from "../components/RowEvent.svelte"
   import RowCfp from "../components/RowCfp.svelte"
+  import SponsorBar from "../components/SponsorBar.svelte"
+  import LocationWarning from "../components/LocationWarning.svelte"
 </script>
 
 <Hero />
+<SponsorBar />
+<LocationWarning />
 
 <div class="wrapper-content">
   <div class="hero-margin"></div>
@@ -57,7 +61,7 @@
     background-position: center right;
     background-size: 100px;
 
-    padding-top: 400px;
+    padding-top: 50px;
     padding-bottom: 100px;
   }
 

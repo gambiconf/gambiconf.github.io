@@ -28,7 +28,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
-    z-index: 1;
+    z-index: 50;
     height: var(--header-height);
     box-sizing: border-box;
   }

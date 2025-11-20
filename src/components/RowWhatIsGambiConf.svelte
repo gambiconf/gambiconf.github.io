@@ -64,6 +64,16 @@
         </Link>
         <Localized id="row-what-is-gambiconf--body-paragraph-5-part-2" />
       </p>
+
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/id_8emhVwiw"
+          title="GambiConf Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
   </Window>
 </div>
@@ -83,5 +93,23 @@
 
   .content p:last-of-type {
     margin-bottom: 0;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin-top: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 </style>

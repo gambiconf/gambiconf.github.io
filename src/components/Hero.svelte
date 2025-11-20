@@ -1,11 +1,41 @@
 <script lang="ts">
+  import { onMount } from "svelte"
   import { Fa } from "svelte-fa"
   import { faMapLocation } from "@fortawesome/free-solid-svg-icons/faMapLocation"
+  import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { assets } from "$app/paths"
   import { theme } from "../store/theme"
   import Button from "./Button.svelte"
   import Link from "./Link.svelte"
+
+  let timeLeft = $state({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+
+  onMount(() => {
+    const targetDate = new Date("2025-11-29T09:00:00-03:00").getTime()
+
+    const updateCountdown = () => {
+      const now = new Date().getTime()
+      const distance = targetDate - now
+
+      if (distance < 0) {
+        timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 }
+        return
+      }
+
+      timeLeft = {
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((distance % (1000 * 60)) / 1000),
+      }
+    }
+
+    updateCountdown()
+    const timer = setInterval(updateCountdown, 1000)
+
+    return () => clearInterval(timer)
+  })
 </script>
 
 <section class="hero">
@@ -35,6 +65,10 @@
       <span>
         <Localized id="hero--date-second-line" />
       </span>
+    </h4>
+
+    <h4 class="countdown">
+      {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
     </h4>
 
     <p class="location">
@@ -71,6 +105,7 @@
       <br />
 
       <span>
+        <Fa icon={faLocationDot} />
         <Localized id="hero--location-third-line" />
       </span>
     </p>
@@ -89,7 +124,8 @@
 <style>
   section {
     position: relative;
-    height: max(55vh, 500px);
+    min-height: max(55vh, 500px);
+    padding-bottom: 140px;
   }
 
   .background-overlay {
@@ -106,16 +142,22 @@
   }
 
   .mascot {
-    position: absolute;
+    position: relative;
+    z-index: 0;
 
-    height: 50vh;
+    display: flex;
+    justify-content: center;
+
     width: 100%;
+    margin-top: clamp(2rem, 10vw, 5rem);
 
-    top: 90%;
+    pointer-events: none;
+    order: 10;
   }
   .mascot img {
-    max-height: 100%;
-    max-width: 100vw;
+    width: min(360px, 80vw);
+    height: auto;
+    object-fit: contain;
   }
 
   .message {
@@ -126,11 +168,13 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 6rem;
   }
 
   .title {
     margin-bottom: 1em;
+    margin-top: 1rem;
   }
 
   .title h1 {
@@ -153,6 +197,11 @@
     margin-bottom: 10px;
   }
 
+  .countdown {
+    margin-bottom: 10px;
+    font-variant-numeric: tabular-nums;
+  }
+
   .location {
     display: flex;
     flex-direction: column;
@@ -172,14 +221,30 @@
   }
 
   @media screen and (min-width: 768px) {
+    section {
+      height: max(55vh, 500px);
+      padding-bottom: 0;
+    }
+
     .mascot {
+      position: absolute;
+      order: initial;
+
       width: auto;
-      height: 60vh;
+      height: 48vh;
 
       top: auto;
-      right: 300px;
+      bottom: -20px;
+      right: clamp(120px, 20vw, 300px);
 
-      margin-top: 20vh;
+      margin-top: 0;
+
+      display: block;
+    }
+    .mascot img {
+      width: auto;
+      height: 100%;
+      max-width: none;
     }
 
     .message {
@@ -187,6 +252,8 @@
 
       margin-right: auto;
       margin-left: auto;
+      justify-content: center;
+      padding-top: 0;
     }
 
     .action {

@@ -43,10 +43,7 @@
 
   <div class="message">
     <div class="mascot">
-      <img
-        src={`${assets}/mambi.png`}
-        alt="GambiConf's mascot. An anthropomorphic orange monkey using a neck scarf with the flag of the European Union"
-      />
+      <img src={`${assets}/mambi.png`} alt="GambiConf's mascot. A cute golden lion tamarin" />
     </div>
 
     <div class="title">
@@ -67,9 +64,9 @@
       </span>
     </h4>
 
-    <h4 class="countdown">
+    <!-- <h4 class="countdown">
       {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-    </h4>
+    </h4> -->
 
     <p class="location">
       <Link
@@ -115,7 +112,7 @@
         url="https://www.eventbrite.com.br/e/gambiconf-5a-edicao-29-de-novembro-na-totvs-30-de-novembro-na-usp-tickets-1333243771009?utm-campaign=website"
         newPage
       >
-        <Localized id="hero--tickets" />
+        <Localized id="hero--cta" />
       </Button>
     </div>
   </div>
@@ -197,10 +194,10 @@
     margin-bottom: 10px;
   }
 
-  .countdown {
+  /* .countdown {
     margin-bottom: 10px;
     font-variant-numeric: tabular-nums;
-  }
+  } */
 
   .location {
     display: flex;

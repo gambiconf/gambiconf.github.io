@@ -19,7 +19,7 @@ hero--location-second-line = USP Butantã -
 hero--location-third-line = São Paulo, Brazil
 hero--location-see-map = See on the map
 hero--cfp = Apply for the CFP
-hero--tickets = Buy your ticket
+hero--cta = Buy your ticket
 
 ## Event Row
 

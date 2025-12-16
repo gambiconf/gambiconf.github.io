@@ -18,7 +18,7 @@ hero--location-first-line = TOTVS -
 hero--location-second-line = USP Butantã -
 hero--location-third-line = São Paulo, Brasil
 hero--cfp = Submeta no CFP
-hero--tickets = Compre seu ingresso
+hero--cta = Compre seu ingresso
 location-warning--text = Atenção! O evento acontece em locais diferentes em cada dia. Confira a seção "Onde e quando".
 
 ## Event Row

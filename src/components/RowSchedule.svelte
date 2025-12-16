@@ -18,7 +18,7 @@
 
       <TimeSlot
         title="Abertura dos portões"
-        date="2024-11-02"
+        date="2025-11-02"
         hours="9:00"
         duration={20}
         members={[]}
@@ -38,7 +38,7 @@
 
       <TimeSlot
         title={t("schedule--presentation-opening-ceremony-first-day-title")}
-        date="2024-11-02"
+        date="2025-11-02"
         hours="9:20"
         duration={25}
         members={[
@@ -74,7 +74,7 @@
 
       <TimeSlot
         title="Usando Clojure para Gerar Javascript para rodar Clojure que Executa Ruby (e Python)"
-        date="2024-11-29"
+        date="2025-11-29"
         hours="9:50"
         duration={30}
         members={[
@@ -99,7 +99,7 @@
 
       <TimeSlot
         title="Usando a VM do SQLite para criar uma linguagem de programação"
-        date="2024-11-29"
+        date="2025-11-29"
         hours="10:25"
         duration={30}
         members={[
@@ -126,7 +126,7 @@
 
       <TimeSlot
         title="Criando um MMO RPG com Erlang, PostgreSQL, Zig, Nix e muita gambiarra"
-        date="2024-11-29"
+        date="2025-11-29"
         hours="11:00"
         duration={35}
         members={[
@@ -155,7 +155,7 @@
 
       <TimeSlot
         title="Sala Secreta? Como verificar as eleições por você mesmo"
-        date="2024-11-29"
+        date="2025-11-29"
         hours="11:40"
         duration={30}
         members={[
@@ -187,7 +187,7 @@
 
       <TimeSlot
         title="Games in PostScript – Play Chess Against Your Printer"
-        date="2024-11-29"
+        date="2025-11-29"
         hours="13:40"
         duration={30}
         members={[
@@ -213,7 +213,7 @@
 
       <TimeSlot
         title="LEAN Fullstack: Codando no Assistente de Provas."
-        date="2024-11-29"
+        date="2025-11-29"
         hours="14:15"
         duration={30}
         members={[
@@ -239,7 +239,7 @@
 
       <TimeSlot
         title="Como tocar música com um monitor LCD e um rádio"
-        date="2024-11-29"
+        date="2025-11-29"
         hours="14:50"
         duration={30}
         members={[
@@ -265,7 +265,7 @@
 
       <TimeSlot
         title="Web-Cafeteiras em Haskell: Implementando a RFC 2324"
-        date="2024-11-29"
+        date="2025-11-29"
         hours="15:25"
         duration={30}
         members={[
@@ -299,7 +299,7 @@
 
       <TimeSlot
         title="Go no PlayStation 2: como virar um péssimo dev de jogos"
-        date="2024-11-29"
+        date="2025-11-29"
         hours="16:35"
         duration={40}
         members={[
@@ -326,7 +326,7 @@
 
       <TimeSlot
         title="ABC: Onde Python começou"
-        date="2024-11-29"
+        date="2025-11-29"
         hours="17:20"
         duration={20}
         members={[
@@ -353,7 +353,7 @@
 
       <TimeSlot
         title="Dirty Hacks e Gambiarras Elegantes"
-        date="2024-11-29"
+        date="2025-11-29"
         hours="17:45"
         duration={30}
         members={[
@@ -395,7 +395,7 @@
 
       <TimeSlot
         title="Abertura dos portões"
-        date="2024-11-02"
+        date="2025-11-30"
         hours="13:00"
         duration={30}
         members={[]}
@@ -415,7 +415,7 @@
 
       <TimeSlot
         title={t("schedule--presentation-opening-ceremony-second-day-title")}
-        date="2024-11-02"
+        date="2025-11-30"
         hours="13:30"
         duration={35}
         members={[
@@ -453,7 +453,7 @@
 
       <TimeSlot
         title="Videogames: das portas lógicas ao software"
-        date="2024-11-30"
+        date="2025-11-30"
         hours="14:10"
         duration={210}
         members={[
@@ -481,7 +481,7 @@
 
       <TimeSlot
         title="Contribuindo com Open Source com a ajuda do GitHub Copilot"
-        date="2024-11-30"
+        date="2025-11-30"
         hours="14:10"
         duration={210}
         members={[
@@ -528,7 +528,7 @@
 
       <TimeSlot
         title="Extensibilidade do PostgreSQL"
-        date="2024-11-30"
+        date="2025-11-30"
         hours="14:10"
         duration={210}
         members={[
@@ -561,7 +561,7 @@
 
       <TimeSlot
         title="Minicurso de Kubernetes por Magalu Cloud"
-        date="2024-11-30"
+        date="2025-11-30"
         hours="14:10"
         duration={210}
         members={[
@@ -593,7 +593,7 @@
 
       <TimeSlot
         title="Introdução à programação com Python"
-        date="2024-11-30"
+        date="2025-11-30"
         hours="14:10"
         duration={210}
         members={[
@@ -619,7 +619,7 @@
 
       <TimeSlot
         title="Linguagens de Domínio Específico Embarcadas"
-        date="2024-11-30"
+        date="2025-11-30"
         hours="14:10"
         duration={210}
         members={[
@@ -656,7 +656,7 @@
 
       <TimeSlot
         title="Painel: Privacidade e Censura na Internet"
-        date="2024-11-03"
+        date="2025-11-30"
         hours="18:20"
         duration={45}
         hasParagraph
@@ -714,6 +714,32 @@
       >
         Um olhar técnico sobre privacidade e censura: vamos discutir sobre como a tecnologia
         influencia o acesso e o controle da informação online.
+      </TimeSlot>
+
+      <div class="division-wrapper">
+        <div class="division"></div>
+      </div>
+
+      <TimeSlot
+        title="Encerramento do evento"
+        date="2025-11-30"
+        hours="19:05"
+        duration={30}
+        members={[
+          {
+            name: "Bruno Macabeus",
+            image: `${assets}/speakers/bruno-macabeus.jpeg`,
+            socialLinks: [
+              { type: "bluesky", url: "https://bsky.app/profile/macabeus.bsky.social" },
+              { type: "twitter", url: "https://twitter.com/bmacabeus" },
+              { type: "github", url: "https://github.com/macabeus" },
+              { type: "website", url: "http://macabeus.github.io/" },
+            ],
+          },
+        ]}
+      >
+        Encerramento do evento, com um quiz valendo prêmios! Será que você manja de gambiarra o
+        suficiente para vencer?
       </TimeSlot>
     </article>
   </Window>

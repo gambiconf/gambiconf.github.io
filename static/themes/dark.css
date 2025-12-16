@@ -8,8 +8,7 @@
 body,
 .wrapper-content {
   background-image:
-    linear-gradient(rgba(24, 26, 27, 0.7), rgba(24, 26, 27, 0.7)),
-    url("/background.png");
+    linear-gradient(rgba(24, 26, 27, 0.7), rgba(24, 26, 27, 0.7)), url("/background.png");
 }
 
 header {

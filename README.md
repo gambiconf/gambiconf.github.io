@@ -2,27 +2,25 @@
 
 > 🐒 The Blow Your Mind Conference
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/9501115/162629911-d01fcf9d-61be-4d3b-9503-8ab04d496554.png">
-</p>
+![Website screenshot](https://user-images.githubusercontent.com/9501115/162629911-d01fcf9d-61be-4d3b-9503-8ab04d496554.png)
 
-# How to run
+## How to run
 
 1 - Clone this repo
 
-```
-git@github.com:gambiconf/gambiconf.github.io.git
+```bash
+git clone git@github.com:gambiconf/gambiconf.github.io.git
 ```
 
 2 - Install the dependencies
 
-```
+```bash
 cd gambiconf.github.io.git && npm i
 ```
 
 3 - Start the SvelteKit's development mode
 
-```
+```bash
 npm run dev
 ```
 
@@ -34,7 +32,7 @@ npm run dev
 
 Deploying to GitHub Pages is an easy task. Just run it:
 
-```
+```bash
 npm run build:prod && npm run deploy:prod
 ```
 
@@ -45,6 +43,6 @@ npm run build:prod && npm run deploy:prod
 
 We have a [staging repository/environmnet](https://github.com/gambiconf/website-staging).
 
-```
+```bash
 npm run build:staging && npm run deploy:staging
 ```

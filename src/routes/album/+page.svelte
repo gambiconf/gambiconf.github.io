@@ -10,6 +10,15 @@
 
   let selectedPhoto: string | null = $state(null)
   let isImageLoading = $state(false)
+  let columnCount = $state(4)
+
+  const updateColumnCount = () => {
+    columnCount = window.innerWidth <= 768 ? 2 : 4
+  }
+
+  $effect(() => {
+    updateColumnCount()
+  })
 
   const focusPoint = {
     "dia3-05-DSC08225.jpg": "0 16%",
@@ -104,7 +113,7 @@
   loadPhotos()
 </script>
 
-<svelte:window onkeydown={handleKeydown} />
+<svelte:window onkeydown={handleKeydown} onresize={updateColumnCount} />
 
 {#if selectedPhoto}
   <div
@@ -119,11 +128,11 @@
     {#if isImageLoading}
       <div class="skeleton-loader"></div>
     {/if}
-    <img 
-      src={selectedPhoto} 
-      alt={t("album--photo-alt")} 
+    <img
+      src={selectedPhoto}
+      alt={t("album--photo-alt")}
       onload={handleImageLoad}
-      style:display={isImageLoading ? 'none' : 'block'}
+      style:display={isImageLoading ? "none" : "block"}
     />
 
     <div
@@ -190,7 +199,7 @@
   </span>
 
   <div class="gallery">
-    <Gallery photoClick={handlePhotoClick} {focusPoint}>
+    <Gallery {columnCount} photoClick={handlePhotoClick} {focusPoint}>
       {#each photos as photo (photo)}
         <img src={photo} loading="lazy" alt={t("album--photo-alt")} />
       {/each}
@@ -251,12 +260,7 @@
     position: absolute;
     width: 80%;
     height: 80%;
-    background: linear-gradient(
-      90deg,
-      #f0f0f0 25%,
-      #e0e0e0 50%,
-      #f0f0f0 75%
-    );
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
     border-radius: 4px;

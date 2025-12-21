@@ -2,6 +2,8 @@
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { Fa, FaLayers } from "svelte-fa"
   import { faX } from "@fortawesome/free-solid-svg-icons/faX"
+  import { faChevronLeft } from "@fortawesome/free-solid-svg-icons/faChevronLeft"
+  import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight"
   import { t } from "../../store/locale.svelte"
   import Link from "../../components/Link.svelte"
   import Gallery from "../../components/Gallery.svelte"
@@ -33,6 +35,50 @@
     selectedPhoto = null
   }
 
+  const handlePreviousPhoto = () => {
+    if (!selectedPhoto) return
+
+    const currentIndex = photos.findIndex((photo) => {
+      const photoFilename = photo.split("/").pop()?.split("?")[0]
+      return selectedPhoto.includes(photoFilename || "")
+    })
+
+    if (currentIndex !== -1) {
+      const previousIndex = currentIndex === 0 ? photos.length - 1 : currentIndex - 1
+      const previousPhoto = photos[previousIndex]
+      const srcFilename = previousPhoto.split("/").pop()?.split("?")[0]
+      selectedPhoto = `https://storage.googleapis.com/gambiconf-2025-photos/${srcFilename}`
+    }
+  }
+
+  const handleNextPhoto = () => {
+    if (!selectedPhoto) return
+
+    const currentIndex = photos.findIndex((photo) => {
+      const photoFilename = photo.split("/").pop()?.split("?")[0]
+      return selectedPhoto.includes(photoFilename || "")
+    })
+
+    if (currentIndex !== -1) {
+      const nextIndex = currentIndex === photos.length - 1 ? 0 : currentIndex + 1
+      const nextPhoto = photos[nextIndex]
+      const srcFilename = nextPhoto.split("/").pop()?.split("?")[0]
+      selectedPhoto = `https://storage.googleapis.com/gambiconf-2025-photos/${srcFilename}`
+    }
+  }
+
+  const handleKeydown = (e: KeyboardEvent) => {
+    if (!selectedPhoto) return
+
+    if (e.key === "Escape") {
+      selectedPhoto = null
+    } else if (e.key === "ArrowRight") {
+      handleNextPhoto()
+    } else if (e.key === "ArrowLeft") {
+      handlePreviousPhoto()
+    }
+  }
+
   const importPhotos = import.meta.glob<{ default: string }>("../../../static/photos/*.jpg")
   let photos: string[] = $state([])
 
@@ -48,6 +94,8 @@
   loadPhotos()
 </script>
 
+<svelte:window onkeydown={handleKeydown} />
+
 {#if selectedPhoto}
   <div
     class="selected-photo-background"
@@ -59,6 +107,30 @@
 
   <div class="selected-photo-overlay">
     <img src={selectedPhoto} alt={t("album--photo-alt")} />
+
+    <div
+      class="nav-button prev"
+      onclick={handlePreviousPhoto}
+      onkeydown={handlePreviousPhoto}
+      role="button"
+      tabindex="0"
+    >
+      <FaLayers size="2x">
+        <Fa scale={0.8} icon={faChevronLeft} />
+      </FaLayers>
+    </div>
+
+    <div
+      class="nav-button next"
+      onclick={handleNextPhoto}
+      onkeydown={handleNextPhoto}
+      role="button"
+      tabindex="0"
+    >
+      <FaLayers size="2x">
+        <Fa scale={0.8} icon={faChevronRight} />
+      </FaLayers>
+    </div>
 
     <div
       class="close"
@@ -163,12 +235,28 @@
 
     cursor: pointer;
 
-    transition: filter 0.5s;
+    filter: drop-shadow(0 0 2px white) drop-shadow(0 0 2px white) drop-shadow(0 0 2px white);
+
+    translate: 20px -10px;
   }
 
-  .close:hover {
-    filter: brightness(1.5);
-    filter: invert(21%) sepia(0%) saturate(8%) hue-rotate(203deg) brightness(97%) contrast(79%);
+  .nav-button {
+    position: absolute;
+    top: 50%;
+
+    cursor: pointer;
+
+    filter: drop-shadow(0 0 2px white) drop-shadow(0 0 2px white) drop-shadow(0 0 2px white);
+  }
+
+  .nav-button.prev {
+    translate: -20px;
+    left: 0;
+  }
+
+  .nav-button.next {
+    translate: 20px;
+    right: 0;
   }
 
   .gallery {

@@ -9,6 +9,7 @@
   import Gallery from "../../components/Gallery.svelte"
 
   let selectedPhoto: string | null = $state(null)
+  let isImageLoading = $state(false)
 
   const focusPoint = {
     "dia3-05-DSC08225.jpg": "0 16%",
@@ -29,10 +30,12 @@
     const srcFilename = e.src.split("/").pop().split("?")[0]
 
     selectedPhoto = `https://storage.googleapis.com/gambiconf-2025-photos/${srcFilename}`
+    isImageLoading = true
   }
 
   const handleClickSelectedPhotoBackground = () => {
     selectedPhoto = null
+    isImageLoading = false
   }
 
   const handlePreviousPhoto = () => {
@@ -48,6 +51,7 @@
       const previousPhoto = photos[previousIndex]
       const srcFilename = previousPhoto.split("/").pop()?.split("?")[0]
       selectedPhoto = `https://storage.googleapis.com/gambiconf-2025-photos/${srcFilename}`
+      isImageLoading = true
     }
   }
 
@@ -64,6 +68,7 @@
       const nextPhoto = photos[nextIndex]
       const srcFilename = nextPhoto.split("/").pop()?.split("?")[0]
       selectedPhoto = `https://storage.googleapis.com/gambiconf-2025-photos/${srcFilename}`
+      isImageLoading = true
     }
   }
 
@@ -72,11 +77,16 @@
 
     if (e.key === "Escape") {
       selectedPhoto = null
+      isImageLoading = false
     } else if (e.key === "ArrowRight") {
       handleNextPhoto()
     } else if (e.key === "ArrowLeft") {
       handlePreviousPhoto()
     }
+  }
+
+  const handleImageLoad = () => {
+    isImageLoading = false
   }
 
   const importPhotos = import.meta.glob<{ default: string }>("../../../static/photos/*.jpg")
@@ -106,7 +116,15 @@
   ></div>
 
   <div class="selected-photo-overlay">
-    <img src={selectedPhoto} alt={t("album--photo-alt")} />
+    {#if isImageLoading}
+      <div class="skeleton-loader"></div>
+    {/if}
+    <img 
+      src={selectedPhoto} 
+      alt={t("album--photo-alt")} 
+      onload={handleImageLoad}
+      style:display={isImageLoading ? 'none' : 'block'}
+    />
 
     <div
       class="nav-button prev"
@@ -227,6 +245,30 @@
     max-width: calc(100% - 30px);
     max-height: calc(100% - 30px);
     object-fit: contain;
+  }
+
+  .skeleton-loader {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(
+      90deg,
+      #f0f0f0 25%,
+      #e0e0e0 50%,
+      #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
   }
 
   .close {

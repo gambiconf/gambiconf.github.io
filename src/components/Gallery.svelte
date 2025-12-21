@@ -8,17 +8,17 @@
     class: string
     style: string | null
   }
-  
+
   interface ImageFocusPoint {
     [key: string]: string
   }
 
   interface Props {
-    focusPoint?: ImageFocusPoint;
-    columnCount?: number;
-    imageHeight?: string;
-    photoClick?: (args: { src: string }) => void;
-    children?: import('svelte').Snippet;
+    focusPoint?: ImageFocusPoint
+    columnCount?: number
+    imageHeight?: string
+    photoClick?: (args: { src: string }) => void
+    children?: import("svelte").Snippet
   }
 
   let {
@@ -26,8 +26,8 @@
     columnCount = 4,
     imageHeight = "250px",
     photoClick,
-    children
-  }: Props = $props();
+    children,
+  }: Props = $props()
 
   let slotHolder = $state<HTMLDivElement | null>(null)
   let columns = $state<Column[][]>([])
@@ -43,7 +43,9 @@
       (child) =>
         child instanceof HTMLElement &&
         (child.tagName === "IMG" ||
-        (child.tagName === "A" && child.childNodes[0] instanceof HTMLElement && child.childNodes[0].tagName === "IMG")),
+          (child.tagName === "A" &&
+            child.childNodes[0] instanceof HTMLElement &&
+            child.childNodes[0].tagName === "IMG")),
     ) as HTMLElement[]
 
     columns = new Array(columnCount).fill([])
@@ -55,7 +57,11 @@
       const photo = nodes[i].tagName === "IMG" ? nodes[i] : nodes[i].childNodes[0]
       const { src, alt, className } = photo as HTMLImageElement
 
-      const srcFilename = src.split("/").pop().split("?")[0]
+      const srcFilename = src
+        .split("/")
+        .pop()
+        .split("?")[0]
+        .replace(/\.[\w\d-]{8}\.jpg/, ".jpg")
 
       const imageFocusPoint = focusPoint[srcFilename]
       const style = imageFocusPoint ? `object-position: ${imageFocusPoint}` : null

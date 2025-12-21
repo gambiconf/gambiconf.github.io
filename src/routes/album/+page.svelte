@@ -36,7 +36,11 @@
   }
 
   const handlePhotoClick = (e) => {
-    const srcFilename = e.src.split("/").pop().split("?")[0]
+    const srcFilename = e.src
+      .split("/")
+      .pop()
+      .split("?")[0]
+      .replace(/\.[\w\d-]{8}\.jpg/, ".jpg")
 
     selectedPhoto = `https://storage.googleapis.com/gambiconf-2025-photos/${srcFilename}`
     isImageLoading = true
@@ -51,14 +55,22 @@
     if (!selectedPhoto) return
 
     const currentIndex = photos.findIndex((photo) => {
-      const photoFilename = photo.split("/").pop()?.split("?")[0]
+      const photoFilename = photo
+        .split("/")
+        .pop()
+        ?.split("?")[0]
+        .replace(/\.[\w\d-]{8}\.jpg/, ".jpg")
       return selectedPhoto.includes(photoFilename || "")
     })
 
     if (currentIndex !== -1) {
       const previousIndex = currentIndex === 0 ? photos.length - 1 : currentIndex - 1
       const previousPhoto = photos[previousIndex]
-      const srcFilename = previousPhoto.split("/").pop()?.split("?")[0]
+      const srcFilename = previousPhoto
+        .split("/")
+        .pop()
+        ?.split("?")[0]
+        .replace(/\.[\w\d-]{8}\.jpg/, ".jpg")
       selectedPhoto = `https://storage.googleapis.com/gambiconf-2025-photos/${srcFilename}`
       isImageLoading = true
     }
@@ -68,14 +80,22 @@
     if (!selectedPhoto) return
 
     const currentIndex = photos.findIndex((photo) => {
-      const photoFilename = photo.split("/").pop()?.split("?")[0]
+      const photoFilename = photo
+        .split("/")
+        .pop()
+        ?.split("?")[0]
+        .replace(/\.[\w\d-]{8}\.jpg/, ".jpg")
       return selectedPhoto.includes(photoFilename || "")
     })
 
     if (currentIndex !== -1) {
       const nextIndex = currentIndex === photos.length - 1 ? 0 : currentIndex + 1
       const nextPhoto = photos[nextIndex]
-      const srcFilename = nextPhoto.split("/").pop()?.split("?")[0]
+      const srcFilename = nextPhoto
+        .split("/")
+        .pop()
+        ?.split("?")[0]
+        .replace(/\.[\w\d-]{8}\.jpg/, ".jpg")
       selectedPhoto = `https://storage.googleapis.com/gambiconf-2025-photos/${srcFilename}`
       isImageLoading = true
     }

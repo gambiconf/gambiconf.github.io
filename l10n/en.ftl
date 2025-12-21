@@ -187,10 +187,13 @@ code-of-conduct--title = Code of Conduct
 album--title = Photos
 album--description-part-1 = Photos by
 album--description-link-author-1 = Hugo Borges
-album--description-part-2 = and
+album--description-part-2 = ,
 album--description-link-author-2 = João de Mello
-album--description-part-3 = -
+album--description-part-3 = and
+album--description-link-author-3 = Gabriela Barrence
+album--description-part-4 = -
 album--description-link-download = Download all photos
+album--photo-alt = Photo from GambiConf
 
 # Previous Editions
 

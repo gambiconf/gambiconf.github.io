@@ -9,29 +9,24 @@
   let selectedPhoto: string | null = $state(null)
 
   const focusPoint = {
-    DSC06987: "0 16%",
-    DSC06988: "0 4%",
-    DSC06991: "0 30%",
-    DSC07005: "0 3%",
-    DSC07014: "0 0",
-    DSC07017: "0 0",
-    DSC07018: "0 35%",
-    DSC07028: "0 90%",
-    DSC07040: "0 28%",
-    DSC07097: "0 37%",
-    DSC07099: "0 36%",
-    DSC07107: "0 68%",
-    DSC07108: "0 68%",
-    DSC07123: "0 64%",
-    DSC07151: "0 2%",
-    DSC07153: "0 6%",
+    "dia3-05-DSC08225.jpg": "0 16%",
+    "dia3-05-DSC08239.jpg": "90% 0",
+    "dia3-05-DSC08344.jpg": "0 0",
+    "dia3-05-DSC08349.jpg": "0 0",
+    "dia3-05-DSC08350.jpg": "20% 0",
+    "dia3-05-DSC08351.jpg": "15% 0",
+    "dia3-05-IMG_0961.jpg": "0 40%",
+    "dia3-05-IMG_1038.jpg": "bottom",
+    "dia3-05-IMG_1041.jpg": "0 15%",
+    "dia3-05-IMG_1062.jpg": "left",
+    "dia3-05-IMG_1082.jpg": "bottom",
+    "dia3-05-IMG_1102.jpg": "left",
   }
 
   const handlePhotoClick = (e) => {
-    selectedPhoto = e.src
-      .replace(/-[\w\d]+/, "")
-      .replace(/\.[\w\d]+\./, ".")
-      .replace(/.*DSC/, "https://storage.googleapis.com/gambiconf-2024-photos/DSC")
+    const srcFilename = e.src.split("/").pop().split("?")[0]
+
+    selectedPhoto = `https://storage.googleapis.com/gambiconf-2025-photos/${srcFilename}`
   }
 
   const handleClickSelectedPhotoBackground = () => {
@@ -54,12 +49,24 @@
 </script>
 
 {#if selectedPhoto}
-  <div class="selected-photo-background" onclick={handleClickSelectedPhotoBackground}></div>
+  <div
+    class="selected-photo-background"
+    onclick={handleClickSelectedPhotoBackground}
+    onkeydown={handleClickSelectedPhotoBackground}
+    role="button"
+    tabindex="0"
+  ></div>
 
   <div class="selected-photo-overlay">
-    <img src={selectedPhoto} />
+    <img src={selectedPhoto} alt={t("album--photo-alt")} />
 
-    <div class="close" onclick={handleClickSelectedPhotoBackground}>
+    <div
+      class="close"
+      onclick={handleClickSelectedPhotoBackground}
+      onkeydown={handleClickSelectedPhotoBackground}
+      role="button"
+      tabindex="0"
+    >
       <FaLayers size="2x">
         <Fa scale={0.6} icon={faX} />
       </FaLayers>
@@ -80,9 +87,13 @@
       <Localized id="album--description-link-author-2" />
     </Link>
     <Localized id="album--description-part-3" />
+    <Link l10n="link-author-2" href="https://www.linkedin.com/in/barrence">
+      <Localized id="album--description-link-author-3" />
+    </Link>
+    <Localized id="album--description-part-4" />
     <Link
       l10n="download"
-      href="https://storage.googleapis.com/gambiconf-2024-photos/gambiconf-2024-photos.zip"
+      href="https://storage.googleapis.com/gambiconf-2025-photos/gambiconf-2025-photos.zip"
     >
       <Localized id="album--description-link-download" />
     </Link>
@@ -91,7 +102,7 @@
   <div class="gallery">
     <Gallery photoClick={handlePhotoClick} {focusPoint}>
       {#each photos as photo (photo)}
-        <img src={photo} loading="lazy" />
+        <img src={photo} loading="lazy" alt={t("album--photo-alt")} />
       {/each}
     </Gallery>
   </div>

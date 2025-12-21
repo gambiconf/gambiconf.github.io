@@ -55,7 +55,9 @@
       const photo = nodes[i].tagName === "IMG" ? nodes[i] : nodes[i].childNodes[0]
       const { src, alt, className } = photo as HTMLImageElement
 
-      const imageFocusPoint = focusPoint[src?.match(/DSC\d+/)?.toString() ?? ""]
+      const srcFilename = src.split("/").pop().split("?")[0]
+
+      const imageFocusPoint = focusPoint[srcFilename]
       const style = imageFocusPoint ? `object-position: ${imageFocusPoint}` : null
 
       columns[idx] = [...columns[idx], { src, alt, class: className, style, href }]

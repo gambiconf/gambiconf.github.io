@@ -1,11 +1,7 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import Tweet from "../Tweet.svelte"
-  import {
-    form,
-    talkTweetPreview,
-    talkTweetStatus,
-  } from "../../store/cfp-submission.svelte"
+  import { form, talkTweetPreview, talkTweetStatus } from "../../store/cfp-submission.svelte"
   import { tweetLength } from "../../utils/tweet"
 </script>
 
@@ -18,7 +14,7 @@
 </div>
 
 <div class="field">
-  <Localized id="cfp--field-twitter-handler">
+  <Localized id="cfp--field-social-media-handler">
     {#snippet children({ attrs })}
       <label for="twitter">{attrs.label}</label>
       <input
@@ -53,6 +49,18 @@
         <option value="workshop">{attrs.optionWorkshop}</option>
       </select>
       <label for="type" class="sublabel">{attrs.sublabel}</label>
+    {/snippet}
+  </Localized>
+</div>
+
+<div class="field">
+  <Localized id="cfp--field-track">
+    {#snippet children({ attrs })}
+      <label for="track">{attrs.label}</label>
+      <select name="track" required bind:value={form.track}>
+        <option value="main">{attrs.optionMain}</option>
+        <option value="typed">{attrs.optionTyped}</option>
+      </select>
     {/snippet}
   </Localized>
 </div>

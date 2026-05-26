@@ -2,12 +2,12 @@
 
 <meta
   name="description"
-  content="GambiConf - The Blow Your Mind Conference / 29 e 30 de Novembro em SP"
+  content="GambiConf - The Blow Your Mind Conference / 28 e 29 de Novembro em SP"
 />
 
 <meta
   property="og:title"
-  content="GambiConf - The Blow Your Mind Conference / 29 e 30 de Novembro em SP"
+  content="GambiConf - The Blow Your Mind Conference / 28 e 29 de Novembro em SP"
 />
 <meta property="og:url" content="https://gambiconf.dev/" />
 <meta
@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary" />
 <meta
   name="twitter:title"
-  content="GambiConf - The Blow Your Mind Conference / 29 e 30 de Novembro em SP"
+  content="GambiConf - The Blow Your Mind Conference / 28 e 29 de Novembro em SP"
 />
 <meta name="twitter:url" content="https://gambiconf.dev/" />
 <meta

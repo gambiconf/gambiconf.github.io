@@ -1,19 +1,21 @@
 <script lang="ts">
   import { Fa } from "svelte-fa"
+  import { faCalendarDays } from "@fortawesome/free-solid-svg-icons/faCalendarDays"
   import { faMapLocation } from "@fortawesome/free-solid-svg-icons/faMapLocation"
   import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
-  import { asset } from "$app/paths"
+  import { asset, resolve } from "$app/paths"
   import { themeState } from "../store/theme.svelte"
   import Button from "./Button.svelte"
   import Link from "./Link.svelte"
 
-  const eventStart = new Date("2025-11-29T09:00:00-03:00").getTime()
+  const eventStart = new Date("2026-11-28T09:00:00-03:00").getTime()
 
   const computeTimeLeft = () => {
     const distance = Math.max(0, eventStart - Date.now())
     return {
-      days: Math.floor(distance / 86_400_000),
+      months: Math.floor(distance / 2_592_000_000),
+      days: Math.floor(distance / 86_400_000) % 30,
       hours: Math.floor((distance / 3_600_000) % 24),
       minutes: Math.floor((distance / 60_000) % 60),
       seconds: Math.floor((distance / 1_000) % 60),
@@ -59,37 +61,34 @@
       </p>
     </div>
 
-    <h4 class="date">
-      <span>
-        <Localized id="hero--date-first-line" />
-      </span>
-
-      <span>
-        <Localized id="hero--date-second-line" />
-      </span>
-    </h4>
+    <p class="event-date">
+      <Fa icon={faCalendarDays} />
+      <Localized id="hero--date" />
+    </p>
 
     {#if !eventStarted}
-      <h4 class="countdown" aria-live="polite">
-        {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-      </h4>
+      <div class="countdown" aria-live="polite">
+        <div class="countdown-cell">
+          <span class="countdown-value">{timeLeft.months}</span>
+          <span class="countdown-label">
+            <Localized id="hero--countdown-months" args={{ count: timeLeft.months }} />
+          </span>
+        </div>
+        <div class="countdown-cell">
+          <span class="countdown-value">{timeLeft.days}</span>
+          <span class="countdown-label">
+            <Localized id="hero--countdown-days" args={{ count: timeLeft.days }} />
+          </span>
+        </div>
+      </div>
     {/if}
 
     <p class="location">
-      <Link
-        href="https://maps.app.goo.gl/PadW6Y4RLhYqxz796"
-        externalIcon
-        --color={linkColors.color}
-        --hover-color={linkColors.hover}
+      <strong
+        ><Fa icon={faLocationDot} /> USP - Campus Butantã / IME - Bloco B<br />São Paulo, Brasil</strong
       >
-        <strong>Sábado:</strong>
 
-        <Localized id="hero--location-first-line" />
-
-        <Fa icon={faMapLocation} />
-
-        Ver Mapa
-      </Link>
+      <br />
 
       <Link
         href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7"
@@ -97,29 +96,15 @@
         --color={linkColors.color}
         --hover-color={linkColors.hover}
       >
-        <strong>Domingo:</strong>
-
-        <Localized id="hero--location-second-line" />
-
         <Fa icon={faMapLocation} />
 
         Ver Mapa
       </Link>
-
-      <br />
-
-      <span>
-        <Fa icon={faLocationDot} />
-        <Localized id="hero--location-third-line" />
-      </span>
     </p>
 
     <div class="action">
-      <Button
-        url="https://www.eventbrite.com.br/e/gambiconf-5a-edicao-29-de-novembro-na-totvs-30-de-novembro-na-usp-tickets-1333243771009?utm-campaign=website"
-        newPage
-      >
-        <Localized id="hero--cta" />
+      <Button url={resolve("/cfp")} newPage>
+        <Localized id="hero--cfp" />
       </Button>
     </div>
   </div>
@@ -195,15 +180,52 @@
     margin: 0;
   }
 
-  .date {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+  .event-date {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-bottom: 14px;
+    font-size: 16px;
+    opacity: 0.85;
   }
 
   .countdown {
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    margin-bottom: 14px;
+  }
+
+  .countdown-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 56px;
+    padding: 8px 10px;
+
+    border: 1px solid color-mix(in oklab, currentColor 18%, transparent);
+    border-radius: 8px;
+    background: color-mix(in oklab, currentColor 6%, transparent);
+  }
+
+  .countdown-value {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
     font-variant-numeric: tabular-nums;
+  }
+
+  .countdown-label {
+    margin-top: 4px;
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    opacity: 0.7;
   }
 
   .location {

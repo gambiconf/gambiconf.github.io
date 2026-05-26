@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Localized } from "@nubolab-ffwd/svelte-fluent"
+  import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
   import { asset, resolve } from "$app/paths"
   import { t } from "../store/locale.svelte"
   import Link from "./Link.svelte"
@@ -15,19 +15,25 @@
 
       <div>
         <p>
-          <Localized id="call-for-proposal--body-paragraph-1" />
+          <Overlay id="call-for-proposal--body-paragraph-1">
+            <strong data-l10n-name="talk"></strong>
+          </Overlay>
         </p>
 
         <p>
-          <Localized id="call-for-proposal--body-paragraph-2-part-1" />
-          <Link href="https://gambiconf.substack.com/" externalIcon>
-            <Localized id="call-for-proposal--body-paragraph-2-link" />
-          </Link>
+          <Overlay id="call-for-proposal--body-paragraph-2">
+            <strong data-l10n-name="workshop"></strong>
+          </Overlay>
         </p>
 
         <p>
-          <Localized id="call-for-proposal--body-paragraph-3" />
-          <Link href="mailto:mambi@gambiconf.dev">mambi@gambiconf.dev</Link>
+          <Overlay id="call-for-proposal--body-paragraph-3">
+            <Link l10n="link" href="/previous-editions" />
+          </Overlay>
+        </p>
+
+        <p>
+          <Localized id="call-for-proposal--body-paragraph-4" />
         </p>
       </div>
     </div>

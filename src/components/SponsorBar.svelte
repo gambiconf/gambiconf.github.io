@@ -10,11 +10,11 @@
       <h3><Localized id="partners--sponsors" /></h3>
       <div class="logos">
         <a href={`https://contaaberta.info/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/conta-aberta.png")} alt="Conta Aberta" />
+          <img src={asset("/partners/partners/conta-aberta.png")} alt="Conta Aberta" />
         </a>
 
         <a href={`https://www.codeminer42.com/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/codeminer42.svg")} alt="Codeminer 42" />
+          <img src={asset("/partners/codeminer42.svg")} alt="Codeminer 42" />
         </a>
       </div>
     </div>
@@ -25,27 +25,27 @@
       <h3><Localized id="partners--supporters" /></h3>
       <div class="logos">
         <a href={`https://usp.br/?${utmSource}`} target="_blank" rel="noopener" class="usp-logo">
-          <img src={asset("/usp.png")} alt="USP" />
+          <img src={asset("/partners/partners/partnersusp.png")} alt="USP" />
         </a>
 
         <a href={`https://www.totvs.com/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/totvs.jpg")} alt="TOTVS" />
+          <img src={asset("/partners/totvs.jpg")} alt="TOTVS" />
         </a>
 
         <a href={`https://symcomp.ime.usp.br/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/symcomp.png")} alt="SymComp" />
+          <img src={asset("/partners/symcomp.png")} alt="SymComp" />
         </a>
 
         <a href={`https://elixiremfoco.com/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/elixir-em-foco.png")} alt="Elixir em foco" />
+          <img src={asset("/partners/elixir-em-foco.png")} alt="Elixir em foco" />
         </a>
 
         <a href={`https://github.com/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/github.png")} alt="GitHub" />
+          <img src={asset("/partners/github.png")} alt="GitHub" />
         </a>
 
         <a href={`https://magalu.cloud/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/magalu-cloud.svg")} alt="Magalu Cloud" />
+          <img src={asset("/partners/magalu-cloud.svg")} alt="Magalu Cloud" />
         </a>
       </div>
     </div>
@@ -166,7 +166,7 @@
       flex-wrap: nowrap;
       gap: 30px;
     }
-    
+
     img {
       height: 40px;
     }

@@ -2,6 +2,7 @@ type PostSubmissionsParams = {
   speakerName: string;
   twitterHandler: string;
   type: string;
+  track: string;
   language: string;
   title: string;
   description: string;

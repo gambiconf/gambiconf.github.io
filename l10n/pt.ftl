@@ -12,13 +12,24 @@ header--schedule = Agenda
 ## Hero
 
 hero--subtitle = The Blow Your Mind Conference
-hero--date-first-line = Fim de semana de
-hero--date-second-line = 29 e 30 de Novembro
+hero--date = 28 e 29 de Novembro de 2026
 hero--location-first-line = TOTVS -
 hero--location-second-line = USP Butantã -
 hero--location-third-line = São Paulo, Brasil
 hero--cfp = Submeta no CFP
 hero--cta = Compre seu ingresso
+hero--countdown-months = { $count ->
+    [one] mês
+   *[other] meses
+  }
+hero--countdown-days = { $count ->
+    [one] dia
+   *[other] dias
+  }
+hero--countdown-hours = { $count ->
+    [one] hora
+   *[other] horas
+  }
 
 ## Event Row
 
@@ -28,39 +39,41 @@ row-event--panel = Painel
 row-event--go-to-playlist = Ver a playlist
 row-event--go-to-album = Ver o álbum
 
-## Row What Is GambiConf
+## Row "The GambiConf"
 
-row-what-is-gambiconf--title = O que é a GambiConf?
-row-what-is-gambiconf--body-paragraph-1 = GambiConf é um evento tech único que vai explodir a sua mente!
+row-what-is-gambiconf--title = A GambiConf
+
+row-what-is-gambiconf--body-paragraph-1 = Na GambiConf, nós celebramos o genuíno espírito hacker.
+
 row-what-is-gambiconf--body-paragraph-2 =
-  A GambiConf é sobre a alegria de explorar algo novo.
-  Apresentamos projetos e ideias que são fora da caixa - tal como fizemos nas edições passadas, onde aprendemos como <a data-l10n-name="link-water">fazer um computador só com água</a>, <a data-l10n-name="link-satellite">fazer engenharia reversa na comunicação de um satélite</a> e também <a data-l10n-name="link-flappy-bird">como escrever um Flappy Bird em Assembly!</a>
+  Aqui, temos um palco com apresentações fora da caixa. Como por exemplo, nas edições passadas aprendemos sobre
+  <a data-l10n-name="link-water">fazer um computador só com água</a>,
+  <a data-l10n-name="link-satellite">fazer engenharia reversa na comunicação de um satélite</a>,
+  <a data-l10n-name="link-flappy-bird">como escrever um Flappy Bird em Assembly</a> e
+  <a data-l10n-name="link-lcd">tocar música com monitor LCD e um rádio!</a>
 
 row-what-is-gambiconf--body-paragraph-3 =
-  Essa é uma conferência multilingue, não limitada numa única tecnologia específica. Se focamos mais
+  Essa é uma conferência multilíngue, não limitada a uma única tecnologia. Nós focamos
   no propósito dos projetos apresentados, na natureza única de cada sessão, e o que podemos aprender a partir
-  de uma ideia diferente e, talvez, inusitada! Queremos encorajar as pessoas a serem ainda mais criativas
-  e descobrirem novidades - tudo pelo simples prazer de saciar a curiosidade.
+  de algo diferente e, talvez, inusitado!
 
 row-what-is-gambiconf--body-paragraph-4 =
-  Inspirada em conferências como a <a data-l10n-name="link-bangbangcon">!!Con</a> e da <a data-l10n-name="link-sigbovik">SIGBOVIK</a>, estamos indo para a quinta edição!
-
-row-what-is-gambiconf--body-paragraph-4-old-editions = <a data-l10n-name="link-old-editions">Veja aqui</a> como foram as edições passadas!
+  Se você tiver algo que queira compartilhar (especialmente se for estranho!), a GambiConf é o seu lugar.
+  Já se você quiser se inspirar com ideias que não veria em outro evento, não perca a próxima edição!
 
 row-what-is-gambiconf--body-paragraph-5 =
-  Você pode conferir <a data-l10n-name="link-presentation">nosso post de apresentação</a> para ver mais sobre o propósito da GambiConf.
+  Você pode conferir mais sobre o que é a GambiConf nesse breve vídeo da abertura na última edição:
 
 ## Where and When
 
 where-and-when--title = Onde e quando
-where-and-when--body-paragraph-1 = Os dias principais são 29 e 30 de Novembro. Cada dia é numa localidade diferente: <a data-l10n-name="link-usp">USP - Campus Butantã</a>.
-where-and-when--body-warm-up = Além disso, dia 27 de Novembro teremos o esquenta! Veja mais <a data-l10n-name="link-meetup">na página do meetup</a>.
+where-and-when--body-paragraph-1 = O evento acontecerá no fim de semana de 28 e 29 de Novembro, na <a data-l10n-name="link-usp">USP - Campus Butantã</a>.
 where-and-when--body-paragraph-2 = Streaming gratuito no <a data-l10n-name="link-youtube">YouTube</a>.
 where-and-when--body-paragraph-3 = Converse conosco no <a data-l10n-name="link-discord">Discord</a>.
 
 ## Calendar
 
-calendar--month = Novembro 2025
+calendar--month = Novembro 2026
 calendar--sunday = Do
 calendar--monday = 2ª
 calendar--tuesday = 3ª
@@ -72,20 +85,23 @@ calendar--saturday = Sa
 ## Call for Proposal
 
 call-for-proposal--title = Call for Proposal
-call-for-proposal--body-paragraph-1 = O CFP já está encerrado, mas ainda dá tempo de participar da GambiConf!
-call-for-proposal--body-paragraph-2-part-1 = Vamos publicar uma revista impressa da GambiConf e incluir nela alguns artigos
-call-for-proposal--body-paragraph-2-link = do nosso blog
+call-for-proposal--body-paragraph-1 =
+  Se você quiser compartilhar um projeto criativo ou uma gambiarra inusitada na
+  computação, venha apresentar a sua <strong data-l10n-name='talk'>talk</strong>.
+call-for-proposal--body-paragraph-2 =
+  Já se você prefere conduzir um hands-on, você pode ministrar um <strong data-l10n-name='workshop'>workshop</strong>.
 call-for-proposal--body-paragraph-3 =
-  Caso você tenha interesse em escrever para o blog, envie um e-mail contando sobre o que gostaria de falar:
+  Caso esteja sem muitas ideias, <a data-l10n-name='link'>se inspire vendo o que já rolou nas edições passadas</a>.
+call-for-proposal--body-paragraph-4 = O prazo final é 7 de Junho.
 call-for-proposal--cta = Submeter no CFP
 
 ## Partners
 
 partners--title = Parceiros
 partners--become-a-partner = _
-  .href = /mediakit-pt.pdf
+  .href = /mediakit.pdf
   .src = /seja-parceiro.png
-  .alt = The GambiConf mascot holding a lifting a board written 'Become a partner'
+  .alt = O mascote da GambiConf segurando uma placa escrita 'Seja um parceiro'
 partners--sponsors = Patrocinador
 partners--supporters = Apoiador
 
@@ -97,23 +113,27 @@ footer--about = Sobre
 footer--previous-editions = Edições Passadas
 footer--code-of-conduct = Código de Conduta
 footer--media-kit = Media Kit — Seja nosso parceiro
-footer--media-kit-href = /mediakit-pt.pdf
+footer--media-kit-href = /mediakit.pdf
 footer--contacts = Contatos
 
 ## CFP
 
 cfp--title = CFP
-cfp--section-main = Submissão
+cfp--section-main = Proposta
 cfp--field-name = Nome
 cfp--field-name-sublabel = Se for uma apresentação em dupla, coloque o nome de ambos. Por exemplo: "João e Maria"
-cfp--field-twitter-handler = _
-  .label = Twitter handler (opcional)
+cfp--field-social-media-handler = _
+  .label = Social media handler (opcional)
   .placeholder = @twitterHandler
 cfp--field-type = _
   .label = O que você vai conduzir?
   .optionTalk = Uma talk
   .optionWorkshop = Um workshop
   .sublabel = Talks são apresentações de 15 a 45 minutos. Já workshops, são hands-on com duração de 3 horas.
+cfp--field-track = _
+  .label = Trilha
+  .optionMain = Trilha principal
+  .optionTyped = Trilha TYPED
 cfp--field-title = Título
 cfp--field-description = Descrição
 cfp--field-ideal-duration = _
@@ -136,19 +156,19 @@ cfp--field-email = E-Mail para o feedback (não será publicado)
 cfp--field-notes = Qualquer observação adicional?
 cfp--add-speaker = Adicionar palestrante
 cfp--submit = Submeter
-cfp--update = Atualizar submissão
+cfp--update = Atualizar proposta
 cfp--submit-success = Submetido com sucesso
-cfp--submit-error = Erro ao submter
-cfp--clear-form = Apagar formulário para submteter uma nova entrada
+cfp--submit-error = Erro ao submeter
+cfp--clear-form = Apagar formulário para submeter uma nova entrada
 
 ## Schedule
 
 schedule--title = Agenda
-schedule--first-day = 29 de Novembro
+schedule--first-day = 28 de Novembro
 schedule--presentation-opening-ceremony-first-day-title = Cerimônia de Abertura
 schedule--presentation-opening-ceremony-first-day-description = Boas vindas ao evento!
 schedule--presentation-opening-ceremony-first-day-bio = Hey! Eu amo engajar as pessoas em desenvolverem projetos pessoais por diversão e compartilhar ideias fora da caixa - e organizar a GambiConf é disseminar essa paixão!
-schedule--second-day = 30 de Novembro
+schedule--second-day = 29 de Novembro
 schedule--presentation-opening-ceremony-second-day-title = Cerimônia de Abertura (Segundo dia)
 schedule--presentation-opening-ceremony-second-day-description = Boas vindas ao evento! Vamos falar dos workshops! Nota: Todos os workshops acontecem ao mesmo tempo, e você deverá escolher um deles para participar.
 schedule--lunch = Almoço

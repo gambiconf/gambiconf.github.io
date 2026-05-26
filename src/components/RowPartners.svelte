@@ -7,11 +7,11 @@
 </script>
 
 <Window title={t("partners--title")}>
-  <h3 class="title"><Localized id="partners--sponsors" /></h3>
+  <!-- <h3 class="title"><Localized id="partners--sponsors" /></h3>
 
   <div class="grid grid-sponsors">
     <a href={`https://contaaberta.info/?${utmSource}`} target="_blank" rel="noopener">
-      <img src={asset("/conta-aberta.png")} alt="Conta Aberta" />
+      <img src={asset("/partners/conta-aberta.png")} alt="Conta Aberta" />
     </a>
 
     <a href={`https://www.codeminer42.com/?${utmSource}`} target="_blank" rel="noopener">
@@ -19,22 +19,22 @@
     </a>
   </div>
 
-  <h3 class="title"><Localized id="partners--supporters" /></h3>
+  <h3 class="title"><Localized id="partners--supporters" /></h3> -->
 
   <div class="grid grid-partners">
     <a href={`https://usp.br/?${utmSource}`} target="_blank" rel="noopener">
-      <img src={asset("/usp.png")} alt="USP" />
+      <img src={asset("/partners/usp.png")} alt="USP" />
     </a>
 
-    <a href={`https://www.totvs.com/?${utmSource}`} target="_blank" rel="noopener">
+    <!-- <a href={`https://www.totvs.com/?${utmSource}`} target="_blank" rel="noopener">
       <img src={asset("/totvs.jpg")} alt="TOTVS" />
-    </a>
+    </a> -->
 
     <a href={`https://symcomp.ime.usp.br/?${utmSource}`} target="_blank" rel="noopener">
-      <img src={asset("/symcomp.png")} alt="SymComp" />
+      <img src={asset("/partners/symcomp.png")} alt="SymComp" />
     </a>
 
-    <a href={`https://elixiremfoco.com/?${utmSource}`} target="_blank" rel="noopener">
+    <!-- <a href={`https://elixiremfoco.com/?${utmSource}`} target="_blank" rel="noopener">
       <img src={asset("/elixir-em-foco.png")} alt="Elixir em foco" />
     </a>
 
@@ -44,7 +44,7 @@
 
     <a href={`https://magalu.cloud/?${utmSource}`} target="_blank" rel="noopener">
       <img src={asset("/magalu-cloud.svg")} alt="Magalu Cloud" />
-    </a>
+    </a> -->
 
     <Localized id="partners--become-a-partner">
       {#snippet children({ attrs })}

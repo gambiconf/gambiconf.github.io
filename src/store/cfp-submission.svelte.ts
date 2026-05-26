@@ -18,6 +18,7 @@ const emptyFields = () => ({
   speakerName: "",
   twitterHandler: "",
   type: "",
+  track: "",
   title: "",
   description: "",
   duration: "",
@@ -80,6 +81,7 @@ const buildPayload = () => ({
   speakerName: form.speakerName,
   twitterHandler: form.twitterHandler,
   type: form.type,
+  track: form.track,
   title: form.title,
   description: form.description,
   duration: Number(form.duration),
@@ -170,6 +172,7 @@ export const loadGivenSubmission = async () => {
   form.speakerName = existing.speakerName;
   form.twitterHandler = existing.twitterHandler;
   form.type = existing.type;
+  form.track = existing.track;
   form.title = existing.title;
   form.description = existing.description;
   form.duration = `${existing.duration}`;

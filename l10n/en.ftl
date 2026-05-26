@@ -96,6 +96,10 @@ call-for-proposal--body-paragraph-3 =
 call-for-proposal--body-paragraph-4 = The deadline is June 7th.
 call-for-proposal--cta = Submit to CFP
 
+## Tickets
+
+tickets--title = Tickets
+
 ## Partners
 
 partners--title = Partners

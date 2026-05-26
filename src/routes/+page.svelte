@@ -7,6 +7,7 @@
   import RowTheGambiConf from "../components/RowTheGambiConf.svelte"
   import RowTyped from "../components/RowTyped.svelte"
   import RowCfp from "../components/RowCfp.svelte"
+  import RowTickets from "../components/RowTickets.svelte"
   // import SponsorBar from "../components/SponsorBar.svelte"
 </script>
 
@@ -47,6 +48,12 @@
   </div> -->
 
   <RowCfp />
+
+  <div class="bullters-gutter-wrapper">
+    <BulletsGutter />
+  </div>
+
+  <RowTickets />
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />

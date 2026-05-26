@@ -95,6 +95,10 @@ call-for-proposal--body-paragraph-3 =
 call-for-proposal--body-paragraph-4 = O prazo final é 7 de Junho.
 call-for-proposal--cta = Submeter no CFP
 
+## Tickets
+
+tickets--title = Ingressos
+
 ## Partners
 
 partners--title = Parceiros

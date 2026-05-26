@@ -106,6 +106,14 @@
       <Button url={resolve("/cfp")} newPage>
         <Localized id="hero--cfp" />
       </Button>
+
+      <Button
+        url="https://www.tickettailor.com/events/gambiconf/2226768"
+        newPage
+        variant="secondary"
+      >
+        <Localized id="hero--cta" />
+      </Button>
     </div>
   </div>
 </section>

@@ -41,7 +41,7 @@
   }
 
   .secondary a {
-    background-color: #ff8a50;
+    background-color: #f9c6a0;
     color: #383838;
   }
 </style>

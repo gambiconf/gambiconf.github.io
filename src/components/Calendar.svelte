@@ -47,7 +47,7 @@
       type: "circle",
       iterations: 2,
       visible: true,
-      padding: -5,
+      padding: 2,
       color: "var(--calendar-highlighted-day-color)",
     }}
   >
@@ -59,7 +59,7 @@
       type: "circle",
       iterations: 2,
       visible: true,
-      padding: -5,
+      padding: 2,
       color: "var(--calendar-highlighted-day-color)",
     }}
   >

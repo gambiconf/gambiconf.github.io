@@ -23,13 +23,21 @@
     <BulletsGutter />
   </div> -->
 
+  <RowTyped />
+
+  <div class="bullters-gutter-wrapper">
+    <BulletsGutter />
+  </div>
+
   <RowTheGambiConf />
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />
   </div>
 
-  <RowTyped />
+  <section id="tickets">
+    <RowTickets />
+  </section>
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />
@@ -47,13 +55,9 @@
     <BulletsGutter />
   </div> -->
 
-  <RowCfp />
-
-  <div class="bullters-gutter-wrapper">
-    <BulletsGutter />
-  </div>
-
-  <RowTickets />
+  <section id="call-for-proposal">
+    <RowCfp />
+  </section>
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />
@@ -70,7 +74,7 @@
 
   .wrapper-content {
     background-position: center right;
-    background-size: 100px;
+    background-size: 240px;
 
     padding-top: 50px;
     padding-bottom: 100px;

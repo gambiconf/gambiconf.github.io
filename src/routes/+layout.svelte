@@ -58,5 +58,7 @@
 
   main {
     flex-grow: 1;
+    padding-top: var(--header-height);
+    box-sizing: border-box;
   }
 </style>

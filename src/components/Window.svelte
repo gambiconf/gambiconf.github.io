@@ -36,6 +36,9 @@
   .title-bar {
     text-align: center;
     font-weight: bold;
+    font-size: clamp(1.1rem, 3.8vw, 1.5rem);
+    line-height: 1.2;
+    padding: 8px 12px;
   }
 
   .title-buttons {

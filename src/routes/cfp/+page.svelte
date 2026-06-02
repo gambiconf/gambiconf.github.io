@@ -65,7 +65,7 @@
 <style>
   :global(body) {
     background-position: center right;
-    background-size: 100px;
+    background-size: 240px;
 
     min-height: 100vh;
     min-width: 100vw;
@@ -83,29 +83,76 @@
     display: flex;
     flex-direction: column;
     max-width: 1140px;
-    padding: 25px;
+    padding: 32px;
+    gap: 6px;
+  }
+
+  :global(.cfp-form h4) {
+    margin: 20px 0 14px;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    line-height: 1.25;
   }
 
   :global(.cfp-form h4:first-child) {
     margin-top: 0;
   }
 
+  :global(.cfp-form h4.section-small) {
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    margin-top: 16px;
+    margin-bottom: 10px;
+  }
+
   :global(.cfp-form label) {
     font-weight: bold;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
+    font-size: 0.98rem;
   }
 
   :global(.cfp-form .field) {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+  }
+
+  :global(.cfp-form input),
+  :global(.cfp-form select),
+  :global(.cfp-form textarea) {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 14px;
+    border-radius: 12px;
+    border: 1px solid color-mix(in oklab, currentColor 20%, transparent);
+    font: inherit;
+    line-height: 1.4;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+
+  :global(.cfp-form textarea) {
+    min-height: 110px;
+    resize: vertical;
+  }
+
+  :global(.cfp-form input::placeholder),
+  :global(.cfp-form textarea::placeholder) {
+    color: color-mix(in oklab, currentColor 52%, transparent);
+  }
+
+  :global(.cfp-form input:focus),
+  :global(.cfp-form select:focus),
+  :global(.cfp-form textarea:focus) {
+    outline: none;
+    border-color: #f34b21;
+    box-shadow: 0 0 0 3px rgb(243 75 33 / 18%);
   }
 
   :global(.cfp-form .bio-header) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
+    gap: 10px;
   }
 
   :global(.cfp-form .bio-buttons) {
@@ -123,12 +170,12 @@
 
   :global(.cfp-form .add-speaker),
   :global(.cfp-form .remove-speaker) {
-    height: 32px;
+    height: 36px;
     border-radius: 12px;
     border: 2px solid #f34b21;
     background-color: white;
     color: #f34b21;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -146,9 +193,10 @@
   }
 
   :global(.cfp-form .sublabel) {
-    font-size: 12px;
+    font-size: 0.84rem;
     text-align: justify;
-    margin-top: 2px;
+    margin-top: 6px;
+    opacity: 0.9;
   }
 
   :global(.cfp-form .warning-limit) {
@@ -168,16 +216,20 @@
   button {
     display: flex;
     justify-content: center;
+    align-items: center;
 
     cursor: pointer;
 
     background-color: #f34b21;
-    padding: 10px;
+    min-height: 48px;
+    padding: 12px 14px;
     border: unset;
-    border-radius: 4px;
+    border-radius: 12px;
     width: 100%;
 
     margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 700;
     color: white;
     text-decoration: none;
 
@@ -188,7 +240,7 @@
     filter: brightness(0.9);
   }
   .outline {
-    border: 1px solid #f34b21;
+    border: 2px solid #f34b21;
     background-color: transparent;
     color: #f34b21;
   }
@@ -209,8 +261,12 @@
   }
 
   @media screen and (min-width: 768px) {
+    :global(.cfp-form) {
+      padding: 36px;
+    }
+
     button {
-      width: 25%;
+      width: 30%;
     }
   }
 </style>

@@ -1,15 +1,13 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
-  import Tweet from "../Tweet.svelte"
-  import { form, talkTweetPreview, talkTweetStatus } from "../../store/cfp-submission.svelte"
-  import { tweetLength } from "../../utils/tweet"
+  import { form } from "../../store/cfp-submission.svelte"
 </script>
 
 <h4><Localized id="cfp--section-main" /></h4>
 
 <div class="field">
   <label for="name"><Localized id="cfp--field-name" /></label>
-  <input name="name" type="text" required bind:value={form.speakerName} />
+  <input name="name" type="text" required maxlength="120" bind:value={form.speakerName} />
   <label for="name" class="sublabel"><Localized id="cfp--field-name-sublabel" /></label>
 </div>
 
@@ -21,6 +19,7 @@
         name="twitter"
         type="text"
         placeholder={attrs.placeholder}
+        maxlength="40"
         bind:value={form.twitterHandler}
       />
     {/snippet}
@@ -67,12 +66,13 @@
 
 <div class="field">
   <label for="title"><Localized id="cfp--field-title" /></label>
-  <input name="title" type="text" required bind:value={form.title} />
+  <input name="title" type="text" required maxlength="120" bind:value={form.title} />
 </div>
 
 <div class="field">
   <label for="description"><Localized id="cfp--field-description" /></label>
-  <textarea name="description" rows="4" required bind:value={form.description}></textarea>
+  <textarea name="description" rows="4" maxlength="1200" required bind:value={form.description}
+  ></textarea>
 </div>
 
 {#if form.type === "talk"}
@@ -90,20 +90,3 @@
     </Localized>
   </div>
 {/if}
-
-<span>
-  <Localized id="cfp--tweet-preview" />
-  <span
-    class:warning-limit={talkTweetStatus.value === "warning"}
-    class:exceeded-limit={talkTweetStatus.value === "exceeded"}
-  >
-    ({tweetLength(talkTweetPreview())}/270)
-  </span>
-</span>
-
-<Tweet
-  body={talkTweetPreview()}
-  tweetStatusChanged={(status) => {
-    talkTweetStatus.value = status
-  }}
-/>

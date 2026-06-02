@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Fa } from "svelte-fa"
   import { faCalendarDays } from "@fortawesome/free-solid-svg-icons/faCalendarDays"
-  import { faMapLocation } from "@fortawesome/free-solid-svg-icons/faMapLocation"
   import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { asset, resolve } from "$app/paths"
@@ -84,35 +83,26 @@
     {/if}
 
     <p class="location">
-      <strong
-        ><Fa icon={faLocationDot} /> USP - Campus Butantã / IME - Bloco B<br />São Paulo, Brasil</strong
-      >
-
-      <br />
-
       <Link
+        class="location-address"
         href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7"
-        externalIcon
         --color={linkColors.color}
         --hover-color={linkColors.hover}
       >
-        <Fa icon={faMapLocation} />
-
-        Ver Mapa
+        <strong
+          ><Fa icon={faLocationDot} /> USP - Campus Butantã / IME - Bloco B<br />São Paulo,
+          Brasil</strong
+        >
       </Link>
     </p>
 
     <div class="action">
-      <Button url={resolve("/cfp")} newPage>
-        <Localized id="hero--cfp" />
+      <Button url="https://www.tickettailor.com/events/gambiconf/2226768" newPage>
+        <Localized id="hero--cta" />
       </Button>
 
-      <Button
-        url="https://www.tickettailor.com/events/gambiconf/2226768"
-        newPage
-        variant="secondary"
-      >
-        <Localized id="hero--cta" />
+      <Button url={resolve("/cfp")} newPage>
+        <Localized id="hero--cfp" />
       </Button>
     </div>
   </div>
@@ -146,7 +136,7 @@
     justify-content: center;
 
     width: 100%;
-    margin-top: clamp(2rem, 10vw, 5rem);
+    margin-top: clamp(0.75rem, 4vw, 2rem);
 
     pointer-events: none;
     order: 10;
@@ -166,7 +156,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 6rem;
+    padding-top: 1.5rem;
   }
 
   .title {
@@ -176,10 +166,14 @@
 
   .title h1 {
     margin: 0;
+    font-size: clamp(2.5rem, 9vw, 4rem);
+    line-height: 1.05;
   }
 
   .title p {
     margin-top: 0;
+    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+    line-height: 1.35;
     opacity: 70%;
   }
 
@@ -195,7 +189,8 @@
     gap: 8px;
 
     margin-bottom: 14px;
-    font-size: 16px;
+    font-size: clamp(1rem, 3.2vw, 1.3rem);
+    font-weight: 600;
     opacity: 0.85;
   }
 
@@ -212,8 +207,8 @@
     flex-direction: column;
     align-items: center;
 
-    min-width: 56px;
-    padding: 8px 10px;
+    min-width: 72px;
+    padding: 10px 12px;
 
     border: 1px solid color-mix(in oklab, currentColor 18%, transparent);
     border-radius: 8px;
@@ -221,7 +216,7 @@
   }
 
   .countdown-value {
-    font-size: 22px;
+    font-size: clamp(1.7rem, 6vw, 2.2rem);
     font-weight: 700;
     line-height: 1;
     font-variant-numeric: tabular-nums;
@@ -230,7 +225,7 @@
   .countdown-label {
     margin-top: 4px;
 
-    font-size: 11px;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     opacity: 0.7;
@@ -244,6 +239,11 @@
     opacity: 70%;
   }
 
+  .location :global(.location-address) {
+    width: fit-content;
+    margin-inline: auto;
+  }
+
   .action {
     margin-top: 25px;
     width: 50%;
@@ -252,6 +252,31 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+
+  @media screen and (max-width: 767px) {
+    section {
+      min-height: auto;
+      padding-bottom: 36px;
+    }
+
+    .message {
+      padding-top: 0.5rem;
+    }
+
+    .mascot {
+      margin-top: 0;
+    }
+
+    .title {
+      margin-top: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .action {
+      margin-top: 14px;
+      width: min(92%, 420px);
+    }
   }
 
   @media screen and (min-width: 768px) {

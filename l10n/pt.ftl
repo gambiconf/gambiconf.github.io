@@ -5,6 +5,7 @@ title = GambiConf - The Blow Your Mind Conference
 header--home = Home
 header--about = Sobre
 header--cfp = CFP
+header--tickets = Ingressos
 header--blog = Blog
 header--album = Álbum
 header--schedule = Agenda
@@ -16,8 +17,9 @@ hero--date = 28 e 29 de Novembro de 2026
 hero--location-first-line = TOTVS -
 hero--location-second-line = USP Butantã -
 hero--location-third-line = São Paulo, Brasil
-hero--cfp = Submeta no CFP
-hero--cta = Compre seu ingresso
+hero--cfp = Envie sua proposta
+hero--cta = Garanta seu ingresso
+hero--add-to-calendar = Adicionar ao calendário
 hero--countdown-months = { $count ->
     [one] mês
    *[other] meses
@@ -41,9 +43,24 @@ row-event--go-to-album = Ver o álbum
 
 ## Row "The GambiConf"
 
-row-what-is-gambiconf--title = A GambiConf
+row-what-is-gambiconf--title = Quem somos
 
 row-what-is-gambiconf--body-paragraph-1 = Na GambiConf, nós celebramos o genuíno espírito hacker.
+
+row-what-is-gambiconf--examples-intro = Nas edições passadas já tivemos talks sobre:
+
+row-what-is-gambiconf--example-water = <a data-l10n-name="link">construir um computador usando água</a>
+row-what-is-gambiconf--example-satellite = <a data-l10n-name="link">engenharia reversa na comunicação de um satélite</a>
+row-what-is-gambiconf--example-flappy-bird = <a data-l10n-name="link">recriar Flappy Bird em Assembly</a>
+row-what-is-gambiconf--example-lcd = <a data-l10n-name="link">tocar música usando um monitor LCD e um rádio</a>
+
+row-typed--title = GambiConf 2026 + Typed
+row-typed--body-paragraph-1 = Essa edição da GambiConf é feita em parceria com a Cryptolar e a TYPED, comunidades voltadas para verificação formal e desenvolvimento web3.
+row-typed--body-paragraph-2 = Neste ano, teremos duas trilhas de palestras paralelas durante todo o dia 28:
+row-typed--track-1 = Trilha GambiConf 2026
+row-typed--track-2 = Trilha TYPED
+row-typed--body-paragraph-4 = Como palestrante, você pode enviar propostas para ambas as trilhas. E como participante, poderá circular livremente e assistir às palestras que mais te interessarem.
+row-typed--body-paragraph-5 = No dia 29, durante a tarde, os workshops acontecerão simultaneamente em salas diferentes, e você poderá escolher quais deseja participar.
 
 row-what-is-gambiconf--body-paragraph-2 =
   Aqui, temos um palco com apresentações fora da caixa. Como por exemplo, nas edições passadas aprendemos sobre
@@ -58,18 +75,31 @@ row-what-is-gambiconf--body-paragraph-3 =
   de algo diferente e, talvez, inusitado!
 
 row-what-is-gambiconf--body-paragraph-4 =
-  Se você tiver algo que queira compartilhar (especialmente se for estranho!), a GambiConf é o seu lugar.
+  Se você construiu algo estranho, criativo ou inesperado, a GambiConf é o seu lugar.
   Já se você quiser se inspirar com ideias que não veria em outro evento, não perca a próxima edição!
 
 row-what-is-gambiconf--body-paragraph-5 =
   Você pode conferir mais sobre o que é a GambiConf nesse breve vídeo da abertura na última edição:
 
+row-what-is-gambiconf--body-paragraph-6 =
+  <a data-l10n-name="link-photos">Confira as fotos das edições passadas</a>.
+
 ## Where and When
 
 where-and-when--title = Onde e quando
-where-and-when--body-paragraph-1 = O evento acontecerá no fim de semana de 28 e 29 de Novembro, na <a data-l10n-name="link-usp">USP - Campus Butantã</a>.
-where-and-when--body-paragraph-2 = Streaming gratuito no <a data-l10n-name="link-youtube">YouTube</a>.
-where-and-when--body-paragraph-3 = Converse conosco no <a data-l10n-name="link-discord">Discord</a>.
+where-and-when--body-paragraph-1 = O evento acontecerá no fim de semana de 28 e 29 de Novembro.
+  • 28 de novembro — palestras das trilhas GambiConf e TYPED
+  • 29 de novembro — workshops e painéis no período da tarde
+where-and-when--schedule-intro = O evento acontecerá no fim de semana de 28 e 29 de Novembro.
+where-and-when--schedule-bullet-1 = • 28 de novembro — palestras das trilhas GambiConf e TYPED
+where-and-when--schedule-bullet-2 = • 29 de novembro — workshops e painéis no período da tarde
+where-and-when--add-to-calendar-inline = + adicionar ao calendário
+where-and-when--body-paragraph-2 = Na <a data-l10n-name="link-usp">USP - Campus Butantã / IME - Bloco B</a>.
+where-and-when--see-map = Ver no mapa
+where-and-when--body-paragraph-3 = Streaming gratuito no <a data-l10n-name="link-youtube">YouTube</a>.
+where-and-when--body-paragraph-4 = Converse conosco no <a data-l10n-name="link-discord">Discord</a>.
+where-and-when--add-to-calendar-day-1 = Adicionar ao calendário — 28 de novembro
+where-and-when--add-to-calendar-day-2 = Adicionar ao calendário — 29 de novembro
 
 ## Calendar
 
@@ -91,9 +121,9 @@ call-for-proposal--body-paragraph-1 =
 call-for-proposal--body-paragraph-2 =
   Já se você prefere conduzir um hands-on, você pode ministrar um <strong data-l10n-name='workshop'>workshop</strong>.
 call-for-proposal--body-paragraph-3 =
-  Caso esteja sem muitas ideias, <a data-l10n-name='link'>se inspire vendo o que já rolou nas edições passadas</a>.
+  Caso esteja sem muitas ideias, <a data-l10n-name='link'>se inspire vendo vídeos do que já rolou nas edições passadas</a>.
 call-for-proposal--body-paragraph-4 = O prazo final é 7 de Junho.
-call-for-proposal--cta = Submeter no CFP
+call-for-proposal--cta = Envie sua proposta
 
 ## Tickets
 
@@ -124,7 +154,7 @@ footer--contacts = Contatos
 
 cfp--title = CFP
 cfp--section-main = Proposta
-cfp--field-name = Nome
+cfp--field-name = Nome do/s palestrante/s
 cfp--field-name-sublabel = Se for uma apresentação em dupla, coloque o nome de ambos. Por exemplo: "João e Maria"
 cfp--field-social-media-handler = _
   .label = Social media handler (opcional)

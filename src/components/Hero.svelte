@@ -307,7 +307,7 @@
     }
 
     .message {
-      max-width: 350px;
+      max-width: 360px;
 
       margin-right: auto;
       margin-left: auto;

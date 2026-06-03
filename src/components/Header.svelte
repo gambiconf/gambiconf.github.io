@@ -11,7 +11,7 @@
 </script>
 
 <header>
-  <Link href="/" onclick={closeMenu}>
+  <Link class="logo-link" href="/" onclick={closeMenu}>
     <img src={asset("/logo.png")} alt="logo" />
   </Link>
 
@@ -30,7 +30,7 @@
 
   <nav class:open={menuOpen}>
     <Link class="nav-link" href="/" variant="secondary" onclick={closeMenu}><Localized id="header--home" /></Link>
-    <!-- <Link href="/#about" variant="secondary"><Localized id="header--about" /></Link> -->
+    <Link class="nav-link" href="/#about" variant="secondary" onclick={closeMenu}><Localized id="header--who-we-are" /></Link>
     <Link class="nav-link" href="/#tickets" variant="secondary" onclick={closeMenu}><Localized id="header--tickets" /></Link>
     <Link class="nav-link" href="/#call-for-proposal" variant="secondary" onclick={closeMenu}><Localized id="header--cfp" /></Link>
     <Link class="nav-link" href="https://gambiconf.substack.com" variant="secondary" onclick={closeMenu}>
@@ -175,8 +175,13 @@
   }
 
   @media screen and (min-width: 768px) {
+    :global(.logo-link) {
+      align-self: flex-start;
+      margin-top: calc(var(--header-height) / 2);
+    }
+
     img {
-      height: 56px;
+      height: 80px;
       margin-left: 10vw;
     }
 

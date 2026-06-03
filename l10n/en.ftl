@@ -3,6 +3,7 @@ title = GambiConf - The Blow Your Mind Conference
 ## Header
 
 header--home = Home
+header--who-we-are = Who we are
 header--about = About
 header--cfp = CFP
 header--tickets = Tickets
@@ -143,6 +144,7 @@ partners--supporters = Supporters
 ## Footer
 
 footer--site-map = Site Map
+footer--links = Links
 footer--home = Home
 footer--about = About
 footer--previous-editions = Previous Editions
@@ -150,6 +152,7 @@ footer--code-of-conduct = Code of Conduct
 footer--media-kit = Media Kit — Become a partner
 footer--media-kit-href = /mediakit.pdf
 footer--contacts = Contacts
+footer--blog = Blog
 
 ## CFP
 

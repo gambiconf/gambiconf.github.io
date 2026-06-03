@@ -59,7 +59,7 @@
       type: "circle",
       iterations: 2,
       visible: true,
-      padding: 2,
+      padding: -5,
       color: "var(--calendar-highlighted-day-color)",
     }}
   >

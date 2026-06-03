@@ -52,10 +52,12 @@
 </Window>
 
 <style>
+  /*
   .title {
     padding: 10px 25px;
     margin: 0;
   }
+  */
 
   .grid {
     display: grid;
@@ -78,6 +80,7 @@
     filter: grayscale(0);
   }
 
+  /*
   .grid-sponsors {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -85,6 +88,7 @@
   .grid-sponsors img {
     height: 100px;
   }
+  */
 
   .grid-partners {
     grid-template-columns: repeat(2, 1fr);

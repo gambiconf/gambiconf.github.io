@@ -4,7 +4,6 @@ title = GambiConf - The Blow Your Mind Conference
 
 header--home = Home
 header--who-we-are = Quem somos
-header--about = Sobre
 header--cfp = CFP
 header--tickets = Ingressos
 header--blog = Blog
@@ -133,23 +132,14 @@ tickets--title = Ingressos
 ## Partners
 
 partners--title = Parceiros
-partners--become-a-partner = _
-  .href = /mediakit.pdf
-  .src = /seja-parceiro.png
-  .alt = O mascote da GambiConf segurando uma placa escrita 'Seja um parceiro'
 partners--sponsors = Patrocinador
 partners--supporters = Apoiador
 
 ## Footer
 
-footer--site-map = Site Map
 footer--links = Links
-footer--home = Home
-footer--about = Sobre
 footer--previous-editions = Edições Passadas
 footer--code-of-conduct = Código de Conduta
-footer--media-kit = Media Kit — Seja nosso parceiro
-footer--media-kit-href = /mediakit.pdf
 footer--contacts = Contatos
 footer--blog = Blog
 

@@ -8,13 +8,13 @@
   import Donut from "./Donut.svelte"
 
   interface Props {
-    body?: string;
-    tweetStatusChanged?: (status: TweetStatus) => void;
+    body?: string
+    tweetStatusChanged?: (status: TweetStatus) => void
   }
 
-  let { body = "", tweetStatusChanged }: Props = $props();
+  let { body = "", tweetStatusChanged }: Props = $props()
 
-  let donutPercent = $derived((tweetLength(body) * 100) / 270)
+  let donutPercent = $derived((tweetLength(body) * 100) / 280)
 
   let tweetStatus: TweetStatus = $state("ok")
 
@@ -29,7 +29,7 @@
       tweetStatus = "ok"
       tweetStatusChanged?.(tweetStatus)
     }
-  });
+  })
 </script>
 
 <div class="tweet">
@@ -79,8 +79,15 @@
 
 <style>
   .tweet {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu,
-      "Helvetica Neue", sans-serif;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Ubuntu,
+      "Helvetica Neue",
+      sans-serif;
 
     display: grid;
     grid-template-columns: auto 1fr;
@@ -89,7 +96,7 @@
     max-width: 100%;
     width: 600px;
     padding: 15px;
-    
+
     box-sizing: border-box;
   }
 
@@ -163,7 +170,8 @@
   }
 
   @media (max-width: 650px) {
-    .date, .date-separator {
+    .date,
+    .date-separator {
       display: none;
     }
   }

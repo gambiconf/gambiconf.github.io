@@ -1,6 +1,14 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
-  import { form, addSpeaker, removeSpeaker } from "../../store/cfp-submission.svelte"
+  import Tweet from "../Tweet.svelte"
+  import {
+    form,
+    bioTweetPreviews,
+    addSpeaker,
+    removeSpeaker,
+    setBioTweetStatus,
+  } from "../../store/cfp-submission.svelte"
+  import { tweetLength } from "../../utils/tweet"
 </script>
 
 <h4 class="section-small"><Localized id="cfp--section-about-you" /></h4>
@@ -27,12 +35,27 @@
         {/if}
       </div>
     </div>
+
     <textarea
       name="bio-{index}"
       rows="4"
-      maxlength="800"
       required={index === 0}
       bind:value={form.speakerBios[index]}
     ></textarea>
+
+    <span>
+      <Localized id="cfp--tweet-preview" />
+      <span
+        class:warning-limit={form.tweetBioStatuses[index] === "warning"}
+        class:exceeded-limit={form.tweetBioStatuses[index] === "exceeded"}
+      >
+        ({tweetLength(bioTweetPreviews()[index])}/280)
+      </span>
+    </span>
+
+    <Tweet
+      body={bioTweetPreviews()[index]}
+      tweetStatusChanged={(status) => setBioTweetStatus(index, status)}
+    />
   </div>
 {/each}

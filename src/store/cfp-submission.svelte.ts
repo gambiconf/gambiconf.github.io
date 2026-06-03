@@ -4,7 +4,7 @@ import { tweetLength } from "../utils/tweet";
 import { capitalize } from "../utils/capitalize";
 import type { TweetStatus } from "../components/Tweet.svelte";
 
-const MAX_TWEET_LENGTH = 270;
+const MAX_TWEET_LENGTH = 280;
 
 export type SubmitState =
   | { status: "idle" }
@@ -63,14 +63,14 @@ const bioTweetForSubmit = (bio: string, index: number, count: number) => {
 /** Returns an error message, or null when the form is ready to submit. */
 const validate = (): string | null => {
   if (tweetLength(talkTweetPreview()) > MAX_TWEET_LENGTH) {
-    return "Tweet talk exceeds 270 characters";
+    return "Talk description exceeds 280 characters";
   }
 
   const filledBios = form.speakerBios.filter((b) => b.trim());
   for (let i = 0; i < filledBios.length; i++) {
     const preview = bioTweetForSubmit(filledBios[i], i, filledBios.length);
     if (tweetLength(preview) > MAX_TWEET_LENGTH) {
-      return `Tweet bio for speaker ${i + 1} exceeds 270 characters`;
+      return `Speaker bio for speaker ${i + 1} exceeds 280 characters`;
     }
   }
 

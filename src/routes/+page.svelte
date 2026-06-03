@@ -23,13 +23,13 @@
     <BulletsGutter />
   </div> -->
 
-  <RowTyped />
+  <RowTheGambiConf />
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />
   </div>
 
-  <RowTheGambiConf />
+  <RowTyped />
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />

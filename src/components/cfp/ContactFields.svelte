@@ -3,7 +3,7 @@
   import { form } from "../../store/cfp-submission.svelte"
 </script>
 
-<h4><Localized id="cfp--section-contacts" /></h4>
+<h4 class="section-small"><Localized id="cfp--section-contacts" /></h4>
 
 <div class="field">
   <label for="social"><Localized id="cfp--field-social-medias" /></label>
@@ -11,6 +11,7 @@
     name="social"
     placeholder="GitHub: macabeus&#013;Stack Overflow: macabeus&#013;..."
     rows="3"
+    maxlength="800"
     required
     bind:value={form.speakerSocialMedias}
   ></textarea>
@@ -18,10 +19,10 @@
 
 <div class="field">
   <label for="email"><Localized id="cfp--field-email" /></label>
-  <input name="email" type="email" required bind:value={form.speakerEmail} />
+  <input name="email" type="email" maxlength="160" required bind:value={form.speakerEmail} />
 </div>
 
 <div class="field">
   <label for="notes"><Localized id="cfp--field-notes" /></label>
-  <textarea name="notes" rows="3" bind:value={form.notes}></textarea>
+  <textarea name="notes" rows="3" maxlength="1000" bind:value={form.notes}></textarea>
 </div>

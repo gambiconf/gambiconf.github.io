@@ -1,109 +1,154 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { asset } from "$app/paths"
-  import { t } from "../store/locale.svelte"
   import Link from "./Link.svelte"
   import GambiConfSocialLinks from "./GambiConfSocialLinks.svelte"
 </script>
 
 <footer>
   <div class="content-wrapper">
-    <div>
-      <img src={asset("/logo.png")} alt="Logo" class="logo-image" />
+    <div class="column contact-col">
+      <a href="/">
+        <img src={asset("/logo.png")} alt="GambiConf" class="logo-small" />
+      </a>
+      <h3><Localized id="footer--contacts" /></h3>
+      <Link href="mailto:mambi@gambiconf.dev" variant="secondary">mambi@gambiconf.dev</Link>
     </div>
 
-    <div class="column-content">
-      <h1><Localized id="footer--site-map" /></h1>
-
-      <div>
-        <Link href="/" variant="secondary"><Localized id="footer--home" /></Link>
-        <Link href="/#about" variant="secondary"><Localized id="footer--about" /></Link>
-        <Link href="/previous-editions" variant="secondary"
-          ><Localized id="footer--previous-editions" /></Link
-        >
-        <Link href="/code-of-conduct" variant="secondary"
-          ><Localized id="footer--code-of-conduct" /></Link
-        >
-        <Link
-          href={asset(t("footer--media-kit-href").replace(/\p{C}/gu, ""))}
-          variant="secondary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Localized id="footer--media-kit" />
+    <div class="column">
+      <h3><Localized id="footer--links" /></h3>
+      <nav>
+        <Link href="https://gambiconf.substack.com" variant="secondary" target="_blank" rel="noopener noreferrer">
+          <Localized id="footer--blog" />
         </Link>
+        <Link href="/previous-editions" variant="secondary"><Localized id="footer--previous-editions" /></Link>
+        <Link href="/code-of-conduct" variant="secondary"><Localized id="footer--code-of-conduct" /></Link>
+      </nav>
+    </div>
+
+    <div class="column social-col">
+      <div class="social-icons">
+        <GambiConfSocialLinks largeScreenRows={2} smallScreenRows={1} exclude={["substack"]} />
       </div>
     </div>
 
-    <address class="column-content">
-      <h1><Localized id="footer--contacts" /></h1>
-
-      <div>
-        <Link href="mailto:mambi@gambiconf.dev" variant="secondary">mambi@gambiconf.dev</Link>
-
-        <GambiConfSocialLinks largeScreenRows={3} smallScreenRows={1} />
-      </div>
-    </address>
+    <div class="partner-col">
+      <a href="/mediakit.pdf" target="_blank" rel="noopener noreferrer">
+        <img src={asset("/seja-parceiro.png")} alt="Seja nosso parceiro" class="partner-image" />
+      </a>
+    </div>
   </div>
 </footer>
 
 <style>
   footer {
-    padding-top: 10px;
-    padding-bottom: 20px;
-    text-align: center;
+    padding: 40px 0 32px;
   }
 
   .content-wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10vw;
+  }
+
+.column {
+    display: flex;
     flex-direction: column;
     gap: 10px;
-
-    max-width: 1140px;
-
-    margin-left: 10vw;
-    margin-right: 10vw;
+    width: 100%;
+    text-align: center;
   }
 
-  .logo-image {
-    height: 75px;
+  h3 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 4px;
+    opacity: 0.45;
   }
 
-  h1 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 0;
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .logo-small {
+    height: 56px;
+    display: block;
+  }
+
+  .social-col {
+    gap: 12px;
+    align-items: center;
+  }
+
+  .contact-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .social-icons :global(.social-links-container) {
+    gap: 8px;
+  }
+
+  .social-icons :global(.social-media-icon) {
+    font-size: 1.05em;
+  }
+
+  .partner-col {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .partner-image {
+    height: 110px;
+    display: block;
+    transition: opacity 0.2s;
+  }
+
+  .partner-image:hover {
+    opacity: 0.85;
   }
 
   :global(footer a) {
-    font-size: 16px;
-  }
-
-  address {
-    font-style: normal;
-  }
-
-  .column-content > div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    font-size: 0.95rem;
   }
 
   @media screen and (min-width: 768px) {
-    footer {
-      text-align: left;
-    }
-
     .content-wrapper {
       flex-direction: row;
-
-      margin-right: auto;
-      margin-left: auto;
+      align-items: flex-start;
+      gap: 48px;
+      padding: 0;
     }
 
-    .logo-image {
-      height: 150px;
+    .column {
+      text-align: left;
+      width: auto;
+      flex: 1;
+    }
+
+    .social-col {
+      align-items: flex-start;
+    }
+
+    .contact-col {
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .partner-col {
+      flex-shrink: 0;
+      align-items: flex-start;
     }
   }
 </style>

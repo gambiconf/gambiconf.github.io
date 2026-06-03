@@ -11,7 +11,7 @@
   import { tweetLength } from "../../utils/tweet"
 </script>
 
-<h4><Localized id="cfp--section-about-you" /></h4>
+<h4 class="section-small"><Localized id="cfp--section-about-you" /></h4>
 
 {#each form.speakerBios as _, index (index)}
   <div class="field">
@@ -35,6 +35,7 @@
         {/if}
       </div>
     </div>
+
     <textarea
       name="bio-{index}"
       rows="4"
@@ -48,7 +49,7 @@
         class:warning-limit={form.tweetBioStatuses[index] === "warning"}
         class:exceeded-limit={form.tweetBioStatuses[index] === "exceeded"}
       >
-        ({tweetLength(bioTweetPreviews()[index])}/270)
+        ({tweetLength(bioTweetPreviews()[index])}/280)
       </span>
     </span>
 

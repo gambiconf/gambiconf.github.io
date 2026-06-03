@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { asset } from "$app/paths"
   import { t } from "../store/locale.svelte"
   import Window from "./Window.svelte"
@@ -34,6 +33,10 @@
       <img src={asset("/partners/symcomp.png")} alt="SymComp" />
     </a>
 
+    <img src={asset("/typed.avif")} alt="TYPED" />
+
+    <img src={asset("/cryptolar.png")} alt="Cryptolar" />
+
     <!-- <a href={`https://elixiremfoco.com/?${utmSource}`} target="_blank" rel="noopener">
       <img src={asset("/elixir-em-foco.png")} alt="Elixir em foco" />
     </a>
@@ -45,22 +48,16 @@
     <a href={`https://magalu.cloud/?${utmSource}`} target="_blank" rel="noopener">
       <img src={asset("/magalu-cloud.svg")} alt="Magalu Cloud" />
     </a> -->
-
-    <Localized id="partners--become-a-partner">
-      {#snippet children({ attrs })}
-        <a href={asset(attrs.href)} target="_blank" rel="noopener">
-          <img src={asset(attrs.src)} alt={attrs.alt} />
-        </a>
-      {/snippet}
-    </Localized>
   </div>
 </Window>
 
 <style>
+  /*
   .title {
     padding: 10px 25px;
     margin: 0;
   }
+  */
 
   .grid {
     display: grid;
@@ -83,6 +80,7 @@
     filter: grayscale(0);
   }
 
+  /*
   .grid-sponsors {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -90,6 +88,7 @@
   .grid-sponsors img {
     height: 100px;
   }
+  */
 
   .grid-partners {
     grid-template-columns: repeat(2, 1fr);

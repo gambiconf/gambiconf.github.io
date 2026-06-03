@@ -9,7 +9,7 @@
 
 <div class="field">
   <label for="name"><Localized id="cfp--field-name" /></label>
-  <input name="name" type="text" required bind:value={form.speakerName} />
+  <input name="name" type="text" required maxlength="120" bind:value={form.speakerName} />
   <label for="name" class="sublabel"><Localized id="cfp--field-name-sublabel" /></label>
 </div>
 
@@ -21,6 +21,7 @@
         name="twitter"
         type="text"
         placeholder={attrs.placeholder}
+        maxlength="40"
         bind:value={form.twitterHandler}
       />
     {/snippet}
@@ -67,7 +68,7 @@
 
 <div class="field">
   <label for="title"><Localized id="cfp--field-title" /></label>
-  <input name="title" type="text" required bind:value={form.title} />
+  <input name="title" type="text" required maxlength="120" bind:value={form.title} />
 </div>
 
 <div class="field">
@@ -97,7 +98,7 @@
     class:warning-limit={talkTweetStatus.value === "warning"}
     class:exceeded-limit={talkTweetStatus.value === "exceeded"}
   >
-    ({tweetLength(talkTweetPreview())}/270)
+    ({tweetLength(talkTweetPreview())}/280)
   </span>
 </span>
 

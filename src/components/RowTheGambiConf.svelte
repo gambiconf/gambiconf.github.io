@@ -46,6 +46,12 @@
           allowfullscreen
         ></iframe>
       </div>
+
+      <p>
+        <Overlay id="row-what-is-gambiconf--body-paragraph-6">
+          <Link l10n="link-photos" href="/previous-editions" />
+        </Overlay>
+      </p>
     </div>
   </Window>
 </div>

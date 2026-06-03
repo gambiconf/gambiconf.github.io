@@ -28,7 +28,7 @@
 
         <p>
           <Overlay id="call-for-proposal--body-paragraph-3">
-            <Link l10n="link" href="/previous-editions" />
+            <Link l10n="link" href="https://www.youtube.com/@gambiconf" />
           </Overlay>
         </p>
 

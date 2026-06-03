@@ -1,13 +1,30 @@
 <script lang="ts">
   import { Fa } from "svelte-fa"
+  import { faCalendarDays } from "@fortawesome/free-solid-svg-icons/faCalendarDays"
   import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot"
+  import { faMapLocation } from "@fortawesome/free-solid-svg-icons/faMapLocation"
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
   import { faDiscord } from "@fortawesome/free-brands-svg-icons/faDiscord"
-  import { Overlay } from "@nubolab-ffwd/svelte-fluent"
+  import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
   import { t } from "../store/locale.svelte"
+  import { getGoogleCalendarLink } from "../utils/calendar"
   import Calendar from "./Calendar.svelte"
   import Link from "./Link.svelte"
   import Window from "./Window.svelte"
+
+  const addToCalendarDay1Url = getGoogleCalendarLink({
+    title: "GambiConf 2026 — Dia 1 (Palestras)",
+    start: "2026-11-28T09:00:00-03:00",
+    end: "2026-11-28T19:00:00-03:00",
+    location: "IME-USP",
+  })
+
+  const addToCalendarDay2Url = getGoogleCalendarLink({
+    title: "GambiConf 2026 — Dia 2 (Workshops)",
+    start: "2026-11-29T13:00:00-03:00",
+    end: "2026-11-29T19:00:00-03:00",
+    location: "IME-USP",
+  })
 </script>
 
 <Window title={t("where-and-when--title")}>
@@ -17,35 +34,62 @@
     </div>
 
     <div class="info-column">
-      <div class="intro-row">
+      <div class="info-row">
         <div class="icon-wrapper">
-          <Fa icon={faLocationDot} />
+          <Fa icon={faCalendarDays} />
         </div>
-        <div>
-          <Overlay id="where-and-when--body-paragraph-1">
-            <Link l10n="link-usp" href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7" />
-          </Overlay>
+        <div class="schedule-text">
+          <p class="schedule-intro"><Localized id="where-and-when--schedule-intro" /></p>
+          <p class="schedule-bullet">
+            <Localized id="where-and-when--schedule-bullet-1" />
+            <Link class="calendar-link-inline" href={addToCalendarDay1Url}>(<Localized id="where-and-when--add-to-calendar-inline" />)</Link>
+          </p>
+          <p class="schedule-bullet">
+            <Localized id="where-and-when--schedule-bullet-2" />
+            <Link class="calendar-link-inline" href={addToCalendarDay2Url}>(<Localized id="where-and-when--add-to-calendar-inline" />)</Link>
+          </p>
         </div>
       </div>
 
-      <div class="outro-rows">
-        <p>
-          <Fa icon={faYoutube} />
-          <span>
+      <div class="info-row">
+        <div class="icon-wrapper">
+          <Fa icon={faLocationDot} />
+        </div>
+        <div class="location-col">
+          <span class="location-text">
             <Overlay id="where-and-when--body-paragraph-2">
-              <Link l10n="link-youtube" href="https://www.youtube.com/@gambiconf" />
+              <Link l10n="link-usp" href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7" />
             </Overlay>
           </span>
-        </p>
+          <span class="map-link">
+            <Fa icon={faMapLocation} />
+            <Link href="https://maps.app.goo.gl/wYoFmYs39tzzmytn7">
+              <Localized id="where-and-when--see-map" />
+            </Link>
+          </span>
+        </div>
+      </div>
 
-        <p>
+      <div class="info-row">
+        <div class="icon-wrapper">
+          <Fa icon={faYoutube} />
+        </div>
+        <span>
+          <Overlay id="where-and-when--body-paragraph-3">
+            <Link l10n="link-youtube" href="https://www.youtube.com/@gambiconf" />
+          </Overlay>
+        </span>
+      </div>
+
+      <div class="info-row">
+        <div class="icon-wrapper">
           <Fa icon={faDiscord} />
-          <span>
-            <Overlay id="where-and-when--body-paragraph-3">
-              <Link l10n="link-discord" href="https://discord.gg/P2tR4xnqfJ" />
-            </Overlay>
-          </span>
-        </p>
+        </div>
+        <span>
+          <Overlay id="where-and-when--body-paragraph-4">
+            <Link l10n="link-discord" href="https://discord.gg/P2tR4xnqfJ" />
+          </Overlay>
+        </span>
       </div>
     </div>
   </div>
@@ -67,64 +111,66 @@
   .info-column {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     min-width: 0;
   }
 
-  .intro-row {
+  .info-row {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     align-items: flex-start;
   }
 
   .icon-wrapper {
-    padding-top: 4px;
+    flex-shrink: 0;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
   }
 
-  .maps-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+  /* Schedule (dates) */
 
-  .day-column {
+  .schedule-text {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 2px;
   }
 
-  .day-header {
-    min-height: 48px;
+  .schedule-intro {
+    margin: 0;
   }
 
-  .nowrap {
-    white-space: nowrap;
-  }
-
-  .map-wrapper {
-    width: 100%;
-    height: 200px;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--border-color, #ddd);
-  }
-
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-  .outro-rows p {
+  .schedule-bullet {
+    margin: 0;
     display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    margin: 10px 0;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
-  .outro-rows p :global(svg) {
-    margin-top: 4px;
-    flex-shrink: 0;
+  :global(.calendar-link-inline) {
+    font-size: 0.8em;
+    white-space: nowrap;
+    opacity: 0.75;
+  }
+
+  /* Location */
+
+  .location-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .location-text {
+    display: inline;
+  }
+
+  .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
   }
 
   @media screen and (min-width: 768px) {
@@ -140,10 +186,6 @@
 
     .info-column {
       flex-grow: 1;
-    }
-
-    .maps-grid {
-      grid-template-columns: 1fr 1fr;
     }
   }
 </style>

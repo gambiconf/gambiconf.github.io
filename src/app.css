@@ -21,7 +21,7 @@
   --h5-size: calc(var(--h1-size) * 0.6);
   --h6-size: calc(var(--h1-size) * 0.5);
 
-  --header-height: 40px;
+  --header-height: 65px;
 }
 
 html {
@@ -76,6 +76,10 @@ a:hover:not(.button *) {
 }
 
 @media screen and (min-width: 768px) {
+  :root {
+    --header-height: 80px;
+  }
+
   body {
     font-size: 1.2rem;
   }

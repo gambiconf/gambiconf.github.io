@@ -3,8 +3,9 @@ title = GambiConf - The Blow Your Mind Conference
 ## Header
 
 header--home = Home
-header--about = About
+header--who-we-are = Who we are
 header--cfp = CFP
+header--tickets = Tickets
 header--blog = Blog
 header--album = Album
 header--schedule = Schedule
@@ -17,8 +18,9 @@ hero--location-first-line = TOTVS -
 hero--location-second-line = USP Butantã -
 hero--location-third-line = São Paulo, Brazil
 hero--location-see-map = See on the map
-hero--cfp = Apply for the CFP
-hero--cta = Buy your ticket
+hero--cfp = Call for talks and workshops
+hero--cta = Secure your ticket
+hero--add-to-calendar = Add to calendar
 hero--countdown-months = { $count ->
     [one] month
    *[other] months
@@ -46,6 +48,21 @@ row-what-is-gambiconf--title = The GambiConf
 
 row-what-is-gambiconf--body-paragraph-1 = At GambiConf, we celebrate the genuine hacker spirit.
 
+row-what-is-gambiconf--examples-intro = In past editions, we have had talks about:
+
+row-what-is-gambiconf--example-water = <a data-l10n-name="link">building a computer using water</a>
+row-what-is-gambiconf--example-satellite = <a data-l10n-name="link">reverse engineering a satellite's communication</a>
+row-what-is-gambiconf--example-flappy-bird = <a data-l10n-name="link">recreating Flappy Bird in Assembly</a>
+row-what-is-gambiconf--example-lcd = <a data-l10n-name="link">playing music using an LCD monitor and a radio</a>
+
+row-typed--title = GambiConf 2026 + Typed
+row-typed--body-paragraph-1 = This GambiConf edition is produced in partnership with Cryptolar and TYPED, communities focused on formal verification and Web3 development.
+row-typed--body-paragraph-2 = This year, we'll have two parallel tracks throughout the whole day on the 28th:
+row-typed--track-1 = GambiConf 2026 Track
+row-typed--track-2 = TYPED Track
+row-typed--body-paragraph-4 = As an attendee, you'll be able to move freely between rooms and attend the talks that interest you most.
+row-typed--body-paragraph-5 = On the 29th in the afternoon, workshops will run simultaneously in different rooms and you can choose which one to attend.
+
 row-what-is-gambiconf--body-paragraph-2 =
   Here, the stage belongs to out-of-the-box talks. In past editions, for example, we learned about
   <a data-l10n-name="link-water">building a computer out of water</a>,
@@ -65,12 +82,25 @@ row-what-is-gambiconf--body-paragraph-4 =
 row-what-is-gambiconf--body-paragraph-5 =
   You can learn more about what GambiConf is in this short opening video from the last edition:
 
+row-what-is-gambiconf--body-paragraph-6 =
+  <a data-l10n-name="link-photos">Check out photos from past editions</a>.
+
 ## Where and When
 
 where-and-when--title = Where and When
-where-and-when--body-paragraph-1 = The event will happen on the weekend of November 29th and 30th, at <a data-l10n-name="link-usp">USP - Butantã Campus</a>.
-where-and-when--body-paragraph-2 = Free streaming on <a data-l10n-name="link-youtube">YouTube</a>.
-where-and-when--body-paragraph-3 = Chat with us on <a data-l10n-name="link-discord">Discord</a>.
+where-and-when--body-paragraph-1 = The event will happen on the weekend of November 28th and 29th.
+  Day 28: talks from both tracks throughout the day.
+  Day 29: workshops and panels in the afternoon.
+where-and-when--schedule-intro = The event will happen on the weekend of November 28th and 29th.
+where-and-when--schedule-bullet-1 = • November 28 — talks from the GambiConf and TYPED tracks
+where-and-when--schedule-bullet-2 = • November 29 — workshops and panels in the afternoon
+where-and-when--add-to-calendar-inline = + add to calendar
+where-and-when--body-paragraph-2 = At <a data-l10n-name="link-usp">USP - Butantã Campus / IME - Block B</a>. São Paulo, Brazil.
+where-and-when--see-map = See on the map
+where-and-when--body-paragraph-3 = Free streaming on <a data-l10n-name="link-youtube">YouTube</a>.
+where-and-when--body-paragraph-4 = Chat with us on <a data-l10n-name="link-discord">Discord</a>.
+where-and-when--add-to-calendar-day-1 = Add to calendar — November 28
+where-and-when--add-to-calendar-day-2 = Add to calendar — November 29
 
 ## Calendar
 
@@ -94,7 +124,7 @@ call-for-proposal--body-paragraph-2 =
 call-for-proposal--body-paragraph-3 =
   Short on ideas? <a data-l10n-name='link'>Get inspired by what happened in the previous editions</a>.
 call-for-proposal--body-paragraph-4 = The deadline is June 7th.
-call-for-proposal--cta = Submit to CFP
+call-for-proposal--cta = Call for talks and workshops
 
 ## Tickets
 
@@ -103,23 +133,16 @@ tickets--title = Tickets
 ## Partners
 
 partners--title = Partners
-partners--become-a-partner = _
-  .href = /mediakit.pdf
-  .src = /become-a-partner.png
-  .alt = The GambiConf mascot holding a lifting a board written 'Become a partner'
 partners--sponsors = Sponsors
 partners--supporters = Supporters
 
 ## Footer
 
-footer--site-map = Site Map
-footer--home = Home
-footer--about = About
+footer--links = Links
 footer--previous-editions = Previous Editions
 footer--code-of-conduct = Code of Conduct
-footer--media-kit = Media Kit — Become a partner
-footer--media-kit-href = /mediakit.pdf
 footer--contacts = Contacts
+footer--blog = Blog
 
 ## CFP
 
@@ -129,7 +152,7 @@ cfp--field-name = Name
 cfp--field-name-sublabel = If it's a presentation by a duo, include both names. For example: "John and Mary"
 cfp--field-social-media-handler = _
   .label = Social media handler (optional)
-  .placeholder = @twitterHandler
+  .placeholder = @handler
 cfp--field-type = _
   .label = What are you going to lead?
   .optionTalk = A talk
@@ -152,7 +175,7 @@ cfp--field-language = _
   .optionPortuguese = I can talk only in Portuguese
   .optionEnglish = I can talk only in English
   .optionPortugueseOrEnglish = I can talk both in Portuguese and English
-cfp--tweet-preview = Tweet preview
+cfp--tweet-preview = Character limit
 cfp--section-about-you = About you
 cfp--field-bio = Bio
 cfp--section-contacts = Contacts

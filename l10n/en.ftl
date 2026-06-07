@@ -123,7 +123,7 @@ call-for-proposal--body-paragraph-2 =
   If you'd rather lead a hands-on, you can run a <strong data-l10n-name='workshop'>workshop</strong>.
 call-for-proposal--body-paragraph-3 =
   Short on ideas? <a data-l10n-name='link'>Get inspired by what happened in the previous editions</a>.
-call-for-proposal--body-paragraph-4 = The deadline is June 7th.
+call-for-proposal--body-paragraph-4 = The deadline is June 21st.
 call-for-proposal--cta = Call for talks and workshops
 
 ## Tickets

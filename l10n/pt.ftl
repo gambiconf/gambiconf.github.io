@@ -124,6 +124,8 @@ call-for-proposal--body-paragraph-3 =
   Caso esteja sem muitas ideias, <a data-l10n-name='link'>se inspire vendo vídeos do que já rolou nas edições passadas</a>.
 call-for-proposal--body-paragraph-4 = O prazo final é 21 de Junho.
 call-for-proposal--cta = Envie sua proposta
+call-for-proposal--body-closed-1 = A submissão de propostas está encerrada.
+call-for-proposal--body-closed-2 = Acompanhe nossas redes sociais para saber quem apresentará na GambiConf 2026!
 
 ## Tickets
 

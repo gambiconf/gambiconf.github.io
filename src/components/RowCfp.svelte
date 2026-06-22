@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { Localized, Overlay } from "@nubolab-ffwd/svelte-fluent"
-  import { asset, resolve } from "$app/paths"
+  import { Localized } from "@nubolab-ffwd/svelte-fluent"
+  import { asset } from "$app/paths"
   import { t } from "../store/locale.svelte"
-  import Link from "./Link.svelte"
   import Window from "./Window.svelte"
+  import GambiConfSocialLinks from "./GambiConfSocialLinks.svelte"
 </script>
 
 <Window title={t("call-for-proposal--title")}>
@@ -15,31 +15,17 @@
 
       <div>
         <p>
-          <Overlay id="call-for-proposal--body-paragraph-1">
-            <strong data-l10n-name="talk"></strong>
-          </Overlay>
+          <Localized id="call-for-proposal--body-closed-1" />
         </p>
 
         <p>
-          <Overlay id="call-for-proposal--body-paragraph-2">
-            <strong data-l10n-name="workshop"></strong>
-          </Overlay>
+          <Localized id="call-for-proposal--body-closed-2" />
         </p>
 
-        <p>
-          <Overlay id="call-for-proposal--body-paragraph-3">
-            <Link l10n="link" href="https://www.youtube.com/@gambiconf" />
-          </Overlay>
-        </p>
-
-        <p>
-          <Localized id="call-for-proposal--body-paragraph-4" />
-        </p>
+        <div class="social-links-container">
+          <GambiConfSocialLinks largeScreenRows={1} exclude={["substack", "github"]} />
+        </div>
       </div>
-    </div>
-
-    <div class="button">
-      <a class="button-cfp" href={resolve("/cfp")}><Localized id="call-for-proposal--cta" /></a>
     </div>
   </div>
 </Window>
@@ -56,6 +42,12 @@
 
   p {
     margin-top: 0;
+  }
+
+  .social-links-container {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .button {

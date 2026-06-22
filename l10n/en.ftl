@@ -125,6 +125,8 @@ call-for-proposal--body-paragraph-3 =
   Short on ideas? <a data-l10n-name='link'>Get inspired by what happened in the previous editions</a>.
 call-for-proposal--body-paragraph-4 = The deadline is June 21st.
 call-for-proposal--cta = Call for talks and workshops
+call-for-proposal--body-closed-1 = The submission of proposals is closed.
+call-for-proposal--body-closed-2 = Follow our social media to find out who will be presenting at GambiConf 2026!
 
 ## Tickets
 

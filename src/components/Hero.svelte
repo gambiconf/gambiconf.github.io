@@ -3,7 +3,7 @@
   import { faCalendarDays } from "@fortawesome/free-solid-svg-icons/faCalendarDays"
   import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
-  import { asset, resolve } from "$app/paths"
+  import { asset } from "$app/paths"
   import { themeState } from "../store/theme.svelte"
   import Button from "./Button.svelte"
   import Link from "./Link.svelte"
@@ -99,10 +99,6 @@
     <div class="action">
       <Button url="https://www.tickettailor.com/events/gambiconf/2226768" newPage>
         <Localized id="hero--cta" />
-      </Button>
-
-      <Button url={resolve("/cfp")} newPage>
-        <Localized id="hero--cfp" />
       </Button>
     </div>
   </div>

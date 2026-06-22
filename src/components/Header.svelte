@@ -32,7 +32,6 @@
     <Link class="nav-link" href="/" variant="secondary" onclick={closeMenu}><Localized id="header--home" /></Link>
     <Link class="nav-link" href="/#about" variant="secondary" onclick={closeMenu}><Localized id="header--who-we-are" /></Link>
     <Link class="nav-link" href="/#tickets" variant="secondary" onclick={closeMenu}><Localized id="header--tickets" /></Link>
-    <Link class="nav-link" href="/#call-for-proposal" variant="secondary" onclick={closeMenu}><Localized id="header--cfp" /></Link>
     <Link class="nav-link" href="https://gambiconf.substack.com" variant="secondary" onclick={closeMenu}>
       <Localized id="header--blog" />
     </Link>

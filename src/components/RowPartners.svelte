@@ -37,6 +37,10 @@
 
     <img src={asset("/cryptolar.png")} alt="Cryptolar" />
 
+    <a href={`https://nacif.software/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={asset("/partners/nacif.png")} alt="Nacif" />
+    </a>
+
     <!-- <a href={`https://elixiremfoco.com/?${utmSource}`} target="_blank" rel="noopener">
       <img src={asset("/elixir-em-foco.png")} alt="Elixir em foco" />
     </a>
@@ -96,7 +100,7 @@
 
   @media screen and (min-width: 768px) {
     .grid-partners {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 </style>

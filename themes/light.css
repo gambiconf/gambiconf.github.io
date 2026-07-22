@@ -14,8 +14,9 @@
 
 body,
 .wrapper-content {
+  /* Warm ivory wash so the page shares the hero's temperature (not its saturation). */
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/background.png");
+    linear-gradient(rgba(255, 247, 238, 0.9), rgba(255, 247, 238, 0.9)), url("/background.png");
 }
 
 header {

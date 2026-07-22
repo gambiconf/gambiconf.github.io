@@ -16,13 +16,17 @@
 
   let { title, members, date, hours = "", duration, descriptionHtml }: Props = $props()
 
-  const googleCalendarLink = $derived(
-    getGoogleCalendarLink({
-      title: `[GambiConf] ${title}`,
-      start: `${date} ${hours}:00 -0300`,
-      duration,
-    }),
-  )
+  const buildStart = (day: string, time: string) => {
+    const [h = "", m = "00"] = time.split(":")
+    if (!h) return undefined
+    return `${day}T${h.padStart(2, "0")}:${m.padStart(2, "0")}:00-03:00`
+  }
+
+  const googleCalendarLink = $derived.by(() => {
+    const start = buildStart(date, hours)
+    if (!start) return undefined
+    return getGoogleCalendarLink({ title: `[GambiConf] ${title}`, start, duration })
+  })
 </script>
 
 <article class="talk">
@@ -30,7 +34,7 @@
     {title}
   </h6>
 
-  {#if hours}
+  {#if hours && googleCalendarLink}
     <p class="talk-time">
       <Localized id="event-time-slot--hours-prefix" />
       <Link href={googleCalendarLink}>{hours}</Link>

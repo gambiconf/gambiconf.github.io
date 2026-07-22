@@ -26,8 +26,12 @@ const getGoogleCalendarLink = ({
   const params = new URLSearchParams({
     action: "TEMPLATE",
     text: title,
-    dates: `${formatDate(startDate)}/${formatDate(endDate)}`,
   });
+
+  const datesAreValid = !Number.isNaN(startDate.getTime()) && !Number.isNaN(endDate.getTime());
+  if (datesAreValid) {
+    params.set("dates", `${formatDate(startDate)}/${formatDate(endDate)}`);
+  }
 
   if (location) {
     params.set("location", location);

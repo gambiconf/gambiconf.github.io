@@ -4,7 +4,6 @@
   import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot"
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { asset } from "$app/paths"
-  import { themeState } from "../store/theme.svelte"
   import Button from "./Button.svelte"
   import Link from "./Link.svelte"
 
@@ -37,19 +36,19 @@
       timeLeft.seconds === 0,
   )
 
-  const linkColors = $derived(
-    themeState.value === "light"
-      ? { color: "rgba(0, 0, 0)", hover: "rgba(0, 0, 0, 0.7)" }
-      : { color: "rgba(255, 255, 255)", hover: "rgba(255, 255, 255, 0.7)" },
-  )
+  const linkColors = { color: "rgba(255, 255, 255)", hover: "rgba(255, 255, 255, 0.75)" }
 </script>
 
 <section class="hero">
-  <div class="background-overlay"></div>
+  <div class="background-overlay">
+    <div class="bg-photo"></div>
+    <div class="bg-tint"></div>
+    <div class="bg-scrim"></div>
+  </div>
 
   <div class="message">
     <div class="mascot">
-      <img src={asset("/mambi.png")} alt="GambiConf's mascot. A cute golden lion tamarin" />
+      <img src={asset("/mambi.svg")} alt="GambiConf's mascot. A cute golden lion tamarin" />
     </div>
 
     <div class="title">
@@ -89,10 +88,9 @@
         --color={linkColors.color}
         --hover-color={linkColors.hover}
       >
-        <strong
-          ><Fa icon={faLocationDot} /> USP - Campus Butantã / IME - Bloco B<br />São Paulo,
-          Brasil</strong
-        >
+        <strong>
+          <Fa icon={faLocationDot} /> USP - Campus Butantã / IME - Bloco B<br />São Paulo, Brasil
+        </strong>
       </Link>
     </p>
 
@@ -109,19 +107,57 @@
     position: relative;
     min-height: max(55vh, 500px);
     padding-bottom: 140px;
+
+    isolation: isolate;
   }
 
+  /*
+   * Green duotone. Three stacked full-bleed layers so each can be filtered /
+   * blended independently (a filter on a parent would also desaturate the tint):
+   *   1. .bg-photo -> grayscale photo, the luminance map
+   *   2. .bg-tint  -> brand green, multiplied over the photo (highlights -> green)
+   *   3. .bg-scrim -> deep-green shadow lift + center scrim for text contrast
+   */
   .background-overlay {
     position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
 
-    width: 100%;
-    height: 100%;
+  .background-overlay > div {
+    position: absolute;
+    inset: 0;
+  }
 
-    background-image: url("/hero-background.png");
+  .bg-photo {
+    background-image: url("/hero-background.jpeg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    mix-blend-mode: overlay;
+
+    filter: grayscale(1) contrast(1.08) brightness(1.04);
+  }
+
+  /* Tints the whole image toward brand orange, uniformly. */
+  .bg-tint {
+    background-color: #ff8915;
+    mix-blend-mode: multiply;
+  }
+
+  /*
+   * Warm center scrim so the message reads over the orange, plus a brand-green
+   * accent glow in the lower-left corner to keep both palette colors present.
+   */
+  .bg-scrim {
+    background-image:
+      radial-gradient(ellipse 70% 90% at 12% 100%, rgba(8, 191, 27, 0.45) 0%, transparent 55%),
+      radial-gradient(
+        ellipse 85% 105% at 45% 48%,
+        rgba(38, 12, 1, 0.68) 0%,
+        rgba(38, 12, 1, 0.4) 40%,
+        transparent 78%
+      ),
+      linear-gradient(rgba(40, 16, 1, 0.32), rgba(40, 16, 1, 0.32));
   }
 
   .mascot {
@@ -153,6 +189,10 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 1.5rem;
+
+    /* force light text regardless of theme */
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 1);
   }
 
   .title {
@@ -162,6 +202,7 @@
 
   .title h1 {
     margin: 0;
+    font-family: "Virus Killer", sans-serif;
     font-size: clamp(2.5rem, 9vw, 4rem);
     line-height: 1.05;
   }
@@ -173,7 +214,6 @@
     opacity: 70%;
   }
 
-  h4,
   p {
     margin: 0;
   }
@@ -267,6 +307,7 @@
     .title {
       margin-top: 0.5rem;
       margin-bottom: 0.75rem;
+      transform: scale(1.2);
     }
 
     .action {
@@ -286,11 +327,11 @@
       order: initial;
 
       width: auto;
-      height: 48vh;
+      height: 54vh;
 
       top: auto;
       bottom: -20px;
-      right: clamp(120px, 20vw, 300px);
+      right: clamp(120px, 45vw, 400px);
 
       margin-top: 0;
 

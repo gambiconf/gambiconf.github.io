@@ -1,5 +1,11 @@
 @import "@fontsource/ibm-plex-sans";
 
+@font-face {
+  font-family: "Virus Killer";
+  src: url("/virus-killer.ttf") format("truetype");
+  font-display: swap;
+}
+
 :root {
   font-family:
     "IBM Plex Sans",

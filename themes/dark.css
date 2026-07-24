@@ -7,7 +7,6 @@
 
 body,
 .wrapper-content {
-  /* Warm charcoal wash so the page shares the hero's temperature. */
   background-image:
     linear-gradient(rgba(29, 24, 20, 0.72), rgba(29, 24, 20, 0.72)), url("/background.png");
 }

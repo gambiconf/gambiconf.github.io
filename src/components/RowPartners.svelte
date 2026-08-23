@@ -41,6 +41,10 @@
       <img src={asset("/partners/nacif.png")} alt="Nacif" />
     </a>
 
+    <a href={`https://www.docker.com/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={asset("/partners/docker.svg")} alt="Docker" />
+    </a>
+
     <!-- <a href={`https://elixiremfoco.com/?${utmSource}`} target="_blank" rel="noopener">
       <img src={asset("/elixir-em-foco.png")} alt="Elixir em foco" />
     </a>

@@ -10,6 +10,7 @@ export type Speaker = {
 export type ScheduleEntry =
   | { kind: "day-header"; titleKey: string }
   | { kind: "break"; bodyKey?: string; bodyHtml?: string }
+  | { kind: "upcoming" }
   | {
       kind: "talk";
       title: string;
@@ -36,15 +37,12 @@ const speaker = (
 });
 
 const macabeus = (bioKey: string) =>
-  speaker("Bruno Macabeus", "bruno-macabeus.jpeg", `__T__${bioKey}`, [
+  speaker("Bruno Macabeus", "macabeus.png", `__T__${bioKey}`, [
     { type: "bluesky", url: "https://bsky.app/profile/macabeus.bsky.social" },
     { type: "twitter", url: "https://twitter.com/bmacabeus" },
     { type: "github", url: "https://github.com/macabeus" },
     { type: "website", url: "http://macabeus.github.io/" },
   ]);
-
-const mapLink = (url: string) =>
-  `<a href="${url}" target="_blank" rel="noopener noreferrer">Ver Mapa ↗</a>`;
 
 export const schedule: ScheduleEntry[] = [
   { kind: "day-header", titleKey: "schedule--first-day" },
@@ -52,289 +50,381 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Abertura dos portões",
-    date: "2025-11-29",
+    date: "2025-11-28",
     hours: "9:00",
     duration: 20,
     members: [],
-    description: `Nesse dia, o evento acontecerá na TOTVS - ${mapLink("https://maps.app.goo.gl/PadW6Y4RLhYqxz796")}`,
+    description: "Nesse dia, o evento começa de manhã.",
   },
+
+  // {
+  //   kind: "talk",
+  //   titleKey: "schedule--presentation-opening-ceremony-first-day-title",
+  //   title: "",
+  //   date: "2025-11-28",
+  //   hours: "9:20",
+  //   duration: 25,
+  //   members: [
+  //     macabeus("schedule--presentation-opening-ceremony-first-day-bio"),
+  //     speaker(
+  //       "Ana Luiza Portello Bastos",
+  //       "ana-bastos.jpeg",
+  //       "Engenheira de software, formada na PUC-SP, gosto de paradigmas de computação, matematíquisses, shitpost e musica.",
+  //       [
+  //         { type: "github", url: "https://github.com/anabastos" },
+  //         { type: "linkedin", url: "https://www.linkedin.com/in/anabastos8/" },
+  //         { type: "website", url: "https://anabastos.me/" },
+  //       ],
+  //     ),
+  //   ],
+  //   descriptionKey: "schedule--presentation-opening-ceremony-first-day-description",
+  // },
 
   {
     kind: "talk",
-    titleKey: "schedule--presentation-opening-ceremony-first-day-title",
-    title: "",
-    date: "2025-11-29",
-    hours: "9:20",
-    duration: 25,
-    members: [
-      macabeus("schedule--presentation-opening-ceremony-first-day-bio"),
-      speaker(
-        "Ana Luiza Portello Bastos",
-        "ana-bastos.jpeg",
-        "Engenheira de software, formada na PUC-SP, gosto de paradigmas de computação, matematíquisses, shitpost e musica.",
-        [
-          { type: "github", url: "https://github.com/anabastos" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/anabastos8/" },
-          { type: "website", url: "https://anabastos.me/" },
-        ],
-      ),
-    ],
-    descriptionKey: "schedule--presentation-opening-ceremony-first-day-description",
-  },
-
-  {
-    kind: "talk",
-    title: "Usando Clojure para Gerar Javascript para rodar Clojure que Executa Ruby (e Python)",
-    date: "2025-11-29",
-    hours: "9:50",
-    duration: 30,
+    title: "[Keynote] Agile Vibe Coding",
+    date: "2025-11-28",
+    hours: "",
+    duration: 45,
     members: [
       speaker(
-        "Maurício Szabo",
-        "mauricio-szabo.jpg",
-        "Desenvolvedor poliglota, apaixonado por desenvolvimento interativo e feedback cycles minúsculos, sigo tentando mudar alguns paradigmas sobre desenvolvimento.",
+        "Fabio Akita",
+        "fabio-akita.jpg",
+        "Blogger de tecnologia em akitaonrails.com. ex-youtuber do canal Akitando. Co-fundador da Codeminer 42.",
         [
-          { type: "gitlab", url: "https://gitlab.com/mauricioszabo" },
-          { type: "bluesky", url: "https://bsky.app/profile/mauricioszabo.bsky.social" },
-        ],
-      ),
-    ],
-    description:
-      "Interactive coding (estilo LISP/Smalltalk) para linguagens tipo Ruby e Python? Sim, é possível, é melhor do que você imagina, já existe, e você já pode usar!",
-  },
-
-  {
-    kind: "talk",
-    title: "Usando a VM do SQLite para criar uma linguagem de programação",
-    date: "2025-11-29",
-    hours: "10:25",
-    duration: 30,
-    members: [
-      speaker(
-        "Diego Reis",
-        "diego-reis.jpg",
-        'Estudante de Ciência da Computação, trabalha na <a href="https://x.com/tursodatabase">@tursodatabase</a> no desenvolvimento do Limbo, rewrite assíncrono do SQLite em Rust. Apaixonado por paçoca e usar ferramentas de forma que não foram pensadas.',
-        [
-          { type: "twitter", url: "https://twitter.com/el_yawd" },
-          { type: "github", url: "https://github.com/el-yawd" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/the-diego-reis" },
+          { type: "twitter", url: "https://twitter.com/akitaonrails" },
+          { type: "github", url: "https://github.com/akitaonrails" },
         ],
       ),
     ],
     description:
-      "SQLite é o banco de dados mais utilizado do mundo e, internamente, uma VM é usada para executar as queries SQL. Assim, e se usássemos essa VM para criar uma linguagem de programação?",
+      "Um panorama geral do mercado de frontier models, agentes, os projetos que desenvolvi este ano e o que aprendi que funciona e não funciona na utilização de LLMs pra programação.",
   },
 
   {
     kind: "talk",
-    title: "Criando um MMO RPG com Erlang, PostgreSQL, Zig, Nix e muita gambiarra",
-    date: "2025-11-29",
-    hours: "11:00",
-    duration: 35,
+    title: "Open Finance via Sega Mega Drive – Telebradesco",
+    date: "2025-11-28",
+    hours: "",
+    duration: 15,
     members: [
       speaker(
-        "Marcos Benevides",
-        "marcos-benevides.png",
-        "Programador F#/OCaml, apreciador de Haskell, maximalista de Nix/NixOS",
+        "Nic",
+        "nic.jpg",
+        '20 anos de experiência em tecnologia e estratégia, sendo nove deles dedicados à construção do Open Finance no Brasil desde o início. Autor da JSR ("Pix por Aproximação"). Um dos arquitetos de Open Finance mais reconhecidos do país.',
         [
-          { type: "github", url: "https://github.com/schonfinkel" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/schonfinkel" },
-          { type: "stackoverflow", url: "https://stackoverflow.com/users/4614840/schonfinkel" },
+          { type: "youtube", url: "https://youtube.com/@OpenFinanceShow" },
+          { type: "github", url: "https://github.com/nic" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/upnic" },
         ],
       ),
     ],
     description:
-      "A experiência (e os perrengues) de criar um MMO RPG utilizando uma combinação pouco convencional: Erlang, PostgreSQL, Zig e Nix. Gambiarras declarativas são inevitáveis.",
+      "Em 1995 o Banco Bradesco lançou o primeiro home banking do Brasil: um cartucho de Mega Drive chamado Telebradesco. 30 anos depois eu fiz engenharia reversa do protocolo e trouxe ele de volta a vida",
   },
 
   {
     kind: "talk",
-    title: "Sala Secreta? Como verificar as eleições por você mesmo",
-    date: "2025-11-29",
-    hours: "11:40",
-    duration: 30,
+    title: "VibeOS, sistema operacional vibe-coded ou IA sendo insultada?",
+    date: "2025-11-28",
+    hours: "",
+    duration: 15,
     members: [
       speaker(
-        "Leonardo Toshinobu Kimura",
-        "leonardo-kimura.jpg",
-        "Doutorando em Engenharia de Computação pela USP, pesquisando como deixar as eleições mais seguras e transparentes.",
-        [{ type: "linkedin", url: "https://www.linkedin.com/in/leonardo-kimura/" }],
-      ),
-    ],
-    description:
-      "Muitas pessoas acreditam que o TSE manipula os votos durante a contagem. Nessa palestra, vamos ver na prática se isso é verdade.",
-  },
-
-  { kind: "break", bodyKey: "schedule--lunch" },
-
-  {
-    kind: "talk",
-    title: "Games in PostScript – Play Chess Against Your Printer",
-    date: "2025-11-29",
-    hours: "13:40",
-    duration: 30,
-    members: [
-      speaker(
-        "Nicolas Seriot",
-        "nicolas-seriot.jpg",
-        "Swiss software engineering manager. Fascinated by weird stuff and broken process. Nature lover, ultra-trail runner.",
+        "Sr. Raposo",
+        "sr-raposo.png",
+        "Oie, sou o Sr. Raposo... sim, um raposo original que tem uma fantasia humana pra vocês não acharem estranho. Vim da floresta encantada onde a magia opera malhas de dados e modelos de IA. Especialista, arquiteto e rosno pra quem idolatra a IA...",
         [
-          { type: "twitter", url: "https://x.com/nst021" },
-          { type: "github", url: "https://github.com/nst" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/nseriot" },
+          { type: "bluesky", url: "https://bsky.app/profile/mrfoxxo.bsky.social" },
+          { type: "github", url: "https://github.com/mr-foxxo" },
         ],
       ),
     ],
     description:
-      "Write games in PostScript, the '80s printer language. Sokoban & Tetris running on desktop, Tic-Tac-Toe & Chess on printer, printer vs human.",
+      "Nascido durante uma live, a ideia era criar um bootloader i386 e userland funcional usando vibe-code. Depois da live o projeto continuou com mais raiva e menos IA...",
   },
 
   {
     kind: "talk",
-    title: "LEAN Fullstack: Codando no Assistente de Provas.",
-    date: "2025-11-29",
-    hours: "14:15",
-    duration: 30,
+    title:
+      "Como derrubamos (sem querer) a internet de Gana: a guerra entre sneaker bots e antibots",
+    date: "2025-11-28",
+    hours: "",
+    duration: 45,
     members: [
       speaker(
-        "Sofia Rodrigues",
-        "sofia-rodrigues.png",
-        'Oi!! Eu sou a Sofia, uma desenvolvedora de 22 anos apaixonada por compiladores e linguagens funcionais. Vivo estudando teoria de tipos e tentando aplicar na programação "real" especialmente nas minhas linguagens favoritas: Haskell e LEAN.',
+        "Ricardo Nacif",
+        "ricardo-nacif.png",
+        "Engenheiro de software na Roadway AI e fundador da Nacif. Entre 2021 e 2023 foi cofundador e dev do Vite, um sneaker bot comercial que disputava drops de tênis contra antibots como Datadome e Akamai.",
         [
-          { type: "twitter", url: "https://twitter.com/algebraic_dev" },
-          { type: "github", url: "https://github.com/algebraic-dev" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/ricardonacif/" },
+          { type: "twitter", url: "https://twitter.com/ricardonacif" },
         ],
       ),
     ],
     description:
-      "Nessa talk, vamos ver os avanços recentes da Std da linguagem LEAN e como esses avanços a tornam não só um excelente assistente de prova, mas também uma ferramenta viável para programação.",
+      "Bastidores do Vite, sneaker bot que burlava antibots como Datadome: engenharia reversa, TLS/JA3, cache poisoning e o dia em que derrubamos ~10% da internet de Gana.",
   },
 
   {
     kind: "talk",
-    title: "Como tocar música com um monitor LCD e um rádio",
-    date: "2025-11-29",
-    hours: "14:50",
+    title: "Sua caixa de som tá vazando senha e você (talvez) nem escuta",
+    date: "2025-11-28",
+    hours: "",
     duration: 30,
     members: [
       speaker(
-        "Luana Barbosa",
-        "luana-barbosa.jpg",
-        "Luana Barbosa (ela/dela) - formada em Ciência da Computação pelo IME-USP.",
-        [{ type: "github", url: "https://github.com/luamfb" }],
-      ),
-    ],
-    description: `Além de luz, monitores LCD também emitem ondas de rádio.<br />Usando um rádio AM e imagens específicas, é possível tocar uma sequência de notas.<br />Repositório no GitHub: <a href="https://github.com/luamfb/tempest-lcd">https://github.com/luamfb/tempest-lcd</a>`,
-  },
-
-  {
-    kind: "talk",
-    title: "Web-Cafeteiras em Haskell: Implementando a RFC 2324",
-    date: "2025-11-29",
-    hours: "15:25",
-    duration: 30,
-    members: [
-      speaker(
-        "Pablo Gustavo Fernandes Maia",
-        "pablo-gustavo.jpeg",
-        "Sou de Natal-RN, estudante de Tecnologia da Informação na UFRN, desenvolvedor full stack e curioso por natureza. Estou constantemente flertando com Ciências da Computação e Matemática.",
+        "Leandro Proença",
+        "leandro-proenca.jpeg",
+        "Programador há quase 20 anos, pragmático no horário comercial e inconsistente nas horas vagas. Gosto de coisas relacionadas a computação, música e futebol. Blogueirinho desde sempre e quando tá frio abro lives no YT fazendo coisas inúteis que ninguém pediu.",
         [
-          { type: "twitter", url: "https://twitter.com/pablo1gustavo" },
-          { type: "github", url: "https://github.com/Pablo1Gustavo" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/pablo-gustavo" },
+          { type: "website", url: "https://leandronsp.com" },
+          { type: "twitter", url: "https://twitter.com/leandronsp" },
+          { type: "github", url: "https://github.com/leandronsp" },
+          { type: "mastodon", url: "https://mastodon.social/@leandronsp" },
         ],
       ),
     ],
     description:
-      'Exploraremos a história do erro 418 "I\'m a teapot", implementando um servidor web em Haskell e abordando temas como programação funcional e o protocolo HTTP.',
+      "Como hackear o alto-falante do computador e transmitir dados mesmo sem acesso à internet. Nesta talk vamos construir um modem acústico do zero, DSP puro com Bash e awk, num som que você não ouve.",
   },
-
-  { kind: "break", bodyKey: "schedule--coffe-break" },
 
   {
     kind: "talk",
-    title: "Go no PlayStation 2: como virar um péssimo dev de jogos",
-    date: "2025-11-29",
-    hours: "16:35",
-    duration: 40,
+    title: "Minerando commits: entendendo blockchain e proof-of-work com Git",
+    date: "2025-11-28",
+    hours: "",
+    duration: 30,
     members: [
       speaker(
-        "Ricardo Gomes",
+        "Sergio Cabral",
+        "sergio-cabral.jpg",
+        "Sou engenheiro de software, CISO e educador tecnológico. Trabalho com full stack, DevSecOps, ISO 27001, cloud e automação. Gosto de desmontar conceitos complexos até virarem algo prático, testável e funcional — às vezes contra o bom senso.",
+        [
+          { type: "github", url: "https://github.com/sergiocabral" },
+          { type: "youtube", url: "https://youtube.com/@devnator" },
+          { type: "linkedin", url: "https://linkedin.com/in/sergiocabraljr" },
+          { type: "website", url: "https://sergiocabral.dev" },
+        ],
+      ),
+    ],
+    description:
+      "Blockchain sem hype: Git como gambiarra didática para entender blocos, hashes, encadeamento, mineração e proof-of-work.",
+  },
+
+  {
+    kind: "talk",
+    title: "Super Nintendo: o PC que nunca foi",
+    date: "2025-11-28",
+    hours: "",
+    duration: 45,
+    members: [
+      speaker(
+        "Ricardo Gomes da Silva",
         "ricardo-gomes.jpg",
         "Dev backend formado em Ciência da Computação pela UFRGS e TU Berlin. Autor de infinitos projetos inacabados, faço mais gambiarras do que deveria ser permitido por lei e modifico eletrônicos por pura diversão - e até hoje só um pegou fogo!",
         [
           { type: "bluesky", url: "https://bsky.app/profile/rgsilva.com" },
           { type: "mastodon", url: "https://mas.to/@debugweshell" },
-          { type: "website", url: "https://rgsilva.com/" },
+          { type: "website", url: "https://rgsilva.com" },
         ],
       ),
     ],
     description:
-      "Quem nunca pensou em desenvolver jogos né? E que tal usar Go e um PS2 para isso? É isso que vamos explorar nesta talk sobre gambiarras baremetal, hacks no compilador e até mesmo bugs da Sony!",
+      "O Mario saiu de férias e deixou o SNES pegando pó: bora transformar ele no pior computador possível com técnicas questionáveis, hacks confusos e gambiarras insalubres - e sempre assoprando o cartucho antes!",
   },
 
   {
     kind: "talk",
-    title: "ABC: Onde Python começou",
-    date: "2025-11-29",
-    hours: "17:20",
-    duration: 20,
-    members: [
-      speaker(
-        "Luciano Ramalho",
-        "luciano-ramalho.jpg",
-        "Luciano Ramalho escreveu Fluent Python e ajudou a criar o Garoa Hacker Clube. Ramalho é foragido do IME/USP, de onde escapou logo no início de sua pena.",
-        [
-          { type: "github", url: "https://github.com/ramalho" },
-          { type: "mastodon", url: "https://ciberlandia.pt/@lr" },
-          { type: "website", url: "https://ramalho.org" },
-        ],
-      ),
-    ],
-    description:
-      "Antes de criar Python, Guido van Rossum trabalhou anos na linguagem ABC, criada no centro de pesquisa CWI em Amsterdam.<br />Conheça ABC e veja a origem de ideias centrais de Python, como tuplas, o laço for e muito mais.",
-  },
-
-  {
-    kind: "talk",
-    title: "Dirty Hacks e Gambiarras Elegantes",
-    date: "2025-11-29",
-    hours: "17:45",
+    title: "Enrolator 2000: Enrolando golpe da falsa central com um modem 4G barato e IA",
+    date: "2025-11-28",
+    hours: "",
     duration: 30,
     members: [
       speaker(
-        'Felipe "Juca" Sanches',
-        "felipe-sanches.jpg",
-        "Desenvolvedor de software livre, tanto profissionalmente, como também no tempo de lazer, desenvolvendo emuladores junto ao Projeto MAME.\nÉ co-fundador do Garoa Hacker Clube.",
+        "Danillo Bosco",
+        "danillo-bosco.jpg",
+        "Bacharel em sistemas de informação, apaixonado por tecnologia e cultura maker. Programador PHP, dono de varias gambiarras.",
         [
-          { type: "twitter", url: "https://twitter.com/juca_gnu" },
-          { type: "github", url: "https://github.com/felipesanches" },
-          { type: "youtube", url: "https://www.youtube.com/c/HappyHackingVideoBlog" },
-          { type: "website", url: "https://forum.fiozera.com.br/" },
+          { type: "twitter", url: "https://twitter.com/Tearing5tv" },
+          { type: "website", url: "https://5tr.in" },
+          { type: "instagram", url: "https://www.instagram.com/danillobosco" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/danillobosco" },
+          { type: "github", url: "https://github.com/danillo523" },
+          { type: "twitch", url: "https://www.twitch.tv/tearing5" },
         ],
       ),
     ],
     description:
-      "História de um apanhado de diversos projetos pessoais, desde a adolescência até os dias atuais.<br />Parte foi engavetada, outra concluída, e até houve casos que se transformaram em atuação profissional!",
+      "Falsa central na linha? Melhor um golpista sendo enrolado do que fazendo uma nova vítima. O Enrolator 2000 enrola os golpistas com um modem 4G baratinho e IA generativa",
   },
+
+  {
+    kind: "talk",
+    title: "Um Mundo Funcional: Construindo uma Physics Engine em Clojure",
+    date: "2025-11-28",
+    hours: "",
+    duration: 20,
+    members: [
+      speaker(
+        "Luana Amorim",
+        "luana-amorim.jpg",
+        "Estudante de computação na Universidade Estadual de Campinas, competidora em maratonas de programação e apaixonada por algoritmos e estruturas de dados!",
+        [
+          { type: "linkedin", url: "https://www.linkedin.com/in/luana-4m0r1m" },
+          { type: "github", url: "https://github.com/luanaamorim04" },
+        ],
+      ),
+    ],
+    description:
+      "A talk mostrará o processo de criar simulações físicas em Clojure. Inicialmente introduzindo forças e colisões, em seguida abordando implementação e finalmente mostrando aplicações.",
+  },
+
+  {
+    kind: "talk",
+    title: "Descubra a mágica atrás dos CODECs de vídeos",
+    date: "2025-11-28",
+    hours: "",
+    duration: 30,
+    members: [
+      speaker(
+        "Leandro Moreira",
+        "leandro-moreira.jpg",
+        "Leandro Moreira trabalha com software há mais de 25 anos, já passou pelas empresas Thoughtworks, Globo, Shopify, e ultimamente trabalha na Uber. Compartilha muito do que sabe de forma acessível no github",
+        [{ type: "github", url: "https://github.com/leandromoreira/" }],
+      ),
+    ],
+    description:
+      "Entenda de forma gradual o que é um vídeo, o que representa cada componente de baixo nível do mesmo, e porque compressão é necessária e mais importante como é esta é feita de forma didatica.",
+  },
+
+  {
+    kind: "talk",
+    title: "Yes, your can run your company mostly with PostgreSQL",
+    date: "2025-11-28",
+    hours: "",
+    duration: 45,
+    members: [
+      speaker(
+        "Eduardo Bellani",
+        "eduardo-bellani.jpeg",
+        "Senior software engineer and engineering manager with 20+ years of experience designing and operating mission-critical systems.",
+        [
+          { type: "linkedin", url: "https://www.linkedin.com/in/eduardo-bellani/" },
+          { type: "website", url: "https://ebellani.github.io/" },
+        ],
+      ),
+    ],
+    description:
+      'Stop adding tools for every problem. See how PostgreSQL handles fintech requirements that "justify" Temporal, Redis, OLAP databases. First principles over hype.',
+  },
+
+  {
+    kind: "talk",
+    title: "Camel up: towards Karuta's BEAM",
+    date: "2025-11-28",
+    hours: "",
+    duration: 45,
+    members: [
+      speaker(
+        "Eduardo Lemos",
+        "eduardo-lemos.jpg",
+        "Entusiasta de programação funcional e praticante de programação recreativa.",
+        [
+          { type: "github", url: "https://github.com/EduardoLR10" },
+          { type: "github", url: "https://github.com/dont-rely-on-nulls" },
+        ],
+      ),
+    ],
+    description:
+      "Karuta é a grande obra de um grupo de nerds frustrados com ideias mirabolantes para uma nova linguagem. Explicaremos a alquimia por trás do nosso compilador: paradigma lógico, Nix, OCaml, LFE, BEAM e microKanren.",
+  },
+
+  {
+    kind: "talk",
+    title: "Como fiz um advergame para GBA com Rust em pleno 2026",
+    date: "2025-11-28",
+    hours: "",
+    duration: 30,
+    members: [
+      speaker(
+        "Alexsandro dos Santos",
+        "alexsandro-santos.jpg",
+        "Alex é Tech Lead, com experiencia em engenharia de dados e arquitetura de software, mas já foi fundador de ONG, educador, competidor de robótica e hoje sempre procura situações legais para absorver conhecimentos complexos.",
+        [
+          { type: "github", url: "https://github.com/Alexsandr0x" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/alexsandr0x/" },
+          { type: "twitter", url: "https://twitter.com/Alhequiz" },
+        ],
+      ),
+    ],
+    description:
+      "Em Janeiro desse ano me desafiei aprender Rust do zero da pior forma possível: Fazendo um jogo de GBA. Agora vamos usar esse jogo como peça de mkt, te conto essa história nessa Palestra!",
+  },
+
+  {
+    kind: "talk",
+    title: "The problem of induction and INSANELY DEPENDENT TYPES",
+    date: "2025-11-28",
+    hours: "",
+    duration: 30,
+    members: [
+      speaker(
+        "Eduardo Rafael",
+        "eduardo-rafael.jpg",
+        "I just a guy who likes to code and write types.",
+        [
+          { type: "twitter", url: "https://twitter.com/TheEduardoRFS" },
+          { type: "github", url: "https://github.com/EduardoRFS" },
+        ],
+      ),
+    ],
+    description:
+      "As Alonzo Church taught us, functions are data. This talk will show that this is true even with dependent types.",
+  },
+
+  {
+    kind: "talk",
+    title: "Erlang... no MEU microkernel seL4?",
+    date: "2025-11-28",
+    hours: "",
+    duration: 15,
+    members: [
+      speaker(
+        "Marcos Benevides",
+        "marcos-benevides.png",
+        "Programador Erlang/F#/OCaml, apreciador de Haskell, entusiasta do PostgreSQL, maximalista de Nix/NixOS",
+        [
+          { type: "github", url: "https://github.com/schonfinkel" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/schonfinkel" },
+        ],
+      ),
+    ],
+    description:
+      "O seL4 é um microkernel formalmente verificado, uma obra-prima da computação... até alguém empacotar uma solução caótica com remendos em Nix, Zig, C e LionOS, tudo visando um único objetivo blasfemo: rodar a BEAM.",
+  },
+
+  { kind: "upcoming" },
+
+  // { kind: "break", bodyKey: "schedule--coffe-break" },
 
   { kind: "day-header", titleKey: "schedule--second-day" },
 
   {
     kind: "talk",
     title: "Abertura dos portões",
-    date: "2025-11-30",
+    date: "2025-11-29",
     hours: "13:00",
     duration: 30,
     members: [],
-    description: `Nesse dia, o evento acontecerá na USP, Campus Butantã, no auditório do IME - ${mapLink("https://maps.app.goo.gl/wYoFmYs39tzzmytn7")}`,
+    description: "Nesse dia, o evento começa de tarde.",
   },
 
   {
     kind: "talk",
     titleKey: "schedule--presentation-opening-ceremony-second-day-title",
     title: "",
-    date: "2025-11-30",
+    date: "2025-11-29",
     hours: "13:30",
     duration: 35,
     members: [macabeus("schedule--presentation-opening-ceremony-first-day-bio")],
@@ -344,158 +434,213 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "break",
     bodyHtml:
-      "<strong>Observação sobre os workshops:</strong><br /><span>Todos acontecerão simultaneamente. Então, no dia do evento, escolha apenas um para participar. Além disso, traga o seu notebook.</span>",
+      "<strong>Observação sobre os workshops:</strong><span>Todos acontecerão simultaneamente. Então, no dia do evento, escolha apenas um para participar. Além disso, traga o seu notebook.</span>",
   },
 
   {
     kind: "talk",
-    title: "Videogames: das portas lógicas ao software",
-    date: "2025-11-30",
+    title: "Escrevendo um Forth para o IBM PC: um exercício em minimalismo e autossuficiência",
+    date: "2025-11-29",
     hours: "14:10",
     duration: 210,
     members: [
       speaker(
-        "Jecel Mattos de Assumpção Júnior",
-        "jecel-mattos.jpg",
-        "Depois de desenvolver vários computadores originais nos anos 1980 (o que era raro no Brasil), Jecel se formou em microeletrônica pela Poli-USP em 1990. Continua criando computadores e circuitos integrados.",
-        [{ type: "github", url: "https://github.com/jeceljr" }],
-      ),
-      speaker(
-        "Mário Gazziro",
-        "mario-gazziro.jpg",
-        "Mario Gazziro é doutor em Física Computacional pela USP. É professor na Universidade Federal do ABC. Tem experiência na área de instrumentação eletrônica e ciência da computação, com ênfase em arquitetura de sistemas de computação.",
-        [{ type: "youtube", url: "https://www.youtube.com/@mario.gazziro" }],
-      ),
-    ],
-    description:
-      "Este workshop usa o simulador Digital para mostrar como as portas lógicas podem ser usadas em blocos maiores até formar um videogame implementado numa placa FPGA.",
-  },
-
-  {
-    kind: "talk",
-    title: "Contribuindo com Open Source com a ajuda do GitHub Copilot",
-    date: "2025-11-30",
-    hours: "14:10",
-    duration: 210,
-    members: [
-      speaker(
-        "Pachi Parra",
-        "pachi-parra.jpg",
-        "Pachi Parra atua como Developer Advocate no GitHub.  Palestra e cria pontes para tornar a tecnologia mais acessível, diversa e colaborativa.",
+        "Tevo",
+        "tevo.jpg",
+        "Idealista incurável. Apreciador de máquinas estranhas, linguagens não-ortodoxas, sistemas operacionais esquisitos e caminhos que não foram trilhados. Lisper em recuperação.",
         [
-          { type: "twitter", url: "http://twitter.com/pachicodes" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/pachicodes" },
-          { type: "bluesky", url: "https://bsky.app/profile/abacatinhos.dev" },
-          { type: "github", url: "https://github.com/pachicodes" },
-        ],
-      ),
-      speaker(
-        "Morganna Giovanelli",
-        "morganna-giovanelli.jpg",
-        "Morganna espalha a palavra da Ada Lovelace por aí e, para ela, Pessoas > Tecnologia. Trabalha como Developer Advocate com plataformas de Inteligência Artificial e é reconhecida como Embaixadora LINUXtips.",
-        [
-          { type: "linkedin", url: "https://www.linkedin.com/in/morgannadev/" },
-          { type: "bluesky", url: "https://bsky.app/profile/morgannadev.bsky.social" },
-          { type: "github", url: "https://github.com/morgannadev" },
-          { type: "website", url: "https://morganna.dev/" },
-        ],
-      ),
-      speaker(
-        "Samuel Henrique",
-        "samuel-henrique.jpg",
-        "Samuel atua como Desenvolvedor Full-Stack e é membro ativo em várias comunidades de tecnologia. Está sempre buscando aprender mais, trocar experiências e colaborar com o crescimento coletivo do ecossistema tech.",
-        [
-          { type: "linkedin", url: "https://www.linkedin.com/in/sanarielsen/" },
-          { type: "github", url: "https://github.com/Sanarielsen" },
+          { type: "website", url: "https://riajuu.net" },
+          { type: "github", url: "https://github.com/Tevo45" },
+          { type: "sourcehunt", url: "https://git.sr.ht/~tevo" },
+          { type: "mastodon", url: "https://mastodon.bsd.cafe/@tevo" },
         ],
       ),
     ],
     description:
-      "Vamos aprendera usar o GitHub Copilot para contribuir com um projeto Open Source, passo-a-passo.",
+      "O quanto você precisa para tornar um computador útil? Veremos o quão simples é escrever um Forth minimalista utilizando apenas um PC, assembly e bastante ingenuidade.",
   },
 
   {
     kind: "talk",
-    title: "Extensibilidade do PostgreSQL",
-    date: "2025-11-30",
+    title: "ELKE - uma maravilha de ambiente criptografado com FreeBSD",
+    date: "2025-11-29",
     hours: "14:10",
     duration: 210,
     members: [
       speaker(
-        "Fabrízio de Royes Mello",
-        "fabrizio-mello.jpg",
-        "Sócio da Timbira Inteligência em PostgreSQL e Engenheiro de Software na TigerData desenvolvendo o TimescaleDB, uma extensão PostgreSQL para análises de alto desempenho em tempo real em séries temporais e dados de eventos.",
+        "Vinícius Zavam",
+        "vinicius-zavam.jpg",
+        "Cearense. Engenheiro da computação, formado pelo IFCE, trabalhando em áreas com foco em automatização/engenharia de sistemas - entusiasta de IPv6, FreeBSD ports committer e membro Core no projeto Tor - nas horas vagas, um atleta híbrido.",
         [
-          { type: "twitter", url: "http://twitter.com/fabriziomello" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/fabriziomello" },
-          { type: "github", url: "http://github.com/fabriziomello" },
-        ],
-      ),
-      speaker(
-        "Dickson Guedes",
-        "dickson-guedes.jpg",
-        "Consultor pela Timbira Inteligência em Postgres, atua na área de tecnologia há mais de 20 anos, experiência em software livre, banco de dados PostgreSQL e análise de dados. Entusiasta de IA e Computação Quântica, desenvolve em Python, Ruby e Rust.",
-        [{ type: "linkedin", url: "https://www.linkedin.com/in/dicksonguedes" }],
-      ),
-    ],
-    description:
-      "O Postgres oferece inúmeros mecanismos de extensibilidade onde é possível, sem alterar seu núcleo, adicionar novas funcionalidades e até mesmo modificar comportamento existente. Bora criar uma extensão juntos?",
-  },
-
-  {
-    kind: "talk",
-    title: "Minicurso de Kubernetes por Magalu Cloud",
-    date: "2025-11-30",
-    hours: "14:10",
-    duration: 210,
-    members: [
-      speaker(
-        "Fernando Ravagnani",
-        "fernando-ravagnani.jpeg",
-        "Fernando está na área tech há mais de 25 anos, sendo que 22 foram na Magalu e Magalu Cloud. Pegou desde o começo do surgimento do devops e tem muita vivência para compartilhar.",
-        [{ type: "linkedin", url: "https://www.linkedin.com/in/fernando-ravagnani" }],
-      ),
-      speaker(
-        "Erivaldo Lopes",
-        "erivaldo-lopes.jpeg",
-        "Erivaldo está há 19 anos no mercado de tecnologia, dos quais 13 foram dedicados em aprimorar ambientes de datacenter, com foco especial em cloud.",
-        [
-          { type: "linkedin", url: "https://www.linkedin.com/in/erivaldolopes" },
-          { type: "website", url: "https://erivaldolopes.io" },
-        ],
-      ),
-    ],
-    description: "Veja na prática como usar kubernetes, do básico ao deploy na Magalu Cloud.",
-  },
-
-  {
-    kind: "talk",
-    title: "Introdução à programação com Python",
-    date: "2025-11-30",
-    hours: "14:10",
-    duration: 210,
-    members: [
-      speaker(
-        "PyLadies São Paulo",
-        "pyladies-saopaulo.png",
-        "A PyLadies é uma comunidade global focada em aumentar a atividade e a liderança das mulheres na comunidade Python. O capítulo de SP nasceu em 2015, e desde então buscamos cumprir este objetivo através de encontros para ensinar e aprender Python ❤️",
-        [
-          { type: "linkedin", url: "https://www.linkedin.com/company/pyladiessp" },
-          { type: "instagram", url: "https://www.instagram.com/pyladies.saopaulo" },
+          { type: "twitter", url: "https://twitter.com/egypcio" },
+          { type: "github", url: "https://github.com/egypcio" },
         ],
       ),
     ],
     description:
-      "Neste workshop vamos introduzir conceitos básicos da programação como condição, repetição, funções e variáveis, utilizando o Python! Não é necessário saber programar em outras linguagens!",
+      "Instalação de um ambiente FreeBSD focado em oferecer um sistema com criptografia de disco combinando GELI e ZFS que possibilite desbloqueio remoto via SSH (com Tor onion service ou não).",
   },
 
   {
     kind: "talk",
-    title: "Linguagens de Domínio Específico Embarcadas",
-    date: "2025-11-30",
+    title:
+      "Construindo os Números e Brincando com Tipos: Uma Introdução à Programação Funcional com Haskell",
+    date: "2025-11-29",
     hours: "14:10",
     duration: 210,
     members: [
+      speaker(
+        "Pablo Gustavo Fernandes Maia",
+        "pablo-gustavo.jpg",
+        "Sou de Natal-RN, formado em Tecnologia da Informação pela UFRN, desenvolvedor full stack e curioso por natureza. Estou constantemente flertando com Ciências da Computação e Matemática.",
+        [
+          { type: "github", url: "https://github.com/Pablo1Gustavo" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/pablo-gustavo/" },
+          { type: "instagram", url: "https://www.instagram.com/pablo.gustv/" },
+        ],
+      ),
+    ],
+    description:
+      "Vamos definir números do zero absoluto, como se explicássemos matemática a seres de outro planeta e explorar programação funcional no caminho.",
+  },
+
+  {
+    kind: "talk",
+    title: "Cursão de Nix e NixOS",
+    date: "2025-11-29",
+    hours: "14:10",
+    duration: 210,
+    members: [
+      speaker(
+        "Marcos Benevides",
+        "marcos-benevides.png",
+        "Programador Erlang/F#/OCaml, apreciador de Haskell, entusiasta do PostgreSQL, maximalista de Nix/NixOS",
+        [
+          { type: "github", url: "https://github.com/schonfinkel" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/schonfinkel" },
+        ],
+      ),
+      speaker(
+        "Victor Freire",
+        "victor-freire.jpg",
+        "Interessado em Nix, Go, Standard ML e veículos automotores de confiabilidade duvidável",
+        [
+          { type: "github", url: "https://github.com/ratsclub" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/victorlfreire" },
+        ],
+      ),
+    ],
+    description:
+      "Cansado de deploys amaldiçoados pelo fantasma do UNIX? Venha aprender como criar infraestrutura declarativa e imutável usando Nix e NixOS!",
+  },
+
+  {
+    kind: "talk",
+    title: "Como resolver um cubo mágico",
+    date: "2025-11-29",
+    hours: "14:10",
+    duration: 210,
+    members: [
+      speaker(
+        "Pedro Pires",
+        "pedro-pires.jpeg",
+        "Pedro Pires é Engenheiro de Software há 7 anos e possui 10 anos de Speedcubing nas costas, também é aficionado por quebra-cabeças e outros esportes da mente",
+        [{ type: "github", url: "https://github.com/pekito" }],
+      ),
+    ],
+    description:
+      "Você já ficou travado num cubo mágico sem saber o que fazer? Neste workshop, você vai aprender do zero a desvendar um dos quebra-cabeças mais famosos do mundo!",
+  },
+
+  {
+    kind: "talk",
+    title: "SD-WAN de pobre: OpenWrt, celular e um roteador sobrevivente",
+    date: "2025-11-29",
+    hours: "14:10",
+    duration: 210,
+    members: [
+      speaker(
+        "Sergio Cabral",
+        "sergio-cabral.jpg",
+        "Sou engenheiro de software, CISO e educador tecnológico. Trabalho com full stack, DevSecOps, ISO 27001, cloud e automação. Gosto de desmontar conceitos complexos até virarem algo prático, testável e funcional — às vezes contra o bom senso.",
+        [
+          { type: "github", url: "https://github.com/sergiocabral" },
+          { type: "youtube", url: "https://youtube.com/@devnator" },
+          { type: "linkedin", url: "https://linkedin.com/in/sergiocabraljr" },
+          { type: "website", url: "https://sergiocabral.dev" },
+        ],
+      ),
+    ],
+    description:
+      "Vamos transformar um roteador com OpenWrt em uma contingência caseira de internet: link principal, celular como backup, detecção de queda e failover automático.",
+  },
+
+  {
+    kind: "talk",
+    title: "O Laboratório do Frankenstein Autônomo",
+    date: "2025-11-29",
+    hours: "14:10",
+    duration: 210,
+    members: [
+      speaker(
+        "Sergio Lopes",
+        "sergio-lopes.jpg",
+        "Engenheiro de Software, Docker Captain, LocalStack Champion, Geek, músico de garagem, gamer e pai. Curto tudo que envolve esse universo maravilhoso e muita música, desde que seja de qualidade.",
+        [
+          { type: "github", url: "https://github.com/sergiolopessp" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/sergio-lopes-20131a33/" },
+          { type: "medium", url: "https://medium.com/@sergiolopessp" },
+        ],
+      ),
+      speaker(
+        "Denis Cruz Rodrigues",
+        "denis-cruz.png",
+        "Staff Plus Engineer at Itaú, Docker Captain and LocalStack Champion. Member of the Linux Foundation, ACM and NYAS. Passionate about Cloud Native, Developer Experience, Platform Engineering and AI.",
+        [
+          { type: "linkedin", url: "https://www.linkedin.com/in/deniscruzrodrigues" },
+          { type: "medium", url: "https://medium.com/@deniscruzrodrigues" },
+        ],
+      ),
+    ],
+    description:
+      "IAs autônomas podem destruir seu host! Neste lab usaremos Docker Sandboxes e MCP para enjaular agentes. Venha ver uma IA codando um backend do zero, mas com o caos 100% controlado!",
+  },
+
+  // {
+  //   kind: "break",
+  //   bodyHtml:
+  //     "<strong>Observação sobre os workshops:</strong><span>Todos acontecerão simultaneamente. Então, no dia do evento, escolha apenas um para participar. Além disso, traga o seu notebook.</span>",
+  // },
+
+  // { kind: "break", bodyKey: "schedule--coffe-break" },
+
+  {
+    kind: "talk",
+    title: "Painel: Pirataria e Copyright",
+    date: "2025-11-29",
+    hours: "18:20",
+    duration: 45,
+    members: [
+      speaker(
+        "Adriano Camacho (mediador)",
+        "adriano-camacho.jpg",
+        "Adriano Camacho é editor de conteúdo no TecMundo e especializado na cobertura de cibersegurança, privacidade e crimes digitais. Acompanha e analisa incidentes cibernéticos, campanhas de malware, operações de ransomware, vazamentos de dados e políticas de proteção da informação. É pós-graduado em Jornalismo, Comunicação e a Nova Ordem Informacional pela FAAP e atualmente cursa pós-graduação em Cibersegurança e Governança de Dados pela PUC Minas.",
+        [
+          { type: "instagram", url: "https://www.instagram.com/adrianocamacho" },
+          { type: "website", url: "https://adrianocamacho.com" },
+          { type: "twitter", url: "https://www.twitter.com/adrianocamacho" },
+        ],
+      ),
+      speaker(
+        "Thiago Ayub",
+        "thiago-ayub.jpeg",
+        "Ayub é testemunha ocular da chegada da Internet no Brasil: em 1995 acompanhou a transformação dos BBS nos primeiros provedores discados e desde então atua na operação e engenharia de provedores, data centers e mitigação de DDoS. É colunista de tecnologia, mantém um canal no YouTube sobre a Internet propriamente dita e é CTO na Sage Networks.",
+        [
+          { type: "twitter", url: "https://twitter.com/@ayubio" },
+          { type: "instagram", url: "https://www.instagram.com/ayubionet/" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/ayubio/" },
+        ],
+      ),
       speaker(
         "Pedro Castilho",
         "pedro-castilho.jpeg",
@@ -507,74 +652,32 @@ export const schedule: ScheduleEntry[] = [
           { type: "bluesky", url: "https://bsky.app/profile/coprodu.to" },
         ],
       ),
-    ],
-    description:
-      "Linguagens de Domínio Específico são uma das técnicas mais poderosas e robustas de construção de software complexo. Vamos aprender na prática como e quando criá-las <strong>dentro da sua lang favorita</strong>.",
-  },
-
-  { kind: "break", bodyKey: "schedule--coffe-break" },
-
-  {
-    kind: "talk",
-    title: "Painel: Privacidade e Censura na Internet",
-    date: "2025-11-30",
-    hours: "18:20",
-    duration: 45,
-    members: [
-      speaker("Pedro Castilho (mediador)", "pedro-castilho.jpeg", undefined, [
-        { type: "twitter", url: "https://twitter.com/coproduto" },
-        { type: "github", url: "https://github.com/coproduto" },
-        { type: "linkedin", url: "https://www.linkedin.com/in/pcstl" },
-        { type: "bluesky", url: "https://bsky.app/profile/coprodu.to" },
-      ]),
       speaker(
-        "Vinicius Zavam",
-        "vinicius-zavam.jpg",
-        `Cearense. Engenheiro da Computação, formado pelo IFCE, trabalhando em áreas com foco em automatização/orquestramento de sistemas e confortável em trabalhar com culturas e práticas categorizadas como DevOps e SRE. Interessado em construir infraestrutura de alta disponibilidade e soluções de alta qualidade, seja na nuvem ou não.<br />Evangelista de sistemas com linhagem BSD, entusiasta de IPv6 e colaborador voluntário em diversos projetos de software livre e código aberto.<br />FreeBSD ports committer e membro do Core Team no projeto Tor. Nas horas vagas, aparentemente um atleta híbrido.`,
+        "Lucas Lago",
+        "lucas-lago.jpg",
+        `Lucas Lago é tecnologista de interesse público, vice-presidente do Instituto Aaron Swartz, organização dedicada à defesa dos direitos digitais e do acesso aberto ao conhecimento. No Instituto Aaron Swartz, participa de iniciativas de educação, pesquisa e incidência pública sobre temas como criptografia, autenticação, privacidade e direitos na internet. O instituto também é um dos responsáveis pelo projeto Copyright Trolls, que orienta pessoas que recebem notificações extrajudiciais relacionadas a supostas infrações de direitos autorais, produzindo informação acessível sobre o tema e auxiliando na compreensão desse tipo de prática.`,
         [
-          { type: "github", url: "https://github.com/egypcio" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/viniciuszavam" },
-        ],
-      ),
-      speaker(
-        "Douglas Fischer",
-        "douglas-fischer.jpg",
-        `Filho, Esposo, Pai³. 42 anos.<br />Engenheiro de telecomunicações.<br />Atuo no mercado de computação e telecomunicações há mais de 20 anos.<br />Gosto de ajudar os operadores de rede da cadeia de provimento de acesso a Internet a "fazer as coisas" da maneira o mais correta o possível.<br />Me considero um tretísta por vocação. Adoro comprar brigas com quem geralmente as pessoas evitam comprar brigas para ajudar a resolver aqueles problemas que todos sabem que é um problema, mas nos vemos de mãos atadas pra resolver.`,
-        [
-          { type: "linkedin", url: "https://www.linkedin.com/in/fischerdouglas" },
-          { type: "twitter", url: "https://twitter.com/fischerdouglas" },
-        ],
-      ),
-      speaker(
-        "Rodrigo Silva",
-        "rodrigo-silva.jpg",
-        `Eu quase fui um físico astrônomo, mas a computação chamou mais a minha atenção. Então, hoje eu escolhi viver na fronteira, onde a tecnologia encontra o infinito a cada bit e "estrela". Toda a minha bagagem como profissional sênior em Cyber, eu transfiro para a Universidade Mackenzie através das salas de aula e o CYBERSEC LAB, aonde euajudo a formar alunos que, para mim, são como lançar sondas no universo: mentes capazes de ir além da órbita segura do comum.`,
-        [
-          {
-            type: "linkedin",
-            url: "https://www.linkedin.com/in/rodrigo-securityanalyst-associateprofessor",
-          },
-          {
-            type: "googleScholar",
-            url: "https://www.researchgate.net/profile/Rodrigo-Silva-87",
-          },
+          { type: "bluesky", url: "https://bsky.app/profile/lucaslago.projeto7c0.com.br" },
+          { type: "instagram", url: "https://www.instagram.com/institutoasw/" },
         ],
       ),
     ],
     description:
-      "Um olhar técnico sobre privacidade e censura: vamos discutir sobre como a tecnologia influencia o acesso e o controle da informação online.",
+      "Quem se beneficia (e quem perde) com as regras atuais de copyright? Neste painel, profissionais de tecnologia discutem pirataria, acesso à cultura, remuneração de criadores e os benefícios e malefícios da propriedade intelectual.",
   },
 
   {
     kind: "talk",
     title: "Encerramento do evento",
-    date: "2025-11-30",
+    date: "2025-11-29",
     hours: "19:05",
     duration: 30,
     members: [macabeus("schedule--presentation-opening-ceremony-first-day-bio")],
     description:
       "Encerramento do evento, com um quiz valendo prêmios! Será que você manja de gambiarra o suficiente para vencer?",
   },
+
+  { kind: "upcoming" },
 ];
 
 /**

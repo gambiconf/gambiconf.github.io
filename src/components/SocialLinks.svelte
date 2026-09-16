@@ -15,6 +15,7 @@
       | "youtube"
       | "gitlab"
       | "stackoverflow"
+      | "sourcehunt"
       | "website"
     url: string
   }
@@ -36,6 +37,7 @@
   import { faGitlab } from "@fortawesome/free-brands-svg-icons/faGitlab"
   import { faStackOverflow } from "@fortawesome/free-brands-svg-icons/faStackoverflow"
   import { faEarth } from "@fortawesome/free-solid-svg-icons/faEarth"
+  import { faCircle } from "@fortawesome/free-solid-svg-icons/faCircle"
   import { faMortarBoard } from "@fortawesome/free-solid-svg-icons/faMortarBoard"
   import type { IconDefinition } from "@fortawesome/fontawesome-common-types"
 
@@ -59,6 +61,7 @@
     youtube: faYoutube,
     gitlab: faGitlab,
     stackoverflow: faStackOverflow,
+    sourcehunt: faCircle,
     website: faEarth,
     googleScholar: faMortarBoard,
   }

@@ -1,12 +1,12 @@
 <script lang="ts">
   import BulletsGutter from "../components/BulletsGutter.svelte"
   import Hero from "../components/Hero.svelte"
-  // import RowSchedule from "../components/RowSchedule.svelte"
+  import RowSchedule from "../components/RowSchedule.svelte"
   import RowWhereAndWhen from "../components/RowWhereAndWhen.svelte"
   import RowPartners from "../components/RowPartners.svelte"
   import RowTheGambiConf from "../components/RowTheGambiConf.svelte"
   import RowTyped from "../components/RowTyped.svelte"
-  import RowCfp from "../components/RowCfp.svelte"
+  // import RowCfp from "../components/RowCfp.svelte"
   import RowTickets from "../components/RowTickets.svelte"
   // import SponsorBar from "../components/SponsorBar.svelte"
 </script>
@@ -49,15 +49,15 @@
     <BulletsGutter />
   </div>
 
-  <!-- <RowSchedule />
+  <RowSchedule />
 
-  <div class="bullters-gutter-wrapper">
+  <!-- <div class="bullters-gutter-wrapper">
     <BulletsGutter />
-  </div> -->
+  </div>
 
   <section id="call-for-proposal">
     <RowCfp />
-  </section>
+  </section> -->
 
   <div class="bullters-gutter-wrapper">
     <BulletsGutter />
@@ -67,6 +67,20 @@
 </div>
 
 <style>
+  .hero-margin {
+    height: 160px;
+    margin-top: -50px;
+    margin-bottom: -110px;
+
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 137, 21, 0.16) 0%,
+      rgba(255, 137, 21, 0) 100%
+    );
+
+    pointer-events: none;
+  }
+
   .bullters-gutter-wrapper {
     margin-top: 30px;
     margin-bottom: 30px;

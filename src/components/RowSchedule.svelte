@@ -4,6 +4,7 @@
   import { t } from "../store/locale.svelte"
   import { schedule, resolveTranslation, type Speaker } from "../data/schedule"
   import Window from "./Window.svelte"
+  import GambiConfSocialLinks from "./GambiConfSocialLinks.svelte"
   import TimeSlot from "./TimeSlot.svelte"
 
   const resolvedSchedule = $derived(
@@ -12,8 +13,7 @@
       return {
         ...entry,
         title: entry.titleKey ? t(entry.titleKey) : entry.title,
-        description:
-          entry.descriptionKey ? t(entry.descriptionKey) : (entry.description ?? ""),
+        description: entry.descriptionKey ? t(entry.descriptionKey) : (entry.description ?? ""),
         members: entry.members.map(
           (m): Speaker => ({
             ...m,
@@ -52,6 +52,18 @@
             {:else if entry.bodyHtml}
               {@html entry.bodyHtml}
             {/if}
+          </div>
+        {:else if entry.kind === "upcoming"}
+          <div class="break">
+            <Localized id="schedule--upcoming" />
+
+            <div class="gambiconf-social-links">
+              <GambiConfSocialLinks
+                largeScreenRows={1}
+                smallScreenRows={1}
+                exclude={["github", "youtube", "substack"]}
+              />
+            </div>
           </div>
         {:else}
           <TimeSlot

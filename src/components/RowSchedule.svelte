@@ -70,6 +70,7 @@
             title={entry.title}
             date={entry.date}
             hours={entry.hours}
+            where={entry.where}
             duration={entry.duration}
             members={entry.members}
             descriptionHtml={entry.description}

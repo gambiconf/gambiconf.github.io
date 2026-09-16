@@ -10,11 +10,12 @@
     members: Array<{ image: string; socialLinks: SocialLink[]; name: string; bio?: string }>
     date: string
     hours?: string
+    where?: string
     duration: number
     descriptionHtml: string
   }
 
-  let { title, members, date, hours = "", duration, descriptionHtml }: Props = $props()
+  let { title, members, date, hours = "", where, duration, descriptionHtml }: Props = $props()
 
   const buildStart = (day: string, time: string) => {
     const [h = "", m = "00"] = time.split(":")
@@ -38,6 +39,9 @@
     <p class="talk-time">
       <Localized id="event-time-slot--hours-prefix" />
       <Link href={googleCalendarLink}>{hours}</Link>
+      {#if where}
+        &nbsp;|&nbsp;{where}
+      {/if}
     </p>
   {/if}
 

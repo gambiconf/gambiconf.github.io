@@ -7,9 +7,29 @@ export type Speaker = {
   socialLinks: SocialLink[];
 };
 
+export type TrackId = "auditorium" | "grandes-gambiarras" | "typed";
+
+export type Track = {
+  nameKey: string;
+  color: string;
+  column: "main" | "parallel";
+};
+
+export const tracks: Record<TrackId, Track> = {
+  auditorium: { nameKey: "schedule--track-auditorium", color: "#f34b21", column: "main" },
+  "grandes-gambiarras": {
+    nameKey: "schedule--track-grandes-gambiarras",
+    color: "#1a9e45",
+    column: "parallel",
+  },
+  typed: { nameKey: "schedule--track-typed", color: "#7c5cff", column: "parallel" },
+};
+
+// Entries must be listed in chronological order within each day: the list and
+// the day overview both render them in the order they appear here.
 export type ScheduleEntry =
   | { kind: "day-header"; titleKey: string }
-  | { kind: "break"; bodyKey?: string; bodyHtml?: string }
+  | { kind: "break"; bodyKey?: string; bodyHtml?: string; hours?: string }
   | { kind: "upcoming" }
   | {
       kind: "talk";
@@ -17,6 +37,7 @@ export type ScheduleEntry =
       titleKey?: string;
       date: string;
       hours: string;
+      track?: TrackId;
       duration: number;
       members: Speaker[];
       description?: string;
@@ -57,91 +78,72 @@ export const schedule: ScheduleEntry[] = [
     description: "Nesse dia, o evento começa de manhã.",
   },
 
-  // {
-  //   kind: "talk",
-  //   titleKey: "schedule--presentation-opening-ceremony-first-day-title",
-  //   title: "",
-  //   date: "2025-11-28",
-  //   hours: "9:20",
-  //   duration: 25,
-  //   members: [
-  //     macabeus("schedule--presentation-opening-ceremony-first-day-bio"),
-  //     speaker(
-  //       "Ana Luiza Portello Bastos",
-  //       "ana-bastos.jpeg",
-  //       "Engenheira de software, formada na PUC-SP, gosto de paradigmas de computação, matematíquisses, shitpost e musica.",
-  //       [
-  //         { type: "github", url: "https://github.com/anabastos" },
-  //         { type: "linkedin", url: "https://www.linkedin.com/in/anabastos8/" },
-  //         { type: "website", url: "https://anabastos.me/" },
-  //       ],
-  //     ),
-  //   ],
-  //   descriptionKey: "schedule--presentation-opening-ceremony-first-day-description",
-  // },
+  {
+    kind: "talk",
+    titleKey: "schedule--presentation-opening-ceremony-first-day-title",
+    title: "",
+    date: "2025-11-28",
+    hours: "9:20",
+    track: "auditorium",
+    duration: 25,
+    members: [
+      macabeus("schedule--presentation-opening-ceremony-first-day-bio"),
+      speaker(
+        "Ana Luiza Portello Bastos",
+        "ana-bastos.jpeg",
+        "Engenheira de software, formada na PUC-SP, gosto de paradigmas de computação, matematíquisses, shitpost e musica.",
+        [
+          { type: "github", url: "https://github.com/anabastos" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/anabastos8/" },
+          { type: "website", url: "https://anabastos.me/" },
+        ],
+      ),
+    ],
+    descriptionKey: "schedule--presentation-opening-ceremony-first-day-description",
+  },
 
   {
     kind: "talk",
-    title: "[Keynote] Agile Vibe Coding",
+    title: "[Keynote a ser revelado em breve]",
     date: "2025-11-28",
-    hours: "",
+    hours: "9:40",
+    track: "auditorium",
+    duration: 45,
+    members: [],
+    description: "",
+  },
+
+  {
+    kind: "talk",
+    title: "Abertura da Trilha Grandes Gambiarras",
+    date: "2025-11-28",
+    hours: "10:25",
+    track: "grandes-gambiarras",
+    duration: 5,
+    members: [],
+    description: "",
+  },
+
+  {
+    kind: "talk",
+    title: "Yes, your can run your company mostly with PostgreSQL",
+    date: "2025-11-28",
+    hours: "10:30",
+    track: "auditorium",
     duration: 45,
     members: [
       speaker(
-        "Fabio Akita",
-        "fabio-akita.jpg",
-        "Blogger de tecnologia em akitaonrails.com. ex-youtuber do canal Akitando. Co-fundador da Codeminer 42.",
+        "Eduardo Bellani",
+        "eduardo-bellani.jpeg",
+        "Senior software engineer and engineering manager with 20+ years of experience designing and operating mission-critical systems.",
         [
-          { type: "twitter", url: "https://twitter.com/akitaonrails" },
-          { type: "github", url: "https://github.com/akitaonrails" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/eduardo-bellani/" },
+          { type: "website", url: "https://ebellani.github.io/" },
         ],
       ),
     ],
     description:
-      "Um panorama geral do mercado de frontier models, agentes, os projetos que desenvolvi este ano e o que aprendi que funciona e não funciona na utilização de LLMs pra programação.",
-  },
-
-  {
-    kind: "talk",
-    title: "Open Finance via Sega Mega Drive – Telebradesco",
-    date: "2025-11-28",
-    hours: "",
-    duration: 15,
-    members: [
-      speaker(
-        "Nic",
-        "nic.jpg",
-        '20 anos de experiência em tecnologia e estratégia, sendo nove deles dedicados à construção do Open Finance no Brasil desde o início. Autor da JSR ("Pix por Aproximação"). Um dos arquitetos de Open Finance mais reconhecidos do país.',
-        [
-          { type: "youtube", url: "https://youtube.com/@OpenFinanceShow" },
-          { type: "github", url: "https://github.com/nic" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/upnic" },
-        ],
-      ),
-    ],
-    description:
-      "Em 1995 o Banco Bradesco lançou o primeiro home banking do Brasil: um cartucho de Mega Drive chamado Telebradesco. 30 anos depois eu fiz engenharia reversa do protocolo e trouxe ele de volta a vida",
-  },
-
-  {
-    kind: "talk",
-    title: "VibeOS, sistema operacional vibe-coded ou IA sendo insultada?",
-    date: "2025-11-28",
-    hours: "",
-    duration: 15,
-    members: [
-      speaker(
-        "Sr. Raposo",
-        "sr-raposo.png",
-        "Oie, sou o Sr. Raposo... sim, um raposo original que tem uma fantasia humana pra vocês não acharem estranho. Vim da floresta encantada onde a magia opera malhas de dados e modelos de IA. Especialista, arquiteto e rosno pra quem idolatra a IA...",
-        [
-          { type: "bluesky", url: "https://bsky.app/profile/mrfoxxo.bsky.social" },
-          { type: "github", url: "https://github.com/mr-foxxo" },
-        ],
-      ),
-    ],
-    description:
-      "Nascido durante uma live, a ideia era criar um bootloader i386 e userland funcional usando vibe-code. Depois da live o projeto continuou com mais raiva e menos IA...",
+      'Stop adding tools for every problem. See how PostgreSQL handles fintech requirements that "justify" Temporal, Redis, OLAP databases. First principles over hype.',
   },
 
   {
@@ -149,7 +151,8 @@ export const schedule: ScheduleEntry[] = [
     title:
       "Como derrubamos (sem querer) a internet de Gana: a guerra entre sneaker bots e antibots",
     date: "2025-11-28",
-    hours: "",
+    hours: "10:30",
+    track: "grandes-gambiarras",
     duration: 45,
     members: [
       speaker(
@@ -168,32 +171,110 @@ export const schedule: ScheduleEntry[] = [
 
   {
     kind: "talk",
-    title: "Sua caixa de som tá vazando senha e você (talvez) nem escuta",
+    title: "Super Nintendo: o PC que nunca foi",
     date: "2025-11-28",
-    hours: "",
-    duration: 30,
+    hours: "11:20",
+    track: "auditorium",
+    duration: 45,
     members: [
       speaker(
-        "Leandro Proença",
-        "leandro-proenca.jpeg",
-        "Programador há quase 20 anos, pragmático no horário comercial e inconsistente nas horas vagas. Gosto de coisas relacionadas a computação, música e futebol. Blogueirinho desde sempre e quando tá frio abro lives no YT fazendo coisas inúteis que ninguém pediu.",
+        "Ricardo Gomes da Silva",
+        "ricardo-gomes.jpg",
+        "Dev backend formado em Ciência da Computação pela UFRGS e TU Berlin. Autor de infinitos projetos inacabados, faço mais gambiarras do que deveria ser permitido por lei e modifico eletrônicos por pura diversão - e até hoje só um pegou fogo!",
         [
-          { type: "website", url: "https://leandronsp.com" },
-          { type: "twitter", url: "https://twitter.com/leandronsp" },
-          { type: "github", url: "https://github.com/leandronsp" },
-          { type: "mastodon", url: "https://mastodon.social/@leandronsp" },
+          { type: "bluesky", url: "https://bsky.app/profile/rgsilva.com" },
+          { type: "mastodon", url: "https://mas.to/@debugweshell" },
+          { type: "website", url: "https://rgsilva.com" },
         ],
       ),
     ],
     description:
-      "Como hackear o alto-falante do computador e transmitir dados mesmo sem acesso à internet. Nesta talk vamos construir um modem acústico do zero, DSP puro com Bash e awk, num som que você não ouve.",
+      "O Mario saiu de férias e deixou o SNES pegando pó: bora transformar ele no pior computador possível com técnicas questionáveis, hacks confusos e gambiarras insalubres - e sempre assoprando o cartucho antes!",
+  },
+
+  {
+    kind: "talk",
+    title: "VibeOS, sistema operacional vibe-coded ou IA sendo insultada?",
+    date: "2025-11-28",
+    hours: "11:20",
+    track: "grandes-gambiarras",
+    duration: 45,
+    members: [
+      speaker(
+        "Sr. Raposo",
+        "sr-raposo.png",
+        "Oie, sou o Sr. Raposo... sim, um raposo original que tem uma fantasia humana pra vocês não acharem estranho. Vim da floresta encantada onde a magia opera malhas de dados e modelos de IA. Especialista, arquiteto e rosno pra quem idolatra a IA...",
+        [
+          { type: "bluesky", url: "https://bsky.app/profile/mrfoxxo.bsky.social" },
+          { type: "github", url: "https://github.com/mr-foxxo" },
+        ],
+      ),
+    ],
+    description:
+      "Nascido durante uma live, a ideia era criar um bootloader i386 e userland funcional usando vibe-code. Depois da live o projeto continuou com mais raiva e menos IA...",
+  },
+
+  { kind: "break", bodyKey: "schedule--lunch", hours: "12:05" },
+
+  {
+    kind: "talk",
+    title: "Como fiz um advergame para GBA com Rust em pleno 2026",
+    date: "2025-11-28",
+    hours: "13:20",
+    track: "auditorium",
+    duration: 30,
+    members: [
+      speaker(
+        "Alexsandro dos Santos",
+        "alexsandro-santos.jpg",
+        "Alex é Tech Lead, com experiencia em engenharia de dados e arquitetura de software, mas já foi fundador de ONG, educador, competidor de robótica e hoje sempre procura situações legais para absorver conhecimentos complexos.",
+        [
+          { type: "github", url: "https://github.com/Alexsandr0x" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/alexsandr0x/" },
+          { type: "twitter", url: "https://twitter.com/Alhequiz" },
+        ],
+      ),
+    ],
+    description:
+      "Em Janeiro desse ano me desafiei aprender Rust do zero da pior forma possível: Fazendo um jogo de GBA. Agora vamos usar esse jogo como peça de mkt, te conto essa história nessa Palestra!",
+  },
+
+  {
+    kind: "talk",
+    title: "Abertura da Trilha TYPED",
+    date: "2025-11-28",
+    hours: "13:20",
+    track: "typed",
+    duration: 15,
+    members: [],
+    description: "",
+  },
+
+  {
+    kind: "talk",
+    title: "Descubra a mágica atrás dos CODECs de vídeos",
+    date: "2025-11-28",
+    hours: "13:55",
+    track: "auditorium",
+    duration: 30,
+    members: [
+      speaker(
+        "Leandro Moreira",
+        "leandro-moreira.jpg",
+        "Leandro Moreira trabalha com software há mais de 25 anos, já passou pelas empresas Thoughtworks, Globo, Shopify, e ultimamente trabalha na Uber. Compartilha muito do que sabe de forma acessível no github",
+        [{ type: "github", url: "https://github.com/leandromoreira/" }],
+      ),
+    ],
+    description:
+      "Entenda de forma gradual o que é um vídeo, o que representa cada componente de baixo nível do mesmo, e porque compressão é necessária e mais importante como é esta é feita de forma didatica.",
   },
 
   {
     kind: "talk",
     title: "Minerando commits: entendendo blockchain e proof-of-work com Git",
     date: "2025-11-28",
-    hours: "",
+    hours: "13:40",
+    track: "typed",
     duration: 30,
     members: [
       speaker(
@@ -214,31 +295,54 @@ export const schedule: ScheduleEntry[] = [
 
   {
     kind: "talk",
-    title: "Super Nintendo: o PC que nunca foi",
+    title: "Um Mundo Funcional: Construindo uma Physics Engine em Clojure",
     date: "2025-11-28",
-    hours: "",
-    duration: 45,
+    hours: "14:30",
+    track: "auditorium",
+    duration: 20,
     members: [
       speaker(
-        "Ricardo Gomes da Silva",
-        "ricardo-gomes.jpg",
-        "Dev backend formado em Ciência da Computação pela UFRGS e TU Berlin. Autor de infinitos projetos inacabados, faço mais gambiarras do que deveria ser permitido por lei e modifico eletrônicos por pura diversão - e até hoje só um pegou fogo!",
+        "Luana Amorim",
+        "luana-amorim.jpg",
+        "Estudante de computação na Universidade Estadual de Campinas, competidora em maratonas de programação e apaixonada por algoritmos e estruturas de dados!",
         [
-          { type: "bluesky", url: "https://bsky.app/profile/rgsilva.com" },
-          { type: "mastodon", url: "https://mas.to/@debugweshell" },
-          { type: "website", url: "https://rgsilva.com" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/luana-4m0r1m" },
+          { type: "github", url: "https://github.com/luanaamorim04" },
         ],
       ),
     ],
     description:
-      "O Mario saiu de férias e deixou o SNES pegando pó: bora transformar ele no pior computador possível com técnicas questionáveis, hacks confusos e gambiarras insalubres - e sempre assoprando o cartucho antes!",
+      "A talk mostrará o processo de criar simulações físicas em Clojure. Inicialmente introduzindo forças e colisões, em seguida abordando implementação e finalmente mostrando aplicações.",
+  },
+
+  {
+    kind: "talk",
+    title: "Erlang... no MEU microkernel seL4?",
+    date: "2025-11-28",
+    hours: "14:15",
+    track: "typed",
+    duration: 30,
+    members: [
+      speaker(
+        "Marcos Benevides",
+        "marcos-benevides.png",
+        "Programador Erlang/F#/OCaml, apreciador de Haskell, entusiasta do PostgreSQL, maximalista de Nix/NixOS",
+        [
+          { type: "github", url: "https://github.com/schonfinkel" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/schonfinkel" },
+        ],
+      ),
+    ],
+    description:
+      "O seL4 é um microkernel formalmente verificado, uma obra-prima da computação... até alguém empacotar uma solução caótica com remendos em Nix, Zig, C e LionOS, tudo visando um único objetivo blasfemo: rodar a BEAM.",
   },
 
   {
     kind: "talk",
     title: "Enrolator 2000: Enrolando golpe da falsa central com um modem 4G barato e IA",
     date: "2025-11-28",
-    hours: "",
+    hours: "14:55",
+    track: "auditorium",
     duration: 30,
     members: [
       speaker(
@@ -261,70 +365,11 @@ export const schedule: ScheduleEntry[] = [
 
   {
     kind: "talk",
-    title: "Um Mundo Funcional: Construindo uma Physics Engine em Clojure",
-    date: "2025-11-28",
-    hours: "",
-    duration: 20,
-    members: [
-      speaker(
-        "Luana Amorim",
-        "luana-amorim.jpg",
-        "Estudante de computação na Universidade Estadual de Campinas, competidora em maratonas de programação e apaixonada por algoritmos e estruturas de dados!",
-        [
-          { type: "linkedin", url: "https://www.linkedin.com/in/luana-4m0r1m" },
-          { type: "github", url: "https://github.com/luanaamorim04" },
-        ],
-      ),
-    ],
-    description:
-      "A talk mostrará o processo de criar simulações físicas em Clojure. Inicialmente introduzindo forças e colisões, em seguida abordando implementação e finalmente mostrando aplicações.",
-  },
-
-  {
-    kind: "talk",
-    title: "Descubra a mágica atrás dos CODECs de vídeos",
-    date: "2025-11-28",
-    hours: "",
-    duration: 30,
-    members: [
-      speaker(
-        "Leandro Moreira",
-        "leandro-moreira.jpg",
-        "Leandro Moreira trabalha com software há mais de 25 anos, já passou pelas empresas Thoughtworks, Globo, Shopify, e ultimamente trabalha na Uber. Compartilha muito do que sabe de forma acessível no github",
-        [{ type: "github", url: "https://github.com/leandromoreira/" }],
-      ),
-    ],
-    description:
-      "Entenda de forma gradual o que é um vídeo, o que representa cada componente de baixo nível do mesmo, e porque compressão é necessária e mais importante como é esta é feita de forma didatica.",
-  },
-
-  {
-    kind: "talk",
-    title: "Yes, your can run your company mostly with PostgreSQL",
-    date: "2025-11-28",
-    hours: "",
-    duration: 45,
-    members: [
-      speaker(
-        "Eduardo Bellani",
-        "eduardo-bellani.jpeg",
-        "Senior software engineer and engineering manager with 20+ years of experience designing and operating mission-critical systems.",
-        [
-          { type: "linkedin", url: "https://www.linkedin.com/in/eduardo-bellani/" },
-          { type: "website", url: "https://ebellani.github.io/" },
-        ],
-      ),
-    ],
-    description:
-      'Stop adding tools for every problem. See how PostgreSQL handles fintech requirements that "justify" Temporal, Redis, OLAP databases. First principles over hype.',
-  },
-
-  {
-    kind: "talk",
     title: "Camel up: towards Karuta's BEAM",
     date: "2025-11-28",
-    hours: "",
-    duration: 45,
+    hours: "14:50",
+    track: "typed",
+    duration: 30,
     members: [
       speaker(
         "Eduardo Lemos",
@@ -340,34 +385,39 @@ export const schedule: ScheduleEntry[] = [
       "Karuta é a grande obra de um grupo de nerds frustrados com ideias mirabolantes para uma nova linguagem. Explicaremos a alquimia por trás do nosso compilador: paradigma lógico, Nix, OCaml, LFE, BEAM e microKanren.",
   },
 
+  { kind: "break", bodyKey: "schedule--coffe-break", hours: "15:25" },
+
   {
     kind: "talk",
-    title: "Como fiz um advergame para GBA com Rust em pleno 2026",
+    title: "Sua caixa de som tá vazando senha e você (talvez) nem escuta",
     date: "2025-11-28",
-    hours: "",
+    hours: "16:05",
+    track: "auditorium",
     duration: 30,
     members: [
       speaker(
-        "Alexsandro dos Santos",
-        "alexsandro-santos.jpg",
-        "Alex é Tech Lead, com experiencia em engenharia de dados e arquitetura de software, mas já foi fundador de ONG, educador, competidor de robótica e hoje sempre procura situações legais para absorver conhecimentos complexos.",
+        "Leandro Proença",
+        "leandro-proenca.jpeg",
+        "Programador há quase 20 anos, pragmático no horário comercial e inconsistente nas horas vagas. Gosto de coisas relacionadas a computação, música e futebol. Blogueirinho desde sempre e quando tá frio abro lives no YT fazendo coisas inúteis que ninguém pediu.",
         [
-          { type: "github", url: "https://github.com/Alexsandr0x" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/alexsandr0x/" },
-          { type: "twitter", url: "https://twitter.com/Alhequiz" },
+          { type: "website", url: "https://leandronsp.com" },
+          { type: "twitter", url: "https://twitter.com/leandronsp" },
+          { type: "github", url: "https://github.com/leandronsp" },
+          { type: "mastodon", url: "https://mastodon.social/@leandronsp" },
         ],
       ),
     ],
     description:
-      "Em Janeiro desse ano me desafiei aprender Rust do zero da pior forma possível: Fazendo um jogo de GBA. Agora vamos usar esse jogo como peça de mkt, te conto essa história nessa Palestra!",
+      "Como hackear o alto-falante do computador e transmitir dados mesmo sem acesso à internet. Nesta talk vamos construir um modem acústico do zero, DSP puro com Bash e awk, num som que você não ouve.",
   },
 
   {
     kind: "talk",
     title: "The problem of induction and INSANELY DEPENDENT TYPES",
     date: "2025-11-28",
-    hours: "",
-    duration: 30,
+    hours: "16:05",
+    track: "typed",
+    duration: 45,
     members: [
       speaker(
         "Eduardo Rafael",
@@ -385,28 +435,48 @@ export const schedule: ScheduleEntry[] = [
 
   {
     kind: "talk",
-    title: "Erlang... no MEU microkernel seL4?",
+    title: "Open Finance via Sega Mega Drive – Telebradesco",
     date: "2025-11-28",
-    hours: "",
+    hours: "16:40",
+    track: "auditorium",
     duration: 15,
     members: [
       speaker(
-        "Marcos Benevides",
-        "marcos-benevides.png",
-        "Programador Erlang/F#/OCaml, apreciador de Haskell, entusiasta do PostgreSQL, maximalista de Nix/NixOS",
+        "Nic",
+        "nic.jpg",
+        '20 anos de experiência em tecnologia e estratégia, sendo nove deles dedicados à construção do Open Finance no Brasil desde o início. Autor da JSR ("Pix por Aproximação"). Um dos arquitetos de Open Finance mais reconhecidos do país.',
         [
-          { type: "github", url: "https://github.com/schonfinkel" },
-          { type: "linkedin", url: "https://www.linkedin.com/in/schonfinkel" },
+          { type: "youtube", url: "https://youtube.com/@OpenFinanceShow" },
+          { type: "github", url: "https://github.com/nic" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/upnic" },
         ],
       ),
     ],
     description:
-      "O seL4 é um microkernel formalmente verificado, uma obra-prima da computação... até alguém empacotar uma solução caótica com remendos em Nix, Zig, C e LionOS, tudo visando um único objetivo blasfemo: rodar a BEAM.",
+      "Em 1995 o Banco Bradesco lançou o primeiro home banking do Brasil: um cartucho de Mega Drive chamado Telebradesco. 30 anos depois eu fiz engenharia reversa do protocolo e trouxe ele de volta a vida",
   },
 
-  { kind: "upcoming" },
-
-  // { kind: "break", bodyKey: "schedule--coffe-break" },
+  {
+    kind: "talk",
+    title: "[Keynote] Agile Vibe Coding",
+    date: "2025-11-28",
+    track: "auditorium",
+    hours: "17:00",
+    duration: 45,
+    members: [
+      speaker(
+        "Fabio Akita",
+        "fabio-akita.jpg",
+        "Blogger de tecnologia em akitaonrails.com. ex-youtuber do canal Akitando. Co-fundador da Codeminer 42.",
+        [
+          { type: "twitter", url: "https://twitter.com/akitaonrails" },
+          { type: "github", url: "https://github.com/akitaonrails" },
+        ],
+      ),
+    ],
+    description:
+      "Um panorama geral do mercado de frontier models, agentes, os projetos que desenvolvi este ano e o que aprendi que funciona e não funciona na utilização de LLMs pra programação.",
+  },
 
   { kind: "day-header", titleKey: "schedule--second-day" },
 
@@ -677,7 +747,7 @@ export const schedule: ScheduleEntry[] = [
       "Encerramento do evento, com um quiz valendo prêmios! Será que você manja de gambiarra o suficiente para vencer?",
   },
 
-  { kind: "upcoming" },
+  // { kind: "upcoming" },
 ];
 
 /**

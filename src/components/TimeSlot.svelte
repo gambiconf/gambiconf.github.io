@@ -6,15 +6,17 @@
   import Link from "./Link.svelte"
 
   interface Props {
+    id?: string
     title: string
     members: Array<{ image: string; socialLinks: SocialLink[]; name: string; bio?: string }>
     date: string
     hours?: string
+    track?: { name: string; color: string }
     duration: number
     descriptionHtml: string
   }
 
-  let { title, members, date, hours = "", duration, descriptionHtml }: Props = $props()
+  let { id, title, members, date, hours = "", track, duration, descriptionHtml }: Props = $props()
 
   const buildStart = (day: string, time: string) => {
     const [h = "", m = "00"] = time.split(":")
@@ -29,7 +31,7 @@
   })
 </script>
 
-<article class="talk">
+<article {id} class="talk" class:has-track={!!track} style:--track-color={track?.color}>
   <h6 class="talk-title">
     {title}
   </h6>
@@ -38,6 +40,9 @@
     <p class="talk-time">
       <Localized id="event-time-slot--hours-prefix" />
       <Link href={googleCalendarLink}>{hours}</Link>
+      {#if track}
+        <span class="track-chip">{track.name}</span>
+      {/if}
     </p>
   {/if}
 
@@ -72,6 +77,11 @@
     flex-direction: column;
   }
 
+  .talk.has-track {
+    border-left: 4px solid var(--track-color);
+    padding-left: 1rem;
+  }
+
   .talk-title {
     margin-top: 0.5rem;
     margin-bottom: 0;
@@ -80,6 +90,27 @@
   .talk-time {
     margin: 0;
     font-weight: bold;
+  }
+
+  .track-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    margin-left: 0.4em;
+    padding: 0 0.6em;
+    border: 1px solid var(--track-color);
+    border-radius: 999px;
+    background-color: color-mix(in srgb, var(--track-color) 12%, transparent);
+    font-size: 0.8em;
+    vertical-align: middle;
+  }
+
+  .track-chip::before {
+    content: "";
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 50%;
+    background-color: var(--track-color);
   }
 
   .talk-description {

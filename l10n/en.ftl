@@ -203,6 +203,12 @@ schedule--presentation-opening-ceremony-second-day-title = Opening Ceremony (2nd
 schedule--presentation-opening-ceremony-second-day-description = Welcome to the event! Let's talk about the workshops! Note: All workshops happen at the same time, and you need to choose one of them.
 schedule--lunch = Lunch Time
 schedule--coffe-break = Coffee break
+schedule--track-auditorium = Auditorium
+schedule--track-grandes-gambiarras = Grandes Gambiarras Track
+schedule--track-typed = TYPED Track
+schedule--overview-label = Overview of the day's schedule
+schedule--overview-time = Time
+schedule--overview-parallel-tracks = Parallel tracks
 schedule--upcoming = New announcements every Monday, Wednesday, and Friday! Follow our social media to be the first to know about the surprises!
 
 ## EventTimeSlot

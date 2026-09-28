@@ -137,7 +137,7 @@ export const schedule: ScheduleEntry[] = [
 
   {
     kind: "talk",
-    title: "Yes, your can run your company mostly with PostgreSQL",
+    title: "Yes, you can run your company mostly with PostgreSQL",
     date: "2026-11-28",
     hours: "10:30",
     track: "auditorium",

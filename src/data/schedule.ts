@@ -71,7 +71,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Abertura dos portões",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "9:00",
     duration: 20,
     members: [],
@@ -82,7 +82,7 @@ export const schedule: ScheduleEntry[] = [
     kind: "talk",
     titleKey: "schedule--presentation-opening-ceremony-first-day-title",
     title: "",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "9:20",
     track: "auditorium",
     duration: 25,
@@ -104,19 +104,30 @@ export const schedule: ScheduleEntry[] = [
 
   {
     kind: "talk",
-    title: "[Keynote a ser revelado em breve]",
-    date: "2025-11-28",
+    title: "[Keynote] Guixifying Conta Aberta",
+    date: "2026-11-28",
     hours: "9:40",
     track: "auditorium",
     duration: 45,
-    members: [],
-    description: "",
+    members: [
+      speaker(
+        "Mário Pinotti Jr.",
+        "mario-pinotti.jpg",
+        "Engenheiro de software da Buzzlabs. Lisper, metaprogramador, apreciador de tecnologias esquecidas e obscuras, e autor de compiladores nas horas vagas.",
+        [
+          { type: "github", url: "https://github.com/z-silver" },
+          { type: "linkedin", url: "https://www.linkedin.com/in/mario-pinotti-jr/" },
+        ],
+      ),
+    ],
+    description:
+      "Conheça os experimentos que estamos fazendo, e os passos que estamos tomando, para tornar o Conta Aberta ainda mais transparente através do Guix e de builds reprodutíveis.",
   },
 
   {
     kind: "talk",
     title: "Abertura da Trilha Grandes Gambiarras",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "10:25",
     track: "grandes-gambiarras",
     duration: 5,
@@ -127,7 +138,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Yes, your can run your company mostly with PostgreSQL",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "10:30",
     track: "auditorium",
     duration: 45,
@@ -150,7 +161,7 @@ export const schedule: ScheduleEntry[] = [
     kind: "talk",
     title:
       "Como derrubamos (sem querer) a internet de Gana: a guerra entre sneaker bots e antibots",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "10:30",
     track: "grandes-gambiarras",
     duration: 45,
@@ -172,7 +183,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Super Nintendo: o PC que nunca foi",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "11:20",
     track: "auditorium",
     duration: 45,
@@ -195,7 +206,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "VibeOS, sistema operacional vibe-coded ou IA sendo insultada?",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "11:20",
     track: "grandes-gambiarras",
     duration: 45,
@@ -219,7 +230,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Como fiz um advergame para GBA com Rust em pleno 2026",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "13:20",
     track: "auditorium",
     duration: 30,
@@ -242,7 +253,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Abertura da Trilha TYPED",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "13:20",
     track: "typed",
     duration: 15,
@@ -253,7 +264,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Descubra a mágica atrás dos CODECs de vídeos",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "13:55",
     track: "auditorium",
     duration: 30,
@@ -272,7 +283,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Minerando commits: entendendo blockchain e proof-of-work com Git",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "13:40",
     track: "typed",
     duration: 30,
@@ -296,7 +307,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Um Mundo Funcional: Construindo uma Physics Engine em Clojure",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "14:30",
     track: "auditorium",
     duration: 20,
@@ -318,7 +329,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Erlang... no MEU microkernel seL4?",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "14:15",
     track: "typed",
     duration: 30,
@@ -340,7 +351,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Enrolator 2000: Enrolando golpe da falsa central com um modem 4G barato e IA",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "14:55",
     track: "auditorium",
     duration: 30,
@@ -366,7 +377,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Camel up: towards Karuta's BEAM",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "14:50",
     track: "typed",
     duration: 30,
@@ -390,7 +401,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Sua caixa de som tá vazando senha e você (talvez) nem escuta",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "16:05",
     track: "auditorium",
     duration: 30,
@@ -414,7 +425,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "The problem of induction and INSANELY DEPENDENT TYPES",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "16:05",
     track: "typed",
     duration: 45,
@@ -436,7 +447,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Open Finance via Sega Mega Drive – Telebradesco",
-    date: "2025-11-28",
+    date: "2026-11-28",
     hours: "16:40",
     track: "auditorium",
     duration: 15,
@@ -459,7 +470,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "[Keynote] Agile Vibe Coding",
-    date: "2025-11-28",
+    date: "2026-11-28",
     track: "auditorium",
     hours: "17:00",
     duration: 45,
@@ -483,7 +494,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Abertura dos portões",
-    date: "2025-11-29",
+    date: "2026-11-29",
     hours: "13:00",
     duration: 30,
     members: [],
@@ -494,7 +505,7 @@ export const schedule: ScheduleEntry[] = [
     kind: "talk",
     titleKey: "schedule--presentation-opening-ceremony-second-day-title",
     title: "",
-    date: "2025-11-29",
+    date: "2026-11-29",
     hours: "13:30",
     duration: 35,
     members: [macabeus("schedule--presentation-opening-ceremony-first-day-bio")],
@@ -510,7 +521,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Escrevendo um Forth para o IBM PC: um exercício em minimalismo e autossuficiência",
-    date: "2025-11-29",
+    date: "2026-11-29",
     hours: "14:10",
     duration: 210,
     members: [
@@ -533,7 +544,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "ELKE - uma maravilha de ambiente criptografado com FreeBSD",
-    date: "2025-11-29",
+    date: "2026-11-29",
     hours: "14:10",
     duration: 210,
     members: [
@@ -555,7 +566,7 @@ export const schedule: ScheduleEntry[] = [
     kind: "talk",
     title:
       "Construindo os Números e Brincando com Tipos: Uma Introdução à Programação Funcional com Haskell",
-    date: "2025-11-29",
+    date: "2026-11-29",
     hours: "14:10",
     duration: 210,
     members: [
@@ -577,7 +588,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Cursão de Nix e NixOS",
-    date: "2025-11-29",
+    date: "2026-11-29",
     hours: "14:10",
     duration: 210,
     members: [
@@ -607,7 +618,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Como resolver um cubo mágico",
-    date: "2025-11-29",
+    date: "2026-11-29",
     hours: "14:10",
     duration: 210,
     members: [
@@ -625,7 +636,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "SD-WAN de pobre: OpenWrt, celular e um roteador sobrevivente",
-    date: "2025-11-29",
+    date: "2026-11-29",
     hours: "14:10",
     duration: 210,
     members: [
@@ -648,7 +659,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "O Laboratório do Frankenstein Autônomo",
-    date: "2025-11-29",
+    date: "2026-11-29",
     hours: "14:10",
     duration: 210,
     members: [
@@ -687,7 +698,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Painel: Pirataria e Copyright",
-    date: "2025-11-29",
+    date: "2026-11-29",
     hours: "18:20",
     duration: 45,
     members: [
@@ -739,7 +750,7 @@ export const schedule: ScheduleEntry[] = [
   {
     kind: "talk",
     title: "Encerramento do evento",
-    date: "2025-11-29",
+    date: "2026-11-29",
     hours: "19:05",
     duration: 30,
     members: [macabeus("schedule--presentation-opening-ceremony-first-day-bio")],

@@ -4,6 +4,17 @@
   import { t } from "../store/locale.svelte"
   import Link from "./Link.svelte"
   import Window from "./Window.svelte"
+
+  const pastVideos = [
+    {
+      title: "Highlights da GambiConf 2025",
+      src: "https://www.youtube.com/embed/mJaIBJqzTrM",
+    },
+    {
+      title: "Highlights da GambiConf 2024",
+      src: "https://www.youtube.com/embed/id_8emhVwiw",
+    },
+  ]
 </script>
 
 <div id="about">
@@ -39,12 +50,30 @@
       <div class="video-container">
         <iframe
           src="https://www.youtube.com/embed/FbRDFCmvxXk"
-          title="GambiConf Video"
+          title="Abertura da GambiConf 2025 / Bruno Macabeus"
           loading="lazy"
           referrerpolicy="strict-origin-when-cross-origin"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
+      </div>
+
+      <div class="videos-row">
+        {#each pastVideos as video (video.src)}
+          <div>
+            <p class="video-label">{video.title}</p>
+            <div class="video-container">
+              <iframe
+                src={video.src}
+                title={video.title}
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        {/each}
       </div>
 
       <p>
@@ -89,5 +118,28 @@
     width: 100%;
     height: 100%;
     border: 0;
+  }
+
+  .videos-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .videos-row .video-container {
+    margin-top: 0;
+  }
+
+  .video-label {
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  @media screen and (min-width: 768px) {
+    .videos-row {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>

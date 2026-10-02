@@ -8,11 +8,11 @@
   import RowTyped from "../components/RowTyped.svelte"
   // import RowCfp from "../components/RowCfp.svelte"
   import RowTickets from "../components/RowTickets.svelte"
-  // import SponsorBar from "../components/SponsorBar.svelte"
+  import SponsorBar from "../components/SponsorBar.svelte"
 </script>
 
 <Hero />
-<!-- <SponsorBar /> -->
+<SponsorBar />
 
 <div class="wrapper-content">
   <div class="hero-margin"></div>

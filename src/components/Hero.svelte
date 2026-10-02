@@ -105,6 +105,7 @@
 <style>
   section {
     position: relative;
+    z-index: 6;
     min-height: max(55vh, 500px);
     padding-bottom: 140px;
 
@@ -330,7 +331,7 @@
       height: 54vh;
 
       top: auto;
-      bottom: -20px;
+      bottom: -16px;
       right: clamp(120px, 45vw, 400px);
 
       margin-top: 0;

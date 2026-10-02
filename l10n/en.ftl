@@ -194,11 +194,11 @@ cfp--clear-form = Clear form to submit a new entry
 ## Schedule
 
 schedule--title = Schedule
-schedule--first-day = November 28th
+schedule--first-day = Sat 28/11
 schedule--presentation-opening-ceremony-first-day-title = Opening Ceremony
 schedule--presentation-opening-ceremony-first-day-description = Welcome to the event!
 schedule--presentation-opening-ceremony-first-day-bio = Hey! I love engaging people in developing personal projects for fun and sharing out-of-the-box ideas - and organizing GambiConf is spreading that passion!
-schedule--second-day = November 29th
+schedule--second-day = Sun 29/11
 schedule--presentation-opening-ceremony-second-day-title = Opening Ceremony (2nd day)
 schedule--presentation-opening-ceremony-second-day-description = Welcome to the event! Let's talk about the workshops! Note: All workshops happen at the same time, and you need to choose one of them.
 schedule--lunch = Lunch Time

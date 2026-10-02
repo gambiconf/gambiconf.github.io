@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { asset } from "$app/paths"
+  import { browser } from "$app/environment"
   import { t } from "../store/locale.svelte"
   import {
     schedule,
@@ -8,14 +9,64 @@
     resolveTranslation,
     type Speaker,
     type TrackId,
+    type ScheduleEntry,
   } from "../data/schedule"
   import Window from "./Window.svelte"
   import GambiConfSocialLinks from "./GambiConfSocialLinks.svelte"
   import TimeSlot from "./TimeSlot.svelte"
   import ScheduleOverview, { type OverviewItem } from "./ScheduleOverview.svelte"
 
+  const days = $derived.by(() => {
+    const found: { date: string; titleKey: string }[] = []
+    let titleKey = ""
+    for (const entry of schedule) {
+      if (entry.kind === "day-header") {
+        titleKey = entry.titleKey
+        continue
+      }
+      if (entry.kind === "talk" && titleKey && !found.some((day) => day.date === entry.date)) {
+        found.push({ date: entry.date, titleKey })
+      }
+    }
+    return found
+  })
+
+  let selectedDay = $state("2026-11-28")
+
+  const chooseDay = (date: string) => {
+    if (date === selectedDay) return
+    selectedDay = date
+    if (browser) document.getElementById("schedule")?.scrollIntoView()
+  }
+
+  const selectDay = (entries: ScheduleEntry[], date: string) => {
+    const selected: ScheduleEntry[] = []
+    let header: ScheduleEntry | undefined
+    let bucket: ScheduleEntry[] = []
+
+    const flush = () => {
+      const matches = bucket.some((entry) => entry.kind === "talk" && entry.date === date)
+      if (matches) {
+        if (header) selected.push(header)
+        selected.push(...bucket)
+      }
+      bucket = []
+    }
+
+    for (const entry of entries) {
+      if (entry.kind === "day-header") {
+        flush()
+        header = entry
+        continue
+      }
+      bucket.push(entry)
+    }
+    flush()
+    return selected
+  }
+
   const resolvedSchedule = $derived(
-    schedule.map((entry) => {
+    selectDay(schedule, selectedDay).map((entry) => {
       if (entry.kind !== "talk") return entry
       return {
         ...entry,
@@ -105,20 +156,33 @@
 <div id="schedule">
   <Window title={t("schedule--title")}>
     <article class="content">
+      <div class="day-selector" role="tablist" aria-label={t("schedule--title")}>
+        {#each days as option (option.date)}
+          <button
+            type="button"
+            role="tab"
+            aria-selected={selectedDay === option.date}
+            class:active={selectedDay === option.date}
+            onclick={() => chooseDay(option.date)}
+          >
+            <Localized id={option.titleKey} />
+          </button>
+        {/each}
+      </div>
+
+      <ScheduleOverview items={firstDayOverview} />
+
       {#each orderedSchedule as entry, i (i)}
-        {#if needsDividerBefore(i)}
-          <div class="division-wrapper">
-            <div class="division"></div>
-          </div>
-        {/if}
-
         {#if entry.kind === "day-header"}
-          <h3><Localized id={entry.titleKey} /></h3>
-
-          {#if i === firstDayHeader}
-            <ScheduleOverview items={firstDayOverview} />
+          <!-- day title is the selector above -->
+        {:else}
+          {#if needsDividerBefore(i)}
+            <div class="division-wrapper">
+              <div class="division"></div>
+            </div>
           {/if}
-        {:else if entry.kind === "break"}
+
+          {#if entry.kind === "break"}
           <div class="break">
             {#if entry.bodyKey}
               <Localized id={entry.bodyKey} />
@@ -149,6 +213,7 @@
             members={entry.members}
             descriptionHtml={entry.description}
           />
+          {/if}
         {/if}
       {/each}
     </article>
@@ -160,12 +225,41 @@
     padding: 25px;
   }
 
-  h3 {
-    margin-bottom: 25px;
+  .day-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 28px;
+    margin: 0 0 25px;
   }
 
-  .content > h3:first-of-type {
-    margin-top: 0;
+  .day-selector button {
+    margin: 0;
+    padding: 0 0 6px;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    background: none;
+    cursor: pointer;
+
+    font: inherit;
+    font-size: var(--h3-size);
+    font-weight: 700;
+    line-height: 1.2;
+    color: inherit;
+    opacity: 0.4;
+  }
+
+  .day-selector button.active {
+    opacity: 1;
+    border-bottom-color: #f34b21;
+  }
+
+  .day-selector button:hover {
+    opacity: 0.75;
+  }
+
+  .day-selector button.active:hover {
+    opacity: 1;
   }
 
   .division-wrapper {
@@ -191,4 +285,5 @@
     align-items: center;
     gap: 12px;
   }
+
 </style>

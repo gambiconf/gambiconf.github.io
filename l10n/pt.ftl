@@ -193,11 +193,11 @@ cfp--clear-form = Apagar formulário para submeter uma nova entrada
 ## Schedule
 
 schedule--title = Agenda
-schedule--first-day = 28 de Novembro
+schedule--first-day = Sáb 28/11
 schedule--presentation-opening-ceremony-first-day-title = Cerimônia de Abertura
 schedule--presentation-opening-ceremony-first-day-description = Boas vindas ao evento!
 schedule--presentation-opening-ceremony-first-day-bio = Hey! Eu amo engajar as pessoas em desenvolverem projetos pessoais por diversão e compartilhar ideias fora da caixa, e organizar a GambiConf é disseminar essa paixão!
-schedule--second-day = 29 de Novembro
+schedule--second-day = Dom 29/11
 schedule--presentation-opening-ceremony-second-day-title = Cerimônia de Abertura (Segundo dia)
 schedule--presentation-opening-ceremony-second-day-description = Boas vindas ao evento! Vamos falar dos workshops! Nota: Todos os workshops acontecem ao mesmo tempo, e você deverá escolher um deles para participar.
 schedule--lunch = Almoço

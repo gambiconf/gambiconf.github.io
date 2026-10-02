@@ -10,11 +10,7 @@
       <h3><Localized id="partners--sponsors" /></h3>
       <div class="logos">
         <a href={`https://contaaberta.info/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/partners/partners/conta-aberta.png")} alt="Conta Aberta" />
-        </a>
-
-        <a href={`https://www.codeminer42.com/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/partners/codeminer42.svg")} alt="Codeminer 42" />
+          <img src={asset("/partners/conta-aberta.png")} alt="Conta Aberta" />
         </a>
       </div>
     </div>
@@ -25,27 +21,23 @@
       <h3><Localized id="partners--supporters" /></h3>
       <div class="logos">
         <a href={`https://usp.br/?${utmSource}`} target="_blank" rel="noopener" class="usp-logo">
-          <img src={asset("/partners/partners/partnersusp.png")} alt="USP" />
-        </a>
-
-        <a href={`https://www.totvs.com/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/partners/totvs.jpg")} alt="TOTVS" />
+          <img src={asset("/partners/usp.png")} alt="USP" />
         </a>
 
         <a href={`https://symcomp.ime.usp.br/?${utmSource}`} target="_blank" rel="noopener">
           <img src={asset("/partners/symcomp.png")} alt="SymComp" />
         </a>
 
-        <a href={`https://elixiremfoco.com/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/partners/elixir-em-foco.png")} alt="Elixir em foco" />
+        <img src={asset("/typed.avif")} alt="TYPED" />
+
+        <img src={asset("/cryptolar.png")} alt="Cryptolar" />
+
+        <a href={`https://nacif.software/?${utmSource}`} target="_blank" rel="noopener">
+          <img src={asset("/partners/nacif.png")} alt="Nacif" />
         </a>
 
-        <a href={`https://github.com/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/partners/github.png")} alt="GitHub" />
-        </a>
-
-        <a href={`https://magalu.cloud/?${utmSource}`} target="_blank" rel="noopener">
-          <img src={asset("/partners/magalu-cloud.svg")} alt="Magalu Cloud" />
+        <a href={`https://www.docker.com/?${utmSource}`} target="_blank" rel="noopener">
+          <img src={asset("/partners/docker.svg")} alt="Docker" />
         </a>
       </div>
     </div>
@@ -54,7 +46,8 @@
 
 <style>
   .sponsor-bar {
-    background-color: var(--bg-color, #ffffff);
+    background-color: #ffffff;
+    color: #666;
     padding: 20px 0 15px;
     width: 100%;
     border-bottom: 1px solid #eee;
@@ -115,7 +108,7 @@
   img {
     height: 35px;
     width: auto;
-    max-width: 120px;
+    max-width: 150px;
     object-fit: contain;
     transition: transform 0.3s ease;
   }
@@ -169,6 +162,7 @@
 
     img {
       height: 40px;
+      max-width: 170px;
     }
 
     .usp-logo img {

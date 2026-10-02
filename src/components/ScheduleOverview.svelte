@@ -51,6 +51,34 @@
     `${Math.floor(minute / 60)}:${String(minute % 60).padStart(2, "0")}`
 
   const layout = $derived.by(() => {
+    const hoursCount = new Map<string, number>()
+    for (const item of items) {
+      if (item.kind !== "talk") continue
+      hoursCount.set(item.talk.hours, (hoursCount.get(item.talk.hours) ?? 0) + 1)
+    }
+    const hasSimultaneous = [...hoursCount.values()].some((count) => count > 2)
+
+    // Several sessions at the same hour (the workshops) don't fit the two-room
+    // grid, so they share one row of blocks under a single time.
+    if (hasSimultaneous) {
+      const groups: Array<
+        { kind: "talks"; hours: string; talks: OverviewTalk[] } | { kind: "break"; bodyKey: string }
+      > = []
+      for (const item of items) {
+        if (item.kind === "break") {
+          if (item.bodyKey) groups.push({ kind: "break", bodyKey: item.bodyKey })
+          continue
+        }
+        const last = groups.at(-1)
+        if (last?.kind === "talks" && last.hours === item.talk.hours) {
+          last.talks.push(item.talk)
+        } else {
+          groups.push({ kind: "talks", hours: item.talk.hours, talks: [item.talk] })
+        }
+      }
+      return { mode: "groups" as const, groups }
+    }
+
     const talkBlocks: TalkBlock[] = []
     for (const item of items) {
       if (item.kind !== "talk") continue
@@ -115,6 +143,7 @@
       Math.max(1, Math.round((block.end - block.start) / SLOT_MINUTES))
 
     return {
+      mode: "rooms" as const,
       blocks,
       gridTemplateRows: `auto ${rowSizes.join(" ")}`,
       rowOf,
@@ -126,7 +155,36 @@
   })
 </script>
 
-{#if layout}
+{#if layout?.mode === "groups"}
+  <div class="agenda" role="table" aria-label={t("schedule--overview-label")}>
+    {#each layout.groups as group (group.kind === "break" ? group.bodyKey : group.hours)}
+      {#if group.kind === "break"}
+        <div class="block break-block agenda-break">
+          <Localized id={group.bodyKey} />
+        </div>
+      {:else}
+        <div class="agenda-row">
+          <span class="agenda-time">{group.hours}</span>
+          <div class="agenda-cells" class:single={group.talks.length === 1}>
+            {#each group.talks as talk (talk.anchor)}
+              <a
+                class="block talk-block"
+                href="#{talk.anchor}"
+                style:--track-color={talk.track
+                  ? tracks[talk.track].color
+                  : group.talks.length > 1
+                    ? "#1a9e45"
+                    : "#f34b21"}
+              >
+                <span class="block-title">{talk.title}</span>
+              </a>
+            {/each}
+          </div>
+        </div>
+      {/if}
+    {/each}
+  </div>
+{:else if layout?.mode === "rooms"}
   <div
     class="timetable"
     style:grid-template-rows={layout.gridTemplateRows}
@@ -183,6 +241,43 @@
 <style>
   /* Phones get the same blocks stacked in time order; the grid below takes
      over once there is room for two rooms side by side. */
+  .agenda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 2rem;
+    font-size: 0.85em;
+    line-height: 1.25;
+  }
+
+  .agenda-row {
+    display: grid;
+    grid-template-columns: 3.2rem 1fr;
+    gap: 8px;
+    align-items: start;
+  }
+
+  .agenda-time {
+    padding-top: 0.3rem;
+    text-align: right;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .agenda-cells {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+  }
+
+  .agenda-cells.single {
+    grid-template-columns: 1fr;
+  }
+
+  .agenda-break {
+    margin-left: calc(3.2rem + 8px);
+  }
+
   .timetable {
     display: flex;
     flex-direction: column;

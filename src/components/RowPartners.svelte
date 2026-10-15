@@ -13,6 +13,9 @@
     <a href={`https://contaaberta.info/?${utmSource}`} target="_blank" rel="noopener">
       <img src={asset("/partners/conta-aberta.png")} alt="Conta Aberta" />
     </a>
+    <a href={`https://quint.sh/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={asset("/partners/quint.png")} alt="Quint" />
+    </a>
   </div>
 
   <h3 class="title"><Localized id="partners--supporters" /></h3>
@@ -67,15 +70,9 @@
     filter: grayscale(0);
   }
 
-  /*
   .grid-sponsors {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-
-  .grid-sponsors img {
-    height: 100px;
-  }
-  */
 
   .grid-partners {
     grid-template-columns: repeat(2, 1fr);

@@ -12,6 +12,9 @@
         <a href={`https://contaaberta.info/?${utmSource}`} target="_blank" rel="noopener">
           <img src={asset("/partners/conta-aberta.png")} alt="Conta Aberta" />
         </a>
+        <a href={`https://quint.sh/?${utmSource}`} target="_blank" rel="noopener">
+          <img src={asset("/partners/quint.png")} alt="Quint" />
+        </a>
       </div>
     </div>
 

@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Localized } from "@nubolab-ffwd/svelte-fluent"
   import { asset } from "$app/paths"
-  import { browser } from "$app/environment"
   import { t } from "../store/locale.svelte"
   import {
     schedule,
@@ -9,64 +8,14 @@
     resolveTranslation,
     type Speaker,
     type TrackId,
-    type ScheduleEntry,
   } from "../data/schedule"
   import Window from "./Window.svelte"
   import GambiConfSocialLinks from "./GambiConfSocialLinks.svelte"
   import TimeSlot from "./TimeSlot.svelte"
   import ScheduleOverview, { type OverviewItem } from "./ScheduleOverview.svelte"
 
-  const days = $derived.by(() => {
-    const found: { date: string; titleKey: string }[] = []
-    let titleKey = ""
-    for (const entry of schedule) {
-      if (entry.kind === "day-header") {
-        titleKey = entry.titleKey
-        continue
-      }
-      if (entry.kind === "talk" && titleKey && !found.some((day) => day.date === entry.date)) {
-        found.push({ date: entry.date, titleKey })
-      }
-    }
-    return found
-  })
-
-  let selectedDay = $state("2026-11-28")
-
-  const chooseDay = (date: string) => {
-    if (date === selectedDay) return
-    selectedDay = date
-    if (browser) document.getElementById("schedule")?.scrollIntoView()
-  }
-
-  const selectDay = (entries: ScheduleEntry[], date: string) => {
-    const selected: ScheduleEntry[] = []
-    let header: ScheduleEntry | undefined
-    let bucket: ScheduleEntry[] = []
-
-    const flush = () => {
-      const matches = bucket.some((entry) => entry.kind === "talk" && entry.date === date)
-      if (matches) {
-        if (header) selected.push(header)
-        selected.push(...bucket)
-      }
-      bucket = []
-    }
-
-    for (const entry of entries) {
-      if (entry.kind === "day-header") {
-        flush()
-        header = entry
-        continue
-      }
-      bucket.push(entry)
-    }
-    flush()
-    return selected
-  }
-
   const resolvedSchedule = $derived(
-    selectDay(schedule, selectedDay).map((entry) => {
+    schedule.map((entry) => {
       if (entry.kind !== "talk") return entry
       return {
         ...entry,
@@ -123,58 +72,46 @@
   const trackBadge = (id: TrackId | undefined) =>
     id ? { name: t(tracks[id].nameKey), color: tracks[id].color } : undefined
 
-  const firstDayHeader = $derived(
-    orderedSchedule.findIndex((entry) => entry.kind === "day-header"),
-  )
-
-  const firstDayOverview = $derived.by(() => {
-    const items: OverviewItem[] = []
+  // Each day header gets the overview of the entries that follow it.
+  const overviewByDay = $derived.by(() => {
+    const overviews = new Map<number, OverviewItem[]>()
+    let current: OverviewItem[] | undefined
     for (const [index, entry] of orderedSchedule.entries()) {
-      if (index <= firstDayHeader) continue
-      if (entry.kind === "day-header") break
+      if (entry.kind === "day-header") {
+        current = []
+        overviews.set(index, current)
+        continue
+      }
+      if (!current) continue
       if (entry.kind === "talk") {
         const { title, hours, duration, track } = entry
-        items.push({
+        current.push({
           kind: "talk",
           talk: { anchor: anchorFor(index), title, hours, duration, track },
         })
       } else if (entry.kind === "break" && entry.bodyKey) {
-        items.push({ kind: "break", bodyKey: entry.bodyKey })
+        current.push({ kind: "break", bodyKey: entry.bodyKey })
       }
     }
-    return items
+    return overviews
   })
 
   // A divider goes between consecutive entries; not after a day-header.
   const needsDividerBefore = (index: number) => {
     if (index === 0) return false
     const prev = orderedSchedule[index - 1]
-    return prev.kind !== "day-header"
+    return prev.kind !== "day-header" && orderedSchedule[index].kind !== "day-header"
   }
 </script>
 
 <div id="schedule">
   <Window title={t("schedule--title")}>
     <article class="content">
-      <div class="day-selector" role="tablist" aria-label={t("schedule--title")}>
-        {#each days as option (option.date)}
-          <button
-            type="button"
-            role="tab"
-            aria-selected={selectedDay === option.date}
-            class:active={selectedDay === option.date}
-            onclick={() => chooseDay(option.date)}
-          >
-            <Localized id={option.titleKey} />
-          </button>
-        {/each}
-      </div>
-
-      <ScheduleOverview items={firstDayOverview} />
-
       {#each orderedSchedule as entry, i (i)}
         {#if entry.kind === "day-header"}
-          <!-- day title is the selector above -->
+          <h3 class="day-title"><Localized id={entry.titleKey} /></h3>
+
+          <ScheduleOverview items={overviewByDay.get(i) ?? []} />
         {:else}
           {#if needsDividerBefore(i)}
             <div class="division-wrapper">
@@ -225,41 +162,13 @@
     padding: 25px;
   }
 
-  .day-selector {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 28px;
+  .day-title {
     margin: 0 0 25px;
+    text-align: center;
   }
 
-  .day-selector button {
-    margin: 0;
-    padding: 0 0 6px;
-    border: 0;
-    border-bottom: 3px solid transparent;
-    background: none;
-    cursor: pointer;
-
-    font: inherit;
-    font-size: var(--h3-size);
-    font-weight: 700;
-    line-height: 1.2;
-    color: inherit;
-    opacity: 0.4;
-  }
-
-  .day-selector button.active {
-    opacity: 1;
-    border-bottom-color: #f34b21;
-  }
-
-  .day-selector button:hover {
-    opacity: 0.75;
-  }
-
-  .day-selector button.active:hover {
-    opacity: 1;
+  .day-title:not(:first-child) {
+    margin-top: 60px;
   }
 
   .division-wrapper {
@@ -285,5 +194,4 @@
     align-items: center;
     gap: 12px;
   }
-
 </style>

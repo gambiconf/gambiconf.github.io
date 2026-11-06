@@ -14,6 +14,7 @@
       | "googleScholar"
       | "youtube"
       | "gitlab"
+      | "fediverse"
       | "stackoverflow"
       | "sourcehunt"
       | "website"
@@ -35,6 +36,7 @@
   import { faBluesky } from "@fortawesome/free-brands-svg-icons/faBluesky"
   import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube"
   import { faGitlab } from "@fortawesome/free-brands-svg-icons/faGitlab"
+  import { faFediverse } from "@fortawesome/free-brands-svg-icons/faFediverse"
   import { faStackOverflow } from "@fortawesome/free-brands-svg-icons/faStackoverflow"
   import { faEarth } from "@fortawesome/free-solid-svg-icons/faEarth"
   import { faCircle } from "@fortawesome/free-solid-svg-icons/faCircle"
@@ -60,6 +62,7 @@
     bluesky: faBluesky,
     youtube: faYoutube,
     gitlab: faGitlab,
+    fediverse: faFediverse,
     stackoverflow: faStackOverflow,
     sourcehunt: faCircle,
     website: faEarth,

@@ -734,12 +734,12 @@ export const schedule: ScheduleEntry[] = [
         ],
       ),
       speaker(
-        "Lucas Lago",
-        "lucas-lago.jpg",
-        `Lucas Lago é tecnologista de interesse público, vice-presidente do Instituto Aaron Swartz, organização dedicada à defesa dos direitos digitais e do acesso aberto ao conhecimento. No Instituto Aaron Swartz, participa de iniciativas de educação, pesquisa e incidência pública sobre temas como criptografia, autenticação, privacidade e direitos na internet. O instituto também é um dos responsáveis pelo projeto Copyright Trolls, que orienta pessoas que recebem notificações extrajudiciais relacionadas a supostas infrações de direitos autorais, produzindo informação acessível sobre o tema e auxiliando na compreensão desse tipo de prática.`,
+        "Alexandre Oliva",
+        "alexandre-oliva.png",
+        `Ativista e desenvolvedor profissional de Software Livre. Premiado pela Free Software Foundation pelas contribuições para o Avanço do Software Livre. Orador e conselheiro do Projeto GNU. Conselheiro co-fundador da FSF América Latina e membro da diretoria da FSF original. Co-mantenedor do GNU Linux-libre, IRPF-Livre, GNU Compiler Collection (GCC), GNU binutils e GNU libc. Engenheiro de Computação, Mestre e ex-doutorando em Ciências da Computação na Unicamp. Campeão da primeira edição brasileira da Maratona de Programação.`,
         [
-          { type: "bluesky", url: "https://bsky.app/profile/lucaslago.projeto7c0.com.br" },
-          { type: "instagram", url: "https://www.instagram.com/institutoasw/" },
+          { type: "fediverse", url: "https://snac.lx.oliva.nom.br/lxo" },
+          { type: "website", url: "https://www.fsfla.org/~lxoliva/" },
         ],
       ),
     ],

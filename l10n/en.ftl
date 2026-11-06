@@ -95,8 +95,9 @@ where-and-when--schedule-intro = The event will happen on the weekend of Novembe
 where-and-when--schedule-bullet-1 = • November 28 — talks from the GambiConf and TYPED tracks
 where-and-when--schedule-bullet-2 = • November 29 — workshops and panels in the afternoon
 where-and-when--add-to-calendar-inline = + add to calendar
-where-and-when--body-paragraph-2 = At <a data-l10n-name="link-usp">USP - Butantã Campus / IME - Block B</a>. São Paulo, Brazil.
-where-and-when--see-map = See on the map
+where-and-when--see-map = Open in:
+where-and-when--copy-address = Copy address
+where-and-when--address-copied = Copied!
 where-and-when--body-paragraph-3 = Free streaming on <a data-l10n-name="link-youtube">YouTube</a>.
 where-and-when--body-paragraph-4 = Chat with us on <a data-l10n-name="link-discord">Discord</a>.
 where-and-when--add-to-calendar-day-1 = Add to calendar — November 28

@@ -94,8 +94,9 @@ where-and-when--schedule-intro = O evento acontecerá no fim de semana de 28 e 2
 where-and-when--schedule-bullet-1 = • 28 de novembro — palestras das trilhas GambiConf e TYPED
 where-and-when--schedule-bullet-2 = • 29 de novembro — workshops e painéis no período da tarde
 where-and-when--add-to-calendar-inline = + adicionar ao calendário
-where-and-when--body-paragraph-2 = Na <a data-l10n-name="link-usp">USP - Campus Butantã / IME - Bloco B</a>.
-where-and-when--see-map = Ver no mapa
+where-and-when--see-map = Abrir em:
+where-and-when--copy-address = Copiar endereço
+where-and-when--address-copied = Copiado!
 where-and-when--body-paragraph-3 = Streaming gratuito no <a data-l10n-name="link-youtube">YouTube</a>.
 where-and-when--body-paragraph-4 = Converse conosco no <a data-l10n-name="link-discord">Discord</a>.
 where-and-when--add-to-calendar-day-1 = Adicionar ao calendário — 28 de novembro

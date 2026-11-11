@@ -136,6 +136,7 @@ tickets--title = Tickets
 ## Partners
 
 partners--title = Partners
+partners--gold-sponsor = Gold Sponsor
 partners--sponsors = Sponsors
 partners--supporters = Supporters
 

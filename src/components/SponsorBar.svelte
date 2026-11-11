@@ -6,6 +6,15 @@
 
 <div class="sponsor-bar">
   <div class="content">
+    <div class="section section-gold">
+      <h3><Localized id="partners--gold-sponsor" /></h3>
+      <div class="logos">
+        <a href={`https://www.google.com/?${utmSource}`} target="_blank" rel="noopener" class="gold-logo">
+          <img src={asset("/partners/google.png")} alt="Google" />
+        </a>
+      </div>
+    </div>
+
     <div class="section">
       <h3><Localized id="partners--sponsors" /></h3>
       <div class="logos">
@@ -125,6 +134,11 @@
     max-width: 150px;
   }
 
+  .gold-logo img {
+    height: 45px;
+    max-width: 180px;
+  }
+
   @media screen and (min-width: 768px) {
     .sponsor-bar {
       padding: 20px 0;
@@ -132,9 +146,10 @@
 
     .content {
       flex-direction: row;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 40px;
+      gap: 16px 40px;
       padding-left: 20px;
       padding-right: 20px;
     }
@@ -171,6 +186,16 @@
     .usp-logo img {
       height: 60px;
       max-width: 180px;
+    }
+
+    .section-gold {
+      flex-basis: 100%;
+      justify-content: center;
+    }
+
+    .gold-logo img {
+      height: 55px;
+      max-width: 220px;
     }
   }
 

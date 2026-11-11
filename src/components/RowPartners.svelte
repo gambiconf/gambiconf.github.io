@@ -7,6 +7,14 @@
 </script>
 
 <Window title={t("partners--title")}>
+  <h3 class="title"><Localized id="partners--gold-sponsor" /></h3>
+
+  <div class="grid grid-gold">
+    <a href={`https://www.google.com/?${utmSource}`} target="_blank" rel="noopener">
+      <img src={asset("/partners/google.png")} alt="Google" />
+    </a>
+  </div>
+
   <h3 class="title"><Localized id="partners--sponsors" /></h3>
 
   <div class="grid grid-sponsors">
@@ -68,6 +76,14 @@
 
   .grid img:hover {
     filter: grayscale(0);
+  }
+
+  .grid-gold {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-gold img {
+    height: 200px;
   }
 
   .grid-sponsors {

@@ -135,6 +135,7 @@ tickets--title = Ingressos
 ## Partners
 
 partners--title = Parceiros
+partners--gold-sponsor = Patrocinador Gold
 partners--sponsors = Patrocinador
 partners--supporters = Apoiador
 
